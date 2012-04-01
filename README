@@ -1,0 +1,38 @@
+pyLottoSimu
+
+a programm for the german lottery "pick 6 out of 49" system.
+
+Lotto Generator und Simulator
+
+Installieren:
+
+Das Programm läuft auf MacOS, Windows und Linux,
+und überall dort wo Python und pyqt installieren lässt!
+
+Das Programm benötigt Python 2.7 dazu. www.python.org/download/ 
+und Qt4 für Python 2.7 www.riverbankcomputing.com/software/pyqt/download
+
+Start mit: 
+python lotto.pyw
+
+Das Layout (lotto.ui) kann mit den Qt4-Designer bearbeitet werden,
+kann dann mit diesem Befehl wieder in Python umgewandelt werden:
+
+cd lotto
+ lotto_ui_zu_py.bat
+
+Bedienen:
+Der Modus kann in der Menüleiste angewählt werden
+Anzahl der Zufallszahlen sind zwischen 1 bis 15 wählbar sowie der
+ Zahlenbereich zwischen 20 und 90! 
+
+Modus Zufallsgenerator:
+Die Zahlen auswählen und mit 'Zufallsgenerator ein' starten
+
+Modus Simulation:
+Die Zahlen auswählen und mit 'Start' die Simulation starten.
+Dabei kann mit dem Schieber oben links die Geschwindigkeit verändert werden.
+
+Info und Lizenz:
+Das Programm hat die Creative Commons by-sa Lizenz
+http://creativecommons.org/licenses/by-sa/3.0/deed.de
