@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 Das Hauptprogramm
+
+Das Programm hat die Creative Commons by-sa Lizenz
+http://creativecommons.org/licenses/by-sa/3.0/deed.de
 """
 
 import sys 
@@ -41,10 +44,10 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
        self.timer.start(verz)
        self.label_zahl.setText(str(self.zufallszahl[self.durchlauf]))
        if self.durchlauf == (len(self.zufallszahl)-3):
-           text = 'Kommen wir nun zur der {0} Zahl, und damit vorletzen Zahl der heutigen Ziehung.. Es ist die {1}'.\
+           text = u'Kommen wir nun zur der {0} Zahl, und damit die vorletze Zahl der heutigen Ziehung.. Es ist die {1}'.\
             format( self.zaehlzahlen[ self.durchlauf], self.zufallszahl[ self.durchlauf])
        elif self.durchlauf == (len(self.zufallszahl)-2):
-           text = 'Und nun kommen wir zu der {0} und letzten Gewinnzahl, es ist die {1}'.\
+           text = u'Und nun kommen wir zu der {0} und letzten Gewinnzahl, es ist die {1}'.\
             format( self.zaehlzahlen[self.durchlauf], self.zufallszahl[ self.durchlauf])
        elif self.durchlauf == len(self.zufallszahl)-1:
            text = 'So, und dies ist die Zusatzzahl .. Es ist die {0}'\
@@ -63,7 +66,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
        elif self.durchlauf == 0:
            text = 'Und die erste Gewinnzahl, ist die {0}'.format( self.zufallszahl[self.durchlauf])      
        else:
-           text = self.textauswahl[ randint(0 ,4)]\
+           text = self.textauswahl[ randint(0 ,len(self.textauswahl))]\
             .format( self.zaehlzahlen[self.durchlauf], self.zufallszahl[self.durchlauf])
        self.plainTextEdit.appendPlainText( text)
        self.durchlauf += 1
@@ -86,12 +89,12 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
        self.plainTextEdit.appendPlainText(text)
        verz = self.horizontalSlider.value()  * 20
        self.timer.start(verz)
-       self.textauswahl = [ 'Und nun kommen wir zu der {0}. Gewinnzahl, es ist die {1}',\
-            'Die {0} Lottozahl der heutigen Ziehung ist die {1}',\
-            'Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}',\
-            'Kommen wir nun zur {0} Zahl der heutigen Ziehung {1}',\
-            'Die {0} Gewinnzahl lautet {1}']
-       self.zaehlzahlen = [ 'ersten', 'zweiten', 'dritten', 'vierten', 'f\xFCnfte', 'sechsten', 'siebten',\
+       self.textauswahl = [ u'Und nun kommen wir zu der {0}. Gewinnzahl, es ist die {1}',\
+            u'Die {0} Lottozahl der heutigen Ziehung ist die {1}',\
+            u'Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}',\
+            u'Kommen wir nun zur {0} Zahl der heutigen Ziehung {1}',\
+            u'Die {0} Gewinnzahl lautet {1}']
+       self.zaehlzahlen = [ 'ersten', 'zweiten', 'dritten', 'vierten', u'fünften', 'sechsten', 'siebten',\
         'achten', 'neunten']
        i=10
        while i < len( self.zufallszahl):

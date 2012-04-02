@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Lotto Gener- &amp; Simulator</string>
+   <string>pyLottoSimu</string>
   </property>
   <widget class="QWidget" name="Lottozahlen">
    <property name="sizePolicy">

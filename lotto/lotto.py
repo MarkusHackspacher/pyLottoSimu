@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'lotto.ui'
 #
-# Created: Sun Apr  1 19:32:24 2012
+# Created: Mon Apr  2 23:00:44 2012
 #      by: PyQt4 UI code generator 4.9.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -165,7 +165,7 @@ class Ui_MainWindow(object):
         MainWindow.setTabOrder(self.anzahl, self.hochste)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Lotto Gener- & Simulator", None, QtGui.QApplication.UnicodeUTF8))
+        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "pyLottoSimu", None, QtGui.QApplication.UnicodeUTF8))
         self.Lottozahlen.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Lottozahlen", None, QtGui.QApplication.UnicodeUTF8))
         self.plainTextEdit.setWhatsThis(QtGui.QApplication.translate("MainWindow", "Ausgabefeld", None, QtGui.QApplication.UnicodeUTF8))
         self.label_Lottozahlen.setText(QtGui.QApplication.translate("MainWindow", "Lottozahlen", None, QtGui.QApplication.UnicodeUTF8))
