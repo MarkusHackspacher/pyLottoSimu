@@ -1,6 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-__rev_id__ = """$Id: lotto_gui1.py,v 0.2 2012/1/15 Markus Hackspacher cc by-sa $"""
+"""
+Das Hauptprogramm
+"""
+
 import sys 
 from datetime import datetime
 import time
@@ -88,7 +91,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
             'Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}',\
             'Kommen wir nun zur {0} Zahl der heutigen Ziehung {1}',\
             'Die {0} Gewinnzahl lautet {1}']
-       self.zaehlzahlen = [ 'ersten', 'zweiten', 'dritten', 'vierten', 'fuenfte', 'sechsten', 'siebten',\
+       self.zaehlzahlen = [ 'ersten', 'zweiten', 'dritten', 'vierten', 'f\xFCnfte', 'sechsten', 'siebten',\
         'achten', 'neunten']
        i=10
        while i < len( self.zufallszahl):
