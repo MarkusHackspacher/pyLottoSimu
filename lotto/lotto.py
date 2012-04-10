@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'lotto.ui'
 #
-# Created: Mon Apr  2 23:00:44 2012
+# Created: Tue Apr 10 21:46:45 2012
 #      by: PyQt4 UI code generator 4.9.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -31,8 +31,8 @@ class Ui_MainWindow(object):
         self.Lottozahlen.setFont(font)
         self.Lottozahlen.setAutoFillBackground(False)
         self.Lottozahlen.setStyleSheet(_fromUtf8("QFrame#Rahmen { border-image: url(:/lottokugel.png)}\n"
-"QLabel {    background-color: rgb(220, 220, 220)}\n"
-"QLabel#label_zahl {    background-color: none}"))
+"#QLabel {    background-color: rgb(220, 220, 220)}\n"
+"QLabel#label_zahl, QLabel#label_zahl_2 {    background-color: none}"))
         self.Lottozahlen.setObjectName(_fromUtf8("Lottozahlen"))
         self.Rahmen = QtGui.QFrame(self.Lottozahlen)
         self.Rahmen.setEnabled(True)
@@ -125,6 +125,16 @@ class Ui_MainWindow(object):
         self.label_Geschwindigkeit = QtGui.QLabel(self.Rahmen)
         self.label_Geschwindigkeit.setGeometry(QtCore.QRect(15, 80, 101, 20))
         self.label_Geschwindigkeit.setObjectName(_fromUtf8("label_Geschwindigkeit"))
+        self.label_zahl_2 = QtGui.QLabel(self.Rahmen)
+        self.label_zahl_2.setEnabled(True)
+        self.label_zahl_2.setGeometry(QtCore.QRect(380, 50, 41, 41))
+        font = QtGui.QFont()
+        font.setPointSize(26)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_zahl_2.setFont(font)
+        self.label_zahl_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_zahl_2.setObjectName(_fromUtf8("label_zahl_2"))
         MainWindow.setCentralWidget(self.Lottozahlen)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 21))
@@ -189,6 +199,7 @@ class Ui_MainWindow(object):
         self.horizontalSlider.setToolTip(QtGui.QApplication.translate("MainWindow", "Speed", None, QtGui.QApplication.UnicodeUTF8))
         self.horizontalSlider.setStatusTip(QtGui.QApplication.translate("MainWindow", "Speed", None, QtGui.QApplication.UnicodeUTF8))
         self.label_Geschwindigkeit.setText(QtGui.QApplication.translate("MainWindow", "Geschwindigkeit", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_zahl_2.setText(QtGui.QApplication.translate("MainWindow", "Text", None, QtGui.QApplication.UnicodeUTF8))
         self.menuDatei.setTitle(QtGui.QApplication.translate("MainWindow", "Datei", None, QtGui.QApplication.UnicodeUTF8))
         self.menuHilfe.setTitle(QtGui.QApplication.translate("MainWindow", "Hilfe", None, QtGui.QApplication.UnicodeUTF8))
         self.menuModus.setTitle(QtGui.QApplication.translate("MainWindow", "Modus", None, QtGui.QApplication.UnicodeUTF8))

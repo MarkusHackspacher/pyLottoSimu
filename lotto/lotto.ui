@@ -45,8 +45,8 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QFrame#Rahmen { border-image: url(:/lottokugel.png)}
-QLabel {	background-color: rgb(220, 220, 220)}
-QLabel#label_zahl {	background-color: none}</string>
+#QLabel {	background-color: rgb(220, 220, 220)}
+QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
    </property>
    <widget class="QFrame" name="Rahmen">
     <property name="enabled">
@@ -337,6 +337,32 @@ QLabel#label_zahl {	background-color: none}</string>
      </property>
      <property name="text">
       <string>Geschwindigkeit</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_zahl_2">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>50</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>26</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Text</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>

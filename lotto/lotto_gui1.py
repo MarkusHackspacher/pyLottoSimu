@@ -39,10 +39,24 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
        self.statusBar().showMessage('Bereit')
 
    def ontimer(self):
+       self.timer.stop()
+       verz = self.horizontalSlider.value()
+       if self.NaechsteZahlverzoegerung >= verz:
+           self.NaechsteZahlverzoegerung = verz
+       self.NaechsteZahlverzoegerung -= 1
+       if self.NaechsteZahlverzoegerung < 10 \
+        or (self.NaechsteZahlverzoegerung < 20 and (self.NaechsteZahlverzoegerung % 2) == 0) \
+        or (self.NaechsteZahlverzoegerung % 4) == 0:
+           self.label_zahl.setText(str(zufallszahlen(1, int(self.hochste.text()))[0]))
+       self.timer.start(100)
+       if self.NaechsteZahlverzoegerung < 0:
+           self.NaechsteZahl()
+           self.NaechsteZahlverzoegerung = verz
+           
+
+   def NaechsteZahl(self):
        """ Ausgabe der nächsten Zahl """
-       verz = self.horizontalSlider.value() * 50
-       self.timer.start(verz)
-       self.label_zahl.setText(str(self.zufallszahl[self.durchlauf]))
+       self.label_zahl_2.setText(str(self.zufallszahl[self.durchlauf]))
        if self.durchlauf == (len(self.zufallszahl)-3):
            text = u'Kommen wir nun zur der {0} Zahl, und damit die vorletze Zahl der heutigen Ziehung.. Es ist die {1}'.\
             format( self.zaehlzahlen[ self.durchlauf], self.zufallszahl[ self.durchlauf])
@@ -66,7 +80,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
        elif self.durchlauf == 0:
            text = 'Und die erste Gewinnzahl, ist die {0}'.format( self.zufallszahl[self.durchlauf])      
        else:
-           text = self.textauswahl[ randint(0 ,len(self.textauswahl))]\
+           text = self.textauswahl[ randint(0 ,len(self.textauswahl) - 1 )]\
             .format( self.zaehlzahlen[self.durchlauf], self.zufallszahl[self.durchlauf])
        self.plainTextEdit.appendPlainText( text)
        self.durchlauf += 1
@@ -79,6 +93,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
        the next drawing starts with the timer event
        """
        self.plainTextEdit.setPlainText("")
+       self.label_zahl_2.setText("")
        self.durchlauf  = 0
        dt = datetime.now()
        i_anzahl = int(self.anzahl.text())
@@ -87,8 +102,8 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
        text = 'Willkommen bei der Ziehung der Lottozahlen, \n am {0}, \nAusgelost werden: {1} aus {2}!'
        text = text.format(dt.strftime("%d %B %Y um %H:%M"), i_anzahl, i_hochste)
        self.plainTextEdit.appendPlainText(text)
-       verz = self.horizontalSlider.value()  * 20
-       self.timer.start(verz)
+       self.timer.start(100)
+       self.NaechsteZahlverzoegerung = self.horizontalSlider.value()
        self.textauswahl = [ u'Und nun kommen wir zu der {0}. Gewinnzahl, es ist die {1}',\
             u'Die {0} Lottozahl der heutigen Ziehung ist die {1}',\
             u'Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}',\
@@ -114,8 +129,10 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
            self.AusgfeldLeeren.setVisible(False)
            self.label_Lottozahlen.setVisible(False)
            self.label_zahl.setVisible(True)
+           self.label_zahl_2.setVisible(True)
            self.label_Geschwindigkeit.setVisible(True)
            self.label_zahl.setText("")
+           self.label_zahl_2.setText("")
            self.btn_start.setVisible(True)
            self.horizontalSlider.setVisible(True)
 
@@ -127,6 +144,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
            self.AusgfeldLeeren.setVisible(True)
            self.label_Lottozahlen.setVisible(True)
            self.label_zahl.setVisible(False)
+           self.label_zahl_2.setVisible(False)
            self.label_Geschwindigkeit.setVisible(False)
            self.btn_start.setVisible(False)
            self.horizontalSlider.setVisible(False)
