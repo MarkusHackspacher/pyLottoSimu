@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Das Hauptprogramm
-
 Das Programm hat die Creative Commons by-sa Lizenz
 http://creativecommons.org/licenses/by-sa/3.0/deed.de
 """
+__doc__ = """The signals for the GUI"""
 
 import sys 
 from datetime import datetime
@@ -16,8 +15,11 @@ from PyQt4 import QtGui, QtCore
 from lotto import Ui_MainWindow as Dlg
 from zufallszahl import zufallszahlen
 
-class MeinDialog(QtGui.QMainWindow, Dlg): 
-   def __init__(self): 
+class MeinDialog(QtGui.QMainWindow, Dlg):
+   """
+   the GUI
+   """
+   def __init__(self):       
        QtGui.QDialog.__init__(self) 
        self.setupUi(self)
        self.actionLottosim()
@@ -39,6 +41,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
        self.statusBar().showMessage('Bereit')
 
    def ontimer(self):
+       """ start time to show a number"""       
        self.timer.stop()
        verz = self.horizontalSlider.value()
        if self.NaechsteZahlverzoegerung >= verz:
@@ -55,7 +58,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
            
 
    def NaechsteZahl(self):
-       """ Ausgabe der nächsten Zahl """
+       """ Display the draw """
        self.label_zahl_2.setText(str(self.zufallszahl[self.durchlauf]))
        if self.durchlauf == (len(self.zufallszahl)-3):
            text = u'Kommen wir nun zur der {0} Zahl, und damit die vorletze Zahl der heutigen Ziehung.. Es ist die {1}'.\
@@ -86,10 +89,8 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
        self.durchlauf += 1
         
    def onbtn_start(self):
-       """ start simultion with the first drawing
-       
-       init timer with the valve from the Scrollbar
-       
+       """ start simultion with the first drawing       
+       init timer with the valve from the Scrollbar       
        the next drawing starts with the timer event
        """
        self.plainTextEdit.setPlainText("")
@@ -164,11 +165,11 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
        self.plainTextEdit.appendPlainText(text)
   
    def onAusgfeldLeeren(self):
-       # clear the TextEdit
+       """ clear the TextEdit"""
        self.plainTextEdit.setPlainText("")
 
    def onInfo(self):
-        # Infoscreen
+        """ Infoscreen """
         text = 'Zufallsgenerator und Simulation einer Ziehung\n\n'
         text += 'Die Idee der Simulation ist\n'
         text = text + 'von imageupload dem Betreiber von \nhttp://www.my-image-upload.de/\n\n'
@@ -181,6 +182,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
         a.exec_()
         
 def gui():
+    """open the GUI"""
     app = QtGui.QApplication(sys.argv) 
     dialog = MeinDialog() 
     dialog.show() 

@@ -36,3 +36,38 @@ Dabei kann mit dem Schieber oben links die Geschwindigkeit verändert werden.
 Info und Lizenz:
 Das Programm hat die Creative Commons by-sa Lizenz
 http://creativecommons.org/licenses/by-sa/3.0/deed.de
+
+documentation of
+lotto/lotto_gui1.py
+The signals for the GUI
+
+class MeinDialog(PyQt4.QtGui.QMainWindow, lotto.Ui_MainWindow)
+       the GUI
+
+Methods defined here:
+ 
+NaechsteZahl(self)
+ Display the draw
+
+__init__(self)
+
+actionLottosim(self)
+ Changing the layout for simulation or generation
+ Move the textedit and change the visible
+
+onAusgfeldLeeren(self)
+ clear the TextEdit
+
+onInfo(self)
+ Infoscreen
+
+onZufallsgenerator(self)
+ Show the output from the random number generator
+
+onbtn_start(self)
+ start simultion with the first drawing       
+ init timer with the valve from the Scrollbar       
+ the next drawing starts with the timer event
+
+ontimer(self)
+ start time to show a number

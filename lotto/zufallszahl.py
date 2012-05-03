@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Erzeugen einer Zufallszahl mit Modultest beim direkten Aufruf
+Erzeugen einer Zufallszahl, mit Modultest beim direkten Aufruf
 """
 
 import random
@@ -9,6 +9,8 @@ import random
 # Zufallszahl ermitteln und als Wuerfelergebnis nehmen. 
 def zufallszahlen(anzahl,maxwert):
     """
+    @return: Gibt Zufallszahlen zurueck.
+    
     >>> zufallszahlen(16, 15)  
     Traceback (most recent call last):
     ValueError: sample larger than population
