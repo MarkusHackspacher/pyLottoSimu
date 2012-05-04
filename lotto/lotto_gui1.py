@@ -4,7 +4,7 @@
 Das Programm hat die Creative Commons by-sa Lizenz
 http://creativecommons.org/licenses/by-sa/3.0/deed.de
 """
-__doc__ = """The signals for the GUI"""
+__doc__ = "The signals for the GUI"
 
 import sys 
 from datetime import datetime
