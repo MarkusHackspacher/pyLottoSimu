@@ -83,10 +83,16 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
            self.timer.stop()
            text = ''           
        elif self.durchlauf == 0:
-           text = 'Und die erste Gewinnzahl, ist die {0}'.format( self.zufallszahl[self.durchlauf])      
+           text = 'Und die erste Gewinnzahl, ist die {0}'.format( self.zufallszahl[self.durchlauf])
+           self.LastTextnumber = -1
        else:
-           text = self.textauswahl[ randint(0 ,len(self.textauswahl) - 1 )]\
+           while True:
+               Textnumber = randint(0 ,len(self.textauswahl) - 1 ) 
+               if Textnumber != self.LastTextnumber:
+                   break
+           text = self.textauswahl[ Textnumber]\
             .format( self.zaehlzahlen[self.durchlauf], self.zufallszahl[self.durchlauf])
+           self.LastTextnumber = Textnumber
        self.plainTextEdit.appendPlainText( text)
        self.durchlauf += 1
         
