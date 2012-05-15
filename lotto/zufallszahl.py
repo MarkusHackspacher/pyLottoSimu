@@ -9,6 +9,10 @@ import random
 # Zufallszahl ermitteln und als Wuerfelergebnis nehmen. 
 def zufallszahlen(anzahl,maxwert):
     """
+    @param anzahl: Gibt die Anzahl der Ausgabewerte an. 
+    @param maxwert: Gibt den höchsten Zahlenwert an
+    @type anzahl: int
+    @type maxwert: int
     @return: Gibt Zufallszahlen zurueck.
     
     >>> zufallszahlen(16, 15)  

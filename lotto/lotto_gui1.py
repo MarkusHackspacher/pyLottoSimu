@@ -48,7 +48,8 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
            self.NaechsteZahlverzoegerung = verz
        self.NaechsteZahlverzoegerung -= 1
        if self.NaechsteZahlverzoegerung < 10 \
-        or (self.NaechsteZahlverzoegerung < 20 and (self.NaechsteZahlverzoegerung % 2) == 0) \
+        or (self.NaechsteZahlverzoegerung < 17 and (self.NaechsteZahlverzoegerung % 2) == 0) \
+        or (self.NaechsteZahlverzoegerung < 25 and (self.NaechsteZahlverzoegerung % 3) == 0) \
         or (self.NaechsteZahlverzoegerung % 4) == 0:
            self.label_zahl.setText(str(zufallszahlen(1, int(self.hochste.text()))[0]))
        self.timer.start(100)
@@ -60,6 +61,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
    def NaechsteZahl(self):
        """ Display the draw """
        self.label_zahl_2.setText(str(self.zufallszahl[self.durchlauf]))
+       self.label_zahl.setText(str(self.zufallszahl[self.durchlauf]))
        if self.durchlauf == (len(self.zufallszahl)-3):
            text = u'Kommen wir nun zur der {0} Zahl, und damit die vorletze Zahl der heutigen Ziehung.. Es ist die {1}'.\
             format( self.zaehlzahlen[ self.durchlauf], self.zufallszahl[ self.durchlauf])
