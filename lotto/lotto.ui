@@ -148,9 +148,6 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
         <property name="whatsThis">
          <string extracomment="Anzahl">Anzahl</string>
         </property>
-        <property name="accessibleName">
-         <string/>
-        </property>
         <property name="minimum">
          <number>1</number>
         </property>

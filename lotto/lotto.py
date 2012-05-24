@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'lotto.ui'
 #
-# Created: Thu May 24 20:55:36 2012
+# Created: Thu May 24 21:05:33 2012
 #      by: PyQt4 UI code generator 4.9.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -71,7 +71,6 @@ class Ui_MainWindow(object):
         self.label_3.setObjectName(_fromUtf8("label_3"))
         self.horizontalLayout.addWidget(self.label_3)
         self.anzahl = QtGui.QSpinBox(self.layoutWidget)
-        self.anzahl.setAccessibleName(_fromUtf8(""))
         self.anzahl.setMinimum(1)
         self.anzahl.setMaximum(15)
         self.anzahl.setProperty("value", 6)
