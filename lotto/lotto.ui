@@ -146,10 +146,10 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
          <string>Anzahl</string>
         </property>
         <property name="whatsThis">
-         <string>Anzahl</string>
+         <string extracomment="Anzahl">Anzahl</string>
         </property>
         <property name="accessibleName">
-         <string>Anzahl</string>
+         <string/>
         </property>
         <property name="minimum">
          <number>1</number>

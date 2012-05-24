@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'lotto.ui'
 #
-# Created: Tue Apr 10 21:46:45 2012
+# Created: Thu May 24 20:55:36 2012
 #      by: PyQt4 UI code generator 4.9.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -71,6 +71,7 @@ class Ui_MainWindow(object):
         self.label_3.setObjectName(_fromUtf8("label_3"))
         self.horizontalLayout.addWidget(self.label_3)
         self.anzahl = QtGui.QSpinBox(self.layoutWidget)
+        self.anzahl.setAccessibleName(_fromUtf8(""))
         self.anzahl.setMinimum(1)
         self.anzahl.setMaximum(15)
         self.anzahl.setProperty("value", 6)
@@ -182,7 +183,6 @@ class Ui_MainWindow(object):
         self.label_3.setText(QtGui.QApplication.translate("MainWindow", "Zahlen:", None, QtGui.QApplication.UnicodeUTF8))
         self.anzahl.setToolTip(QtGui.QApplication.translate("MainWindow", "Anzahl", None, QtGui.QApplication.UnicodeUTF8))
         self.anzahl.setWhatsThis(QtGui.QApplication.translate("MainWindow", "Anzahl", None, QtGui.QApplication.UnicodeUTF8))
-        self.anzahl.setAccessibleName(QtGui.QApplication.translate("MainWindow", "Anzahl", None, QtGui.QApplication.UnicodeUTF8))
         self.label_2.setText(QtGui.QApplication.translate("MainWindow", "aus", None, QtGui.QApplication.UnicodeUTF8))
         self.hochste.setToolTip(QtGui.QApplication.translate("MainWindow", "Höchste Zufallszahl", None, QtGui.QApplication.UnicodeUTF8))
         self.hochste.setStatusTip(QtGui.QApplication.translate("MainWindow", "Höchste Zufallszahl", None, QtGui.QApplication.UnicodeUTF8))
