@@ -10,9 +10,11 @@ import sys
 from datetime import datetime
 import time
 from random import randint
+from os.path import join
 from PyQt4 import QtGui, QtCore 
 
 from lotto import Ui_MainWindow as Dlg
+from dialog.show_drawing import DlgShowDrawing
 from zufallszahl import zufallszahlen
 
 class MeinDialog(QtGui.QMainWindow, Dlg):
@@ -21,6 +23,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
    """
    def __init__(self):       
        QtGui.QDialog.__init__(self) 
+       self.setWindowIcon(QtGui.QIcon(join("misc", "icon.ico")))
        self.setupUi(self)
        self.actionLottosim()
        self.timer =  QtCore.QTimer( self )
@@ -79,6 +82,8 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
             + u'die Zahlen lauteten:{0}, die Zusatzzahl: {1}, '.format(text1,self.zufallszahl[-1])\
             + u'ich wünsche Ihnen noch einen schönen Abend! Tschüss und auf Wiedersehen!'
            self.timer.stop()
+           dlg = DlgShowDrawing(zufallszahl)
+           dlg.exec_()
        elif self.durchlauf >= len(self.zufallszahl):
            self.timer.stop()
            text = ''           
