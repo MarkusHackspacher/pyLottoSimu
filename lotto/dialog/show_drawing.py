@@ -4,6 +4,13 @@ from PyQt4 import QtCore, QtGui
 class DlgShowDrawing(QtGui.QDialog):
     """Show the numbers in a dialog box"""
     def __init__(self, draw_number, highest_number):
+        """
+        @param draw_number: the number of draw 
+        @param highest_number: the number of the PushButtons
+        @type draw_number: int
+        @type highest_number: int
+        @return: none
+        """
         QtGui.QDialog.__init__(self)
         
         self.setWindowIcon(QtGui.QIcon(join("misc", "icon.ico")))
