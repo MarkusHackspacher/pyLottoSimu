@@ -2,6 +2,7 @@ from os.path import join
 from PyQt4 import QtCore, QtGui
 
 class DlgShowDrawing(QtGui.QDialog):
+    """Show the numbers in a dialog box"""
     def __init__(self, draw_number):
         QtGui.QDialog.__init__(self)
         
