@@ -82,7 +82,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
             + u'die Zahlen lauteten:{0}, die Zusatzzahl: {1}, '.format(text1,self.zufallszahl[-1])\
             + u'ich wünsche Ihnen noch einen schönen Abend! Tschüss und auf Wiedersehen!'
            self.timer.stop()
-           dlg = DlgShowDrawing(zufallszahl)
+           dlg = DlgShowDrawing(zufallszahl, self.i_hochste)
            dlg.exec_()
        elif self.durchlauf >= len(self.zufallszahl):
            self.timer.stop()
@@ -111,10 +111,10 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
        self.durchlauf  = 0
        dt = datetime.now()
        i_anzahl = int(self.anzahl.text())
-       i_hochste = int(self.hochste.text())
-       self.zufallszahl = zufallszahlen(i_anzahl+1,i_hochste)
+       self.i_hochste = int(self.hochste.text())
+       self.zufallszahl = zufallszahlen(i_anzahl+1, self.i_hochste)
        text = 'Willkommen bei der Ziehung der Lottozahlen, \n am {0}, \nAusgelost werden: {1} aus {2}!'
-       text = text.format(dt.strftime("%d %B %Y um %H:%M"), i_anzahl, i_hochste)
+       text = text.format(dt.strftime("%d %B %Y um %H:%M"), i_anzahl, self.i_hochste)
        self.plainTextEdit.appendPlainText(text)
        self.timer.start(100)
        self.NaechsteZahlverzoegerung = self.horizontalSlider.value()
