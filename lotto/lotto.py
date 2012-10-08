@@ -2,8 +2,8 @@
 
 # Form implementation generated from reading ui file 'lotto.ui'
 #
-# Created: Thu May 24 21:05:33 2012
-#      by: PyQt4 UI code generator 4.9.1
+# Created: Mon Oct  8 23:31:59 2012
+#      by: PyQt4 UI code generator 4.9.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -17,7 +17,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(480, 368)
+        MainWindow.resize(480, 375)
         self.Lottozahlen = QtGui.QWidget(MainWindow)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
@@ -56,7 +56,7 @@ class Ui_MainWindow(object):
         self.label_Lottozahlen.setAlignment(QtCore.Qt.AlignCenter)
         self.label_Lottozahlen.setObjectName(_fromUtf8("label_Lottozahlen"))
         self.layoutWidget = QtGui.QWidget(self.Rahmen)
-        self.layoutWidget.setGeometry(QtCore.QRect(60, 140, 351, 31))
+        self.layoutWidget.setGeometry(QtCore.QRect(60, 140, 351, 33))
         self.layoutWidget.setObjectName(_fromUtf8("layoutWidget"))
         self.horizontalLayout = QtGui.QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setMargin(0)
@@ -123,7 +123,7 @@ class Ui_MainWindow(object):
         self.horizontalSlider.setInvertedControls(False)
         self.horizontalSlider.setObjectName(_fromUtf8("horizontalSlider"))
         self.label_Geschwindigkeit = QtGui.QLabel(self.Rahmen)
-        self.label_Geschwindigkeit.setGeometry(QtCore.QRect(15, 80, 101, 20))
+        self.label_Geschwindigkeit.setGeometry(QtCore.QRect(15, 80, 121, 20))
         self.label_Geschwindigkeit.setObjectName(_fromUtf8("label_Geschwindigkeit"))
         self.label_zahl_2 = QtGui.QLabel(self.Rahmen)
         self.label_zahl_2.setEnabled(True)
@@ -137,7 +137,7 @@ class Ui_MainWindow(object):
         self.label_zahl_2.setObjectName(_fromUtf8("label_zahl_2"))
         MainWindow.setCentralWidget(self.Lottozahlen)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 480, 29))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuDatei = QtGui.QMenu(self.menubar)
         self.menuDatei.setObjectName(_fromUtf8("menuDatei"))
