@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+
+"""
+Das Programm hat die Creative Commons by-sa Lizenz
+http://creativecommons.org/licenses/by-sa/3.0/deed.de
+"""
+
 from os.path import join
 from PyQt4 import QtCore, QtGui
 
@@ -7,7 +14,7 @@ class DlgShowDrawing(QtGui.QDialog):
         """
         @param draw_number: the number of draw 
         @param highest_number: the number of the PushButtons
-        @type draw_number: int
+        @type draw_number: tuple of int
         @type highest_number: int
         @return: none
         """
@@ -37,6 +44,9 @@ class DlgShowDrawing(QtGui.QDialog):
         for button in xrange(highest_number):
             if button + 1 in draw_number:
                 self.Btn_Numerary_1to49[button].setFlat(False)
+                self.Btn_Numerary_1to49[button].setStyleSheet("color: red;")
+                if button + 1 == draw_number[-1]:
+                    self.Btn_Numerary_1to49[button].setStyleSheet("color: blue;")
             else:
                 self.Btn_Numerary_1to49[button].setFlat(True)
        

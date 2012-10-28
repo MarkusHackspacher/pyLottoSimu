@@ -83,7 +83,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
             + u'ich wünsche Ihnen noch einen schönen Abend! Tschüss und auf Wiedersehen!'
            self.timer.stop()
            #show dialog of the draw
-           dlg = DlgShowDrawing(zufallszahl, self.i_hochste)
+           dlg = DlgShowDrawing(self.zufallszahl, self.i_hochste)
            dlg.exec_()
        elif self.durchlauf >= len(self.zufallszahl):
            self.timer.stop()
