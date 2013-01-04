@@ -34,40 +34,22 @@ Die Zahlen auswählen und mit 'Start' die Simulation starten.
 Dabei kann mit dem Schieber oben links die Geschwindigkeit verändert werden.
 
 Info und Lizenz:
-Das Programm hat die Creative Commons by-sa Lizenz
-http://creativecommons.org/licenses/by-sa/3.0/deed.de
+pyLottoSimu
 
-documentation of
-lotto/lotto_gui1.py
-The signals for the GUI
+Copyright (C) <2012> Markus Hackspacher
 
-class MeinDialog(PyQt4.QtGui.QMainWindow, lotto.Ui_MainWindow)
-       the GUI
+This file is part of pyLottoSimu.
 
-Methods defined here:
- 
-NaechsteZahl(self)
- Display the draw
+pyLottoverwaltung is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-__init__(self)
+pyLottoSimu is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
 
-actionLottosim(self)
- Changing the layout for simulation or generation
- Move the textedit and change the visible
+You should have received a copy of the GNU General Public License
+along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
-onAusgfeldLeeren(self)
- clear the TextEdit
-
-onInfo(self)
- Infoscreen
-
-onZufallsgenerator(self)
- Show the output from the random number generator
-
-onbtn_start(self)
- start simultion with the first drawing       
- init timer with the valve from the Scrollbar       
- the next drawing starts with the timer event
-
-ontimer(self)
- start time to show a number
