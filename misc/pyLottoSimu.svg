@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64px"
+   height="64px"
+   id="svg3072"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="pyLottoSimu.svg"
+   inkscape:export-filename="/home/mar/workspace/python/src/pyLottoSimu/misc/pyLottoSimu.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs3074">
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3664"
+       id="radialGradient3724"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.95384616,0,7.7019228)"
+       cx="152.08333"
+       cy="166.875"
+       fx="152.08333"
+       fy="166.875"
+       r="67.708336" />
+    <linearGradient
+       id="linearGradient3664">
+      <stop
+         style="stop-color:#f8ffff;stop-opacity:1;"
+         offset="0"
+         id="stop3666" />
+      <stop
+         style="stop-color:#c7cec6;stop-opacity:0.99607843;"
+         offset="1"
+         id="stop3668" />
+    </linearGradient>
+    <radialGradient
+       r="67.708336"
+       fy="166.875"
+       fx="152.08333"
+       cy="166.875"
+       cx="152.08333"
+       gradientTransform="matrix(1,0,0,0.95384616,0,7.7019228)"
+       gradientUnits="userSpaceOnUse"
+       id="radialGradient3070"
+       xlink:href="#linearGradient3664"
+       inkscape:collect="always" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3664"
+       id="radialGradient3122"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.50307121,-0.52812181,2.815615,2.4386166,-394.28116,-159.75064)"
+       cx="152.08333"
+       cy="166.875"
+       fx="152.08333"
+       fy="166.875"
+       r="67.708336" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3664"
+       id="radialGradient2994"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.44621404,-0.16599727,0.12331376,0.32854185,-77.700809,28.883849)"
+       cx="213.95529"
+       cy="104.83537"
+       fx="213.95529"
+       fy="104.83537"
+       r="67.708336" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.6970563"
+     inkscape:cx="32"
+     inkscape:cy="94.820436"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     inkscape:window-width="1360"
+     inkscape:window-height="689"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3077">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://www.gnu.org/licenses" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Markus Hackspacher</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:date>2013</dc:date>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <circle
+       cx="32"
+       cy="32"
+       r="32"
+       stroke="black"
+       stroke-width="2"
+       style="fill:url(#radialGradient2994);fill-opacity:1;fill-rule:evenodd;stroke:none"
+       id="circle17" />
+  </g>
+</svg>
