@@ -203,8 +203,8 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
         text = 'Zufallsgenerator und Simulation einer Ziehung\n\n'
         text += 'Die Idee der Simulation ist\n'
         text = text + 'von imageupload dem Betreiber von \nhttp://www.my-image-upload.de/\n\n'
-        text = text + 'Lizenz: Creative Commons by-sa\n'
-        text = text + 'http://creativecommons.org/licenses/by-sa/3.0/deed.de'
+        text = text + 'Lizenz: GNU GPL v3\n'
+        text = text + 'http://www.gnu.org/licenses/'
         a = QtGui.QMessageBox()
         a.setWindowTitle('Info')
         a.setText(text)
