@@ -45,8 +45,6 @@ class DlgShowDrawing(QtGui.QDialog):
             if button + 1 in draw_number:
                 self.Btn_Numerary_1to49[button].setFlat(False)
                 self.Btn_Numerary_1to49[button].setStyleSheet("color: red;")
-                if button + 1 == draw_number[-1]:
-                    self.Btn_Numerary_1to49[button].setStyleSheet("color: blue;")
             else:
                 self.Btn_Numerary_1to49[button].setFlat(True)
        

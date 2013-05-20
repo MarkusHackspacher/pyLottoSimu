@@ -85,27 +85,24 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
         """ Display the draw """
         self.label_zahl_2.setText(str(self.zufallszahl[self.durchlauf]))
         self.label_zahl.setText(str(self.zufallszahl[self.durchlauf]))
-        if self.durchlauf == (len(self.zufallszahl) - 3):
+        if self.durchlauf == (len(self.zufallszahl) - 2):
             text = u'Kommen wir nun zur der {0} Zahl, und damit die vorletze'\
              u'Zahl der heutigen Ziehung.. Es ist die {1}'.\
              format(self.zaehlzahlen[self.durchlauf],
               self.zufallszahl[self.durchlauf])
-        elif self.durchlauf == (len(self.zufallszahl) - 2):
+        elif self.durchlauf == (len(self.zufallszahl) - 1):
             text = u'Und nun kommen wir zu der {0} und letzten Gewinnzahl,'\
              'es ist die {1}'.\
              format(self.zaehlzahlen[self.durchlauf],
               self.zufallszahl[self.durchlauf])
-        elif self.durchlauf == len(self.zufallszahl) - 1:
-            text = 'So, und dies ist die Zusatzzahl .. Es ist die {0}'\
-             .format(self.zufallszahl[self.durchlauf])
             self.plainTextEdit.appendPlainText(text)
-            zufallszahl = sorted(self.zufallszahl[:-1])
+            zufallszahl = sorted(self.zufallszahl[:])
             text1 = "".join(map(" {0:02d}".format, zufallszahl))
             text = u'Das war die heutige Ziehung der Lottozahlen, '\
-            u'die Zahlen lauteten:{0}, die Zusatzzahl: {1}, '\
+            u'die Zahlen lauteten:{0}, '\
             u'ich wünsche Ihnen noch einen schönen Abend! '\
             u'Tschüss und auf Wiedersehen!'\
-            .format(text1, self.zufallszahl[-1])
+            .format(text1)
             self.timer.stop()
             #show dialog of the draw
             dlg = DlgShowDrawing(self.zufallszahl, self.i_hochste)
@@ -140,7 +137,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
         dt = datetime.now()
         i_anzahl = int(self.anzahl.text())
         self.i_hochste = int(self.hochste.text())
-        self.zufallszahl = zufallszahlen(i_anzahl + 1, self.i_hochste)
+        self.zufallszahl = zufallszahlen(i_anzahl, self.i_hochste)
         text = 'Willkommen bei der Ziehung der Lottozahlen, \n am {0}, \n'\
          'Ausgelost werden: {1} aus {2}!'.format(
          dt.strftime("%d %B %Y um %H:%M"), i_anzahl, self.i_hochste)
