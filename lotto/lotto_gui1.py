@@ -86,12 +86,12 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
         self.label_zahl_2.setText(str(self.zufallszahl[self.durchlauf]))
         self.label_zahl.setText(str(self.zufallszahl[self.durchlauf]))
         if self.durchlauf == (len(self.zufallszahl) - 2):
-            text = u'Kommen wir nun zur der {0} Zahl, und damit die vorletze'\
-             u'Zahl der heutigen Ziehung.. Es ist die {1}'.\
+            text = u'Kommen wir nun zur der {0} Zahl, und damit die vorletzte '\
+             u'Zahl der heutigen Ziehung. Es ist die {1}'.\
              format(self.zaehlzahlen[self.durchlauf],
               self.zufallszahl[self.durchlauf])
         elif self.durchlauf == (len(self.zufallszahl) - 1):
-            text = u'Und nun kommen wir zu der {0} und letzten Gewinnzahl,'\
+            text = u'Und nun kommen wir zu der {0} und letzten Gewinnzahl, '\
              'es ist die {1}'.\
              format(self.zaehlzahlen[self.durchlauf],
               self.zufallszahl[self.durchlauf])
