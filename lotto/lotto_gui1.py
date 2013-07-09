@@ -145,7 +145,7 @@ class MeinDialog(QtGui.QMainWindow, Dlg):
         self.timer.start(100)
         self.NaechsteZahlverzoegerung = self.horizontalSlider.value()
         self.textauswahl = [
-            u'Und nun kommen wir zu der {0}. Gewinnzahl, es ist die {1}',
+            u'Und nun kommen wir zu der {0} Gewinnzahl, es ist die {1}',
             u'Die {0} Lottozahl der heutigen Ziehung ist die {1}',
             u'Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}',
             u'Kommen wir nun zur {0} Zahl der heutigen Ziehung {1}',
