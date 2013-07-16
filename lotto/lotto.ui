@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>480</width>
-    <height>375</height>
+    <height>359</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -143,6 +143,9 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
       <item>
        <widget class="QSpinBox" name="anzahl">
         <property name="toolTip">
+         <string>Anzahl</string>
+        </property>
+        <property name="statusTip">
          <string>Anzahl</string>
         </property>
         <property name="whatsThis">
@@ -370,7 +373,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
      <x>0</x>
      <y>0</y>
      <width>480</width>
-     <height>29</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuDatei">
