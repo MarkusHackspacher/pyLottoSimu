@@ -44,7 +44,7 @@ class MeinDialog(QtGui.QMainWindow):
         # Set up the user interface from Designer.
         self.ui = uic.loadUi(join("lotto", "lotto.ui"))
         self.ui.setWindowIcon(QtGui.QIcon(join("misc", "pyLottoSimu.svg")))
-
+ 
         self.actionLottosim()
         self.timer = QtCore.QTimer(self)
 
@@ -144,9 +144,9 @@ class MeinDialog(QtGui.QMainWindow):
         i_anzahl = int(self.ui.anzahl.text())
         self.i_hochste = int(self.ui.hochste.text())
         self.zufallszahl = zufallszahlen(i_anzahl, self.i_hochste)
-        text = 'Willkommen bei der Ziehung der Lottozahlen, \n am {0}, \n'\
+        text = self.tr('Willkommen bei der Ziehung der Lottozahlen, \n am {0}, \n'\
          'Ausgelost werden: {1} aus {2}!'.format(
-         dt.strftime("%d %B %Y um %H:%M"), i_anzahl, self.i_hochste)
+         dt.strftime("%d %B %Y um %H:%M"), i_anzahl, self.i_hochste))
         self.ui.plainTextEdit.appendPlainText(text)
         self.timer.start(100)
         self.NaechsteZahlverzoegerung = self.ui.horizontalSlider.value()
@@ -204,7 +204,7 @@ class MeinDialog(QtGui.QMainWindow):
         if zufallszahl:
             text = "".join(map(" {0:02d}".format, zufallszahl))
         else:
-            text = "Fehler, keine gültigen Zahlen vorhanden!"
+            text = self.tr("Fehler, keine gültigen Zahlen vorhanden!")
         dt = datetime.now()
         text = dt.strftime("%H:%M:%S: ") + str(i_anzahl) + \
          " aus " + str(i_hochste) + ": " + text
@@ -216,21 +216,29 @@ class MeinDialog(QtGui.QMainWindow):
 
     def onInfo(self):
         """ Infoscreen """
-        text = 'Zufallsgenerator und Simulation einer Ziehung\n\n' \
+        text = self.tr(
+        'Zufallsgenerator und Simulation einer Ziehung\n\n' \
         'Die Idee der Simulation ist von imageupload,\n' \
         'dem Betreiber von http://www.my-image-upload.de/\n\n' \
         'Lizenz: GNU GPL v3\n' \
-        'http://www.gnu.org/licenses/'
+        'http://www.gnu.org/licenses/')
         a = QtGui.QMessageBox()
+        a.setObjectName('Info')
         a.setWindowTitle('Info')
         a.setText(text)
-        a.setInformativeText('Erstellt mit Python von Markus Hackspacher')
+        a.setInformativeText(QtGui.QApplication.translate("Info", 
+         'Erstellt mit Python von Markus Hackspacher', None, QtGui.QApplication.UnicodeUTF8))
         a.exec_()
 
 
 def gui():
     """open the GUI"""
     app = QtGui.QApplication(sys.argv)
+    locale=unicode(QtCore.QLocale.system().name())
+    print "lotto1_" + unicode(locale)
+    translator = QtCore.QTranslator()
+    translator.load(join("lotto","lotto1_" + unicode(locale)))
+    app.installTranslator(translator)
     dialog = MeinDialog()
     sys.exit(app.exec_())
 
