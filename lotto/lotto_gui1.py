@@ -92,23 +92,23 @@ class MeinDialog(QtGui.QMainWindow):
         self.ui.label_zahl_2.setText(str(self.zufallszahl[self.durchlauf]))
         self.ui.label_zahl.setText(str(self.zufallszahl[self.durchlauf]))
         if self.durchlauf == (len(self.zufallszahl) - 2):
-            text = u'Kommen wir nun zur der {0} Zahl, und damit die vorletzte '\
+            text = self.tr(u'Kommen wir nun zur der {0} Zahl, und damit die vorletzte '\
              u'Zahl der heutigen Ziehung. Es ist die {1}'.\
              format(self.zaehlzahlen[self.durchlauf],
-              self.zufallszahl[self.durchlauf])
+              self.zufallszahl[self.durchlauf]))
         elif self.durchlauf == (len(self.zufallszahl) - 1):
-            text = u'Und nun kommen wir zu der {0} und letzten Gewinnzahl, '\
+            text = self.tr(u'Und nun kommen wir zu der {0} und letzten Gewinnzahl, '\
              'es ist die {1}'.\
              format(self.zaehlzahlen[self.durchlauf],
-              self.zufallszahl[self.durchlauf])
+              self.zufallszahl[self.durchlauf]))
             self.ui.plainTextEdit.appendPlainText(text)
             zufallszahl = sorted(self.zufallszahl[:])
             text1 = "".join(map(" {0:02d}".format, zufallszahl))
-            text = u'Das war die heutige Ziehung der Lottozahlen, '\
+            text = self.tr(u'Das war die heutige Ziehung der Lottozahlen, '\
             u'die Zahlen lauteten:{0}, '\
             u'ich wünsche Ihnen noch einen schönen Abend! '\
             u'Tschüss und auf Wiedersehen!'\
-            .format(text1)
+            .format(text1))
             self.timer.stop()
             #show dialog of the draw
             dlgdraw = DlgShowDrawing(self.zufallszahl, self.i_hochste)
@@ -117,8 +117,8 @@ class MeinDialog(QtGui.QMainWindow):
             self.timer.stop()
             text = ''
         elif self.durchlauf == 0:
-            text = 'Und die erste Gewinnzahl, ist die {0}'.format(
-             self.zufallszahl[self.durchlauf])
+            text = self.tr('Und die erste Gewinnzahl, ist die {0}'.format(
+             self.zufallszahl[self.durchlauf]))
             self.LastTextnumber = -1
         else:
             while True:
