@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="en_GB" sourcelanguage="de_DE">
+<!DOCTYPE TS><TS version="2.0" language="en_GB" sourcelanguage="de_DE">
 <context>
     <name>Info</name>
     <message>
         <location filename="lotto_gui1.py" line="228"/>
         <source>Erstellt mit Python von Markus Hackspacher</source>
-        <translation type="unfinished">by Markus Hackspacher</translation>
+        <translation type="obsolete">by Markus Hackspacher</translation>
     </message>
 </context>
 <context>
@@ -41,7 +40,7 @@
         <source>aus</source>
         <translation type="unfinished">from</translation>
     </message>
-    <message utf8="true">
+    <message encoding="UTF-8">
         <location filename="lotto.ui" line="191"/>
         <source>Höchste Zufallszahl</source>
         <translation type="unfinished"></translation>
@@ -110,6 +109,57 @@
         <location filename="lotto.ui" line="431"/>
         <source>Lottosimulation</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context encoding="UTF-8">
+    <name>MeinDialog</name>
+    <message>
+        <location filename="lotto_gui1.py" line="95"/>
+        <source>Kommen wir nun zur der {0} Zahl, und damit die vorletzte Zahl der heutigen Ziehung. Es ist die {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="100"/>
+        <source>Und nun kommen wir zu der {0} und letzten Gewinnzahl, es ist die {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message encoding="UTF-8">
+        <location filename="lotto_gui1.py" line="107"/>
+        <source>Das war die heutige Ziehung der Lottozahlen, die Zahlen lauteten:{0}, ich wünsche Ihnen noch einen schönen Abend! Tschüss und auf Wiedersehen!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="120"/>
+        <source>Und die erste Gewinnzahl, ist die {0}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="147"/>
+        <source>Willkommen bei der Ziehung der Lottozahlen, 
+ am {0}, 
+Ausgelost werden: {1} aus {2}!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message encoding="UTF-8">
+        <location filename="lotto_gui1.py" line="207"/>
+        <source>Fehler, keine gültigen Zahlen vorhanden!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="219"/>
+        <source>Zufallsgenerator und Simulation einer Ziehung
+
+Die Idee der Simulation ist von imageupload,
+dem Betreiber von http://www.my-image-upload.de/
+
+Lizenz: GNU GPL v3
+http://www.gnu.org/licenses/</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="229"/>
+        <source>Erstellt mit Python von Markus Hackspacher</source>
+        <translation type="unfinished">by Markus Hackspacher</translation>
     </message>
 </context>
 </TS>

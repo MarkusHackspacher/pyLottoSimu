@@ -226,8 +226,8 @@ class MeinDialog(QtGui.QMainWindow):
         a.setObjectName('Info')
         a.setWindowTitle('Info')
         a.setText(text)
-        a.setInformativeText(QtGui.QApplication.translate("Info", 
-         'Erstellt mit Python von Markus Hackspacher', None, QtGui.QApplication.UnicodeUTF8))
+        text = self.tr('Erstellt mit Python von Markus Hackspacher')
+        a.setInformativeText(text)
         a.exec_()
 
 

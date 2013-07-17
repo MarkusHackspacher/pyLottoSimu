@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<!DOCTYPE TS><TS version="2.0" language="de_DE" sourcelanguage="">
 <context>
     <name>Info</name>
     <message>
         <location filename="lotto_gui1.py" line="229"/>
         <source>Erstellt mit Python von Markus Hackspacher</source>
-        <translation>Erstellt mit Python von Markus Hackspacher</translation>
+        <translation type="obsolete">Erstellt mit Python von Markus Hackspacher</translation>
     </message>
 </context>
 <context>
@@ -41,7 +40,7 @@
         <source>aus</source>
         <translation>aus</translation>
     </message>
-    <message utf8="true">
+    <message encoding="UTF-8">
         <location filename="lotto.ui" line="191"/>
         <source>Höchste Zufallszahl</source>
         <translation>Höchste Zufallszahl</translation>
@@ -112,7 +111,7 @@
         <translation>Lottosimulation</translation>
     </message>
 </context>
-<context>
+<context encoding="UTF-8">
     <name>MeinDialog</name>
     <message>
         <location filename="lotto_gui1.py" line="95"/>
@@ -124,7 +123,7 @@
         <source>Und nun kommen wir zu der {0} und letzten Gewinnzahl, es ist die {1}</source>
         <translation>Und nun kommen wir zu der {0} und letzten Gewinnzahl, es ist die {1}</translation>
     </message>
-    <message utf8="true">
+    <message encoding="UTF-8">
         <location filename="lotto_gui1.py" line="107"/>
         <source>Das war die heutige Ziehung der Lottozahlen, die Zahlen lauteten:{0}, ich wünsche Ihnen noch einen schönen Abend! Tschüss und auf Wiedersehen!</source>
         <translation>Das war die heutige Ziehung der Lottozahlen, die Zahlen lauteten:{0}, ich wünsche Ihnen noch einen schönen Abend! Tschüss und auf Wiedersehen!</translation>
@@ -143,7 +142,7 @@ Ausgelost werden: {1} aus {2}!</source>
  am {0}, 
 Ausgelost werden: {1} aus {2}!</translation>
     </message>
-    <message utf8="true">
+    <message encoding="UTF-8">
         <location filename="lotto_gui1.py" line="207"/>
         <source>Fehler, keine gültigen Zahlen vorhanden!</source>
         <translation>Fehler, keine gültigen Zahlen vorhanden!</translation>
@@ -164,6 +163,11 @@ dem Betreiber von http://www.my-image-upload.de/
 
 Lizenz: GNU GPL v3
 http://www.gnu.org/licenses/</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="229"/>
+        <source>Erstellt mit Python von Markus Hackspacher</source>
+        <translation>Erstellt mit Python von Markus Hackspacher</translation>
     </message>
 </context>
 </TS>
