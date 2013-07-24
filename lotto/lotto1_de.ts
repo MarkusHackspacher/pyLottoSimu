@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<!DOCTYPE TS><TS version="2.0" language="de_DE" sourcelanguage="">
 <context>
     <name>DlgShowDrawing</name>
     <message>
         <location filename="dialog/show_drawing.py" line="69"/>
         <source>Show Drawing</source>
         <translation>Ziehung</translation>
-    </message>
-</context>
-<context>
-    <name>Info</name>
-    <message>
-        <location filename="lotto_gui1.py" line="229"/>
-        <source>Erstellt mit Python von Markus Hackspacher</source>
-        <translation type="obsolete">Erstellt mit Python von Markus Hackspacher</translation>
     </message>
 </context>
 <context>
@@ -49,7 +40,7 @@
         <source>aus</source>
         <translation>aus</translation>
     </message>
-    <message utf8="true">
+    <message encoding="UTF-8">
         <location filename="lotto.ui" line="191"/>
         <source>Höchste Zufallszahl</source>
         <translation>Höchste Zufallszahl</translation>
@@ -132,7 +123,7 @@
         <source>Und nun kommen wir zu der {0} und letzten Gewinnzahl, es ist die {1}</source>
         <translation>Und nun kommen wir zu der {0} und letzten Gewinnzahl, es ist die {1}</translation>
     </message>
-    <message utf8="true">
+    <message encoding="UTF-8">
         <location filename="lotto_gui1.py" line="102"/>
         <source>Das war die heutige Ziehung der Lottozahlen, die Zahlen lauteten:{0}, ich wünsche Ihnen noch einen schönen Abend! Tschüss und auf Wiedersehen!</source>
         <translation>Das war die heutige Ziehung der Lottozahlen, die Zahlen lauteten:{0}, ich wünsche Ihnen noch einen schönen Abend! Tschüss und auf Wiedersehen!</translation>
@@ -151,13 +142,13 @@ Ausgelost werden: {1} aus {2}!</source>
  am {0}, 
 Ausgelost werden: {1} aus {2}!</translation>
     </message>
-    <message utf8="true">
-        <location filename="lotto_gui1.py" line="203"/>
+    <message encoding="UTF-8">
+        <location filename="lotto_gui1.py" line="211"/>
         <source>Fehler, keine gültigen Zahlen vorhanden!</source>
         <translation>Fehler, keine gültigen Zahlen vorhanden!</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="215"/>
+        <location filename="lotto_gui1.py" line="223"/>
         <source>Zufallsgenerator und Simulation einer Ziehung
 
 Die Idee der Simulation ist von imageupload,
@@ -174,7 +165,7 @@ Lizenz: GNU GPL v3
 http://www.gnu.org/licenses/</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="225"/>
+        <location filename="lotto_gui1.py" line="233"/>
         <source>Erstellt mit Python von Markus Hackspacher</source>
         <translation>Erstellt mit Python von Markus Hackspacher</translation>
     </message>
@@ -184,12 +175,12 @@ http://www.gnu.org/licenses/</translation>
         <translation>Bereit</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="169"/>
+        <location filename="lotto_gui1.py" line="177"/>
         <source>Lottosimulation</source>
         <translation>Lottosimulation</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="184"/>
+        <location filename="lotto_gui1.py" line="192"/>
         <source>Zufallsgenerator</source>
         <translation>Zufallsgenerator</translation>
     </message>
@@ -201,6 +192,86 @@ Ausgelost werden: {1} aus {2}!</source>
         <translation>Willkommen bei der Ziehung der Lottozahlen,
 am {0}.
 Ausgelost werden: {1} aus {2}!</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="150"/>
+        <source>Und nun kommen wir zu der {0} Gewinnzahl, es ist die {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="152"/>
+        <source>Die {0} Lottozahl der heutigen Ziehung ist die {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="154"/>
+        <source>Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="156"/>
+        <source>Kommen wir nun zur {0} Zahl der heutigen Ziehung {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="158"/>
+        <source>Die {0} Gewinnzahl lautet {1}</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="160"/>
+        <source>ersten</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="160"/>
+        <source>zweiten</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="161"/>
+        <source>dritten</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="161"/>
+        <source>vierten</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message encoding="UTF-8">
+        <location filename="lotto_gui1.py" line="161"/>
+        <source>fünften</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="162"/>
+        <source>sechsten</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="162"/>
+        <source>siebten</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="162"/>
+        <source>achten</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="163"/>
+        <source>neunten</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="214"/>
+        <source> aus </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="231"/>
+        <source>Info</source>
+        <translation>Info</translation>
     </message>
 </context>
 </TS>

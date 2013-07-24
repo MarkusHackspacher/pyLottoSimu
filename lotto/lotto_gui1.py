@@ -48,7 +48,7 @@ class MeinDialog(QtGui.QMainWindow):
         self.actionLottosim()
         self.timer = QtCore.QTimer(self)
 
-        # Slots einrichten
+        # Slots
         self.ui.Zufallsgenerator.clicked.connect(self.onZufallsgenerator)
         self.ui.AusgfeldLeeren.clicked.connect(self.onAusgfeldLeeren)
         self.ui.btn_start.clicked.connect(self.onbtn_start)
@@ -146,14 +146,22 @@ class MeinDialog(QtGui.QMainWindow):
         self.ui.plainTextEdit.appendPlainText(text)
         self.timer.start(100)
         self.NaechsteZahlverzoegerung = self.ui.horizontalSlider.value()
-        self.textauswahl = [
-            u'Und nun kommen wir zu der {0} Gewinnzahl, es ist die {1}',
-            u'Die {0} Lottozahl der heutigen Ziehung ist die {1}',
-            u'Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}',
-            u'Kommen wir nun zur {0} Zahl der heutigen Ziehung {1}',
-            u'Die {0} Gewinnzahl lautet {1}']
-        self.zaehlzahlen = ['ersten', 'zweiten', 'dritten', 'vierten',
-        u'fünften', 'sechsten', 'siebten', 'achten', 'neunten']
+        textauswahl_tr = [
+            self.tr(
+            'Und nun kommen wir zu der {0} Gewinnzahl, es ist die {1}'),
+            self.tr(
+            'Die {0} Lottozahl der heutigen Ziehung ist die {1}'),
+            self.tr(
+            'Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}',),
+            self.tr(
+            'Kommen wir nun zur {0} Zahl der heutigen Ziehung {1}',),
+            self.tr('Die {0} Gewinnzahl lautet {1}')]
+        self.textauswahl = map(unicode, textauswahl_tr)
+        zaehlzahlen_tr = [self.tr('ersten'), self.tr('zweiten'),
+         self.tr('dritten'), self.tr('vierten'), self.tr('fünften'),
+         self.tr('sechsten'), self.tr('siebten'), self.tr('achten'),
+         self.tr('neunten')]
+        self.zaehlzahlen = map(unicode, zaehlzahlen_tr)
         i = 10
         while i < len(self.zufallszahl):
             self.zaehlzahlen.append(str(i) + ".")
@@ -203,7 +211,7 @@ class MeinDialog(QtGui.QMainWindow):
             text = self.tr("Fehler, keine gültigen Zahlen vorhanden!")
         dt = datetime.now()
         text = dt.strftime("%H:%M:%S: ") + str(i_anzahl) + \
-         " aus " + str(i_hochste) + ": " + text
+         self.tr(" aus ") + str(i_hochste) + ": " + text
         self.ui.plainTextEdit.appendPlainText(text)
 
     def onAusgfeldLeeren(self):
@@ -219,8 +227,7 @@ class MeinDialog(QtGui.QMainWindow):
         'Lizenz: GNU GPL v3\n'
         'http://www.gnu.org/licenses/')
         a = QtGui.QMessageBox()
-        a.setObjectName('Info')
-        a.setWindowTitle('Info')
+        a.setWindowTitle(self.tr('Info'))
         a.setText(text)
         text = self.tr('Erstellt mit Python von Markus Hackspacher')
         a.setInformativeText(text)
