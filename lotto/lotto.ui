@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>pyLottoSimu</string>
   </property>
-  <widget class="QWidget" name="Lottozahlen">
+  <widget class="QWidget" name="widget_lottery_numbers">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
      <horstretch>0</horstretch>
@@ -38,7 +38,7 @@
     </font>
    </property>
    <property name="windowTitle">
-    <string>Lottozahlen</string>
+    <string>lottery numbers</string>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -79,7 +79,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
       </rect>
      </property>
      <property name="whatsThis">
-      <string extracomment="Ausgabefeld">Ausgabefeld</string>
+      <string extracomment="output field">output field</string>
      </property>
      <property name="autoFillBackground">
       <bool>false</bool>
@@ -107,7 +107,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
       </font>
      </property>
      <property name="text">
-      <string>Lottozahlen</string>
+      <string>lottery numbers</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -133,7 +133,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
          </font>
         </property>
         <property name="text">
-         <string>Zahlen:</string>
+         <string>Numbers:</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -141,15 +141,15 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
        </widget>
       </item>
       <item>
-       <widget class="QSpinBox" name="anzahl">
+       <widget class="QSpinBox" name="sbox_drawn_numbers">
         <property name="toolTip">
-         <string>Anzahl</string>
+         <string>drawn numbers</string>
         </property>
         <property name="statusTip">
-         <string>Anzahl</string>
+         <string>drawn numbers</string>
         </property>
         <property name="whatsThis">
-         <string extracomment="Anzahl">Anzahl</string>
+         <string extracomment="drawn numbers">drawn numbers</string>
         </property>
         <property name="minimum">
          <number>1</number>
@@ -172,7 +172,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
          </font>
         </property>
         <property name="text">
-         <string>aus</string>
+         <string>out of</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -180,15 +180,15 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
        </widget>
       </item>
       <item>
-       <widget class="QSpinBox" name="hochste">
+       <widget class="QSpinBox" name="sbox_from_a_set_of">
         <property name="toolTip">
-         <string>Höchste Zufallszahl</string>
+         <string>from a set of</string>
         </property>
         <property name="statusTip">
-         <string>Höchste Zufallszahl</string>
+         <string>from a set of</string>
         </property>
         <property name="whatsThis">
-         <string extracomment="Höchste Zufallszahl">Höchste Zufallszahl</string>
+         <string extracomment="from a set of">from a set of</string>
         </property>
         <property name="buttonSymbols">
          <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -209,7 +209,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
       </item>
      </layout>
     </widget>
-    <widget class="QPushButton" name="Zufallsgenerator">
+    <widget class="QPushButton" name="btn_random_numbers">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -219,13 +219,13 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
       </rect>
      </property>
      <property name="toolTip">
-      <string>Zufallsgenerator ein</string>
+      <string>random numbers</string>
      </property>
      <property name="statusTip">
-      <string>Zufallsgenerator ein</string>
+      <string>random numbers</string>
      </property>
      <property name="text">
-      <string>Zufallsgenerator ein</string>
+      <string>random numbers</string>
      </property>
     </widget>
     <widget class="QPushButton" name="AusgfeldLeeren">
@@ -238,10 +238,10 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
       </rect>
      </property>
      <property name="toolTip">
-      <string>Ausgabefeld leeren</string>
+      <string>output field empty</string>
      </property>
      <property name="text">
-      <string>Ausgabefeld leeren</string>
+      <string>output field empty</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_zahl">
@@ -280,13 +280,13 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
       </rect>
      </property>
      <property name="toolTip">
-      <string>Start</string>
+      <string>start draw</string>
      </property>
      <property name="statusTip">
-      <string>Start</string>
+      <string>start draw</string>
      </property>
      <property name="text">
-      <string>Start</string>
+      <string>start draw</string>
      </property>
     </widget>
     <widget class="QSlider" name="horizontalSlider">
@@ -336,7 +336,10 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
       </rect>
      </property>
      <property name="text">
-      <string>Geschwindigkeit</string>
+      <string>Speed</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_zahl_2">
@@ -378,19 +381,19 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
    </property>
    <widget class="QMenu" name="menuDatei">
     <property name="title">
-     <string>Datei</string>
+     <string>File</string>
     </property>
     <addaction name="actionBeenden"/>
    </widget>
    <widget class="QMenu" name="menuHilfe">
     <property name="title">
-     <string>Hilfe</string>
+     <string>Help</string>
     </property>
     <addaction name="actionInfo"/>
    </widget>
    <widget class="QMenu" name="menuModus">
     <property name="title">
-     <string>Modus</string>
+     <string>Mode</string>
     </property>
     <addaction name="actionLottosimulation"/>
    </widget>
@@ -401,7 +404,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionBeenden">
    <property name="text">
-    <string>Beenden</string>
+    <string>Quit</string>
    </property>
   </action>
   <action name="actionInfo">
@@ -417,7 +420,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Zufallsgenerator</string>
+    <string>random numbers</string>
    </property>
   </action>
   <action name="actionLottosimulation">
@@ -428,19 +431,15 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Lottosimulation</string>
+    <string>Lotto simulation</string>
    </property>
   </action>
   <action name="actionHilfe">
    <property name="text">
-    <string>Hilfe</string>
+    <string>Help</string>
    </property>
   </action>
  </widget>
- <tabstops>
-  <tabstop>anzahl</tabstop>
-  <tabstop>hochste</tabstop>
- </tabstops>
  <resources>
   <include location="lottokugeln.qrc"/>
  </resources>
