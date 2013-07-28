@@ -198,6 +198,7 @@ class MeinDialog(QtGui.QMainWindow):
             self.ui.label_Geschwindigkeit.setVisible(False)
             self.ui.btn_start.setVisible(False)
             self.ui.horizontalSlider.setVisible(False)
+            self.timer.stop()
 
     def onZufallsgenerator(self):
         """ Show the output from the random number generator """
@@ -234,14 +235,22 @@ class MeinDialog(QtGui.QMainWindow):
         a.exec_()
 
     def onClose(self):
+        """close GUI"""
         self.ui.close()
 
 
-def gui():
-    """open the GUI"""
+def gui(arguments):
+    """open the GUI
+    @param arguments: language
+    @type arguments: string
+    @return: none
+    """
+    if len(arguments) > 1:
+        locale = arguments[1]
+    else:
+        locale = unicode(QtCore.QLocale.system().name())
+        print "locale: " + unicode(locale)
     app = QtGui.QApplication(sys.argv)
-    locale = unicode(QtCore.QLocale.system().name())
-    print "lotto1_" + unicode(locale)
     translator = QtCore.QTranslator()
     translator.load(join("lotto", "lotto1_" + unicode(locale)))
     app.installTranslator(translator)
