@@ -49,14 +49,14 @@ class MeinDialog(QtGui.QMainWindow):
         self.timer = QtCore.QTimer(self)
 
         # Slots
-        self.ui.Zufallsgenerator.clicked.connect(self.onZufallsgenerator)
+        self.ui.btn_random_numbers.clicked.connect(self.onZufallsgenerator)
         self.ui.AusgfeldLeeren.clicked.connect(self.onAusgfeldLeeren)
         self.ui.btn_start.clicked.connect(self.onbtn_start)
         self.ui.actionBeenden.triggered.connect(self.onClose)
         self.ui.actionInfo.triggered.connect(self.onInfo)
         self.ui.actionLottosimulation.changed.connect(self.actionLottosim)
         self.timer.timeout.connect(self.ontimer)
-        self.ui.statusBar().showMessage(self.tr('Bereit'))
+        self.ui.statusBar().showMessage(self.tr('ready'))
         verz = self.ui.horizontalSlider.value()
         self.NaechsteZahlverzoegerung = verz
 
@@ -76,7 +76,7 @@ class MeinDialog(QtGui.QMainWindow):
          and (self.NaechsteZahlverzoegerung % 3) == 0) \
          or (self.NaechsteZahlverzoegerung % 4) == 0:
             self.ui.label_zahl.setText(str(zufallszahlen(1,
-             int(self.ui.hochste.text()))[0]))
+             int(self.ui.sbox_from_a_set_of.text()))[0]))
         self.timer.start(100)
         if self.NaechsteZahlverzoegerung < 0:
             self.NaechsteZahl()
@@ -87,23 +87,22 @@ class MeinDialog(QtGui.QMainWindow):
         self.ui.label_zahl_2.setText(str(self.zufallszahl[self.durchlauf]))
         self.ui.label_zahl.setText(str(self.zufallszahl[self.durchlauf]))
         if self.durchlauf == (len(self.zufallszahl) - 2):
-            text = self.tr(u'Kommen wir nun zur der {0} Zahl, und damit '
-             u'die vorletzte Zahl der heutigen Ziehung. Es ist die {1}'.
-             format(self.zaehlzahlen[self.durchlauf],
-              self.zufallszahl[self.durchlauf]))
+            text = self.tr(u'Now we come to the number {0}, and thus '
+             'the penultimate number of todays draw. It is the {1}')
+            text = unicode(text).format(self.zaehlzahlen[self.durchlauf],
+              self.zufallszahl[self.durchlauf])
         elif self.durchlauf == (len(self.zufallszahl) - 1):
-            text = self.tr(u'Und nun kommen wir zu der {0} und letzten '
-             'Gewinnzahl, es ist die {1}'.
-             format(self.zaehlzahlen[self.durchlauf],
-              self.zufallszahl[self.durchlauf]))
+            text = self.tr(u'And now we come to the {0} and last'
+             'winning number, it is the {1}')
+            text = unicode(text).format(self.zaehlzahlen[self.durchlauf],
+              self.zufallszahl[self.durchlauf])
             self.ui.plainTextEdit.appendPlainText(text)
             zufallszahl = sorted(self.zufallszahl[:])
             text1 = "".join(map(" {0:02d}".format, zufallszahl))
-            text = self.tr(u'Das war die heutige Ziehung der Lottozahlen, '
-            u'die Zahlen lauteten:{0}, '
-            u'ich wünsche Ihnen noch einen schönen Abend! '
-            u'Tschüss und auf Wiedersehen!'
-            .format(text1))
+            text = self.tr(u'That was todays lottery draw, '
+            'the figures were:{0}, '
+            'I wish you a nice evening! Bye, bye!')
+            text = unicode(text).format(text1)
             self.timer.stop()
             #show dialog of the draw
             dlgdraw = DlgShowDrawing(self.zufallszahl, self.i_hochste)
@@ -112,8 +111,8 @@ class MeinDialog(QtGui.QMainWindow):
             self.timer.stop()
             text = ''
         elif self.durchlauf == 0:
-            text = self.tr('Und die erste Gewinnzahl, ist die {0}'.format(
-             self.zufallszahl[self.durchlauf]))
+            text = self.tr('And the first winning number is the {0}')
+            text = unicode(text).format(self.zufallszahl[self.durchlauf])
             self.LastTextnumber = -1
         else:
             while True:
@@ -136,31 +135,31 @@ class MeinDialog(QtGui.QMainWindow):
         self.ui.label_zahl_2.setText("")
         self.durchlauf = 0
         dt = datetime.now()
-        i_anzahl = int(self.ui.anzahl.text())
-        self.i_hochste = int(self.ui.hochste.text())
+        i_anzahl = int(self.ui.sbox_drawn_numbers.text())
+        self.i_hochste = int(self.ui.sbox_from_a_set_of.text())
         self.zufallszahl = zufallszahlen(i_anzahl, self.i_hochste)
-        text = self.tr('Willkommen bei der Ziehung der Lottozahlen,\n'
-         'am {0}.\n'
-         'Ausgelost werden: {1} aus {2}!'.format(
-         dt.strftime("%d %B %Y um %H:%M"), i_anzahl, self.i_hochste))
+        text = self.tr('Welcome to the lottery draw,\n'
+         'at {0}.\nnumbers are drawn: {1} out of {2}!')
+        text = unicode(text).format(
+         dt.strftime("%d %B %Y um %H:%M"), i_anzahl, self.i_hochste)
         self.ui.plainTextEdit.appendPlainText(text)
         self.timer.start(100)
         self.NaechsteZahlverzoegerung = self.ui.horizontalSlider.value()
         textauswahl_tr = [
             self.tr(
-            'Und nun kommen wir zu der {0} Gewinnzahl, es ist die {1}'),
+            'And now we come to the winning number {0}, it is the {1}'),
             self.tr(
-            'Die {0} Lottozahl der heutigen Ziehung ist die {1}'),
+            'The {0} lotto number of todays draw is the {1}'),
             self.tr(
-            'Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}',),
+            'Now we come to winning number {0}, this is the {1}',),
             self.tr(
-            'Kommen wir nun zur {0} Zahl der heutigen Ziehung {1}',),
-            self.tr('Die {0} Gewinnzahl lautet {1}')]
+            'Now we come to {0} number of todays draw {1}',),
+            self.tr('The {0} winning number is {1}')]
         self.textauswahl = map(unicode, textauswahl_tr)
-        zaehlzahlen_tr = [self.tr('ersten'), self.tr('zweiten'),
-         self.tr('dritten'), self.tr('vierten'), self.tr('fünften'),
-         self.tr('sechsten'), self.tr('siebten'), self.tr('achten'),
-         self.tr('neunten')]
+        zaehlzahlen_tr = [self.tr('first'), self.tr('second'),
+         self.tr('third'), self.tr('fourth'), self.tr('fifth'),
+         self.tr('sixth'), self.tr('seventh'), self.tr('eighth'),
+         self.tr('ninth')]
         self.zaehlzahlen = map(unicode, zaehlzahlen_tr)
         i = 10
         while i < len(self.zufallszahl):
@@ -174,9 +173,9 @@ class MeinDialog(QtGui.QMainWindow):
         self.ui.plainTextEdit.setPlainText("")
         if self.ui.actionLottosimulation.isChecked():
             # Lottosimulation
-            self.ui.statusBar().showMessage(self.tr('Lottosimulation'))
+            self.ui.statusBar().showMessage(self.tr('lotto simulation'))
             self.ui.plainTextEdit.setGeometry(QtCore.QRect(20, 180, 441, 136))
-            self.ui.Zufallsgenerator.setVisible(False)
+            self.ui.btn_random_numbers.setVisible(False)
             self.ui.AusgfeldLeeren.setVisible(False)
             self.ui.label_Lottozahlen.setVisible(False)
             self.ui.label_zahl.setVisible(True)
@@ -189,9 +188,9 @@ class MeinDialog(QtGui.QMainWindow):
 
         else:
             # Zufallsgenerator
-            self.ui.statusBar().showMessage(self.tr('Zufallsgenerator'))
+            self.ui.statusBar().showMessage(self.tr('random numbers'))
             self.ui.plainTextEdit.setGeometry(QtCore.QRect(20, 20, 441, 111))
-            self.ui.Zufallsgenerator.setVisible(True)
+            self.ui.btn_random_numbers.setVisible(True)
             self.ui.AusgfeldLeeren.setVisible(True)
             self.ui.label_Lottozahlen.setVisible(True)
             self.ui.label_zahl.setVisible(False)
@@ -202,16 +201,16 @@ class MeinDialog(QtGui.QMainWindow):
 
     def onZufallsgenerator(self):
         """ Show the output from the random number generator """
-        i_anzahl = int(self.ui.anzahl.text())
-        i_hochste = int(self.ui.hochste.text())
+        i_anzahl = int(self.ui.sbox_drawn_numbers.text())
+        i_hochste = int(self.ui.sbox_from_a_set_of.text())
         zufallszahl = sorted(zufallszahlen(i_anzahl, i_hochste))
         if zufallszahl:
             text = "".join(map(" {0:02d}".format, zufallszahl))
         else:
-            text = self.tr("Fehler, keine gültigen Zahlen vorhanden!")
+            text = self.tr("Error, no valid numbers available!")
         dt = datetime.now()
         text = dt.strftime("%H:%M:%S: ") + str(i_anzahl) + \
-         self.tr(" aus ") + str(i_hochste) + ": " + text
+         self.tr(" out of ") + str(i_hochste) + ": " + text
         self.ui.plainTextEdit.appendPlainText(text)
 
     def onAusgfeldLeeren(self):
@@ -221,15 +220,16 @@ class MeinDialog(QtGui.QMainWindow):
     def onInfo(self):
         """ Infoscreen """
         text = self.tr(
-        'Zufallsgenerator und Simulation einer Ziehung\n\n'
-        'Die Idee der Simulation ist von imageupload,\n'
-        'dem Betreiber von http://www.my-image-upload.de/\n\n'
+        'simulation of a random draw\n\n'
+        'based on an idea of imageupload,\n'
+        'http://www.my-image-upload.de/\n\n'
         'Lizenz: GNU GPL v3\n'
         'http://www.gnu.org/licenses/')
         a = QtGui.QMessageBox()
         a.setWindowTitle(self.tr('Info'))
         a.setText(text)
-        text = self.tr('Erstellt mit Python von Markus Hackspacher')
+        text = self.tr('Created with Python by Markus Hackspacher'
+        'http://markush.cwsurf.de')
         a.setInformativeText(text)
         a.exec_()
 
