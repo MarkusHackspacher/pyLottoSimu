@@ -4,7 +4,7 @@
 """
 pyLottoSimu
 
-Copyright (C) <2012> Markus Hackspacher
+Copyright (C) <2012-2013> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
@@ -21,7 +21,8 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
+import sys
 
 import lotto.lotto_gui1
 
-lotto.lotto_gui1.gui()
+lotto.lotto_gui1.gui(sys.argv)
