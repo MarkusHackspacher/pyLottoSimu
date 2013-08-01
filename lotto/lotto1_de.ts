@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de_DE" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de_DE">
 <context>
     <name>DlgShowDrawing</name>
     <message>
@@ -104,7 +105,7 @@
 <context>
     <name>MeinDialog</name>
     <message>
-        <location filename="lotto_gui1.py" line="230"/>
+        <location filename="lotto_gui1.py" line="232"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
@@ -114,27 +115,12 @@
         <translation>Bereit</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="90"/>
-        <source>Now we come to the number {0}, and thus the penultimate number of todays draw. It is the {1}</source>
-        <translation>Kommen wir nun zur der {0} Zahl, und damit die vorletzte Zahl der heutigen Ziehung. Es ist die {1}</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="95"/>
-        <source>And now we come to the {0} and lastwinning number, it is the {1}</source>
-        <translation>Und nun kommen wir zu der {0} und letzten Gewinnzahl, es ist die {1}</translation>
-    </message>
-    <message>
         <location filename="lotto_gui1.py" line="102"/>
         <source>That was todays lottery draw, the figures were:{0}, I wish you a nice evening! Bye, bye!</source>
         <translation>Das war die heutige Ziehung der Lottozahlen, die Zahlen lauteten:{0}, ich wünsche Ihnen noch einen schönen Abend! Tschüss und auf Wiedersehen!</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="115"/>
-        <source>And the first winning number is the {0}</source>
-        <translation>Und die erste Gewinnzahl, ist die {0}</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="142"/>
+        <location filename="lotto_gui1.py" line="141"/>
         <source>Welcome to the lottery draw,
 at {0}.
 numbers are drawn: {1} out of {2}!</source>
@@ -143,97 +129,72 @@ am {0}.
 Ausgelost werden: {1} aus {2}!</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="151"/>
-        <source>And now we come to the winning number {0}, it is the {1}</source>
-        <translation>Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="153"/>
-        <source>The {0} lotto number of todays draw is the {1}</source>
-        <translation>Kommen wir nun zur {0} Zahl der heutigen Ziehung {1}</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="155"/>
-        <source>Now we come to winning number {0}, this is the {1}</source>
-        <translation>Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="157"/>
-        <source>Now we come to {0} number of todays draw {1}</source>
-        <translation>Kommen wir nun zur {0} Zahl der heutigen Ziehung {1}</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="158"/>
-        <source>The {0} winning number is {1}</source>
-        <translation>Die {0} Gewinnzahl lautet {1}</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="160"/>
+        <location filename="lotto_gui1.py" line="159"/>
         <source>first</source>
         <translation>ersten</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="160"/>
+        <location filename="lotto_gui1.py" line="159"/>
         <source>second</source>
         <translation>zweiten</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="161"/>
+        <location filename="lotto_gui1.py" line="160"/>
         <source>third</source>
         <translation>dritten</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="161"/>
+        <location filename="lotto_gui1.py" line="160"/>
         <source>fourth</source>
         <translation>vierten</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="161"/>
+        <location filename="lotto_gui1.py" line="160"/>
         <source>fifth</source>
         <translation>fünften</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="162"/>
+        <location filename="lotto_gui1.py" line="161"/>
         <source>sixth</source>
         <translation>sechsten</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="162"/>
+        <location filename="lotto_gui1.py" line="161"/>
         <source>seventh</source>
         <translation>siebten</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="162"/>
+        <location filename="lotto_gui1.py" line="161"/>
         <source>eighth</source>
         <translation>achten</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="163"/>
+        <location filename="lotto_gui1.py" line="162"/>
         <source>ninth</source>
         <translation>neunten</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="177"/>
+        <location filename="lotto_gui1.py" line="178"/>
         <source>lotto simulation</source>
         <translation>Lottosimulation</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="192"/>
+        <location filename="lotto_gui1.py" line="193"/>
         <source>random numbers</source>
         <translation>Zufallsgenerator</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="211"/>
+        <location filename="lotto_gui1.py" line="213"/>
         <source>Error, no valid numbers available!</source>
         <translation>Fehler, keine gültigen Zahlen vorhanden!</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="214"/>
+        <location filename="lotto_gui1.py" line="216"/>
         <source> out of </source>
         <translation> aus </translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="228"/>
+        <location filename="lotto_gui1.py" line="225"/>
         <source>simulation of a random draw
 
 based on an idea of imageupload,
@@ -250,9 +211,79 @@ Lizenz: GNU GPL v3
 http://www.gnu.org/licenses/</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="233"/>
-        <source>Created with Python by Markus Hackspacherhttp://markush.cwsurf.de</source>
-        <translation>Erstellt mit Python von Markus Hackspacherhttp://markush.cwsurf.de</translation>
+        <location filename="lotto_gui1.py" line="234"/>
+        <source>Created with Python by Markus Hackspacher http://markush.cwsurf.de</source>
+        <translation>Erstellt mit Python von Markus Hackspacher http://markush.cwsurf.de</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="90"/>
+        <source>Now we come to the number {0}, and thus the penultimate number of todays draw. It is the {1}.</source>
+        <translation>Kommen wir nun zur der {0} Zahl, und damit die vorletzte Zahl der heutigen Ziehung. Es ist die {1}.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="95"/>
+        <source>And now we come to the {0} and lastwinning number, it is the {1}.</source>
+        <translation>Und nun kommen wir zu der {0} und letzten Gewinnzahl, es ist die {1}.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="114"/>
+        <source>And the first winning number is the {0}.</source>
+        <translation>Und die erste Gewinnzahl, ist die {0}.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="149"/>
+        <source>And now we come to the winning number {0}, it is the {1}.</source>
+        <translation>Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="151"/>
+        <source>The {0} lotto number of today&apos;s draw is the {1}.</source>
+        <translation>Kommen wir nun zur {0} Zahl der heutigen Ziehung {1}.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="153"/>
+        <source>Now we come to winning number {0}, this is the {1}.</source>
+        <translation>Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="155"/>
+        <source>Now we come to {0} number of today&apos;s draw {1}.</source>
+        <translation>Kommen wir nun zur {0} Zahl der heutigen Ziehung {1}.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="157"/>
+        <source>The {0} winning number is {1}.</source>
+        <translation>Die {0} Gewinnzahl lautet {1}.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="162"/>
+        <source>10th</source>
+        <translation>10.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="162"/>
+        <source>11th</source>
+        <translation>11.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="163"/>
+        <source>12th</source>
+        <translation>12.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="163"/>
+        <source>13th</source>
+        <translation>13.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="163"/>
+        <source>14th</source>
+        <translation>14.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="164"/>
+        <source>15th</source>
+        <translation>15.</translation>
     </message>
 </context>
 </TS>

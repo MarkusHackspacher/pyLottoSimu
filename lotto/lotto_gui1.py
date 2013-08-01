@@ -88,12 +88,12 @@ class MeinDialog(QtGui.QMainWindow):
         self.ui.label_zahl.setText(str(self.zufallszahl[self.durchlauf]))
         if self.durchlauf == (len(self.zufallszahl) - 2):
             text = self.tr(u'Now we come to the number {0}, and thus '
-             'the penultimate number of todays draw. It is the {1}')
+             'the penultimate number of todays draw. It is the {1}.')
             text = unicode(text).format(self.zaehlzahlen[self.durchlauf],
               self.zufallszahl[self.durchlauf])
         elif self.durchlauf == (len(self.zufallszahl) - 1):
             text = self.tr(u'And now we come to the {0} and last'
-             'winning number, it is the {1}')
+             'winning number, it is the {1}.')
             text = unicode(text).format(self.zaehlzahlen[self.durchlauf],
               self.zufallszahl[self.durchlauf])
             self.ui.plainTextEdit.appendPlainText(text)
@@ -111,7 +111,7 @@ class MeinDialog(QtGui.QMainWindow):
             self.timer.stop()
             text = ''
         elif self.durchlauf == 0:
-            text = self.tr('And the first winning number is the {0}')
+            text = self.tr('And the first winning number is the {0}.')
             text = unicode(text).format(self.zufallszahl[self.durchlauf])
             self.LastTextnumber = -1
         else:
@@ -147,19 +147,21 @@ class MeinDialog(QtGui.QMainWindow):
         self.NaechsteZahlverzoegerung = self.ui.horizontalSlider.value()
         textauswahl_tr = [
             self.tr(
-            'And now we come to the winning number {0}, it is the {1}'),
+            'And now we come to the winning number {0}, it is the {1}.'),
             self.tr(
-            'The {0} lotto number of todays draw is the {1}'),
+            "The {0} lotto number of today's draw is the {1}."),
             self.tr(
-            'Now we come to winning number {0}, this is the {1}',),
+            'Now we come to winning number {0}, this is the {1}.',),
             self.tr(
-            'Now we come to {0} number of todays draw {1}',),
-            self.tr('The {0} winning number is {1}')]
+            "Now we come to {0} number of today's draw {1}.",),
+            self.tr('The {0} winning number is {1}.')]
         self.textauswahl = map(unicode, textauswahl_tr)
         zaehlzahlen_tr = [self.tr('first'), self.tr('second'),
          self.tr('third'), self.tr('fourth'), self.tr('fifth'),
          self.tr('sixth'), self.tr('seventh'), self.tr('eighth'),
-         self.tr('ninth')]
+         self.tr('ninth'), self.tr('10th'), self.tr('11th'),
+         self.tr('12th'), self.tr('13th'), self.tr('14th'),
+         self.tr('15th')]
         self.zaehlzahlen = map(unicode, zaehlzahlen_tr)
         i = 10
         while i < len(self.zufallszahl):
@@ -229,7 +231,7 @@ class MeinDialog(QtGui.QMainWindow):
         a = QtGui.QMessageBox()
         a.setWindowTitle(self.tr('Info'))
         a.setText(text)
-        text = self.tr('Created with Python by Markus Hackspacher'
+        text = self.tr('Created with Python by Markus Hackspacher '
         'http://markush.cwsurf.de')
         a.setInformativeText(text)
         a.exec_()
@@ -241,7 +243,7 @@ class MeinDialog(QtGui.QMainWindow):
 
 def gui(arguments):
     """open the GUI
-    @param arguments: language
+    @param arguments: language (en, de)
     @type arguments: string
     @return: none
     """
