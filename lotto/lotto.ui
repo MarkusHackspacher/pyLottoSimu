@@ -389,6 +389,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
     <property name="title">
      <string>Help</string>
     </property>
+    <addaction name="actionGo_to_the_website"/>
     <addaction name="actionInfo"/>
    </widget>
    <widget class="QMenu" name="menuModus">
@@ -437,6 +438,11 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
   <action name="actionHilfe">
    <property name="text">
     <string>Help</string>
+   </property>
+  </action>
+  <action name="actionGo_to_the_website">
+   <property name="text">
+    <string>Go to the website</string>
    </property>
   </action>
  </widget>

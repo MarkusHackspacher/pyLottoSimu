@@ -27,6 +27,7 @@ from datetime import datetime
 import time
 from random import randint
 from os.path import join
+import webbrowser
 from PyQt4 import QtGui, QtCore, uic
 
 import lottokugeln_rc
@@ -54,6 +55,7 @@ class MeinDialog(QtGui.QMainWindow):
         self.ui.btn_start.clicked.connect(self.onbtn_start)
         self.ui.actionBeenden.triggered.connect(self.onClose)
         self.ui.actionInfo.triggered.connect(self.onInfo)
+        self.ui.actionGo_to_the_website.triggered.connect(self.onwebsite)
         self.ui.actionLottosimulation.changed.connect(self.actionLottosim)
         self.timer.timeout.connect(self.ontimer)
         self.ui.statusBar().showMessage(self.tr('ready'))
@@ -61,6 +63,13 @@ class MeinDialog(QtGui.QMainWindow):
         self.NaechsteZahlverzoegerung = verz
 
         self.ui.show()
+
+    def init(self):
+        """inital variable"""
+        self.durchlauf = 0
+        self.i_hochste = int(self.ui.sbox_from_a_set_of.text())
+        self.zufallszahl = 0
+
 
     def ontimer(self):
         """ start time to show a number"""
@@ -163,10 +172,6 @@ class MeinDialog(QtGui.QMainWindow):
          self.tr('12th'), self.tr('13th'), self.tr('14th'),
          self.tr('15th')]
         self.zaehlzahlen = map(unicode, zaehlzahlen_tr)
-        i = 10
-        while i < len(self.zufallszahl):
-            self.zaehlzahlen.append(str(i) + ".")
-            i += 1
 
     def actionLottosim(self):
         """ Changing the layout for simulation or generation
@@ -236,6 +241,11 @@ class MeinDialog(QtGui.QMainWindow):
         a.setInformativeText(text)
         a.exec_()
 
+    def onwebsite(self):
+        """ open website """
+        webbrowser.open_new_tab("http://markush.cwsurf.de/"
+         "joomla_17/index.php/python/pylottosimu/")
+        
     def onClose(self):
         """close GUI"""
         self.ui.close()
