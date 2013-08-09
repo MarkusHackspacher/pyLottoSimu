@@ -49,22 +49,22 @@ class DlgShowDrawing(QtGui.QDialog):
         self.gridLayout.setMargin(0)
 
         #array of Button from 1 to 49
-        self.Btn_Numerary_1to49 = []
-        for button in xrange(highest_number):
-            self.Btn_Numerary_1to49.append(QtGui.QPushButton(self))
-            self.Btn_Numerary_1to49[button].setMaximumSize(
-             QtCore.QSize(58, 58))
-            self.gridLayout.addWidget(self.Btn_Numerary_1to49[button],
-             int(button / 7),  int(button % 7), 1, 1)
-            self.Btn_Numerary_1to49[button].setAutoFillBackground(True)
-            self.Btn_Numerary_1to49[button].setText(str(button + 1))
+        self.Btn_Numerary_1to49 = [QtGui.QPushButton(self)
+         for num_draw in xrange(highest_number)]
+        button_number = 0
+        for button in self.Btn_Numerary_1to49:
+            button.setMaximumSize(QtCore.QSize(58, 58))
+            button.setAutoFillBackground(True)
+            self.gridLayout.addWidget(button,
+             int(button_number / 7), int(button_number % 7), 1, 1)
+            button_number += 1
+            button.setText(str(button_number))
 
-        for button in xrange(highest_number):
-            if button + 1 in draw_number:
-                self.Btn_Numerary_1to49[button].setFlat(False)
-                self.Btn_Numerary_1to49[button].setStyleSheet("color: red;")
+            if button_number in draw_number:
+                button.setFlat(False)
+                button.setStyleSheet("color: red;")
             else:
-                self.Btn_Numerary_1to49[button].setFlat(True)
+                button.setFlat(True)
 
         self.setWindowTitle(self.tr("Show Drawing"))
 

@@ -23,11 +23,11 @@ along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 __doc__ = "The signals for the GUI"
 
 import sys
-from datetime import datetime
 import time
+import webbrowser
+from datetime import datetime
 from random import randint
 from os.path import join
-import webbrowser
 from PyQt4 import QtGui, QtCore, uic
 
 import lottokugeln_rc
@@ -59,8 +59,6 @@ class MeinDialog(QtGui.QMainWindow):
         self.ui.actionLottosimulation.changed.connect(self.actionLottosim)
         self.timer.timeout.connect(self.ontimer)
         self.ui.statusBar().showMessage(self.tr('ready'))
-        verz = self.ui.horizontalSlider.value()
-        self.NaechsteZahlverzoegerung = verz
 
         self.ui.show()
 
@@ -69,7 +67,7 @@ class MeinDialog(QtGui.QMainWindow):
         self.durchlauf = 0
         self.i_hochste = int(self.ui.sbox_from_a_set_of.text())
         self.zufallszahl = 0
-
+        self.NaechsteZahlverzoegerung = self.ui.horizontalSlider.value()
 
     def ontimer(self):
         """ start time to show a number"""
