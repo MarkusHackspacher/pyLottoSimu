@@ -104,7 +104,7 @@
     <message>
         <location filename="lotto.ui" line="445"/>
         <source>Go to the website</source>
-        <translation type="unfinished">Webseite PyLottoSimu öffnen</translation>
+        <translation>Webseite PyLottoSimu öffnen</translation>
     </message>
 </context>
 <context>
