@@ -11,15 +11,15 @@ install
 -------
 
 The program requires Python 2.7 to. www.python.org/download/
-and Qt4 for Python 2.7 www.riverbankcomputing.com / software / pyqt / download
+and Qt4 for Python 2.7 www.riverbankcomputing.com/software/pyqt/download
 
-start with:
+start with
 ```python lotto.pyw en```
 
 Make the documentation as .pdf file:
 ```epydoc lotto --pdf```
 
-Installieren:
+Installieren
 -------------
 
 Das Programm läuft auf MacOS, Windows und Linux,
@@ -31,7 +31,7 @@ und Qt4 für Python 2.7 www.riverbankcomputing.com/software/pyqt/download
 Start mit: 
 ```python lotto.pyw de```
 
-Bedienen:
+Bedienen
 ---------
 Der Modus kann in der Menüleiste angewählt werden
 Anzahl der Zufallszahlen sind zwischen 1 bis 15 wählbar sowie der
