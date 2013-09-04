@@ -14,14 +14,10 @@ The program requires Python 2.7 to. www.python.org/download/
 and Qt4 for Python 2.7 www.riverbankcomputing.com / software / pyqt / download
 
 start with:
-'''
-python lotto.pyw en
-'''
+```python lotto.pyw en```
 
 Make the documentation as .pdf file:
-'''
-epydoc lotto --pdf
-'''
+```epydoc lotto --pdf```
 
 Installieren:
 -------------
@@ -33,9 +29,7 @@ Das Programm benötigt Python 2.7 dazu. www.python.org/download/
 und Qt4 für Python 2.7 www.riverbankcomputing.com/software/pyqt/download
 
 Start mit: 
-'''
-python lotto.pyw de
-'''
+```python lotto.pyw de```
 
 Bedienen:
 ---------
