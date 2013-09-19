@@ -24,11 +24,11 @@ insert in the complete.pro your language code.
 ```
 cd lotto
 pylupdate4 complete.pro
-'''
+```
 translate your language file: lotto1_xx.ts, and produce the .ts translation files with
-'''
+```
 lrelease complete.pro
-'''
+```
 
 Installieren
 -------------
