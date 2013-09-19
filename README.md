@@ -13,11 +13,22 @@ install
 The program requires Python 2.7 to. www.python.org/download/
 and Qt4 for Python 2.7 www.riverbankcomputing.com/software/pyqt/download
 
-start with
+Start with
 ```python lotto.pyw en```
 
 Make the documentation as .pdf file:
 ```epydoc lotto --pdf```
+
+To translate the programm or make a translation in your language,
+insert in the complete.pro your language code.
+```
+cd lotto
+pylupdate4 complete.pro
+'''
+translate your language file: lotto1_xx.ts, and produce the .ts translation files with
+'''
+lrelease complete.pro
+'''
 
 Installieren
 -------------
