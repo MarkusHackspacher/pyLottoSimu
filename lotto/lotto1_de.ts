@@ -208,7 +208,7 @@ Lizenz: GNU GPL v3
 http://www.gnu.org/licenses/</source>
         <translation>Zufallsgenerator und Simulation einer Ziehung
 
-Die Idee der Simulation ist von imageupload,
+Die Idee dieser Simulation stammt von imageupload,
 dem Betreiber von http://www.my-image-upload.de/
 
 Lizenz: GNU GPL v3
@@ -232,7 +232,7 @@ http://www.gnu.org/licenses/</translation>
     <message>
         <location filename="lotto_gui1.py" line="121"/>
         <source>And the first winning number is the {0}.</source>
-        <translation>Und die erste Gewinnzahl, ist die {0}.</translation>
+        <translation>Und die erste Gewinnzahl ist die {0}.</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="156"/>
