@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>480</width>
-    <height>359</height>
+    <height>369</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -304,6 +304,9 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
      <property name="statusTip">
       <string>Speed</string>
      </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
      <property name="minimum">
       <number>1</number>
      </property>
@@ -376,7 +379,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
      <x>0</x>
      <y>0</y>
      <width>480</width>
-     <height>20</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuDatei">
