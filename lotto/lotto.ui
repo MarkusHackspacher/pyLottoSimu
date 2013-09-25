@@ -44,8 +44,7 @@
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">QFrame#Rahmen { border-image: url(:/lottokugel.png)}
-#QLabel {	background-color: rgb(220, 220, 220)}
+    <string notr="true">QFrame#QLabel {	background-color: rgb(220, 220, 220)}
 QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
    </property>
    <widget class="QFrame" name="Rahmen">

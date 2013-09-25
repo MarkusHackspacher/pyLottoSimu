@@ -28,9 +28,8 @@ import webbrowser
 from datetime import datetime
 from random import randint
 from os.path import join
-from PyQt4 import QtGui, QtCore, uic
+from PyQt4 import QtGui, QtCore, QtSvg, uic
 
-import lottokugeln_rc
 from dialog.show_drawing import DlgShowDrawing
 from zufallszahl import zufallszahlen
 
@@ -44,6 +43,12 @@ class MeinDialog(QtGui.QMainWindow):
         # Set up the user interface from Designer.
         self.ui = uic.loadUi(join("lotto", "lotto.ui"))
         self.ui.setWindowIcon(QtGui.QIcon(join("misc", "pyLottoSimu.svg")))
+
+        self.mainWindowPixmap = QtSvg.QSvgRenderer(join("lotto", "lottokugel.svg"))
+        img = QtGui.QImage(480, 320, QtGui.QImage.Format_ARGB32)
+        img.fill(0)
+        painter = QtGui.QPainter(img)
+        self.mainWindowPixmap.render(painter)
 
         self.actionLottosim()
         self.timer = QtCore.QTimer(self)
