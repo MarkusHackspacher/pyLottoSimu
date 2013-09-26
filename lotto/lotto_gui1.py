@@ -28,8 +28,9 @@ import webbrowser
 from datetime import datetime
 from random import randint
 from os.path import join
-from PyQt4 import QtGui, QtCore, QtSvg, uic
+from PyQt4 import QtGui, QtCore, uic
 
+import lottokugeln_rc
 from dialog.show_drawing import DlgShowDrawing
 from zufallszahl import zufallszahlen
 
@@ -44,23 +45,19 @@ class MeinDialog(QtGui.QMainWindow):
         self.ui = uic.loadUi(join("lotto", "lotto.ui"))
         self.ui.setWindowIcon(QtGui.QIcon(join("misc", "pyLottoSimu.svg")))
 
-        self.mainWindowPixmap = QtSvg.QSvgRenderer(join("lotto", "lottokugel.svg"))
-        img = QtGui.QImage(480, 320, QtGui.QImage.Format_ARGB32)
-        img.fill(0)
-        painter = QtGui.QPainter(img)
-        self.mainWindowPixmap.render(painter)
-
         self.actionLottosim()
         self.timer = QtCore.QTimer(self)
 
         # Slots
-        self.ui.btn_random_numbers.clicked.connect(self.onZufallsgenerator)
+        self.ui.btn_random_numbers.clicked.connect(
+         self.onrandom_numbers_generator)
         self.ui.AusgfeldLeeren.clicked.connect(self.onclean_output_text)
         self.ui.btn_start.clicked.connect(self.onbtn_start)
         self.ui.actionBeenden.triggered.connect(self.onclose)
         self.ui.actionInfo.triggered.connect(self.oninfo)
         self.ui.actionGo_to_the_website.triggered.connect(self.onwebsite)
         self.ui.actionLottosimulation.changed.connect(self.actionLottosim)
+        self.ui.btn_draw_overview.clicked.connect(self.onbtn_draw_overview)
         self.timer.timeout.connect(self.ontimer)
         self.ui.statusBar().showMessage(self.tr('ready'))
 
@@ -115,13 +112,15 @@ class MeinDialog(QtGui.QMainWindow):
             'I wish you a nice evening! Bye, bye!')
             text = unicode(text).format(text1)
             self.timer.stop()
-            #show dialog of the draw
-            dlgdraw = DlgShowDrawing(self.zufallszahl, self.i_hochste)
-            dlgdraw.exec_()
+            if self.ui.rdbtn_show_draw_after.isChecked():
+                self.onbtn_draw_overview()
+            else:
+                self.ui.btn_draw_overview.setVisible(True)
         elif self.durchlauf >= len(self.zufallszahl):
             self.timer.stop()
             text = ''
         elif self.durchlauf == 0:
+            self.ui.btn_draw_overview.setVisible(False)
             text = self.tr('And the first winning number is the {0}.')
             text = unicode(text).format(self.zufallszahl[self.durchlauf])
             self.LastTextnumber = -1
@@ -137,6 +136,11 @@ class MeinDialog(QtGui.QMainWindow):
         self.ui.plainTextEdit.appendPlainText(text)
         self.durchlauf += 1
 
+    def onbtn_draw_overview(self):
+        """show dialog of the draw"""
+        dlgdraw = DlgShowDrawing(self.zufallszahl, self.i_hochste)
+        dlgdraw.exec_()
+ 
     def onbtn_start(self):
         """Start simulation with the first drawing
         init timer with the valve from the Scrollbar
@@ -181,7 +185,7 @@ class MeinDialog(QtGui.QMainWindow):
         """
         self.ui.plainTextEdit.setPlainText("")
         if self.ui.actionLottosimulation.isChecked():
-            # Lottosimulation
+            # lotto simulation
             self.ui.statusBar().showMessage(self.tr('lotto simulation'))
             self.ui.plainTextEdit.setGeometry(QtCore.QRect(20, 180, 441, 136))
             self.ui.btn_random_numbers.setVisible(False)
@@ -194,9 +198,11 @@ class MeinDialog(QtGui.QMainWindow):
             self.ui.label_zahl_2.setText("")
             self.ui.btn_start.setVisible(True)
             self.ui.horizontalSlider.setVisible(True)
+            self.ui.btn_draw_overview.setVisible(False)
+            self.ui.rdbtn_show_draw_after.setVisible(True)
 
         else:
-            # Zufallsgenerator
+            #random numbers
             self.ui.statusBar().showMessage(self.tr('random numbers'))
             self.ui.plainTextEdit.setGeometry(QtCore.QRect(20, 20, 441, 111))
             self.ui.btn_random_numbers.setVisible(True)
@@ -207,14 +213,15 @@ class MeinDialog(QtGui.QMainWindow):
             self.ui.label_Geschwindigkeit.setVisible(False)
             self.ui.btn_start.setVisible(False)
             self.ui.horizontalSlider.setVisible(False)
+            self.ui.btn_draw_overview.setVisible(False)
+            self.ui.rdbtn_show_draw_after.setVisible(False)
             self.timer.stop()
 
-    def onZufallsgenerator(self):
+    def onrandom_numbers_generator(self):
         """Show the output from the random number generator.  """
         i_anzahl = int(self.ui.sbox_drawn_numbers.text())
         i_hochste = int(self.ui.sbox_from_a_set_of.text())
-        zufallszahl = sorted(zufallszahlen(i_anzahl, i_hochste))
-        if zufallszahl:
+        if sorted(zufallszahlen(i_anzahl, i_hochste)):
             text = "".join(map(" {0:02d}".format, zufallszahl))
         else:
             text = self.tr("Error, no valid numbers available!")

@@ -44,7 +44,8 @@
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">QFrame#QLabel {	background-color: rgb(220, 220, 220)}
+    <string notr="true">QFrame#Rahmen { border-image: url(:/lottokugel.png)}
+#QLabel {	background-color: rgb(220, 220, 220)}
 QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
    </property>
    <widget class="QFrame" name="Rahmen">
@@ -272,7 +273,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
     <widget class="QPushButton" name="btn_start">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>170</x>
        <y>110</y>
        <width>121</width>
        <height>25</height>
@@ -366,6 +367,32 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>90</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QRadioButton" name="rdbtn_show_draw_after">
+        <property name="text">
+         <string>show draw after</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_draw_overview">
+        <property name="text">
+         <string>show draw overview</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </widget>
   </widget>
