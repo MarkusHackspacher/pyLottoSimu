@@ -137,7 +137,7 @@
     <message>
         <location filename="lotto_gui1.py" line="110"/>
         <source>That was todays lottery draw, the figures were:{0}, I wish you a nice evening! Bye, bye!</source>
-        <translation>C&apos;était tirage au sort d&apos;aujourd&apos;hui, les chiffres étaient les suivants: {0}, je vous souhaite une bonne soirée! Bye, bye!</translation>
+        <translation>C&apos;était tirage au sort d&apos;aujourd&apos;hui, les chiffres étaient les suivants: {0}, je vous souhaite une bonne soirée! Au révoir!</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="124"/>
