@@ -114,8 +114,7 @@ class MeinDialog(QtGui.QMainWindow):
             self.timer.stop()
             if self.ui.rdbtn_show_draw_after.isChecked():
                 self.onbtn_draw_overview()
-            else:
-                self.ui.btn_draw_overview.setVisible(True)
+            self.ui.btn_draw_overview.setVisible(True)
         elif self.durchlauf >= len(self.zufallszahl):
             self.timer.stop()
             text = ''

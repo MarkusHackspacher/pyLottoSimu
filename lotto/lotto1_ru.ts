@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0">
+<!DOCTYPE TS>
+<TS version="2.0" language="ru" sourcelanguage="en">
 <context>
     <name>DlgShowDrawing</name>
     <message>
         <location filename="dialog/show_drawing.py" line="69"/>
         <source>Show Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать Рисование</translation>
     </message>
 </context>
 <context>
@@ -13,107 +14,107 @@
     <message>
         <location filename="lotto.ui" line="14"/>
         <source>pyLottoSimu</source>
-        <translation type="unfinished"></translation>
+        <translation>pyLottoSimu</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="110"/>
         <source>lottery numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>лотереи</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="82"/>
         <source>output field</source>
-        <translation type="unfinished"></translation>
+        <translation>поле вывода</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="136"/>
         <source>Numbers:</source>
-        <translation type="unfinished"></translation>
+        <translation>числа:</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="152"/>
         <source>drawn numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>обращается номера</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="175"/>
         <source>out of</source>
-        <translation type="unfinished"></translation>
+        <translation>из</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="191"/>
         <source>from a set of</source>
-        <translation type="unfinished"></translation>
+        <translation>из набора</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="450"/>
         <source>random numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>случайных чисел</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="244"/>
         <source>output field empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Выход поле пустым</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="365"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="289"/>
         <source>start draw</source>
-        <translation type="unfinished"></translation>
+        <translation>начать рисовать</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="339"/>
         <source>Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>скорость</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="384"/>
         <source>show draw after</source>
-        <translation type="unfinished"></translation>
+        <translation>показать рисовать</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="391"/>
         <source>show draw overview</source>
-        <translation type="unfinished"></translation>
+        <translation>показать привлечь обзор</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="410"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>файл</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="466"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>помощь</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="423"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>режим</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="434"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>выход</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="439"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>информация</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="461"/>
         <source>Lotto simulation</source>
-        <translation type="unfinished"></translation>
+        <translation>Лото моделирования</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="471"/>
         <source>Go to the website</source>
-        <translation type="unfinished"></translation>
+        <translation>Перейти на сайт</translation>
     </message>
 </context>
 <context>
@@ -121,154 +122,156 @@
     <message>
         <location filename="lotto_gui1.py" line="62"/>
         <source>ready</source>
-        <translation type="unfinished"></translation>
+        <translation>готовый</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="98"/>
         <source>Now we come to the number {0}, and thus the penultimate number of todays draw. It is the {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Теперь мы подошли к числу {0}, и, таким образом предпоследний числа сегодняшних ничьей. Это {1}.</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="103"/>
         <source>And now we come to the {0} and lastwinning number, it is the {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>И теперь мы подходим к {0} и lastwinning числа, это {1}.</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="110"/>
         <source>That was todays lottery draw, the figures were:{0}, I wish you a nice evening! Bye, bye!</source>
-        <translation type="unfinished"></translation>
+        <translation>Это была сегодняшняя ничья лотерее, эти цифры составили: {0}, я желаю вам хорошего вечера! До свидания, до свидания!</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="124"/>
         <source>And the first winning number is the {0}.</source>
-        <translation type="unfinished"></translation>
+        <translation>И первый выигрышный номер {0}.</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="156"/>
         <source>Welcome to the lottery draw,
 at {0}.
 numbers are drawn: {1} out of {2}!</source>
-        <translation type="unfinished"></translation>
+        <translation>Добро пожаловать в розыгрыше лотереи,
+на {0}.
+номера взяты: {1} из {2}!</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="164"/>
         <source>And now we come to the winning number {0}, it is the {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>И теперь мы подходим к выигрышным номером {0}, то {1}.</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="166"/>
         <source>The {0} lotto number of today&apos;s draw is the {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} лото число ничья сегодня является {1}.</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="168"/>
         <source>Now we come to winning number {0}, this is the {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Теперь мы подошли к выигрышным номером {0}, это {1}.</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="170"/>
         <source>Now we come to {0} number of today&apos;s draw ... {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Теперь мы подошли к {0} число сегодняшней ничьей ... {1}.</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="172"/>
         <source>The {0} winning number is {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} выигрышный номер {1}.</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="174"/>
         <source>first</source>
-        <translation type="unfinished"></translation>
+        <translation>первый</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="174"/>
         <source>second</source>
-        <translation type="unfinished"></translation>
+        <translation>второй</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="175"/>
         <source>third</source>
-        <translation type="unfinished"></translation>
+        <translation>третий</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="175"/>
         <source>fourth</source>
-        <translation type="unfinished"></translation>
+        <translation>четвертый</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="175"/>
         <source>fifth</source>
-        <translation type="unfinished"></translation>
+        <translation>пятый</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="176"/>
         <source>sixth</source>
-        <translation type="unfinished"></translation>
+        <translation>шестой</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="176"/>
         <source>seventh</source>
-        <translation type="unfinished"></translation>
+        <translation>седьмой</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="176"/>
         <source>eighth</source>
-        <translation type="unfinished"></translation>
+        <translation>восьмой</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="177"/>
         <source>ninth</source>
-        <translation type="unfinished"></translation>
+        <translation>девятый</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="177"/>
         <source>10th</source>
-        <translation type="unfinished"></translation>
+        <translation>10-й</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="177"/>
         <source>11th</source>
-        <translation type="unfinished"></translation>
+        <translation>11</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="178"/>
         <source>12th</source>
-        <translation type="unfinished"></translation>
+        <translation>12</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="178"/>
         <source>13th</source>
-        <translation type="unfinished"></translation>
+        <translation>13</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="178"/>
         <source>14th</source>
-        <translation type="unfinished"></translation>
+        <translation>14</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="179"/>
         <source>15th</source>
-        <translation type="unfinished"></translation>
+        <translation>15</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="189"/>
         <source>lotto simulation</source>
-        <translation type="unfinished"></translation>
+        <translation>Лото моделирования</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="206"/>
         <source>random numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>случайных чисел</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="227"/>
         <source>Error, no valid numbers available!</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка, нет действительных номеров доступны!</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="230"/>
         <source> out of </source>
-        <translation type="unfinished"></translation>
+        <translation> из </translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="241"/>
@@ -279,17 +282,23 @@ http://www.my-image-upload.de/
 
 Lizenz: GNU GPL v3
 http://www.gnu.org/licenses/</source>
-        <translation type="unfinished"></translation>
+        <translation>Моделирование случайной жеребьевкой
+
+основана на идее ImageUpload,
+http://www.my-image-upload.de/
+
+Lizenz: GNU GPL v3
+http://www.gnu.org/licenses/</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="248"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>информация</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="250"/>
         <source>Created with Python by Markus Hackspacher http://markush.cwsurf.de</source>
-        <translation type="unfinished"></translation>
+        <translation>Созданный с Python Маркус Hackspacher http://markush.cwsurf.de</translation>
     </message>
 </context>
 </TS>
