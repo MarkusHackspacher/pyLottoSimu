@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="fr" sourcelanguage="en">
+<!DOCTYPE TS><TS version="2.0" language="fr" sourcelanguage="en">
 <context>
     <name>DlgShowDrawing</name>
     <message>
@@ -140,12 +139,12 @@
         <translation>C&apos;était tirage au sort d&apos;aujourd&apos;hui, les chiffres étaient les suivants: {0}, je vous souhaite une bonne soirée! Bye, bye!</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="124"/>
+        <location filename="lotto_gui1.py" line="123"/>
         <source>And the first winning number is the {0}.</source>
         <translation>Et le premier numéro gagnant est le {0}.</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="156"/>
+        <location filename="lotto_gui1.py" line="155"/>
         <source>Welcome to the lottery draw,
 at {0}.
 numbers are drawn: {1} out of {2}!</source>
@@ -154,127 +153,127 @@ numbers are drawn: {1} out of {2}!</source>
 numéros sont tirés: {1} sur {2}!</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="164"/>
+        <location filename="lotto_gui1.py" line="163"/>
         <source>And now we come to the winning number {0}, it is the {1}.</source>
         <translation>Et maintenant, nous arrivons au nombre de victoires {0}, il est le {1}.</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="166"/>
+        <location filename="lotto_gui1.py" line="165"/>
         <source>The {0} lotto number of today&apos;s draw is the {1}.</source>
         <translation>Le {0} nombre de loto tirage d&apos;aujourd&apos;hui est le {1}.</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="168"/>
+        <location filename="lotto_gui1.py" line="167"/>
         <source>Now we come to winning number {0}, this is the {1}.</source>
         <translation>Nous arrivons maintenant à numéro gagnant {0}, c&apos;est le {1}.</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="170"/>
+        <location filename="lotto_gui1.py" line="169"/>
         <source>Now we come to {0} number of today&apos;s draw ... {1}.</source>
         <translation>Nous arrivons maintenant à {0} nombre de tirage d&apos;aujourd&apos;hui ... {1}.</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="172"/>
+        <location filename="lotto_gui1.py" line="171"/>
         <source>The {0} winning number is {1}.</source>
         <translation>Le {0} numéro gagnant est {1}.</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="174"/>
+        <location filename="lotto_gui1.py" line="173"/>
         <source>first</source>
         <translation>première</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="174"/>
+        <location filename="lotto_gui1.py" line="173"/>
         <source>second</source>
         <translation>deuxième</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="175"/>
+        <location filename="lotto_gui1.py" line="174"/>
         <source>third</source>
         <translation>troisième</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="175"/>
+        <location filename="lotto_gui1.py" line="174"/>
         <source>fourth</source>
         <translation>quatrième</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="175"/>
+        <location filename="lotto_gui1.py" line="174"/>
         <source>fifth</source>
         <translation>cinquième</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="176"/>
+        <location filename="lotto_gui1.py" line="175"/>
         <source>sixth</source>
         <translation>sixième</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="176"/>
+        <location filename="lotto_gui1.py" line="175"/>
         <source>seventh</source>
         <translation>septième</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="176"/>
+        <location filename="lotto_gui1.py" line="175"/>
         <source>eighth</source>
         <translation>huitième</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="177"/>
+        <location filename="lotto_gui1.py" line="176"/>
         <source>ninth</source>
         <translation>neuvième</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="177"/>
+        <location filename="lotto_gui1.py" line="176"/>
         <source>10th</source>
         <translation>10ème</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="177"/>
+        <location filename="lotto_gui1.py" line="176"/>
         <source>11th</source>
         <translation>11ème</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="178"/>
+        <location filename="lotto_gui1.py" line="177"/>
         <source>12th</source>
         <translation>12ème</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="178"/>
+        <location filename="lotto_gui1.py" line="177"/>
         <source>13th</source>
         <translation>13ème</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="178"/>
+        <location filename="lotto_gui1.py" line="177"/>
         <source>14th</source>
         <translation>14ème</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="179"/>
+        <location filename="lotto_gui1.py" line="178"/>
         <source>15th</source>
         <translation>15ème</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="189"/>
+        <location filename="lotto_gui1.py" line="188"/>
         <source>lotto simulation</source>
         <translation>simulation loto</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="206"/>
+        <location filename="lotto_gui1.py" line="205"/>
         <source>random numbers</source>
         <translation>des nombres aléatoires</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="227"/>
+        <location filename="lotto_gui1.py" line="226"/>
         <source>Error, no valid numbers available!</source>
         <translation>Erreur, pas de numéros valides disponibles!</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="230"/>
+        <location filename="lotto_gui1.py" line="229"/>
         <source> out of </source>
         <translation> sur </translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="241"/>
+        <location filename="lotto_gui1.py" line="240"/>
         <source>simulation of a random draw
 
 based on an idea of imageupload,
@@ -291,12 +290,12 @@ Lizenz: GNU GPL v3
 http://www.gnu.org/licenses/</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="248"/>
+        <location filename="lotto_gui1.py" line="247"/>
         <source>Info</source>
         <translation>Infos</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="250"/>
+        <location filename="lotto_gui1.py" line="249"/>
         <source>Created with Python by Markus Hackspacher http://markush.cwsurf.de</source>
         <translation>Créé avec Python par Markus Hackspacher http://markush.cwsurf.de</translation>
     </message>
