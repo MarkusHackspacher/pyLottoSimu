@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="ru" sourcelanguage="en">
+<!DOCTYPE TS>
+<TS version="2.0" language="ru" sourcelanguage="en">
 <context>
     <name>DlgShowDrawing</name>
     <message>
@@ -131,12 +132,12 @@
     <message>
         <location filename="lotto_gui1.py" line="103"/>
         <source>And now we come to the {0} and lastwinning number, it is the {1}.</source>
-        <translation>И теперь мы подходим к {0} и lastwinning числа, это {1}.</translation>
+        <translation>И теперь мы подходим к {0} и последний выигрышный номер, это {1}.</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="110"/>
         <source>That was todays lottery draw, the figures were:{0}, I wish you a nice evening! Bye, bye!</source>
-        <translation>Это была сегодняшняя ничья лотерее, эти цифры составили: {0}, я желаю вам хорошего вечера! До свидания, до свидания!</translation>
+        <translation>Это была сегодняшняя ничья лотерее, эти цифры составили: {0}, я желаю вам хорошего вечера! до свидания!</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="123"/>
@@ -297,7 +298,7 @@ http://www.gnu.org/licenses/</translation>
     <message>
         <location filename="lotto_gui1.py" line="249"/>
         <source>Created with Python by Markus Hackspacher http://markush.cwsurf.de</source>
-        <translation>Созданный с Python Маркус Hackspacher http://markush.cwsurf.de</translation>
+        <translation>Созданный с Python Markus Hackspacher http://markush.cwsurf.de</translation>
     </message>
 </context>
 </TS>
