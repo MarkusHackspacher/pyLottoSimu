@@ -277,7 +277,7 @@ def gui(arguments):
         print "locale: " + unicode(locale)
     app = QtGui.QApplication(sys.argv)
     translator = QtCore.QTranslator()
-    translator.load(join("lotto", "lotto1_" + unicode(locale)))
+    translator.load(join("lotto", "translation", "lotto1_" + unicode(locale)))
     app.installTranslator(translator)
     dialog = MeinDialog()
     sys.exit(app.exec_())
