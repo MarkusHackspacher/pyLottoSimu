@@ -31,8 +31,8 @@ from os.path import join
 from PyQt4 import QtGui, QtCore, uic
 
 import lotto.lottokugeln_rc
-from dialog.show_drawing import DlgShowDrawing
-from zufallszahl import zufallszahlen
+from lotto.dialog.show_drawing import DlgShowDrawing
+from lotto.zufallszahl import zufallszahlen
 
 
 class MeinDialog(QtGui.QMainWindow):
@@ -275,10 +275,10 @@ def gui(arguments):
         locale = arguments[1]
     else:
         locale = unicode(QtCore.QLocale.system().name())
-        print ("locale: " + unicode(locale))
+        print ("locale: " + locale)
     app = QtGui.QApplication(sys.argv)
     translator = QtCore.QTranslator()
-    translator.load(join("lotto", "translation", "lotto1_" + unicode(locale)))
+    translator.load(join("lotto", "translation", "lotto1_" + locale))
     app.installTranslator(translator)
     dialog = MeinDialog()
     sys.exit(app.exec_())
