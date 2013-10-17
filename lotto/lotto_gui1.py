@@ -30,7 +30,7 @@ from random import randint
 from os.path import join
 from PyQt4 import QtGui, QtCore, uic
 
-import lottokugeln_rc
+import lotto.lottokugeln_rc
 from dialog.show_drawing import DlgShowDrawing
 from zufallszahl import zufallszahlen
 
@@ -45,7 +45,7 @@ class MeinDialog(QtGui.QMainWindow):
         self.ui = uic.loadUi(join("lotto", "lotto.ui"))
         self.ui.setWindowIcon(QtGui.QIcon(join("misc", "pyLottoSimu.svg")))
 
-        self.actionLottosim()
+        self.action_lottosim()
         self.timer = QtCore.QTimer(self)
 
         # Slots
@@ -56,7 +56,7 @@ class MeinDialog(QtGui.QMainWindow):
         self.ui.actionBeenden.triggered.connect(self.onclose)
         self.ui.actionInfo.triggered.connect(self.oninfo)
         self.ui.actionGo_to_the_website.triggered.connect(self.onwebsite)
-        self.ui.actionLottosimulation.changed.connect(self.actionLottosim)
+        self.ui.actionLottosimulation.changed.connect(self.action_lottosim)
         self.ui.btn_draw_overview.clicked.connect(self.onbtn_draw_overview)
         self.timer.timeout.connect(self.ontimer)
         self.ui.statusBar().showMessage(self.tr('ready'))
@@ -68,46 +68,46 @@ class MeinDialog(QtGui.QMainWindow):
         self.durchlauf = 0
         self.i_hochste = int(self.ui.sbox_from_a_set_of.text())
         self.zufallszahl = 0
-        self.NaechsteZahlverzoegerung = self.ui.horizontalSlider.value()
+        self.delay_of_next_number = self.ui.horizontalSlider.value()
 
     def ontimer(self):
         """Start time to show a number.  """
         self.timer.stop()
         verz = self.ui.horizontalSlider.value()
-        if self.NaechsteZahlverzoegerung >= verz:
-            self.NaechsteZahlverzoegerung = verz
-        self.NaechsteZahlverzoegerung -= 1
-        if self.NaechsteZahlverzoegerung < 10 \
-         or (self.NaechsteZahlverzoegerung < 17
-         and (self.NaechsteZahlverzoegerung % 2) == 0) \
-         or (self.NaechsteZahlverzoegerung < 25
-         and (self.NaechsteZahlverzoegerung % 3) == 0) \
-         or (self.NaechsteZahlverzoegerung % 4) == 0:
+        if self.delay_of_next_number >= verz:
+            self.delay_of_next_number = verz
+        self.delay_of_next_number -= 1
+        if self.delay_of_next_number < 10 \
+         or (self.delay_of_next_number < 17
+         and (self.delay_of_next_number % 2) == 0) \
+         or (self.delay_of_next_number < 25
+         and (self.delay_of_next_number % 3) == 0) \
+         or (self.delay_of_next_number % 4) == 0:
             self.ui.label_zahl.setText(str(zufallszahlen(1,
              int(self.ui.sbox_from_a_set_of.text()))[0]))
         self.timer.start(100)
-        if self.NaechsteZahlverzoegerung < 0:
+        if self.delay_of_next_number < 0:
             self.NaechsteZahl()
-            self.NaechsteZahlverzoegerung = verz
+            self.delay_of_next_number = verz
 
     def NaechsteZahl(self):
         """Simulation of the draw .  """
         self.ui.label_zahl_2.setText(str(self.zufallszahl[self.durchlauf]))
         self.ui.label_zahl.setText(str(self.zufallszahl[self.durchlauf]))
         if self.durchlauf == (len(self.zufallszahl) - 2):
-            text = self.tr(u'Now we come to the number {0}, and thus '
+            text = self.tr('Now we come to the number {0}, and thus '
              'the penultimate number of todays draw. It is the {1}.')
             text = unicode(text).format(self.zaehlzahlen[self.durchlauf],
               self.zufallszahl[self.durchlauf])
         elif self.durchlauf == (len(self.zufallszahl) - 1):
-            text = self.tr(u'And now we come to the {0} and last'
+            text = self.tr('And now we come to the {0} and last'
              'winning number, it is the {1}.')
             text = unicode(text).format(self.zaehlzahlen[self.durchlauf],
               self.zufallszahl[self.durchlauf])
             self.ui.plainTextEdit.appendPlainText(text)
             zufallszahl = sorted(self.zufallszahl[:])
             text1 = "".join(map(" {0:02d}".format, zufallszahl))
-            text = self.tr(u'That was todays lottery draw, '
+            text = self.tr('That was todays lottery draw, '
             'the figures were:{0}, '
             'I wish you a nice evening! Bye, bye!')
             text = unicode(text).format(text1)
@@ -158,7 +158,7 @@ class MeinDialog(QtGui.QMainWindow):
          dt.strftime("%d %B %Y um %H:%M"), i_anzahl, self.i_hochste)
         self.ui.plainTextEdit.appendPlainText(text)
         self.timer.start(100)
-        self.NaechsteZahlverzoegerung = self.ui.horizontalSlider.value()
+        self.delay_of_next_number = self.ui.horizontalSlider.value()
         textauswahl_tr = [
             self.tr(
             'And now we come to the winning number {0}, it is the {1}.'),
@@ -178,7 +178,7 @@ class MeinDialog(QtGui.QMainWindow):
          self.tr('15th')]
         self.zaehlzahlen = map(unicode, zaehlzahlen_tr)
 
-    def actionLottosim(self):
+    def action_lottosim(self):
         """Changing the layout for simulation or generation
         Move the textedit and change the visible.
         """
@@ -220,8 +220,9 @@ class MeinDialog(QtGui.QMainWindow):
         """Show the output from the random number generator.  """
         i_anzahl = int(self.ui.sbox_drawn_numbers.text())
         i_hochste = int(self.ui.sbox_from_a_set_of.text())
-        if sorted(zufallszahlen(i_anzahl, i_hochste)):
-            text = "".join(map(" {0:02d}".format, zufallszahl))
+        random_numbers = sorted(zufallszahlen(i_anzahl, i_hochste))
+        if random_numbers:
+            text = "".join(map(" {0:02d}".format, random_numbers))
         else:
             text = self.tr("Error, no valid numbers available!")
         dt = datetime.now()
@@ -274,7 +275,7 @@ def gui(arguments):
         locale = arguments[1]
     else:
         locale = unicode(QtCore.QLocale.system().name())
-        print "locale: " + unicode(locale)
+        print ("locale: " + unicode(locale))
     app = QtGui.QApplication(sys.argv)
     translator = QtCore.QTranslator()
     translator.load(join("lotto", "translation", "lotto1_" + unicode(locale)))
