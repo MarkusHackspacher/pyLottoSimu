@@ -38,7 +38,9 @@ from lotto.zufallszahl import zufallszahlen
 class MeinDialog(QtGui.QMainWindow):
     """The GUI and programm of the pyLottoSimu. """
     def __init__(self):
-        """Inital user interface and slots"""
+        """Inital user interface and slots
+        @return: none
+        """
         QtGui.QDialog.__init__(self)
 
         # Set up the user interface from Designer.
@@ -64,14 +66,18 @@ class MeinDialog(QtGui.QMainWindow):
         self.ui.show()
 
     def init(self):
-        """Inital variable"""
+        """Inital variable
+        @return: none
+        """
         self.durchlauf = 0
         self.i_hochste = int(self.ui.sbox_from_a_set_of.text())
         self.zufallszahl = 0
         self.delay_of_next_number = self.ui.horizontalSlider.value()
 
     def ontimer(self):
-        """Start time to show a number.  """
+        """Start time to show a number.  
+        @return: none
+        """
         self.timer.stop()
         verz = self.ui.horizontalSlider.value()
         if self.delay_of_next_number >= verz:
@@ -87,11 +93,13 @@ class MeinDialog(QtGui.QMainWindow):
              int(self.ui.sbox_from_a_set_of.text()))[0]))
         self.timer.start(100)
         if self.delay_of_next_number < 0:
-            self.NaechsteZahl()
+            self.show_next_number()
             self.delay_of_next_number = verz
 
-    def NaechsteZahl(self):
-        """Simulation of the draw .  """
+    def show_next_number(self):
+        """Simulation of the draw and show the next Number on the Screen.  
+        @return: none
+        """
         self.ui.label_zahl_2.setText(str(self.zufallszahl[self.durchlauf]))
         self.ui.label_zahl.setText(str(self.zufallszahl[self.durchlauf]))
         if self.durchlauf == (len(self.zufallszahl) - 2):
@@ -144,6 +152,7 @@ class MeinDialog(QtGui.QMainWindow):
         """Start simulation with the first drawing
         init timer with the valve from the Scrollbar
         the next drawing starts with the timer event.
+        @return: none
         """
         self.ui.plainTextEdit.setPlainText("")
         self.ui.label_zahl_2.setText("")
@@ -181,6 +190,7 @@ class MeinDialog(QtGui.QMainWindow):
     def action_lottosim(self):
         """Changing the layout for simulation or generation
         Move the textedit and change the visible.
+        @return: none
         """
         self.ui.plainTextEdit.setPlainText("")
         if self.ui.actionLottosimulation.isChecked():
@@ -217,7 +227,9 @@ class MeinDialog(QtGui.QMainWindow):
             self.timer.stop()
 
     def onrandom_numbers_generator(self):
-        """Show the output from the random number generator.  """
+        """Show the output from the random number generator.  
+        @return: none
+        """
         i_anzahl = int(self.ui.sbox_drawn_numbers.text())
         i_hochste = int(self.ui.sbox_from_a_set_of.text())
         random_numbers = sorted(zufallszahlen(i_anzahl, i_hochste))

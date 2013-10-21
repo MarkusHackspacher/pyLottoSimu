@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-pyLottoSimu
+pyLottoSimu, load module lotto
 
 Copyright (C) <2012-2013> Markus Hackspacher
 
