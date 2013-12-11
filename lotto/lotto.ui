@@ -240,7 +240,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
       <string>random numbers</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="AusgfeldLeeren">
+    <widget class="QPushButton" name="clean_output_text">
      <property name="geometry">
       <rect>
        <x>160</x>
