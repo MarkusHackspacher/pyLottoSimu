@@ -10,8 +10,7 @@ a programm for the german lottery "pick 6 out of 49" system.
 install
 -------
 
-The program requires Python 2.7 to. www.python.org/download/
-and Qt4 for Python 2.7 www.riverbankcomputing.com/software/pyqt/download
+The program requires [Python 2.7](www.python.org/download/) and [Qt4 for Python 2.7](www.riverbankcomputing.com/software/pyqt/download).
 
 Start with
 ```python lotto.pyw [de|fr|es|it|ru]```
@@ -36,8 +35,7 @@ Installieren
 Das Programm läuft auf MacOS, Windows und Linux,
 und überall dort wo Python und pyqt installieren lässt!
 
-Das Programm benötigt Python 2.7 dazu. www.python.org/download/ 
-und Qt4 für Python 2.7 www.riverbankcomputing.com/software/pyqt/download
+Das Programm benötigt [Python 2.7](www.python.org/download/) und [Qt4 für Python 2.7](www.riverbankcomputing.com/software/pyqt/download) dazu.
 
 Start mit: 
 ```python lotto.pyw [de|fr|es|it|ru]```
