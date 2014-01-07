@@ -14,7 +14,7 @@ The program requires Python 2.7 to. www.python.org/download/
 and Qt4 for Python 2.7 www.riverbankcomputing.com/software/pyqt/download
 
 Start with
-```python lotto.pyw en```
+```python lotto.pyw [de|fr|es|it|ru]```
 
 Make the documentation as .pdf file:
 ```epydoc pylottosimu.pyw lotto --pdf```
@@ -40,7 +40,7 @@ Das Programm benötigt Python 2.7 dazu. www.python.org/download/
 und Qt4 für Python 2.7 www.riverbankcomputing.com/software/pyqt/download
 
 Start mit: 
-```python lotto.pyw de```
+```python lotto.pyw [de|fr|es|it|ru]```
 
 Documentation als .pdf Datei aus den Kommentaren des Quelltextes erstellen lassen:
 ```epydoc pylottosimu.pyw lotto --pdf```
@@ -58,7 +58,7 @@ Modus Simulation:
 Die Zahlen auswählen und mit 'Start' die Simulation starten.
 Dabei kann mit dem Schieber oben links die Geschwindigkeit verändert werden.
 
-Auf der Webseite gibt es ein [Videos](http://markush.cwsurf.de/joomla_17/index.php/python/pylottosimu/8-lotto-generator-und-simulator) zu dem Programm.
+Auf der Webseite gibt es [Videos](http://markush.cwsurf.de/joomla_17/index.php/python/pylottosimu/8-lotto-generator-und-simulator) zu dem Programm.
 
 Info und Lizenz
 ---------------
