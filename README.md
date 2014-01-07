@@ -58,12 +58,15 @@ Modus Simulation:
 Die Zahlen auswählen und mit 'Start' die Simulation starten.
 Dabei kann mit dem Schieber oben links die Geschwindigkeit verändert werden.
 
+Videos zu dem Programm findet ihr auf der Webseite:
+http://markush.cwsurf.de/joomla_17/index.php/python/pylottosimu/8-lotto-generator-und-simulator
+
 Info und Lizenz
 ---------------
 
 pyLottoSimu
 
-Copyright (C) <2012-2013> Markus Hackspacher
+Copyright <2012-2014> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
@@ -75,7 +78,7 @@ the Free Software Foundation, either version 3 of the License, or
 pyLottoSimu is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Lesser General Public License for more details.
+GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
