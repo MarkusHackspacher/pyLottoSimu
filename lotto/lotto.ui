@@ -56,11 +56,11 @@
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">QFrame#Rahmen { border-image: url(:/lottokugel.png)}
+    <string notr="true">QFrame#main_frame { border-image: url(:/lottokugel.png)}
 #QLabel {	background-color: rgb(220, 220, 220)}
-QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
+QLabel#label_big_number, QLabel#label_last_draw_number {	background-color: none}</string>
    </property>
-   <widget class="QFrame" name="Rahmen">
+   <widget class="QFrame" name="main_frame">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -78,7 +78,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPlainTextEdit" name="plainTextEdit">
+    <widget class="QPlainTextEdit" name="plaintextedit">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -136,7 +136,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="label_numbers">
         <property name="font">
          <font>
           <pointsize>12</pointsize>
@@ -175,7 +175,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="label_out_of">
         <property name="font">
          <font>
           <pointsize>12</pointsize>
@@ -256,7 +256,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
       <string>output field empty</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_zahl">
+    <widget class="QLabel" name="label_big_number">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -338,7 +338,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label_Geschwindigkeit">
+    <widget class="QLabel" name="label_speed">
      <property name="geometry">
       <rect>
        <x>15</x>
@@ -354,7 +354,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="label_zahl_2">
+    <widget class="QLabel" name="label_last_draw_number">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -417,36 +417,36 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
      <height>20</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuDatei">
+   <widget class="QMenu" name="menu_file">
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionBeenden"/>
+    <addaction name="action_quit"/>
    </widget>
-   <widget class="QMenu" name="menuHilfe">
+   <widget class="QMenu" name="menu_help">
     <property name="title">
      <string>Help</string>
     </property>
-    <addaction name="actionGo_to_the_website"/>
-    <addaction name="actionInfo"/>
+    <addaction name="action_go_to_the_website"/>
+    <addaction name="action_info"/>
    </widget>
-   <widget class="QMenu" name="menuModus">
+   <widget class="QMenu" name="menu_mode">
     <property name="title">
      <string>Mode</string>
     </property>
-    <addaction name="actionLottosimulation"/>
+    <addaction name="action_lotto_simulation"/>
    </widget>
-   <addaction name="menuDatei"/>
-   <addaction name="menuModus"/>
-   <addaction name="menuHilfe"/>
+   <addaction name="menu_file"/>
+   <addaction name="menu_mode"/>
+   <addaction name="menu_help"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionBeenden">
+  <action name="action_quit">
    <property name="text">
     <string>Quit</string>
    </property>
   </action>
-  <action name="actionInfo">
+  <action name="action_info">
    <property name="text">
     <string>Info</string>
    </property>
@@ -462,7 +462,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
     <string>random numbers</string>
    </property>
   </action>
-  <action name="actionLottosimulation">
+  <action name="action_lotto_simulation">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -478,7 +478,7 @@ QLabel#label_zahl, QLabel#label_zahl_2 {	background-color: none}</string>
     <string>Help</string>
    </property>
   </action>
-  <action name="actionGo_to_the_website">
+  <action name="action_go_to_the_website">
    <property name="text">
     <string>Go to the website</string>
    </property>

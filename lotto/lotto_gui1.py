@@ -3,7 +3,7 @@
 """
 pyLottoSimu
 
-Copyright (C) <2012-2013> Markus Hackspacher
+Copyright (C) <2012-2014> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
@@ -55,10 +55,10 @@ class MeinDialog(QtGui.QMainWindow):
          self.onrandom_numbers_generator)
         self.ui.clean_output_text.clicked.connect(self.onclean_output_text)
         self.ui.btn_start.clicked.connect(self.onbtn_start)
-        self.ui.actionBeenden.triggered.connect(self.onclose)
-        self.ui.actionInfo.triggered.connect(self.oninfo)
-        self.ui.actionGo_to_the_website.triggered.connect(self.onwebsite)
-        self.ui.actionLottosimulation.changed.connect(self.action_lottosim)
+        self.ui.action_quit.triggered.connect(self.onclose)
+        self.ui.action_info.triggered.connect(self.oninfo)
+        self.ui.action_go_to_the_website.triggered.connect(self.onwebsite)
+        self.ui.action_lotto_simulation.changed.connect(self.action_lottosim)
         self.ui.btn_draw_overview.clicked.connect(self.onbtn_draw_overview)
         self.timer.timeout.connect(self.ontimer)
         self.ui.statusBar().showMessage(self.tr('ready'))
@@ -89,7 +89,7 @@ class MeinDialog(QtGui.QMainWindow):
          or (self.delay_of_next_number < 25
          and (self.delay_of_next_number % 3) == 0) \
          or (self.delay_of_next_number % 4) == 0:
-            self.ui.label_zahl.setText(str(zufallszahlen(1,
+            self.ui.label_big_number.setText(str(zufallszahlen(1,
              int(self.ui.sbox_from_a_set_of.text()))[0]))
         self.timer.start(100)
         if self.delay_of_next_number < 0:
@@ -100,8 +100,8 @@ class MeinDialog(QtGui.QMainWindow):
         """Simulation of the draw and show the next Number on the Screen.  
         @return: none
         """
-        self.ui.label_zahl_2.setText(str(self.random_number[self.turn]))
-        self.ui.label_zahl.setText(str(self.random_number[self.turn]))
+        self.ui.label_last_draw_number.setText(str(self.random_number[self.turn]))
+        self.ui.label_big_number.setText(str(self.random_number[self.turn]))
         if self.turn == (len(self.random_number) - 2):
             text = self.tr('Now we come to the number {0}, and thus '
              'the penultimate number of todays draw. It is the {1}.')
@@ -112,7 +112,7 @@ class MeinDialog(QtGui.QMainWindow):
              'winning number, it is the {1}.')
             text = unicode(text).format(self.zaehlzahlen[self.turn],
               self.random_number[self.turn])
-            self.ui.plainTextEdit.appendPlainText(text)
+            self.ui.plaintextedit.appendPlainText(text)
             random_number = sorted(self.random_number[:])
             text1 = "".join(map(" {0:02d}".format, random_number))
             text = self.tr('That was todays lottery draw, '
@@ -140,7 +140,7 @@ class MeinDialog(QtGui.QMainWindow):
              self.zaehlzahlen[self.turn],
              self.random_number[self.turn])
             self.LastTextnumber = Textnumber
-        self.ui.plainTextEdit.appendPlainText(text)
+        self.ui.plaintextedit.appendPlainText(text)
         self.turn += 1
 
     def onbtn_draw_overview(self):
@@ -154,8 +154,8 @@ class MeinDialog(QtGui.QMainWindow):
         the next drawing starts with the timer event.
         @return: none
         """
-        self.ui.plainTextEdit.setPlainText("")
-        self.ui.label_zahl_2.setText("")
+        self.ui.plaintextedit.setPlainText("")
+        self.ui.label_last_draw_number.setText("")
         self.turn = 0
         dt = datetime.now()
         i_anzahl = int(self.ui.sbox_drawn_numbers.text())
@@ -165,7 +165,7 @@ class MeinDialog(QtGui.QMainWindow):
          'at {0}.\nnumbers are drawn: {1} out of {2}!')
         text = unicode(text).format(
          dt.strftime("%d %B %Y um %H:%M"), i_anzahl, self.i_hochste)
-        self.ui.plainTextEdit.appendPlainText(text)
+        self.ui.plaintextedit.appendPlainText(text)
         self.timer.start(100)
         self.delay_of_next_number = self.ui.horizontalSlider.value()
         textauswahl_tr = [
@@ -192,19 +192,19 @@ class MeinDialog(QtGui.QMainWindow):
         Move the textedit and change the visible.
         @return: none
         """
-        self.ui.plainTextEdit.setPlainText("")
-        if self.ui.actionLottosimulation.isChecked():
+        self.ui.plaintextedit.setPlainText("")
+        if self.ui.action_lotto_simulation.isChecked():
             # lotto simulation
             self.ui.statusBar().showMessage(self.tr('lotto simulation'))
-            self.ui.plainTextEdit.setGeometry(QtCore.QRect(20, 180, 441, 136))
+            self.ui.plaintextedit.setGeometry(QtCore.QRect(20, 180, 441, 136))
             self.ui.btn_random_numbers.setVisible(False)
             self.ui.clean_output_text.setVisible(False)
             self.ui.label_Lottozahlen.setVisible(False)
-            self.ui.label_zahl.setVisible(True)
-            self.ui.label_zahl_2.setVisible(True)
-            self.ui.label_Geschwindigkeit.setVisible(True)
-            self.ui.label_zahl.setText("")
-            self.ui.label_zahl_2.setText("")
+            self.ui.label_big_number.setVisible(True)
+            self.ui.label_last_draw_number.setVisible(True)
+            self.ui.label_speed.setVisible(True)
+            self.ui.label_big_number.setText("")
+            self.ui.label_last_draw_number.setText("")
             self.ui.btn_start.setVisible(True)
             self.ui.horizontalSlider.setVisible(True)
             self.ui.btn_draw_overview.setVisible(False)
@@ -213,13 +213,13 @@ class MeinDialog(QtGui.QMainWindow):
         else:
             #random numbers
             self.ui.statusBar().showMessage(self.tr('random numbers'))
-            self.ui.plainTextEdit.setGeometry(QtCore.QRect(20, 20, 441, 111))
+            self.ui.plaintextedit.setGeometry(QtCore.QRect(20, 20, 441, 111))
             self.ui.btn_random_numbers.setVisible(True)
             self.ui.clean_output_text.setVisible(True)
             self.ui.label_Lottozahlen.setVisible(True)
-            self.ui.label_zahl.setVisible(False)
-            self.ui.label_zahl_2.setVisible(False)
-            self.ui.label_Geschwindigkeit.setVisible(False)
+            self.ui.label_big_number.setVisible(False)
+            self.ui.label_last_draw_number.setVisible(False)
+            self.ui.label_speed.setVisible(False)
             self.ui.btn_start.setVisible(False)
             self.ui.horizontalSlider.setVisible(False)
             self.ui.btn_draw_overview.setVisible(False)
@@ -240,12 +240,12 @@ class MeinDialog(QtGui.QMainWindow):
         dt = datetime.now()
         text = dt.strftime("%H:%M:%S: ") + str(i_anzahl) + \
          self.tr(" out of ") + str(i_hochste) + ": " + text
-        self.ui.plainTextEdit.appendPlainText(text)
+        self.ui.plaintextedit.appendPlainText(text)
 
     def onclean_output_text(self):
         """Clean the output text
         @return: none"""
-        self.ui.plainTextEdit.setPlainText("")
+        self.ui.plaintextedit.setPlainText("")
 
     def oninfo(self):
         """Infoscreen
