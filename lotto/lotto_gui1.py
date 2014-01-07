@@ -75,7 +75,7 @@ class MeinDialog(QtGui.QMainWindow):
         self.delay_of_next_number = self.ui.horizontalSlider.value()
 
     def ontimer(self):
-        """Start time to show a number.  
+        """Start time to show a number.
         @return: none
         """
         self.timer.stop()
@@ -97,10 +97,11 @@ class MeinDialog(QtGui.QMainWindow):
             self.delay_of_next_number = verz
 
     def show_next_number(self):
-        """Simulation of the draw and show the next Number on the Screen.  
+        """Simulation of the draw and show the next Number on the Screen.
         @return: none
         """
-        self.ui.label_last_draw_number.setText(str(self.random_number[self.turn]))
+        self.ui.label_last_draw_number.setText(
+         str(self.random_number[self.turn]))
         self.ui.label_big_number.setText(str(self.random_number[self.turn]))
         if self.turn == (len(self.random_number) - 2):
             text = self.tr('Now we come to the number {0}, and thus '
@@ -147,7 +148,7 @@ class MeinDialog(QtGui.QMainWindow):
         """show dialog of the draw"""
         dlgdraw = DlgShowDrawing(self.random_number, self.i_hochste)
         dlgdraw.exec_()
- 
+
     def onbtn_start(self):
         """Start simulation with the first drawing
         init timer with the valve from the Scrollbar
@@ -227,7 +228,7 @@ class MeinDialog(QtGui.QMainWindow):
             self.timer.stop()
 
     def onrandom_numbers_generator(self):
-        """Show the output from the random number generator.  
+        """Show the output from the random number generator.
         @return: none
         """
         i_anzahl = int(self.ui.sbox_drawn_numbers.text())
