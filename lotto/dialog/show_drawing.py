@@ -3,7 +3,7 @@
 """
 pyLottoSimu
 
-Copyright (C) <2012-2013> Markus Hackspacher
+Copyright (C) <2012-2014> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
@@ -49,8 +49,12 @@ class DlgShowDrawing(QtGui.QDialog):
         self.gridLayout.setMargin(0)
 
         #array of Button from 1 to 49
-        self.Btn_Numerary_1to49 = [QtGui.QPushButton(self)
-         for num_draw in xrange(highest_number)]
+        try:
+            self.Btn_Numerary_1to49 = [QtGui.QPushButton(self)
+             for num_draw in xrange(highest_number)]
+        except:
+            self.Btn_Numerary_1to49 = [QtGui.QPushButton(self)
+             for num_draw in range(highest_number)]
         button_number = 0
         for button in self.Btn_Numerary_1to49:
             button.setMaximumSize(QtCore.QSize(58, 58))

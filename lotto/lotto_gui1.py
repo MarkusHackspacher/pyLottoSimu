@@ -30,10 +30,15 @@ from random import randint
 from os.path import join
 from PyQt4 import QtGui, QtCore, uic
 
-import lotto.lottokugeln_rc
 from lotto.dialog.show_drawing import DlgShowDrawing
-from lotto.zufallszahl import zufallszahlen
 
+print (sys.version_info)
+if sys.version_info >= (3, 0):
+    import lotto.lottokugeln_rc3 as lottokugeln_rc
+    from lotto.randomnumbers import zufallszahlen
+else:
+    import lotto.lottokugeln_rc as lottokugeln_rc
+    from lotto.zufallszahl import zufallszahlen
 
 class MeinDialog(QtGui.QMainWindow):
     """The GUI and programm of the pyLottoSimu. """
@@ -106,20 +111,31 @@ class MeinDialog(QtGui.QMainWindow):
         if self.turn == (len(self.random_number) - 2):
             text = self.tr('Now we come to the number {0}, and thus '
              'the penultimate number of todays draw. It is the {1}.')
-            text = unicode(text).format(self.zaehlzahlen[self.turn],
-              self.random_number[self.turn])
+            try:
+                text = unicode(text).format(self.zaehlzahlen[self.turn],
+                 self.random_number[self.turn])
+            except:
+                text = text.format(self.zaehlzahlen[self.turn],
+                 self.random_number[self.turn])
         elif self.turn == (len(self.random_number) - 1):
             text = self.tr('And now we come to the {0} and last'
              'winning number, it is the {1}.')
-            text = unicode(text).format(self.zaehlzahlen[self.turn],
-              self.random_number[self.turn])
+            try:
+                text = unicode(text).format(self.zaehlzahlen[self.turn],
+                 self.random_number[self.turn])
+            except:
+                text = text.format(self.zaehlzahlen[self.turn],
+                 self.random_number[self.turn])
             self.ui.plaintextedit.appendPlainText(text)
             random_number = sorted(self.random_number[:])
             text1 = "".join(map(" {0:02d}".format, random_number))
             text = self.tr('That was todays lottery draw, '
             'the figures were:{0}, '
             'I wish you a nice evening! Bye, bye!')
-            text = unicode(text).format(text1)
+            try:
+                text = unicode(text).format(text1)
+            except:
+                text = text.format(text1)
             self.timer.stop()
             if self.ui.rdbtn_show_draw_after.isChecked():
                 self.onbtn_draw_overview()
@@ -130,7 +146,11 @@ class MeinDialog(QtGui.QMainWindow):
         elif self.turn == 0:
             self.ui.btn_draw_overview.setVisible(False)
             text = self.tr('And the first winning number is the {0}.')
-            text = unicode(text).format(self.random_number[self.turn])
+            try:
+                text = unicode(text).format(self.random_number[self.turn])
+            except:
+                text = text.format(self.random_number[self.turn])
+            
             self.LastTextnumber = -1
         else:
             while True:
@@ -164,8 +184,12 @@ class MeinDialog(QtGui.QMainWindow):
         self.random_number = zufallszahlen(i_anzahl, self.i_hochste)
         text = self.tr('Welcome to the lottery draw,\n'
          'at {0}.\nnumbers are drawn: {1} out of {2}!')
-        text = unicode(text).format(
-         dt.strftime("%d %B %Y um %H:%M"), i_anzahl, self.i_hochste)
+        try:
+            text = unicode(text).format(dt.strftime(
+             "%d %B %Y um %H:%M"), i_anzahl, self.i_hochste)
+        except:
+            text = text.format(dt.strftime(
+             "%d %B %Y um %H:%M"), i_anzahl, self.i_hochste)
         self.ui.plaintextedit.appendPlainText(text)
         self.timer.start(100)
         self.delay_of_next_number = self.ui.horizontalSlider.value()
@@ -179,14 +203,20 @@ class MeinDialog(QtGui.QMainWindow):
             self.tr(
             "Now we come to {0} number of today's draw ... {1}.",),
             self.tr('The {0} winning number is {1}.')]
-        self.textauswahl = map(unicode, textauswahl_tr)
+        try:
+            self.textauswahl = map(unicode, textauswahl_tr)
+        except:
+            self.textauswahl = textauswahl_tr
         zaehlzahlen_tr = [self.tr('first'), self.tr('second'),
          self.tr('third'), self.tr('fourth'), self.tr('fifth'),
          self.tr('sixth'), self.tr('seventh'), self.tr('eighth'),
          self.tr('ninth'), self.tr('10th'), self.tr('11th'),
          self.tr('12th'), self.tr('13th'), self.tr('14th'),
          self.tr('15th')]
-        self.zaehlzahlen = map(unicode, zaehlzahlen_tr)
+        try:
+            self.zaehlzahlen = map(unicode, zaehlzahlen_tr)
+        except:
+            self.zaehlzahlen = zaehlzahlen_tr
 
     def action_lottosim(self):
         """Changing the layout for simulation or generation
@@ -287,7 +317,10 @@ def gui(arguments):
     if len(arguments) > 1:
         locale = arguments[1]
     else:
-        locale = unicode(QtCore.QLocale.system().name())
+        try:
+            locale = unicode(QtCore.QLocale.system().name())
+        except:
+            locale = QtCore.QLocale.system().name()
         print ("locale: " + locale)
     app = QtGui.QApplication(sys.argv)
     translator = QtCore.QTranslator()
