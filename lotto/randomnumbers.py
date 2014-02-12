@@ -36,7 +36,7 @@ def zufallszahlen(anzahl, maxwert):
     @type anzahl: int
     @type maxwert: int
     @return: Gibt Zufallszahlen zurueck.
-    
+
     >>> zufallszahlen(16, 15)
     Traceback (most recent call last):
     ValueError: Sample larger than population

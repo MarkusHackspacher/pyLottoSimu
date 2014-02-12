@@ -22,10 +22,14 @@ along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 from os.path import join
-from PyQt4 import QtCore, QtGui
+try:
+    from PyQt5 import QtGui, QtCore, QtWidgets
+except ImportError:
+    from PyQt4 import QtGui as QtWidgets
+    from PyQt4 import QtGui, QtCore
 
 
-class DlgShowDrawing(QtGui.QDialog):
+class DlgShowDrawing(QtWidgets.QDialog):
     """Show the numbers in a dialog box"""
     def __init__(self, draw_number, highest_number):
         """
@@ -35,32 +39,33 @@ class DlgShowDrawing(QtGui.QDialog):
         @type highest_number: int
         @return: none
         """
-        QtGui.QDialog.__init__(self)
+        QtWidgets.QDialog.__init__(self)
 
         self.setWindowIcon(QtGui.QIcon(join("misc", "icon.ico")))
         self.setModal(True)
-        self.buttonBox = QtGui.QDialogButtonBox(self)
+        self.buttonBox = QtWidgets.QDialogButtonBox(self)
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Ok)
+        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Ok)
 
-        self.boxLayout = QtGui.QBoxLayout(QtGui.QBoxLayout.TopToBottom, self)
+        self.boxLayout = QtWidgets.QBoxLayout(
+            QtWidgets.QBoxLayout.TopToBottom, self)
 
-        self.gridLayout = QtGui.QGridLayout()
-        self.gridLayout.setMargin(0)
+        self.gridLayout = QtWidgets.QGridLayout()
 
         #array of Button from 1 to 49
         try:
-            self.Btn_Numerary_1to49 = [QtGui.QPushButton(self)
-             for num_draw in xrange(highest_number)]
+            self.Btn_Numerary_1to49 = [
+                QtGui.QPushButton(self) for num_draw in xrange(highest_number)]
         except:
-            self.Btn_Numerary_1to49 = [QtGui.QPushButton(self)
-             for num_draw in range(highest_number)]
+            self.Btn_Numerary_1to49 = [
+                QtWidgets.QPushButton(self)
+                for num_draw in range(highest_number)]
         button_number = 0
         for button in self.Btn_Numerary_1to49:
             button.setMaximumSize(QtCore.QSize(58, 58))
             button.setAutoFillBackground(True)
-            self.gridLayout.addWidget(button,
-             int(button_number / 7), int(button_number % 7), 1, 1)
+            self.gridLayout.addWidget(
+                button, int(button_number / 7), int(button_number % 7), 1, 1)
             button_number += 1
             button.setText(str(button_number))
 
