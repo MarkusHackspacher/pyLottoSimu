@@ -37,7 +37,7 @@ Installieren
 Das Programm läuft auf MacOS, Windows und Linux,
 und überall dort wo Python und pyqt installieren lässt!
 
-Das Programm benötigt [Python  2.7 or 3.x](http://www.python.org/download/) 
+Das Programm benötigt [Python  2.7 oder 3.x](http://www.python.org/download/) 
 und [Qt4 für Python](http://www.riverbankcomputing.com/software/pyqt/download) 
 oder [Qt5 für Python](http://www.riverbankcomputing.com/software/pyqt/download5) dazu.
 
