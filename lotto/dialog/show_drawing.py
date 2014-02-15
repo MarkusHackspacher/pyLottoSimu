@@ -60,14 +60,12 @@ class DlgShowDrawing(QtWidgets.QDialog):
             self.Btn_Numerary_1to49 = [
                 QtWidgets.QPushButton(self)
                 for num_draw in range(highest_number)]
-        button_number = 0
-        for button in self.Btn_Numerary_1to49:
+        for button_number, button in enumerate(self.Btn_Numerary_1to49):
             button.setMaximumSize(QtCore.QSize(58, 58))
             button.setAutoFillBackground(True)
             self.gridLayout.addWidget(
                 button, int(button_number / 7), int(button_number % 7), 1, 1)
-            button_number += 1
-            button.setText(str(button_number))
+            button.setText(str(button_number + 1))
 
             if button_number in draw_number:
                 button.setFlat(False)

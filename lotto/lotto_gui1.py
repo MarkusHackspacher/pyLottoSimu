@@ -333,7 +333,7 @@ def gui(arguments):
             locale = unicode(QtCore.QLocale.system().name())
         except:
             locale = QtCore.QLocale.system().name()
-        print ("locale: " + locale)
+        print ("locale: {}".format(locale))
     app = QtWidgets.QApplication(sys.argv)
     translator = QtCore.QTranslator()
     translator.load(join("lotto", "translation", "lotto1_" + locale))
