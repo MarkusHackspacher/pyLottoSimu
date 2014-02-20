@@ -22,11 +22,15 @@ along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 from os.path import join
+import sys
+
 try:
     from PyQt5 import QtGui, QtCore, QtWidgets
 except ImportError:
     from PyQt4 import QtGui as QtWidgets
     from PyQt4 import QtGui, QtCore
+if sys.version_info < (3, 0):
+    range = xrange
 
 
 class DlgShowDrawing(QtWidgets.QDialog):
@@ -53,13 +57,9 @@ class DlgShowDrawing(QtWidgets.QDialog):
         self.gridLayout = QtWidgets.QGridLayout()
 
         #array of Button from 1 to 49
-        try:
-            self.Btn_Numerary_1to49 = [
-                QtGui.QPushButton(self) for num_draw in xrange(highest_number)]
-        except:
-            self.Btn_Numerary_1to49 = [
-                QtWidgets.QPushButton(self)
-                for num_draw in range(highest_number)]
+        self.Btn_Numerary_1to49 = [
+            QtWidgets.QPushButton(self)
+            for num_draw in range(highest_number)]
         for button_number, button in enumerate(self.Btn_Numerary_1to49):
             button.setMaximumSize(QtCore.QSize(58, 58))
             button.setAutoFillBackground(True)

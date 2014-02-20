@@ -28,6 +28,7 @@ import webbrowser
 from datetime import datetime
 from random import randint
 from os.path import join
+import random
 
 try:
     from PyQt5 import QtGui, QtCore, QtWidgets, uic
@@ -37,19 +38,17 @@ except ImportError:
     from PyQt4 import QtGui, QtCore, uic
     print ("pyQt4")
 
-#from lotto.dialog.show_drawing import DlgShowDrawing
 if sys.version_info >= (3, 0):
     if QtCore.QT_VERSION >= 0x050000:
         import lotto.lottokugeln_rc3_qt5 as lottokugeln_rc
     else:
         import lotto.lottokugeln_rc3 as lottokugeln_rc
-    from lotto.randomnumbers import zufallszahlen
     from lotto.dialog.show_drawing import DlgShowDrawing
     unicode = str
 else:
     import lottokugeln_rc as lottokugeln_rc
-    from zufallszahl import zufallszahlen
     from dialog.show_drawing import DlgShowDrawing
+    range = xrange
 
 
 class LottoSimuDialog(QtWidgets.QMainWindow):
@@ -87,7 +86,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         @return: none
         """
         self.turn = 0
-        self.i_hochste = int(self.ui.sbox_from_a_set_of.text())
+        self.highest = int(self.ui.sbox_from_a_set_of.text())
         self.random_number = 0
         self.delay_of_next_number = self.ui.horizontalSlider.value()
 
@@ -106,8 +105,9 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                 or (self.delay_of_next_number < 25
                     and (self.delay_of_next_number % 3) == 0) \
                 or (self.delay_of_next_number % 4) == 0:
-            self.ui.label_big_number.setText(str(zufallszahlen(
-                1, int(self.ui.sbox_from_a_set_of.text()))[0]))
+            self.ui.label_big_number.setText(str(
+                random.sample(range(1, int(
+                self.ui.sbox_from_a_set_of.text()) + 1), 1)[0]))
         self.timer.start(100)
         if self.delay_of_next_number < 0:
             self.show_next_number()
@@ -123,12 +123,12 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         if self.turn == (len(self.random_number) - 2):
             text = self.tr('Now we come to the number {0}, and thus the '
                            'penultimate number of todays draw. It is the {1}.')
-            text = unicode(text).format(self.zaehlzahlen[self.turn],
+            text = unicode(text).format(self.countnumbers[self.turn],
                                         self.random_number[self.turn])
         elif self.turn == (len(self.random_number) - 1):
             text = self.tr('And now we come to the {0} and last'
                            'winning number, it is the {1}.')
-            text = unicode(text).format(self.zaehlzahlen[self.turn],
+            text = unicode(text).format(self.countnumbers[self.turn],
                                         self.random_number[self.turn])
             self.ui.plaintextedit.appendPlainText(text)
             random_number = sorted(self.random_number[:])
@@ -151,11 +151,11 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             self.LastTextnumber = -1
         else:
             while True:
-                Textnumber = randint(0, len(self.textauswahl) - 1)
+                Textnumber = randint(0, len(self.textselection) - 1)
                 if Textnumber != self.LastTextnumber:
                     break
-            text = self.textauswahl[Textnumber].format(
-                self.zaehlzahlen[self.turn],
+            text = self.textselection[Textnumber].format(
+                self.countnumbers[self.turn],
                 self.random_number[self.turn])
             self.LastTextnumber = Textnumber
         self.ui.plaintextedit.appendPlainText(text)
@@ -163,7 +163,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
     def onbtn_draw_overview(self):
         """show dialog of the draw"""
-        dlgdraw = DlgShowDrawing(self.random_number, self.i_hochste)
+        dlgdraw = DlgShowDrawing(self.random_number, self.highest)
         dlgdraw.exec_()
 
     def onbtn_start(self):
@@ -176,17 +176,18 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.label_last_draw_number.setText("")
         self.turn = 0
         dt = datetime.now()
-        i_anzahl = int(self.ui.sbox_drawn_numbers.text())
-        self.i_hochste = int(self.ui.sbox_from_a_set_of.text())
-        self.random_number = zufallszahlen(i_anzahl, self.i_hochste)
+        drawn_numbers = int(self.ui.sbox_drawn_numbers.text())
+        self.highest = int(self.ui.sbox_from_a_set_of.text())
+        self.random_number = \
+            random.sample(range(1, self.highest + 1), drawn_numbers)
         text = self.tr('Welcome to the lottery draw,\n'
                        'at {0}.\nnumbers are drawn: {1} out of {2}!')
         text = unicode(text).format(dt.strftime(
-                "%d %B %Y um %H:%M"), i_anzahl, self.i_hochste)
+                "%d %B %Y um %H:%M"), drawn_numbers, self.highest)
         self.ui.plaintextedit.appendPlainText(text)
         self.timer.start(100)
         self.delay_of_next_number = self.ui.horizontalSlider.value()
-        textauswahl_tr = [
+        textselection_tr = [
             self.tr(
                 "And now we come to the winning number {0}, it is the {1}."),
             self.tr(
@@ -196,7 +197,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             self.tr(
                 "Now we come to {0} number of today's draw ... {1}.",),
             self.tr('The {0} winning number is {1}.')]
-        zaehlzahlen_tr = [self.tr('first'), self.tr('second'),
+        countnumbers_tr = [self.tr('first'), self.tr('second'),
                           self.tr('third'), self.tr('fourth'),
                           self.tr('fifth'), self.tr('sixth'),
                           self.tr('seventh'), self.tr('eighth'),
@@ -205,11 +206,11 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                           self.tr('13th'), self.tr('14th'),
                           self.tr('15th')]
         if sys.version_info >= (3, 0):
-            self.textauswahl = textauswahl_tr
-            self.zaehlzahlen = zaehlzahlen_tr
+            self.textselection = textselection_tr
+            self.countnumbers = countnumbers_tr
         else:
-            self.textauswahl = map(unicode, textauswahl_tr)
-            self.zaehlzahlen = map(unicode, zaehlzahlen_tr)
+            self.textselection = map(unicode, textselection_tr)
+            self.countnumbers = map(unicode, countnumbers_tr)
 
     def action_lottosim(self):
         """Changing the layout for simulation or generation
@@ -254,16 +255,17 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """Show the output from the random number generator.
         @return: none
         """
-        i_anzahl = int(self.ui.sbox_drawn_numbers.text())
-        i_hochste = int(self.ui.sbox_from_a_set_of.text())
-        random_numbers = sorted(zufallszahlen(i_anzahl, i_hochste))
+        drawn_numbers = int(self.ui.sbox_drawn_numbers.text())
+        highest = int(self.ui.sbox_from_a_set_of.text())
+        random_numbers = sorted(
+            random.sample(range(1, highest + 1), drawn_numbers))
         if random_numbers:
             text = "".join(map(" {0:02d}".format, random_numbers))
         else:
             text = self.tr("Error, no valid numbers available!")
         dt = datetime.now()
-        text = dt.strftime("%H:%M:%S: ") + str(i_anzahl) + \
-            self.tr(" out of ") + str(i_hochste) + ": " + text
+        text = dt.strftime("%H:%M:%S: ") + str(drawn_numbers) + \
+            self.tr(" out of ") + str(highest) + ": " + text
         self.ui.plaintextedit.appendPlainText(text)
 
     def onclean_output_text(self):
