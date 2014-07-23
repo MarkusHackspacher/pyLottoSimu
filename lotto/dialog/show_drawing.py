@@ -7,7 +7,7 @@ Copyright (C) <2012-2014> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
-pyLottoverwaltung is free software: you can redistribute it and/or modify
+pyLottoSimu is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
@@ -57,9 +57,8 @@ class DlgShowDrawing(QtWidgets.QDialog):
         self.gridLayout = QtWidgets.QGridLayout()
 
         #array of Button from 1 to 49
-        self.Btn_Numerary_1to49 = [
-            QtWidgets.QPushButton(self)
-            for num_draw in range(highest_number)]
+        self.Btn_Numerary_1to49 = [QtWidgets.QPushButton(self)
+                                   for _ in range(highest_number)]
         for button_number, button in enumerate(self.Btn_Numerary_1to49):
             button.setMaximumSize(QtCore.QSize(58, 58))
             button.setAutoFillBackground(True)
