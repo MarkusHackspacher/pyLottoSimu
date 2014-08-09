@@ -56,7 +56,7 @@ class DlgShowDrawing(QtWidgets.QDialog):
 
         self.gridLayout = QtWidgets.QGridLayout()
 
-        #array of Button from 1 to 49
+        # Array of Button from 1 to 49
         self.Btn_Numerary_1to49 = [QtWidgets.QPushButton(self)
                                    for _ in range(highest_number)]
         for button_number, button in enumerate(self.Btn_Numerary_1to49):

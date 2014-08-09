@@ -107,7 +107,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                 or (self.delay_of_next_number % 4) == 0:
             self.ui.label_big_number.setText(str(
                 random.sample(range(1, int(
-                self.ui.sbox_from_a_set_of.text()) + 1), 1)[0]))
+                    self.ui.sbox_from_a_set_of.text()) + 1), 1)[0]))
         self.timer.start(100)
         if self.delay_of_next_number < 0:
             self.show_next_number()
@@ -182,8 +182,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             random.sample(range(1, self.highest + 1), drawn_numbers)
         text = self.tr('Welcome to the lottery draw,\n'
                        'at {0}.\nnumbers are drawn: {1} out of {2}!')
-        text = unicode(text).format(dt.strftime(
-                "%d %B %Y um %H:%M"), drawn_numbers, self.highest)
+        text = unicode(text).format(
+            dt.strftime("%d %B %Y um %H:%M"), drawn_numbers, self.highest)
         self.ui.plaintextedit.appendPlainText(text)
         self.timer.start(100)
         self.delay_of_next_number = self.ui.horizontalSlider.value()
@@ -198,13 +198,13 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                 "Now we come to {0} number of today's draw ... {1}.",),
             self.tr('The {0} winning number is {1}.')]
         countnumbers_tr = [self.tr('first'), self.tr('second'),
-                          self.tr('third'), self.tr('fourth'),
-                          self.tr('fifth'), self.tr('sixth'),
-                          self.tr('seventh'), self.tr('eighth'),
-                          self.tr('ninth'), self.tr('10th'),
-                          self.tr('11th'), self.tr('12th'),
-                          self.tr('13th'), self.tr('14th'),
-                          self.tr('15th')]
+                           self.tr('third'), self.tr('fourth'),
+                           self.tr('fifth'), self.tr('sixth'),
+                           self.tr('seventh'), self.tr('eighth'),
+                           self.tr('ninth'), self.tr('10th'),
+                           self.tr('11th'), self.tr('12th'),
+                           self.tr('13th'), self.tr('14th'),
+                           self.tr('15th')]
         if sys.version_info >= (3, 0):
             self.textselection = textselection_tr
             self.countnumbers = countnumbers_tr
@@ -236,7 +236,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             self.ui.rdbtn_show_draw_after.setVisible(True)
 
         else:
-            #random numbers
+            # random numbers
             self.ui.statusBar().showMessage(self.tr('random numbers'))
             self.ui.plaintextedit.setGeometry(QtCore.QRect(20, 20, 441, 111))
             self.ui.btn_random_numbers.setVisible(True)
