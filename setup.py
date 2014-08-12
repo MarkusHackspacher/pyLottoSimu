@@ -21,6 +21,7 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
+from py2exe.build_exe import py2exe 
 from distutils.core import setup
 
 
@@ -33,4 +34,10 @@ setup(name='pyLottoSimu',
       download_url='https://github.com/MarkusHackspacher/pyLottoSimu',
       packages=['pylottosimu', 'pylottosimu.dialog'],
       license='GPL',
+      console=["pylottosimu.pyw"],
+      options={
+            "py2exe":{
+            "dll_excludes": ["MSVCP90.dll", "HID.DLL", "w9xpopen.exe"],
+            "includes" : ["sip", ]},
+        },
       ) 
