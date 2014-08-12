@@ -21,7 +21,7 @@ You should have received a copy of the GNU General Public License
 along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-from os.path import join
+import os
 import sys
 
 try:
@@ -45,7 +45,9 @@ class DlgShowDrawing(QtWidgets.QDialog):
         """
         QtWidgets.QDialog.__init__(self)
 
-        self.setWindowIcon(QtGui.QIcon(join("misc", "icon.ico")))
+        self.setWindowIcon(
+            QtGui.QIcon(os.path.abspath(os.path.join(os.path.dirname(__file__),
+                        "..", "..", "misc", "pyLottoSimu.svg"))))
         self.setModal(True)
         self.buttonBox = QtWidgets.QDialogButtonBox(self)
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)

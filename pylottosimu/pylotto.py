@@ -22,12 +22,12 @@ along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
 __doc__ = "The signals for the GUI"
 
+import os
 import sys
 import time
 import webbrowser
 from datetime import datetime
 from random import randint
-from os.path import join
 import random
 
 try:
@@ -60,8 +60,11 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         QtWidgets.QDialog.__init__(self)
 
         # Set up the user interface from Designer.
-        self.ui = uic.loadUi(join("pylottosimu", "lottosimu_gui.ui"))
-        self.ui.setWindowIcon(QtGui.QIcon(join("misc", "pyLottoSimu.svg")))
+        self.ui = uic.loadUi(os.path.abspath(os.path.join(
+                             os.path.dirname(__file__), "lottosimu_gui.ui")))
+        self.ui.setWindowIcon(
+            QtGui.QIcon(os.path.abspath(os.path.join(os.path.dirname(__file__),
+                        "..", "misc", "pyLottoSimu.svg"))))
 
         self.action_lottosim()
         self.timer = QtCore.QTimer(self)
@@ -316,10 +319,11 @@ def gui(arguments):
         print ("locale: {}".format(locale))
     app = QtWidgets.QApplication(sys.argv)
     translator = QtCore.QTranslator()
-    translator.load(join("pylottosimu", "translation", "lotto1_" + locale))
+    translator.load(os.path.abspath(os.path.join(os.path.dirname(__file__),
+                    "translation", "lotto1_" + locale)))
     app.installTranslator(translator)
     dialog = LottoSimuDialog()
     sys.exit(app.exec_())
 
 if __name__ == "__main__":
-    gui()
+    gui('')
