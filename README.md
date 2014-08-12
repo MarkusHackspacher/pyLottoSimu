@@ -18,7 +18,7 @@ Start with
 ```python lotto.pyw [de|fr|es|it|ru]```
 
 Make the documentation as .pdf file:
-```epydoc pylottosimu.pyw lotto --pdf```
+```epydoc pylottosimu --pdf```
 
 To translate the programm or make a translation in your language,
 insert in the complete.pro your language code.
@@ -45,7 +45,7 @@ Start mit:
 ```python lotto.pyw [de|fr|es|it|ru]```
 
 Documentation als .pdf Datei aus den Kommentaren des Quelltextes erstellen lassen:
-```epydoc pylottosimu.pyw lotto --pdf```
+```epydoc pylottosimu --pdf```
 
 Bedienen
 ---------
