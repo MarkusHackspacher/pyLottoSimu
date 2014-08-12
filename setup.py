@@ -4,7 +4,7 @@
 """
 pyLottoSimu, load module lotto
 
-Copyright (C) <2012-2013> Markus Hackspacher
+Copyright (C) <2014> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
@@ -21,8 +21,16 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
-import sys
+from distutils.core import setup
 
-from pylottosimu import pylotto
 
-pylotto.gui(sys.argv)
+setup(name='pyLottoSimu',
+      version='1.5',
+      description='Python Lotto Simulator',
+      author='Markus Hackspacher',
+      author_email='hackspacher@gmx.de',
+      url='http://markush.cwsurf.de/joomla_17/index.php/python/pylottosimu',
+      download_url='https://github.com/MarkusHackspacher/pyLottoSimu',
+      packages=['pylottosimu', 'pylottosimu.dialog'],
+      license='GPL',
+      ) 

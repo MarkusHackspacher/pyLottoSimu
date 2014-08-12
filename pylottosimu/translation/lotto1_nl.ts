@@ -1,172 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="da" sourcelanguage="en">
+<!DOCTYPE TS><TS version="2.0" language="nl_NL" sourcelanguage="en">
 <context>
     <name>DlgShowDrawing</name>
     <message>
-        <location filename="dialog/show_drawing.py" line="76"/>
+        <location filename="dialog/show_drawing.py" line="75"/>
         <source>Show Drawing</source>
-        <translation>Vis Tegning</translation>
+        <translation>Toon Drawing</translation>
     </message>
 </context>
 <context>
     <name>LottoSimuDialog</name>
     <message>
-        <location filename="lotto_gui1.py" line="81"/>
+        <location filename="lotto_gui1.py" line="80"/>
         <source>ready</source>
-        <translation>klar</translation>
+        <translation>klaar</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="124"/>
         <source>Now we come to the number {0}, and thus the penultimate number of todays draw. It is the {1}.</source>
-        <translation>Nu kommer vi til det antal {0}, og dermed næstsidste antal af dagens lodtrækning. Det er {1}.</translation>
+        <translation>Nu komen we bij het ​​nummer {0}, en dus het voorlaatste nummer van vandaag trekken. Het is de {1}.</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="129"/>
         <source>And now we come to the {0} and lastwinning number, it is the {1}.</source>
-        <translation>Og nu kommer vi til {0} og sidste vindende nummer, er det {1}.</translation>
+        <translation>En nu komen we bij de {0} en laatste winnende nummer, het is de {1}.</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="136"/>
         <source>That was todays lottery draw, the figures were:{0}, I wish you a nice evening! Bye, bye!</source>
-        <translation>Det var dagens lodtrækning, var tallene: {0}, jeg ønsker dig en dejlig aften! Ved!</translation>
+        <translation>Dat was vandaag loting, waren de cijfers: {0}, ik wens je een leuke avond! goede nacht!</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="152"/>
+        <location filename="lotto_gui1.py" line="149"/>
         <source>And the first winning number is the {0}.</source>
-        <translation>Og den første vindende nummer er {0}.</translation>
+        <translation>En het eerste winnende nummer is de {0}.</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="188"/>
+        <location filename="lotto_gui1.py" line="183"/>
         <source>Welcome to the lottery draw,
 at {0}.
 numbers are drawn: {1} out of {2}!</source>
-        <translation>Velkommen til lodtrækning,
-ved {0}.
-numre er trukket: {1} af {2}!</translation>
+        <translation>Welkom op de loting,
+op {0}.
+nummers worden getrokken: {1} van {2}!</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="191"/>
+        <source>And now we come to the winning number {0}, it is the {1}.</source>
+        <translation>En nu komen we bij het ​​winnende nummer {0}, het is de {1}.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="193"/>
+        <source>The {0} lotto number of today&apos;s draw is the {1}.</source>
+        <translation>De {0} lotto aantal hedendaagse loting is de {1}.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="195"/>
+        <source>Now we come to winning number {0}, this is the {1}.</source>
+        <translation>Nu komen we bij winnende nummer {0}, dit is de {1}.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="197"/>
+        <source>Now we come to {0} number of today&apos;s draw ... {1}.</source>
+        <translation>Nu komen we bij {0} aantal hedendaagse gelijkspel ... {1}.</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="199"/>
+        <source>The {0} winning number is {1}.</source>
+        <translation>De {0} winnende nummer {1}.</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="200"/>
-        <source>And now we come to the winning number {0}, it is the {1}.</source>
-        <translation>Og nu kommer vi til det vindende nummer {0}, er det {1}.</translation>
+        <source>first</source>
+        <translation>eerste</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="200"/>
+        <source>second</source>
+        <translation>tweede</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="201"/>
+        <source>third</source>
+        <translation>derde</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="201"/>
+        <source>fourth</source>
+        <translation>vierde</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="202"/>
-        <source>The {0} lotto number of today&apos;s draw is the {1}.</source>
-        <translation>Den {0} lotto antal dagens draw er {1}.</translation>
+        <source>fifth</source>
+        <translation>vijfde</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="202"/>
+        <source>sixth</source>
+        <translation>zesde</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="203"/>
+        <source>seventh</source>
+        <translation>zevende</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="203"/>
+        <source>eighth</source>
+        <translation>achtste</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="204"/>
-        <source>Now we come to winning number {0}, this is the {1}.</source>
-        <translation>Nu kommer vi til vindende nummer {0}, dette er {1}.</translation>
+        <source>ninth</source>
+        <translation>negende</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="204"/>
+        <source>10th</source>
+        <translation>10</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="205"/>
+        <source>11th</source>
+        <translation>11</translation>
+    </message>
+    <message>
+        <location filename="lotto_gui1.py" line="205"/>
+        <source>12th</source>
+        <translation>12</translation>
     </message>
     <message>
         <location filename="lotto_gui1.py" line="206"/>
-        <source>Now we come to {0} number of today&apos;s draw ... {1}.</source>
-        <translation>Nu kommer vi til {0} Antallet af dagens lodtrækning ... {1}.</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="208"/>
-        <source>The {0} winning number is {1}.</source>
-        <translation>Den {0} vindende nummer er {1}.</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="213"/>
-        <source>first</source>
-        <translation>første</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="213"/>
-        <source>second</source>
-        <translation>sekund</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="214"/>
-        <source>third</source>
-        <translation>tredje</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="214"/>
-        <source>fourth</source>
-        <translation>fjerde</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="215"/>
-        <source>fifth</source>
-        <translation>femte</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="215"/>
-        <source>sixth</source>
-        <translation>sjette</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="216"/>
-        <source>seventh</source>
-        <translation>syvende</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="216"/>
-        <source>eighth</source>
-        <translation>ottende</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="217"/>
-        <source>ninth</source>
-        <translation>niende</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="217"/>
-        <source>10th</source>
-        <translation>10.</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="218"/>
-        <source>11th</source>
-        <translation>11.</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="218"/>
-        <source>12th</source>
-        <translation>12.</translation>
-    </message>
-    <message>
-        <location filename="lotto_gui1.py" line="219"/>
         <source>13th</source>
-        <translation>13.</translation>
+        <translation>13</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="219"/>
+        <location filename="lotto_gui1.py" line="206"/>
         <source>14th</source>
-        <translation>14.</translation>
+        <translation>14</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="220"/>
+        <location filename="lotto_gui1.py" line="207"/>
         <source>15th</source>
-        <translation>15.</translation>
+        <translation>15</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="234"/>
+        <location filename="lotto_gui1.py" line="223"/>
         <source>lotto simulation</source>
-        <translation>lotto simulation</translation>
+        <translation>loterij simulator</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="251"/>
+        <location filename="lotto_gui1.py" line="240"/>
         <source>random numbers</source>
-        <translation>tilfældige tal</translation>
+        <translation>willekeurige getallen</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="275"/>
+        <location filename="lotto_gui1.py" line="265"/>
         <source>Error, no valid numbers available!</source>
-        <translation>Fejl, ingen gyldige numre til rådighed!</translation>
+        <translation>Fout, geen geldige getallen beschikbaar!</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="278"/>
+        <location filename="lotto_gui1.py" line="268"/>
         <source> out of </source>
-        <translation> ud af </translation>
+        <translation> buiten </translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="289"/>
+        <location filename="lotto_gui1.py" line="279"/>
         <source>simulation of a random draw
 
 based on an idea of imageupload,
@@ -174,23 +173,23 @@ http://www.my-image-upload.de/
 
 Lizenz: GNU GPL v3
 http://www.gnu.org/licenses/</source>
-        <translation>simulering af en lodtrækning
+        <translation>simulatie van een willekeurige trekking
 
-baseret på en idé om ImageUpload,
+gebaseerd op een idee van ImageUpload,
 http://www.my-image-upload.de/
 
 Lizenz: GNU GPL v3
 http://www.gnu.org/licenses/</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="296"/>
+        <location filename="lotto_gui1.py" line="286"/>
         <source>Info</source>
-        <translation>Info</translation>
+        <translation>info</translation>
     </message>
     <message>
-        <location filename="lotto_gui1.py" line="298"/>
+        <location filename="lotto_gui1.py" line="288"/>
         <source>Created with Python by Markus Hackspacher http://markush.cwsurf.de</source>
-        <translation>Skabt med Python af Markus Hackspacher http://markush.cwsurf.de</translation>
+        <translation>Gemaakt met Python door Markus Hackspacher http://markush.cwsurf.de</translation>
     </message>
 </context>
 <context>
@@ -203,42 +202,42 @@ http://www.gnu.org/licenses/</translation>
     <message>
         <location filename="lotto.ui" line="122"/>
         <source>lottery numbers</source>
-        <translation>lotteri numre</translation>
+        <translation>lotnummers</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="94"/>
         <source>output field</source>
-        <translation>output felt</translation>
+        <translation>uitvoerveld</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="148"/>
         <source>Numbers:</source>
-        <translation>tal:</translation>
+        <translation>nummers:</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="164"/>
         <source>drawn numbers</source>
-        <translation>udtrukne numre</translation>
+        <translation>getrokken nummers</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="187"/>
         <source>out of</source>
-        <translation>ud af</translation>
+        <translation>buiten</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="203"/>
         <source>from a set of</source>
-        <translation>fra et sæt af</translation>
+        <translation>een reeks</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="462"/>
         <source>random numbers</source>
-        <translation>tilfældige tal</translation>
+        <translation>willekeurige getallen</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="256"/>
         <source>output field empty</source>
-        <translation>output tomt</translation>
+        <translation>uitgang veld leeg</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="377"/>
@@ -248,57 +247,57 @@ http://www.gnu.org/licenses/</translation>
     <message>
         <location filename="lotto.ui" line="301"/>
         <source>start draw</source>
-        <translation>starte tegne</translation>
+        <translation>beginnen</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="351"/>
         <source>Speed</source>
-        <translation>hastighed</translation>
+        <translation>snelheid</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="396"/>
         <source>show draw after</source>
-        <translation>vise tegne efter</translation>
+        <translation>laten trekken achter</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="403"/>
         <source>show draw overview</source>
-        <translation>vise tegne overblik</translation>
+        <translation>tonen tekenen overzicht</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="422"/>
         <source>File</source>
-        <translation>File</translation>
+        <translation>bestand</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="478"/>
         <source>Help</source>
-        <translation>Hjælp</translation>
+        <translation>Help</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="435"/>
         <source>Mode</source>
-        <translation>tilstand</translation>
+        <translation>keuze</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="446"/>
         <source>Quit</source>
-        <translation>Afslut</translation>
+        <translation>ophouden</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="451"/>
         <source>Info</source>
-        <translation>Info</translation>
+        <translation>info</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="473"/>
         <source>Lotto simulation</source>
-        <translation>Lotto simulation</translation>
+        <translation>loterij simulator</translation>
     </message>
     <message>
         <location filename="lotto.ui" line="483"/>
         <source>Go to the website</source>
-        <translation>Gå til hjemmesiden</translation>
+        <translation>Ga naar de website</translation>
     </message>
 </context>
 </TS>

@@ -1,0 +1,4 @@
+include pylottosimu.pyw
+include pylottosimu/translation/*.qm
+include pylottosimu/lottosimu_gui.ui
+include misc/pyLottoSimu.svg

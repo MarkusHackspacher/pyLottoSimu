@@ -60,7 +60,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         QtWidgets.QDialog.__init__(self)
 
         # Set up the user interface from Designer.
-        self.ui = uic.loadUi(join("lotto", "lotto.ui"))
+        self.ui = uic.loadUi(join("pylottosimu", "lottosimu_gui.ui"))
         self.ui.setWindowIcon(QtGui.QIcon(join("misc", "pyLottoSimu.svg")))
 
         self.action_lottosim()
@@ -316,7 +316,7 @@ def gui(arguments):
         print ("locale: {}".format(locale))
     app = QtWidgets.QApplication(sys.argv)
     translator = QtCore.QTranslator()
-    translator.load(join("lotto", "translation", "lotto1_" + locale))
+    translator.load(join("pylottosimu", "translation", "lotto1_" + locale))
     app.installTranslator(translator)
     dialog = LottoSimuDialog()
     sys.exit(app.exec_())
