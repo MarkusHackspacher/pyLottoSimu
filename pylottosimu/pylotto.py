@@ -24,7 +24,6 @@ __doc__ = "The signals for the GUI"
 
 import os
 import sys
-import time
 import webbrowser
 from datetime import datetime
 from random import randint
@@ -40,10 +39,10 @@ except ImportError:
 
 if sys.version_info >= (3, 0):
     if QtCore.QT_VERSION >= 0x050000:
-        import lotto.lottokugeln_rc3_qt5 as lottokugeln_rc
+        import pylottosimu.lottokugeln_rc3_qt5 as lottokugeln_rc
     else:
-        import lotto.lottokugeln_rc3 as lottokugeln_rc
-    from lotto.dialog.show_drawing import DlgShowDrawing
+        import pylottosimu.lottokugeln_rc3 as lottokugeln_rc
+    from pylottosimu.dialog.show_drawing import DlgShowDrawing
     unicode = str
 else:
     import lottokugeln_rc as lottokugeln_rc
