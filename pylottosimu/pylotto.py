@@ -24,7 +24,7 @@ __doc__ = "The signals for the GUI"
 
 import os
 import sys
-import time
+#import time
 import webbrowser
 from datetime import datetime
 from random import randint
@@ -85,7 +85,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.show()
 
     def init(self):
-        """Inital variable
+        """Initial variable
         @return: none
         """
         self.turn = 0
@@ -124,8 +124,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             str(self.random_number[self.turn]))
         self.ui.label_big_number.setText(str(self.random_number[self.turn]))
         if self.turn == (len(self.random_number) - 2):
-            text = self.tr('Now we come to the number {0}, and thus the '
-                           'penultimate number of todays draw. It is the {1}.')
+            text = self.tr("Now we come to the number {0}, and thus the "
+                           "penultimate number of today's draw. It is the {1}.")
             text = unicode(text).format(self.countnumbers[self.turn],
                                         self.random_number[self.turn])
         elif self.turn == (len(self.random_number) - 1):
@@ -136,9 +136,9 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             self.ui.plaintextedit.appendPlainText(text)
             random_number = sorted(self.random_number[:])
             text1 = "".join(map(" {0:02d}".format, random_number))
-            text = self.tr('That was todays lottery draw, '
-                           'the figures were:{0}, '
-                           'I wish you a nice evening! Bye, bye!')
+            text = self.tr("That was today's lottery draw, "
+                           "the figures were:{0}, "
+                           "I wish you a nice evening! Bye, bye!")
             text = unicode(text).format(text1)
             self.timer.stop()
             if self.ui.rdbtn_show_draw_after.isChecked():
@@ -283,7 +283,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             'simulation of a random draw\n\n'
             'based on an idea of imageupload,\n'
             'http://www.my-image-upload.de/\n\n'
-            'Lizenz: GNU GPL v3\n'
+            'GNU GPL v3\n'
             'http://www.gnu.org/licenses/')
         a = QtWidgets.QMessageBox()
         a.setWindowTitle(self.tr('Info'))

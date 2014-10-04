@@ -20,10 +20,10 @@ Start with
 Make the documentation as .pdf file:
 ```epydoc pylottosimu --pdf```
 
-To translate the programm or make a translation in your language,
+To translate the program or make a translation in your language,
 insert in the complete.pro your language code.
 ```
-cd lotto
+cd pylottosimu
 pylupdate4 complete.pro
 ```
 translate your language file: lotto1_xx.ts, and produce the .ts translation files with
@@ -71,7 +71,7 @@ Copyright <2012-2014> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
-pyLottoverwaltung is free software: you can redistribute it and/or modify
+pyLottoSimu is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
