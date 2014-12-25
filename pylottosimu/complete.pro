@@ -1,6 +1,7 @@
  SOURCES         = pylotto.py \
                    dialog/show_drawing.py
- FORMS           = lottosimu_gui.ui
+ FORMS           = lottosimu_gui.ui \
+                   setting.ui
  TRANSLATIONS    = translation/lotto1_de.ts \
                    translation/lotto1_fr.ts \
                    translation/lotto1_nl.ts \
