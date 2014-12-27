@@ -38,7 +38,7 @@ else:
     range = xrange
 
 
-class LottoSettingsDialog(QtWidgets.QMainWindow):
+class LottoSettingsDialog(QtWidgets.QDialog):
     """The GUI of Settings. """
     def __init__(self):
         """Inital user interface and slots
@@ -53,13 +53,33 @@ class LottoSettingsDialog(QtWidgets.QMainWindow):
             QtGui.QIcon(os.path.abspath(os.path.join(os.path.dirname(__file__),
                         "..", "misc", "pyLottoSimu.svg"))))
 
+        self.ui.check_with_addit.clicked.connect(self.with_addit)
+        self.ui.check_sep_addit_numbers.clicked.connect(self.sep_addit_numbers)
 
+        self.with_addit()
         self.ui.show()
 
     def init(self):
         """Initial variable
         @return: none
         """
+        pass
+        
+    def sep_addit_numbers(self):
+        check = self.ui.check_sep_addit_numbers.isChecked()
+        self.ui.label_max_addit.setEnabled(check)
+        self.ui.spinBox_max_addit.setEnabled(check)
+
+    def with_addit(self):
+        check = self.ui.check_with_addit.isChecked()
+        self.ui.spinBox_addit_numbers.setEnabled(check)
+        self.ui.label_addit_numbers.setEnabled(check)
+        self.ui.label_sep_addit_numbers.setEnabled(check)
+        self.ui.check_sep_addit_numbers.setEnabled(check)
+        if check is not True:
+            self.ui.check_sep_addit_numbers.setChecked(False)
+        self.sep_addit_numbers()
+
 
 def gui(arguments):
     """Open the GUI
@@ -82,4 +102,19 @@ def gui(arguments):
 
 if __name__ == "__main__":
     gui('')
+    #settings = QtCore.QSettings('pylottosimu', 'pylottosimu')
+
+    #settings.setValue('int_value', 42)
+    #settings.setValue('point_value', QtCore.QPoint(10, 12))
+
+    # This will write the setting to the platform specific storage.
+    #del settings
+
+    #settings = QtCore.QSettings('foo', 'foo')
+
+    #int_value = settings.value('int_value', type=int)
+    #print("int_value: %s" % repr(int_value))
+
+    #point_value = settings.value('point_value', type=QtCore.QPoint)
+    #print("point_value: %s" % repr(point_value))
  
