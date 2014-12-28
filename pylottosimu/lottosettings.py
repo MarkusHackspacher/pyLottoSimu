@@ -40,11 +40,11 @@ else:
 
 class LottoSettingsDialog(QtWidgets.QDialog):
     """The GUI of Settings. """
-    def __init__(self):
+    def __init__(self, parent=None):
         """Inital user interface and slots
         @return: none
         """
-        QtWidgets.QDialog.__init__(self)
+        super(LottoSettingsDialog, self).__init__(parent)
 
         # Set up the user interface from Designer.
         self.ui = uic.loadUi(os.path.abspath(os.path.join(
@@ -57,14 +57,13 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         self.ui.check_sep_addit_numbers.clicked.connect(self.sep_addit_numbers)
 
         self.with_addit()
-        self.ui.show()
 
     def init(self):
         """Initial variable
         @return: none
         """
         pass
-        
+
     def sep_addit_numbers(self):
         check = self.ui.check_sep_addit_numbers.isChecked()
         self.ui.label_max_addit.setEnabled(check)
@@ -80,6 +79,28 @@ class LottoSettingsDialog(QtWidgets.QDialog):
             self.ui.check_sep_addit_numbers.setChecked(False)
         self.sep_addit_numbers()
 
+    def values(self):
+        """Values"""
+        return (unicode(self.ui.combo_name.currentText()),
+                self.ui.spinBox_max_draw.valueFromText(
+                self.ui.spinBox_max_draw.text()),
+                self.ui.spinBox_draw_numbers.valueFromText(
+                self.ui.spinBox_draw_numbers.text()),
+                self.ui.check_with_addit.isChecked(),
+                self.ui.spinBox_addit_numbers.valueFromText(
+                self.ui.spinBox_addit_numbers.text()),
+                self.ui.check_sep_addit_numbers.isChecked(),
+                self.ui.spinBox_max_addit.valueFromText(
+                self.ui.spinBox_max_addit.text()))
+
+    # static method to create the dialog and return (date, time, accepted)
+    @staticmethod
+    def getValues(parent=None):
+        """getValues"""
+        dialog = LottoSettingsDialog(parent)
+        result = dialog.ui.exec_()
+        return (dialog.values(), result == QtGui.QDialog.Accepted)
+
 
 def gui(arguments):
     """Open the GUI
@@ -92,29 +113,27 @@ def gui(arguments):
     else:
         locale = str(QtCore.QLocale.system().name())
         print ("locale: {}".format(locale))
-    app = QtWidgets.QApplication(sys.argv)
+    app = QtWidgets.QApplication([])
     translator = QtCore.QTranslator()
     translator.load(os.path.abspath(os.path.join(os.path.dirname(__file__),
                     "translation", "lotto1_" + locale)))
     app.installTranslator(translator)
-    dialog = LottoSettingsDialog()
-    sys.exit(app.exec_())
+    print(LottoSettingsDialog.getValues())
 
 if __name__ == "__main__":
     gui('')
-    #settings = QtCore.QSettings('pylottosimu', 'pylottosimu')
+    # settings = QtCore.QSettings('pylottosimu', 'pylottosimu')
 
-    #settings.setValue('int_value', 42)
-    #settings.setValue('point_value', QtCore.QPoint(10, 12))
+    # settings.setValue('int_value', 42)
+    # settings.setValue('point_value', QtCore.QPoint(10, 12))
 
     # This will write the setting to the platform specific storage.
-    #del settings
+    # del settings
 
-    #settings = QtCore.QSettings('foo', 'foo')
+    # settings = QtCore.QSettings('foo', 'foo')
 
-    #int_value = settings.value('int_value', type=int)
-    #print("int_value: %s" % repr(int_value))
+    # int_value = settings.value('int_value', type=int)
+    # print("int_value: %s" % repr(int_value))
 
-    #point_value = settings.value('point_value', type=QtCore.QPoint)
-    #print("point_value: %s" % repr(point_value))
- 
+    # point_value = settings.value('point_value', type=QtCore.QPoint)
+    # print("point_value: %s" % repr(point_value))
