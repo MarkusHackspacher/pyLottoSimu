@@ -23,6 +23,7 @@ along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
 import sys
+import json
 
 try:
     from PyQt5 import QtGui, QtCore, QtWidgets, uic
@@ -40,7 +41,7 @@ else:
 
 class LottoSettingsDialog(QtWidgets.QDialog):
     """The GUI of Settings. """
-    def __init__(self, parent=None):
+    def __init__(self, sysdat, parent=None):
         """Inital user interface and slots
         @return: none
         """
@@ -55,7 +56,8 @@ class LottoSettingsDialog(QtWidgets.QDialog):
 
         self.ui.check_with_addit.clicked.connect(self.with_addit)
         self.ui.check_sep_addit_numbers.clicked.connect(self.sep_addit_numbers)
-
+        self.systemdata = sysdat
+        self.setvalues()
         self.with_addit()
 
     def init(self):
@@ -79,30 +81,66 @@ class LottoSettingsDialog(QtWidgets.QDialog):
             self.ui.check_sep_addit_numbers.setChecked(False)
         self.sep_addit_numbers()
 
+    def setvalues(self):
+        """Set Values"""
+        self.ui.combo_name.setEditText(
+            self.systemdata.data[0]['name'])
+        self.ui.spinBox_max_draw.setValue(
+            self.systemdata.data[0]['max_draw'])
+        self.ui.spinBox_draw_numbers.setValue(
+            self.systemdata.data[0]['draw_numbers'])
+        self.ui.check_with_addit.setChecked(
+            self.systemdata.data[0]['with_addit'])
+        self.ui.spinBox_addit_numbers.setValue(
+            self.systemdata.data[0]['addit_numbers'])
+        self.ui.check_sep_addit_numbers.setChecked(
+            self.systemdata.data[0]['sep_addit_numbers'])
+        self.ui.spinBox_max_addit.setValue(
+            self.systemdata.data[0]['max_addit'])
+
     def values(self):
         """Values"""
         return (unicode(self.ui.combo_name.currentText()),
                 self.ui.spinBox_max_draw.valueFromText(
-                self.ui.spinBox_max_draw.text()),
+                    self.ui.spinBox_max_draw.text()),
                 self.ui.spinBox_draw_numbers.valueFromText(
-                self.ui.spinBox_draw_numbers.text()),
+                    self.ui.spinBox_draw_numbers.text()),
                 self.ui.check_with_addit.isChecked(),
                 self.ui.spinBox_addit_numbers.valueFromText(
-                self.ui.spinBox_addit_numbers.text()),
+                    self.ui.spinBox_addit_numbers.text()),
                 self.ui.check_sep_addit_numbers.isChecked(),
                 self.ui.spinBox_max_addit.valueFromText(
-                self.ui.spinBox_max_addit.text()))
+                    self.ui.spinBox_max_addit.text()))
 
     # static method to create the dialog and return (date, time, accepted)
     @staticmethod
-    def getValues(parent=None):
+    def getValues(sysdat, parent=None):
         """getValues"""
-        dialog = LottoSettingsDialog(parent)
+        dialog = LottoSettingsDialog(sysdat, parent)
         result = dialog.ui.exec_()
         return (dialog.values(), result == QtGui.QDialog.Accepted)
 
 
-def gui(arguments):
+class lottosystemdata():
+    def __init__(self, name='Lotto', max_draw=49, draw_numbers=6,
+                 with_addit=False, addit_numbers=0, sep_addit_numbers=False,
+                 max_addit=0):
+        self.data = [{
+            'name': name,
+            'max_draw': max_draw,
+            'draw_numbers': draw_numbers,
+            'with_addit': with_addit,
+            'addit_numbers': addit_numbers,
+            'sep_addit_numbers': sep_addit_numbers,
+            'max_addit': max_addit
+        }]
+
+    def writetofile(self):
+        with open('lottosystems.josn', 'w') as outfile:
+            json.dump(self.data, outfile)
+
+
+def gui(arguments, sysdat):
     """Open the GUI
     @param arguments: language (en, de)
     @type arguments: string
@@ -118,10 +156,12 @@ def gui(arguments):
     translator.load(os.path.abspath(os.path.join(os.path.dirname(__file__),
                     "translation", "lotto1_" + locale)))
     app.installTranslator(translator)
-    print(LottoSettingsDialog.getValues())
+    print(LottoSettingsDialog.getValues(sysdat))
 
 if __name__ == "__main__":
-    gui('')
+    sysdat = lottosystemdata()
+    gui('', sysdat)
+    sysdat.writetofile()
     # settings = QtCore.QSettings('pylottosimu', 'pylottosimu')
 
     # settings.setValue('int_value', 42)
