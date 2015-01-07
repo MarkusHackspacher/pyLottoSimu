@@ -435,6 +435,7 @@ QLabel#label_big_number, QLabel#label_last_draw_number {	background-color: none}
      <string>Mode</string>
     </property>
     <addaction name="action_lotto_simulation"/>
+    <addaction name="actionLotto_system"/>
    </widget>
    <addaction name="menu_file"/>
    <addaction name="menu_mode"/>
@@ -481,6 +482,11 @@ QLabel#label_big_number, QLabel#label_last_draw_number {	background-color: none}
   <action name="action_go_to_the_website">
    <property name="text">
     <string>Go to the website</string>
+   </property>
+  </action>
+  <action name="actionLotto_system">
+   <property name="text">
+    <string>Lotto system</string>
    </property>
   </action>
  </widget>

@@ -3,7 +3,7 @@
 """
 pyLottoSimu
 
-Copyright (C) <2012-2014> Markus Hackspacher
+Copyright (C) <2012-2015> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
@@ -43,11 +43,13 @@ if sys.version_info >= (3, 0):
     else:
         import pylottosimu.lottokugeln_rc3 as lottokugeln_rc
     from pylottosimu.dialog.show_drawing import DlgShowDrawing
+    import pylottosimu.dialog.lottosystem as DlgLottoSystem
     unicode = str
 else:
     import lottokugeln_rc as lottokugeln_rc
     from dialog.show_drawing import DlgShowDrawing
-    range = xrange
+    import dialog.lottosystem as DlgLottoSystem
+range = xrange
 
 
 class LottoSimuDialog(QtWidgets.QMainWindow):
@@ -80,6 +82,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.btn_draw_overview.clicked.connect(self.onbtn_draw_overview)
         self.timer.timeout.connect(self.ontimer)
         self.ui.statusBar().showMessage(self.tr('ready'))
+        self.ui.actionLotto_system.triggered.connect(self.onsystem)
 
         self.ui.show()
 
@@ -167,6 +170,14 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """show dialog of the draw"""
         dlgdraw = DlgShowDrawing(self.random_number, self.highest)
         dlgdraw.exec_()
+
+    def onsystem(self):
+        """show dialog of the draw"""
+        sysdat = DlgLottoSystem.lottosystemdata()
+        system = DlgLottoSystem.LottoSettingsDialog.getValues(sysdat)
+        if system[1]:
+            self.ui.sbox_drawn_numbers.setValue(system[0][2])
+            self.ui.sbox_from_a_set_of.setValue(system[0][1])
 
     def onbtn_start(self):
         """Start simulation with the first drawing
