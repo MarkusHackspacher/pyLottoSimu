@@ -49,7 +49,7 @@ else:
     import lottokugeln_rc as lottokugeln_rc
     from dialog.show_drawing import DlgShowDrawing
     import dialog.lottosystem as DlgLottoSystem
-range = xrange
+    range = xrange
 
 
 class LottoSimuDialog(QtWidgets.QMainWindow):
