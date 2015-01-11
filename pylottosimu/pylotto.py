@@ -84,6 +84,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.statusBar().showMessage(self.tr('ready'))
         self.ui.actionLotto_system.triggered.connect(self.onsystem)
 
+        self.init()
         self.ui.show()
 
     def init(self):
@@ -94,6 +95,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.highest = int(self.ui.sbox_from_a_set_of.text())
         self.random_number = 0
         self.delay_of_next_number = self.ui.horizontalSlider.value()
+        self.lottodraw = drawlotto()
 
     def ontimer(self):
         """Start time to show a number.
@@ -273,17 +275,22 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """Show the output from the random number generator.
         @return: none
         """
-        drawn_numbers = int(self.ui.sbox_drawn_numbers.text())
-        highest = int(self.ui.sbox_from_a_set_of.text())
-        random_numbers = sorted(
-            random.sample(range(1, highest + 1), drawn_numbers))
-        if random_numbers:
-            text = "".join(map(" {0:02d}".format, random_numbers))
+        self.lottodraw.data['draw_numbers'] = int(
+            self.ui.sbox_drawn_numbers.text())
+        self.lottodraw.data['max_draw'] = int(
+            self.ui.sbox_from_a_set_of.text())
+        self.lottodraw.draw()
+        if self.lottodraw.random_number:
+            text = "".join(map(" {0:02d}".format, sorted(
+                self.lottodraw.random_number)))
         else:
             text = self.tr("Error, no valid numbers available!")
         dt = datetime.now()
-        text = dt.strftime("%H:%M:%S: ") + str(drawn_numbers) + \
-            self.tr(" out of ") + str(highest) + ": " + text
+        texttr = self.tr("{} {} out of {}: {}")
+        text = unicode(texttr).format(dt.strftime("%H:%M:%S:"),
+                                      self.lottodraw.data['draw_numbers'],
+                                      self.lottodraw.data['max_draw'],
+                                      text)
         self.ui.plaintextedit.appendPlainText(text)
 
     def onclean_output_text(self):
@@ -362,7 +369,6 @@ class drawlotto(QtCore.QObject):
             self.textselection = map(unicode, textselection_tr)
             self.countnumbers = map(unicode, countnumbers_tr)
 
-        self.isstarted = False
         self.random_addit = 0
         self.random_number = 0
 
