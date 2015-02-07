@@ -1,0 +1,29 @@
+[
+    {
+        "addit_numbers": 0,
+        "draw_numbers": 6,
+        "max_addit": 0,
+        "max_draw": 49,
+        "name": "Lotto DE",
+        "sep_addit_numbers": false,
+        "with_addit": false
+    },
+    {
+        "addit_numbers": 1,
+        "draw_numbers": 6,
+        "max_addit": 0,
+        "max_draw": 45,
+        "name": "Lotto AT",
+        "sep_addit_numbers": false,
+        "with_addit": true
+    },
+    {
+        "addit_numbers": 2,
+        "draw_numbers": 5,
+        "max_addit": 11,
+        "max_draw": 50,
+        "name": "EuroMillionen",
+        "sep_addit_numbers": true,
+        "with_addit": true
+    }
+]
