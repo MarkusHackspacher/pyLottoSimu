@@ -160,8 +160,8 @@ class lottosystemdata():
 
 
 def gui(arguments, sysdat):
-    """Open the GUI
-    @param arguments: language (en, de)
+    """Open the GUI of the LottoSettings Dialog
+    @param arguments: language, see in folder translate
     @type arguments: string
     @return: none
     """

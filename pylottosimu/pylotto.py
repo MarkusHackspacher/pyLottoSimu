@@ -445,7 +445,7 @@ class drawlotto(QtCore.QObject):
 
 def gui(arguments):
     """Open the GUI
-    @param arguments: language (en, de)
+    @param arguments: language, see in folder translate
     @type arguments: string
     @return: none
     """
@@ -461,6 +461,7 @@ def gui(arguments):
     app.installTranslator(translator)
     dialog = LottoSimuDialog()
     sys.exit(app.exec_())
+
 
 if __name__ == "__main__":
     # gui('')

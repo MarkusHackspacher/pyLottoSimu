@@ -25,4 +25,9 @@ import pylottosimu.pylotto
 
 
 def gui(arguments):
+    """Open the GUI
+    @param arguments: language, see in folder translate
+    @type arguments: string
+    @return: none
+    """
     pylotto.gui(arguments)
