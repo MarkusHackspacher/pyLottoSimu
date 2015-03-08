@@ -202,8 +202,11 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             random.sample(range(1, self.highest + 1), drawn_numbers)
         text = self.tr('Welcome to the lottery draw,\n'
                        'at {0}.\nnumbers are drawn: {1} out of {2}!')
+        dttext = dt.strftime("%d %B %Y um %H:%M")
+        if sys.version_info < (3, 0):
+            dttext = dttext.decode('utf-8')
         text = unicode(text).format(
-            dt.strftime("%d %B %Y um %H:%M"), drawn_numbers, self.highest)
+            dttext, drawn_numbers, self.highest)
         self.ui.plaintextedit.appendPlainText(text)
         self.timer.start(100)
         self.delay_of_next_number = self.ui.horizontalSlider.value()
@@ -413,9 +416,11 @@ class drawlotto(QtCore.QObject):
             dt = datetime.now()
             textr = self.tr('Welcome to the lottery draw,\n'
                             'at {0}.\nnumbers are drawn: {1} out of {2}!\n')
+            dttext = dt.strftime("%d %B %Y um %H:%M")
+            if sys.version_info < (3, 0):
+                dttext = dttext.decode('utf-8')
             text = unicode(textr).format(
-                dt.strftime("%d %B %Y %H:%M"), self.data['draw_numbers'],
-                self.data['max_draw'])
+                dttext, self.data['draw_numbers'], self.data['max_draw'])
             textr = self.tr('And the first winning number is the {0}.')
             text += unicode(textr).format(self.random_number[turn])
             self.LastTextnumber = -1
@@ -428,13 +433,13 @@ class drawlotto(QtCore.QObject):
                 text = unicode(textr).format(self.random_number[turn])
         else:
             while True:
-                Textnumber = randint(0, len(self.textselection) - 1)
-                if Textnumber != self.LastTextnumber:
+                textnumber = randint(0, len(self.textselection) - 1)
+                if textnumber != self.LastTextnumber:
                     break
-            text = self.textselection[Textnumber].format(
+            text = self.textselection[textnumber].format(
                 self.countnumbers[turn],
                 self.random_number[turn])
-            self.LastTextnumber = Textnumber
+            self.LastTextnumber = textnumber
         return text
 
 
@@ -468,6 +473,6 @@ if __name__ == "__main__":
     lt = drawlotto(with_addit=True, addit_numbers=2, sep_addit_numbers=True,
                    max_addit=10)
     lt.draw()
-    print lt.random_number, lt.random_addit
+    print(lt.random_number, lt.random_addit)
     for x in range(9):
-        print lt.picknumber(x)
+        print(lt.picknumber(x))

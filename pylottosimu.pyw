@@ -4,7 +4,7 @@
 """
 pyLottoSimu, load module lotto
 
-Copyright (C) <2012-2013> Markus Hackspacher
+Copyright (C) <2012-2015> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
@@ -23,6 +23,7 @@ along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
 import sys
 
-from pylottosimu import pylotto
+import pylottosimu
 
-pylotto.gui(sys.argv)
+
+pylottosimu.gui(sys.argv)
