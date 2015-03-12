@@ -335,7 +335,9 @@ class drawlotto(QtCore.QObject):
     def __init__(self, name='Lotto DE', max_draw=49, draw_numbers=6,
                  with_addit=False, addit_numbers=0, sep_addit_numbers=False,
                  max_addit=0):
-        """simutate a lotto draw
+        """simulate a lotto draw
+        @param name: name of game
+        @type name: string
         """
         QtWidgets.QDialog.__init__(self)
         self.data = {
@@ -377,6 +379,7 @@ class drawlotto(QtCore.QObject):
 
     def draw(self):
         """draw of the lotto numbers
+        @return: none
         """
         drawn_numbers = self.data['draw_numbers']
         if self.data['with_addit']:
@@ -475,5 +478,5 @@ if __name__ == "__main__":
                    max_addit=10)
     lt.draw()
     print(lt.random_number, lt.random_addit)
-    for x in range(9):
+    for x in range(len(lt.random_number + lt.random_addit) + 1):
         print(lt.picknumber(x))
