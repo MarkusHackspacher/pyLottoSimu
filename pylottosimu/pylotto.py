@@ -84,18 +84,12 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.statusBar().showMessage(self.tr('ready'))
         self.ui.actionLotto_system.triggered.connect(self.onsystem)
 
-        self.init()
-        self.ui.show()
-
-    def init(self):
-        """Initial variable
-        @return: none
-        """
         self.turn = 0
         self.highest = int(self.ui.sbox_from_a_set_of.text())
         self.random_number = 0
         self.delay_of_next_number = self.ui.horizontalSlider.value()
         self.lottodraw = drawlotto()
+        self.ui.show()
 
     def ontimer(self):
         """Start time to show a number.
@@ -124,49 +118,21 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """Simulation of the draw and show the next Number on the Screen.
         @return: none
         """
-        self.ui.label_last_draw_number.setText(
-            str(self.random_number[self.turn]))
-        self.ui.label_big_number.setText(str(self.random_number[self.turn]))
-        if self.turn == (len(self.random_number) - 2):
-            text = self.tr(
-                "Now we come to the number {0}, and thus the "
-                "penultimate number of today's draw. It is the {1}.")
-            text = unicode(text).format(self.countnumbers[self.turn],
-                                        self.random_number[self.turn])
-        elif self.turn == (len(self.random_number) - 1):
-            text = self.tr('And now we come to the {0} and last'
-                           'winning number, it is the {1}.')
-            text = unicode(text).format(self.countnumbers[self.turn],
-                                        self.random_number[self.turn])
-            self.ui.plaintextedit.appendPlainText(text)
-            random_number = sorted(self.random_number[:])
-            text1 = "".join(map(" {0:02d}".format, random_number))
-            text = self.tr("That was today's lottery draw, "
-                           "the figures were:{0}, "
-                           "I wish you a nice evening! Bye, bye!")
-            text = unicode(text).format(text1)
-            self.timer.stop()
-            if self.ui.rdbtn_show_draw_after.isChecked():
-                self.onbtn_draw_overview()
-            self.ui.btn_draw_overview.setVisible(True)
-        elif self.turn >= len(self.random_number):
+        if self.turn == 0:
+            self.ui.btn_draw_overview.setVisible(False)
+            self.LastTextnumber = -1
+
+        if self.turn >= len((self.lottodraw.random_number + self.lottodraw.random_addit)):
             self.timer.stop()
             text = ''
-        elif self.turn == 0:
-            self.ui.btn_draw_overview.setVisible(False)
-            text = self.tr('And the first winning number is the {0}.')
-            text = unicode(text).format(self.random_number[self.turn])
-            self.LastTextnumber = -1
         else:
-            while True:
-                Textnumber = randint(0, len(self.textselection) - 1)
-                if Textnumber != self.LastTextnumber:
-                    break
-            text = self.textselection[Textnumber].format(
-                self.countnumbers[self.turn],
-                self.random_number[self.turn])
-            self.LastTextnumber = Textnumber
-        self.ui.plaintextedit.appendPlainText(text)
+            self.ui.label_last_draw_number.setText(
+            str((self.lottodraw.random_number + self.lottodraw.random_addit)[self.turn]))
+            self.ui.label_big_number.setText(str((self.lottodraw.random_number +
+                                                  self.lottodraw.random_addit)[self.turn]))
+
+        self.ui.plaintextedit.appendPlainText(self.lottodraw.picknumber(self.turn))
+
         self.turn += 1
 
     def onbtn_draw_overview(self):
@@ -196,44 +162,12 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.label_last_draw_number.setText("")
         self.turn = 0
         dt = datetime.now()
-        drawn_numbers = int(self.ui.sbox_drawn_numbers.text())
-        self.highest = int(self.ui.sbox_from_a_set_of.text())
-        self.random_number = \
-            random.sample(range(1, self.highest + 1), drawn_numbers)
-        text = self.tr('Welcome to the lottery draw,\n'
-                       'at {0}.\nnumbers are drawn: {1} out of {2}!')
-        dttext = dt.strftime("%d %B %Y um %H:%M")
-        if sys.version_info < (3, 0):
-            dttext = dttext.decode('utf-8')
-        text = unicode(text).format(
-            dttext, drawn_numbers, self.highest)
-        self.ui.plaintextedit.appendPlainText(text)
+        self.lottodraw.data['drawn_numbers'] = int(self.ui.sbox_drawn_numbers.text())
+        self.lottodraw.data['max_draw'] = int(self.ui.sbox_from_a_set_of.text())
+        self.lottodraw.draw()
+        self.lottodraw.picknumber(0)
         self.timer.start(100)
         self.delay_of_next_number = self.ui.horizontalSlider.value()
-        textselection_tr = [
-            self.tr(
-                "And now we come to the winning number {0}, it is the {1}."),
-            self.tr(
-                "The {0} lotto number of today's draw is the {1}."),
-            self.tr(
-                "Now we come to winning number {0}, this is the {1}.",),
-            self.tr(
-                "Now we come to {0} number of today's draw ... {1}.",),
-            self.tr('The {0} winning number is {1}.')]
-        countnumbers_tr = [self.tr('first'), self.tr('second'),
-                           self.tr('third'), self.tr('fourth'),
-                           self.tr('fifth'), self.tr('sixth'),
-                           self.tr('seventh'), self.tr('eighth'),
-                           self.tr('ninth'), self.tr('10th'),
-                           self.tr('11th'), self.tr('12th'),
-                           self.tr('13th'), self.tr('14th'),
-                           self.tr('15th')]
-        if sys.version_info >= (3, 0):
-            self.textselection = textselection_tr
-            self.countnumbers = countnumbers_tr
-        else:
-            self.textselection = map(unicode, textselection_tr)
-            self.countnumbers = map(unicode, countnumbers_tr)
 
     def action_lottosim(self):
         """Changing the layout for simulation or generation
@@ -338,6 +272,18 @@ class drawlotto(QtCore.QObject):
         """simulate a lotto draw
         @param name: name of game
         @type name: string
+        @param max_draw: maximal draw numbers
+        @type max_draw: int
+        @param draw_numbers: the draw numbers
+        @type draw_numbers: int
+        @param with_addit: with additional number
+        @type with_addit: bool
+        @param addit_numbers: the additional numbers
+        @type addit_numbers: int
+        @param sep_addit_numbers: separates additional numbers
+        @type sep_addit_numbers: bool
+        @param max_addit: maximal additional numbers
+        @type max_addit: int
         """
         QtWidgets.QDialog.__init__(self)
         self.data = {
@@ -374,7 +320,7 @@ class drawlotto(QtCore.QObject):
             self.textselection = map(unicode, textselection_tr)
             self.countnumbers = map(unicode, countnumbers_tr)
 
-        self.random_addit = 0
+        self.random_addit = []
         self.random_number = 0
 
     def draw(self):
@@ -408,7 +354,8 @@ class drawlotto(QtCore.QObject):
             text = unicode(text).format(self.countnumbers[turn],
                                         self.random_number[turn])
 
-        elif turn >= (self.data['draw_numbers'] + self.data['addit_numbers']):
+        elif turn >= (self.data['draw_numbers'] + self.data['addit_numbers']) and self.data['with_addit'] is True\
+                or turn >= (self.data['draw_numbers']) and self.data['with_addit'] is False:
             random_number = sorted(self.random_number[:])
             text1 = "".join(map(" {0:02d}".format, random_number))
             text = self.tr("That was today's lottery draw, "
@@ -428,13 +375,12 @@ class drawlotto(QtCore.QObject):
             text += unicode(textr).format(self.random_number[turn])
             self.LastTextnumber = -1
         elif turn > (self.data['draw_numbers'] - 1):
-            textr = self.tr('The additional number is the {0}.')
-            if self.data['sep_addit_numbers']:
+            if self.data['with_addit'] is True:
+                textr = self.tr('The additional number is the {0}.')
                 text = unicode(textr).format(self.random_addit[turn
                                              - self.data['draw_numbers']])
-            else:
-                text = unicode(textr).format(self.random_number[turn])
         else:
+            text = 'no'
             while True:
                 textnumber = randint(0, len(self.textselection) - 1)
                 if textnumber != self.LastTextnumber:
@@ -474,9 +420,10 @@ if __name__ == "__main__":
     translator.load(os.path.abspath(os.path.join(os.path.dirname(__file__),
                     "translation", "lotto1_" + locale)))
     app.installTranslator(translator)
-    lt = drawlotto(with_addit=True, addit_numbers=2, sep_addit_numbers=True,
+    lt = drawlotto(with_addit=False, addit_numbers=2, sep_addit_numbers=True,
                    max_addit=10)
     lt.draw()
     print(lt.random_number, lt.random_addit)
+    print(lt.random_number + lt.random_addit)
     for x in range(len(lt.random_number + lt.random_addit) + 1):
         print(lt.picknumber(x))
