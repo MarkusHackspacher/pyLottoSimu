@@ -161,7 +161,6 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.plaintextedit.setPlainText("")
         self.ui.label_last_draw_number.setText("")
         self.turn = 0
-        dt = datetime.now()
         self.lottodraw.data['drawn_numbers'] = int(self.ui.sbox_drawn_numbers.text())
         self.lottodraw.data['max_draw'] = int(self.ui.sbox_from_a_set_of.text())
         self.lottodraw.draw()
@@ -301,7 +300,7 @@ class drawlotto(QtCore.QObject):
             self.tr(
                 "The {0} lotto number of today's draw is the {1}."),
             self.tr(
-                "Now we come to winning number {0}, this is the {1}.",),
+                "We come to the {0} winning number, this is the {1}.",),
             self.tr(
                 "Now we come to {0} number of today's draw ... {1}.",),
             self.tr('The {0} winning number is {1}.')]
@@ -344,7 +343,7 @@ class drawlotto(QtCore.QObject):
         """
         if turn == (self.data['draw_numbers'] - 2):
             text = self.tr(
-                "Now we come to the number {0}, and thus the "
+                "We are already at the winning number {0}, and thus the "
                 "penultimate number of today's draw. It is the {1}.")
             text = unicode(text).format(self.countnumbers[turn],
                                         self.random_number[turn])
