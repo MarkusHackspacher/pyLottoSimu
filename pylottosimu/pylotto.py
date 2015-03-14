@@ -122,16 +122,20 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             self.ui.btn_draw_overview.setVisible(False)
             self.LastTextnumber = -1
 
-        if self.turn >= len((self.lottodraw.random_number + self.lottodraw.random_addit)):
+        if self.turn >= len((self.lottodraw.random_number
+                             + self.lottodraw.random_addit)):
             self.timer.stop()
             text = ''
         else:
-            self.ui.label_last_draw_number.setText(
-            str((self.lottodraw.random_number + self.lottodraw.random_addit)[self.turn]))
-            self.ui.label_big_number.setText(str((self.lottodraw.random_number +
-                                                  self.lottodraw.random_addit)[self.turn]))
+            self.ui.label_last_draw_number.setText(str((
+                self.lottodraw.random_number +
+                self.lottodraw.random_addit)[self.turn]))
+            self.ui.label_big_number.setText(str((
+                self.lottodraw.random_number +
+                self.lottodraw.random_addit)[self.turn]))
 
-        self.ui.plaintextedit.appendPlainText(self.lottodraw.picknumber(self.turn))
+        self.ui.plaintextedit.appendPlainText(self.lottodraw.picknumber(
+            self.turn))
 
         self.turn += 1
 
@@ -148,6 +152,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """
         sysdat = DlgLottoSystem.lottosystemdata()
         system = DlgLottoSystem.LottoSettingsDialog.getValues(sysdat)
+
         if system[1]:
             self.ui.sbox_drawn_numbers.setValue(system[0][2])
             self.ui.sbox_from_a_set_of.setValue(system[0][1])
@@ -161,8 +166,10 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.plaintextedit.setPlainText("")
         self.ui.label_last_draw_number.setText("")
         self.turn = 0
-        self.lottodraw.data['drawn_numbers'] = int(self.ui.sbox_drawn_numbers.text())
-        self.lottodraw.data['max_draw'] = int(self.ui.sbox_from_a_set_of.text())
+        self.lottodraw.data['drawn_numbers'] = int(
+            self.ui.sbox_drawn_numbers.text())
+        self.lottodraw.data['max_draw'] = int(
+            self.ui.sbox_from_a_set_of.text())
         self.lottodraw.draw()
         self.lottodraw.picknumber(0)
         self.timer.start(100)
@@ -353,8 +360,10 @@ class drawlotto(QtCore.QObject):
             text = unicode(text).format(self.countnumbers[turn],
                                         self.random_number[turn])
 
-        elif turn >= (self.data['draw_numbers'] + self.data['addit_numbers']) and self.data['with_addit'] is True\
-                or turn >= (self.data['draw_numbers']) and self.data['with_addit'] is False:
+        elif (turn >= (self.data['draw_numbers'] + self.data['addit_numbers'])
+                and self.data['with_addit'] is True
+                or turn >= (self.data['draw_numbers'])
+                and self.data['with_addit'] is False):
             random_number = sorted(self.random_number[:])
             text1 = "".join(map(" {0:02d}".format, random_number))
             text = self.tr("That was today's lottery draw, "

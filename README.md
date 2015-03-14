@@ -1,13 +1,11 @@
-
-===========
-
-[![Join the chat at https://gitter.im/MarkusHackspacher/pyLottoSimu](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MarkusHackspacher/pyLottoSimu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 pyLottoSimu
 ===========
 
+[![Join the chat at https://gitter.im/MarkusHackspacher/pyLottoSimu](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MarkusHackspacher/pyLottoSimu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Lotto Generator und Simulator
 
-a programm for the german lottery "pick 6 out of 49" system.
+a program for the german lottery "pick 6 out of 49" system.
 
 install
 -------
