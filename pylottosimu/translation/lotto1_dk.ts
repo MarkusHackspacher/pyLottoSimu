@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="da" sourcelanguage="en">
+<!DOCTYPE TS>
+<TS version="2.0" language="da" sourcelanguage="en">
 <context>
     <name>Dialog</name>
     <message>
@@ -25,7 +26,7 @@
     <message>
         <location filename="dialog/lottosystem.ui" line="75"/>
         <source>Draw numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>udtrukne numre</translation>
     </message>
     <message>
         <location filename="dialog/lottosystem.ui" line="82"/>
@@ -264,7 +265,7 @@ http://www.gnu.org/licenses/</translation>
     <message>
         <location filename="pylotto.py" line="225"/>
         <source>{} {} out of {}: {}</source>
-        <translation type="unfinished"></translation>
+        <translation>{} {} ud af {}: {}</translation>
     </message>
 </context>
 <context>
@@ -385,117 +386,117 @@ http://www.gnu.org/licenses/</translation>
     <message>
         <location filename="pylotto.py" line="298"/>
         <source>And now we come to the winning number {0}, it is the {1}.</source>
-        <translation type="unfinished">Og nu kommer vi til det vindende nummer {0}, er det {1}.</translation>
+        <translation>Og nu kommer vi til det vindende nummer {0}, er det {1}.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="300"/>
         <source>The {0} lotto number of today&apos;s draw is the {1}.</source>
-        <translation type="unfinished">Den {0} lotto antal dagens draw er {1}.</translation>
+        <translation>Den {0} lotto antal dagens draw er {1}.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="302"/>
         <source>We come to the {0} winning number, this is the {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nu kommer vi til vindende nummer {0}, dette er {1}.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="304"/>
         <source>Now we come to {0} number of today&apos;s draw ... {1}.</source>
-        <translation type="unfinished">Nu kommer vi til {0} Antallet af dagens lodtrækning ... {1}.</translation>
+        <translation>Nu kommer vi til {0} Antallet af dagens lodtrækning ... {1}.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="306"/>
         <source>The {0} winning number is {1}.</source>
-        <translation type="unfinished">Den {0} vindende nummer er {1}.</translation>
+        <translation>Den {0} vindende nummer er {1}.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="307"/>
         <source>first</source>
-        <translation type="unfinished">første</translation>
+        <translation>første</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="307"/>
         <source>second</source>
-        <translation type="unfinished">sekund</translation>
+        <translation>sekund</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="308"/>
         <source>third</source>
-        <translation type="unfinished">tredje</translation>
+        <translation>tredje</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="308"/>
         <source>fourth</source>
-        <translation type="unfinished">fjerde</translation>
+        <translation>fjerde</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="309"/>
         <source>fifth</source>
-        <translation type="unfinished">femte</translation>
+        <translation>femte</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="309"/>
         <source>sixth</source>
-        <translation type="unfinished">sjette</translation>
+        <translation>sjette</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="310"/>
         <source>seventh</source>
-        <translation type="unfinished">syvende</translation>
+        <translation>syvende</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="310"/>
         <source>eighth</source>
-        <translation type="unfinished">ottende</translation>
+        <translation>ottende</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="311"/>
         <source>ninth</source>
-        <translation type="unfinished">niende</translation>
+        <translation>niende</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="311"/>
         <source>10th</source>
-        <translation type="unfinished">10.</translation>
+        <translation>10.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="312"/>
         <source>11th</source>
-        <translation type="unfinished">11.</translation>
+        <translation>11.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="312"/>
         <source>12th</source>
-        <translation type="unfinished">12.</translation>
+        <translation>12.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="313"/>
         <source>13th</source>
-        <translation type="unfinished">13.</translation>
+        <translation>13.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="313"/>
         <source>14th</source>
-        <translation type="unfinished">14.</translation>
+        <translation>14.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="314"/>
         <source>15th</source>
-        <translation type="unfinished">15.</translation>
+        <translation>15.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="345"/>
         <source>We are already at the winning number {0}, and thus the penultimate number of today&apos;s draw. It is the {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nu kommer vi til det antal {0}, og dermed næstsidste antal af dagens lodtrækning. Det er {1}.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="351"/>
         <source>And now we come to the {0} and lastwinning number, it is the {1}.</source>
-        <translation type="unfinished">Og nu kommer vi til {0} og sidste vindende nummer, er det {1}.</translation>
+        <translation>Og nu kommer vi til {0} og sidste vindende nummer, er det {1}.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="360"/>
         <source>That was today&apos;s lottery draw, the figures were:{0}, I wish you a nice evening! Bye, bye!</source>
-        <translation type="unfinished">Det var dagens lodtrækning, var tallene: {0}, jeg ønsker dig en dejlig aften! Ved!</translation>
+        <translation>Det var dagens lodtrækning, var tallene: {0}, jeg ønsker dig en dejlig aften! Ved!</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="366"/>
@@ -503,12 +504,14 @@ http://www.gnu.org/licenses/</translation>
 at {0}.
 numbers are drawn: {1} out of {2}!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Velkommen til lodtrækning,
+ved {0}.
+numre er trukket: {1} af {2}!</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="373"/>
         <source>And the first winning number is the {0}.</source>
-        <translation type="unfinished">Og den første vindende nummer er {0}.</translation>
+        <translation>Og den første vindende nummer er {0}.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="378"/>

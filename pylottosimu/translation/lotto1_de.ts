@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de_DE" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de_DE">
 <context>
     <name>Dialog</name>
     <message>
@@ -368,7 +369,7 @@ http://www.gnu.org/licenses/</translation>
     <message>
         <location filename="pylotto.py" line="302"/>
         <source>We come to the {0} winning number, this is the {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="304"/>
@@ -458,7 +459,7 @@ http://www.gnu.org/licenses/</translation>
     <message>
         <location filename="pylotto.py" line="345"/>
         <source>We are already at the winning number {0}, and thus the penultimate number of today&apos;s draw. It is the {1}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kommen wir nun zur der {0} Zahl, und damit die vorletzte Zahl der heutigen Ziehung. Es ist die {1}.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="351"/>
@@ -476,7 +477,9 @@ http://www.gnu.org/licenses/</translation>
 at {0}.
 numbers are drawn: {1} out of {2}!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Willkommen bei der Ziehung der Lottozahlen,
+am {0}.
+Ausgelost werden: {1} aus {2}!</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="373"/>
@@ -486,7 +489,7 @@ numbers are drawn: {1} out of {2}!
     <message>
         <location filename="pylotto.py" line="378"/>
         <source>The additional number is the {0}.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die zusatzzahl ist die {0}.</translation>
     </message>
 </context>
 </TS>
