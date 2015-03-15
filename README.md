@@ -62,12 +62,12 @@ Dabei kann mit dem Schieber oben links die Geschwindigkeit verändert werden.
 
 Auf der Webseite gibt es [Videos](http://markush.cwsurf.de/joomla_17/index.php/python/pylottosimu/8-lotto-generator-und-simulator) zu dem Programm.
 
-Info und Lizenz
----------------
+License
+-------
 
 pyLottoSimu
 
-Copyright <2012-2014> Markus Hackspacher
+Copyright <2012-2015> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
