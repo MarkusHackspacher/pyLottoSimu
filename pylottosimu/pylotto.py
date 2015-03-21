@@ -46,7 +46,10 @@ if sys.version_info >= (3, 0):
     import pylottosimu.dialog.lottosystem as DlgLottoSystem
     unicode = str
 else:
-    import lottokugeln_rc as lottokugeln_rc
+    if QtCore.QT_VERSION >= 0x050000:
+        import pylottosimu.lottokugeln_rc3_qt5 as lottokugeln_rc
+    else:
+        import lottokugeln_rc as lottokugeln_rc
     from dialog.show_drawing import DlgShowDrawing
     import dialog.lottosystem as DlgLottoSystem
     range = xrange
