@@ -31,6 +31,8 @@ translate your language file: lotto1_xx.ts, and produce the .ts translation file
 lrelease complete.pro
 ```
 
+![Image](misc/pyLottoSimu_screenshot_en.png "simulate a lotto draw.")
+
 Installieren
 -------------
 
