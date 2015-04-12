@@ -366,21 +366,31 @@ class drawlotto(QtCore.QObject):
                 and self.data['with_addit'] is True
                 or turn >= (self.data['draw_numbers'])
                 and self.data['with_addit'] is False):
-            random_number = sorted(self.random_number[:])
-            text1 = "".join(map(" {0:02d}".format, random_number))
+            if self.data['with_addit']:
+                text_addit_number = "".join(map(" {0:02d}".format, sorted(self.random_addit[:])))
+                textr_addit = self.tr("the additional numbers are{0}, ")
+                text_addit = unicode(textr_addit).format(text_addit_number)
+            else:
+                text_addit = ""
+            text_random_number = "".join(map(" {0:02d}".format, sorted(self.random_number[:])))
             text = self.tr("That was today's lottery draw, "
-                           "the figures were:{0}, "
+                           "the figures were:{0}, {1}"
                            "I wish you a nice evening! Bye, bye!")
-            text = unicode(text).format(text1)
+            text = unicode(text).format(text_random_number, text_addit)
         elif turn == -1:
+            if self.data['with_addit']:
+                textr_addit = self.tr("with {0} additional numbers ")
+                text_addit = unicode(textr_addit).format(self.data['addit_numbers'])
+            else:
+                text_addit = ""
             dt = datetime.now()
             textr = self.tr('Welcome to the lottery draw,\n'
-                            'at {0}.\nnumbers are drawn: {1} out of {2}!\n')
+                            'at {0}.\nnumbers are drawn: {1} out of {2} {3}!')
             dttext = dt.strftime("%d %B %Y um %H:%M")
             if sys.version_info < (3, 0):
                 dttext = dttext.decode('utf-8')
             text = unicode(textr).format(
-                dttext, self.data['draw_numbers'], self.data['max_draw'])
+                dttext, self.data['draw_numbers'], self.data['max_draw'], text_addit)
         elif turn == 0:
             textr = self.tr('And the first winning number is the {0}.')
             text = unicode(textr).format(self.random_number[turn])
@@ -436,5 +446,13 @@ if __name__ == "__main__":
     lt.draw()
     print(lt.random_number, lt.random_addit)
     print(lt.random_number + lt.random_addit)
+    print(lt.picknumber(-1))
+    for x in range(len(lt.random_number + lt.random_addit) + 1):
+        print(lt.picknumber(x))
+    lt.data['with_addit'] = True
+    lt.draw()
+    print(lt.random_number, lt.random_addit)
+    print(lt.random_number + lt.random_addit)
+    print(lt.picknumber(-1))
     for x in range(len(lt.random_number + lt.random_addit) + 1):
         print(lt.picknumber(x))
