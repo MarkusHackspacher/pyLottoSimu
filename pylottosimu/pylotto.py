@@ -166,7 +166,6 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         the next drawing starts with the timer event.
         @return: none
         """
-        self.ui.plaintextedit.setPlainText("")
         self.ui.label_last_draw_number.setText("")
         self.turn = 0
         self.lottodraw.data['drawn_numbers'] = int(
@@ -174,7 +173,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.lottodraw.data['max_draw'] = int(
             self.ui.sbox_from_a_set_of.text())
         self.lottodraw.draw()
-        self.lottodraw.picknumber(0)
+        self.ui.plaintextedit.setPlainText(self.lottodraw.picknumber(-1))
         self.timer.start(100)
         self.delay_of_next_number = self.ui.horizontalSlider.value()
 
@@ -373,7 +372,7 @@ class drawlotto(QtCore.QObject):
                            "the figures were:{0}, "
                            "I wish you a nice evening! Bye, bye!")
             text = unicode(text).format(text1)
-        elif turn == 0:
+        elif turn == -1:
             dt = datetime.now()
             textr = self.tr('Welcome to the lottery draw,\n'
                             'at {0}.\nnumbers are drawn: {1} out of {2}!\n')
@@ -382,8 +381,9 @@ class drawlotto(QtCore.QObject):
                 dttext = dttext.decode('utf-8')
             text = unicode(textr).format(
                 dttext, self.data['draw_numbers'], self.data['max_draw'])
+        elif turn == 0:
             textr = self.tr('And the first winning number is the {0}.')
-            text += unicode(textr).format(self.random_number[turn])
+            text = unicode(textr).format(self.random_number[turn])
             self.LastTextnumber = -1
         elif turn > (self.data['draw_numbers'] - 1):
             if self.data['with_addit'] is True:
