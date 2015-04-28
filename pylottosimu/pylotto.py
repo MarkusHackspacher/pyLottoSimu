@@ -129,6 +129,9 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                              + self.lottodraw.random_addit)):
             self.timer.stop()
             text = ''
+            if self.ui.rdbtn_show_draw_after.isChecked():
+                self.onbtn_draw_overview()
+            self.ui.btn_draw_overview.setVisible(True)
         else:
             self.ui.label_last_draw_number.setText(str((
                 self.lottodraw.random_number +
@@ -146,7 +149,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """show dialog of the draw
         @return: none
         """
-        dlgdraw = DlgShowDrawing(self.random_number, self.highest)
+        dlgdraw = DlgShowDrawing(self.lottodraw.random_number, self.highest)
         dlgdraw.exec_()
 
     def onsystem(self):
