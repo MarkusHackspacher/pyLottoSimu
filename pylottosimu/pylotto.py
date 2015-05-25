@@ -88,10 +88,11 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.actionLotto_system.triggered.connect(self.onsystem)
 
         self.turn = 0
-        self.highest = int(self.ui.sbox_from_a_set_of.text())
+        # self.highest = int(self.ui.sbox_from_a_set_of.text())
         self.random_number = 0
         self.delay_of_next_number = self.ui.horizontalSlider.value()
         self.lottodraw = drawlotto()
+        self.ui.label_numbers.setText(self.lottodraw.data['name'])
         self.ui.show()
 
     def ontimer(self):
@@ -111,7 +112,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                 or (self.delay_of_next_number % 4) == 0:
             self.ui.label_big_number.setText(str(
                 random.sample(range(1, int(
-                    self.ui.sbox_from_a_set_of.text()) + 1), 1)[0]))
+                    self.lottodraw.data['max_draw']) + 1), 1)[0]))
         self.timer.start(100)
         if self.delay_of_next_number < 0:
             self.show_next_number()
@@ -149,7 +150,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """show dialog of the draw
         @return: none
         """
-        dlgdraw = DlgShowDrawing(self.lottodraw.random_number, self.highest)
+        dlgdraw = DlgShowDrawing(self.lottodraw.random_number,
+                                 self.lottodraw.data['max_draw'])
         dlgdraw.exec_()
 
     def onsystem(self):
@@ -160,8 +162,15 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         system = DlgLottoSystem.LottoSettingsDialog.getValues(sysdat)
 
         if system[1]:
-            self.ui.sbox_drawn_numbers.setValue(system[0][2])
-            self.ui.sbox_from_a_set_of.setValue(system[0][1])
+             self.lottodraw.data['name']=system[0][0]
+             self.lottodraw.data['max_draw']=system[0][1]
+             self.lottodraw.data['draw_numbers']=system[0][2]
+             self.lottodraw.data['with_addit']=system[0][3]
+             self.lottodraw.data['addit_numbers']=system[0][4]
+             self.lottodraw.data['sep_addit_numbers']=system[0][5]
+             self.lottodraw.data['max_addit']=system[0][6]
+
+        self.ui.label_numbers.setText(self.lottodraw.data['name'])
 
     def onbtn_start(self):
         """Start simulation with the first drawing
@@ -171,10 +180,6 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """
         self.ui.label_last_draw_number.setText("")
         self.turn = 0
-        self.lottodraw.data['drawn_numbers'] = int(
-            self.ui.sbox_drawn_numbers.text())
-        self.lottodraw.data['max_draw'] = int(
-            self.ui.sbox_from_a_set_of.text())
         self.lottodraw.draw()
         self.ui.plaintextedit.setPlainText(self.lottodraw.picknumber(-1))
         self.timer.start(100)
@@ -223,10 +228,6 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """Show the output from the random number generator.
         @return: none
         """
-        self.lottodraw.data['draw_numbers'] = int(
-            self.ui.sbox_drawn_numbers.text())
-        self.lottodraw.data['max_draw'] = int(
-            self.ui.sbox_from_a_set_of.text())
         self.lottodraw.draw()
         if self.lottodraw.random_number:
             text = "".join(map(" {0:02d}".format, sorted(
@@ -249,19 +250,19 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
     def oninfo(self):
         """info message box
         @return: none"""
+        infobox = QtWidgets.QMessageBox()
+        infobox.setWindowTitle(self.tr('Info'))
         text = self.tr(
             'simulation of a random draw\n\n'
             'based on an idea of imageupload,\n'
             'http://www.my-image-upload.de/\n\n'
             'GNU GPL v3\n'
             'http://www.gnu.org/licenses/')
-        a = QtWidgets.QMessageBox()
-        a.setWindowTitle(self.tr('Info'))
-        a.setText(text)
+        infobox.setText(text)
         text = self.tr('Created with Python by Markus Hackspacher '
                        'http://markush.cwsurf.de')
-        a.setInformativeText(text)
-        a.exec_()
+        infobox.setInformativeText(text)
+        infobox.exec_()
 
     def onwebsite(self):
         """Open website
