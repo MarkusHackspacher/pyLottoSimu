@@ -170,6 +170,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             self.lottodraw.data['max_addit'] = system[0][6]
 
         self.ui.label_numbers.setText(self.lottodraw.data['name'])
+        self.ui.btn_draw_overview.setVisible(False)
 
     def onbtn_start(self):
         """Start simulation with the first drawing
