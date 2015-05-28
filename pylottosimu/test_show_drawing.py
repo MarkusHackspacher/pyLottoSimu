@@ -66,7 +66,6 @@ class show_drawingTestCase(unittest.TestCase):
         self.assertEqual(dialog.Btn_Numerary_1to49[4].isFlat(), False)
         self.assertEqual(dialog.Btn_Numerary_1to49[5].isFlat(), True)
 
-
     def test_number(self):
         dialog = DlgShowDrawing([2], 5)
         self.assertTrue(dialog)

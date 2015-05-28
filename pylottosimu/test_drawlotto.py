@@ -25,10 +25,11 @@ import unittest
 
 import pylotto
 
+
 class drawlottoTestCase(unittest.TestCase):
     def setUp(self):
         self.lotto = pylotto.drawlotto(with_addit=False, addit_numbers=2,
-                               sep_addit_numbers=True, max_addit=10)
+                                       sep_addit_numbers=True, max_addit=10)
 
     def test_setting(self):
         self.assertEqual(self.lotto.data['name'], 'Lotto DE')

@@ -410,7 +410,7 @@ class drawlotto(QtCore.QObject):
                 textr = self.tr('The additional number is the {0}.')
                 if self.data['sep_addit_numbers']:
                     text = unicode(textr).format(self.random_addit[turn
-                                             - self.data['draw_numbers']])
+                                                 - self.data['draw_numbers']])
                 else:
                     text = unicode(textr).format(self.random_number[turn])
         else:
