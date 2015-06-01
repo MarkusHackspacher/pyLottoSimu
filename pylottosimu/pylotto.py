@@ -389,13 +389,16 @@ class drawlotto(QtCore.QObject):
                 and self.data['with_addit'] is False):
             if self.data['with_addit']:
                 text_addit_number = "".join(map(" {0:02d}".format, sorted(
-                    self.random_addit[:])))
-                textr_addit = self.tr("the additional numbers are{0}, ")
+                    self.ballbonus[:])))
+                if len(self.ballbonus) > 1:
+                    textr_addit = self.tr("the bonus numbers are{0}, ")
+                else:
+                    textr_addit = self.tr("the bonus number is{0}, ")
                 text_addit = unicode(textr_addit).format(text_addit_number)
             else:
                 text_addit = ""
             text_random_number = "".join(map(" {0:02d}".format, sorted(
-                self.random_number[:])))
+                self.ballnumber[:])))
             text = self.tr("That was today's lottery draw, "
                            "the figures were:{0}, {1}"
                            "I wish you a nice evening! Bye, bye!")
