@@ -35,12 +35,13 @@ if sys.version_info < (3, 0):
 
 class DlgShowDrawing(QtWidgets.QDialog):
     """Show the numbers in a dialog box"""
-    def __init__(self, draw_number, highest_number):
+    def __init__(self, ballnumbers, highestnumber, bonusnumbers=False,
+                 highestbonus=False):
         """
-        @param draw_number: the number of draw
-        @param highest_number: the number of the PushButtons
-        @type draw_number: tuple of int
-        @type highest_number: int
+        @param ballnumbers: the number of draw
+        @param highestnumber: the number of the PushButtons
+        @type ballnumbers: tuple of int
+        @type highestnumber: int
         @return: none
         """
         QtWidgets.QDialog.__init__(self)
@@ -57,26 +58,46 @@ class DlgShowDrawing(QtWidgets.QDialog):
             QtWidgets.QBoxLayout.TopToBottom, self)
 
         self.gridLayout = QtWidgets.QGridLayout()
+        self.gridbonus = QtWidgets.QGridLayout()
 
         # Array of Button from 1 to 49
         self.Btn_Numerary_1to49 = [QtWidgets.QPushButton(self)
-                                   for _ in range(highest_number)]
-        for button_number, button in enumerate(self.Btn_Numerary_1to49):
+                                   for _ in range(highestnumber)]
+        for buttonnumber, button in enumerate(self.Btn_Numerary_1to49):
             button.setMaximumSize(QtCore.QSize(58, 58))
             button.setAutoFillBackground(True)
             self.gridLayout.addWidget(
-                button, int(button_number / 7), int(button_number % 7), 1, 1)
-            button.setText(str(button_number + 1))
+                button, int(buttonnumber / 7), int(buttonnumber % 7), 1, 1)
+            button.setText(str(buttonnumber + 1))
 
-            if button_number in draw_number:
+            if buttonnumber + 1 in ballnumbers:
                 button.setFlat(False)
                 button.setStyleSheet("color: red;")
+            elif bonusnumbers and not highestbonus:
+                if buttonnumber + 1 in bonusnumbers:
+                    button.setFlat(False)
+                    button.setStyleSheet("color: blue;")
             else:
                 button.setFlat(True)
 
+        if highestbonus:
+            self.btnnumerarybonus = [QtWidgets.QPushButton(self)
+                                     for _ in range(highestbonus)]
+            for buttonnumber, button in enumerate(self.btnnumerarybonus):
+                button.setMaximumSize(QtCore.QSize(58, 58))
+                button.setAutoFillBackground(True)
+                self.gridbonus.addWidget(
+                    button, int(buttonnumber / 7), int(buttonnumber % 7), 1, 1)
+                button.setText(str(buttonnumber + 1))
+                if buttonnumber + 1 in bonusnumbers:
+                    button.setFlat(False)
+                    button.setStyleSheet("color: blue;")
+                else:
+                    button.setFlat(True)
+
         self.setWindowTitle(self.tr("Show Drawing"))
-
         self.boxLayout.addLayout(self.gridLayout)
+        if highestbonus:
+            self.boxLayout.addLayout(self.gridbonus)
         self.boxLayout.addWidget(self.buttonBox)
-
         self.buttonBox.accepted.connect(self.accept)

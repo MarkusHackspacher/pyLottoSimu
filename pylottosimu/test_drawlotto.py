@@ -45,6 +45,8 @@ class drawlottoTestCase(unittest.TestCase):
         self.lotto.draw()
         self.assertEqual(len(self.lotto.random_number), 6)
         self.assertEqual(len(self.lotto.random_addit), 0)
+        self.assertEqual(len(self.lotto.ballnumber), 6)
+        self.assertEqual(len(self.lotto.ballbonus), 0)
 
     def test_draw_addit(self):
         self.lotto.data['with_addit'] = True
@@ -52,6 +54,8 @@ class drawlottoTestCase(unittest.TestCase):
         self.lotto.draw()
         self.assertEqual(len(self.lotto.random_number), 8)
         self.assertEqual(len(self.lotto.random_addit), 0)
+        self.assertEqual(len(self.lotto.ballnumber), 6)
+        self.assertEqual(len(self.lotto.ballbonus), 2)
 
     def test_draw_addit_sep(self):
         self.lotto.data['with_addit'] = True
@@ -59,6 +63,8 @@ class drawlottoTestCase(unittest.TestCase):
         self.lotto.draw()
         self.assertEqual(len(self.lotto.random_number), 6)
         self.assertEqual(len(self.lotto.random_addit), 2)
+        self.assertEqual(len(self.lotto.ballnumber), 6)
+        self.assertEqual(len(self.lotto.ballbonus), 2)
 
 if __name__ == '__main__':
     unittest.main()

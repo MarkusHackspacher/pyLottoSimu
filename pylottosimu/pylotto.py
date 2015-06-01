@@ -149,8 +149,15 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """show dialog of the draw
         @return: none
         """
-        dlgdraw = DlgShowDrawing(self.lottodraw.random_number,
-                                 self.lottodraw.data['max_draw'])
+        separetebonus = False
+        if self.lottodraw.data['sep_addit_numbers']:
+            separetebonus = self.lottodraw.data['max_addit']
+
+        dlgdraw = DlgShowDrawing(self.lottodraw.ballnumber,
+                                 self.lottodraw.data['max_draw'],
+                                 self.lottodraw.ballbonus,
+                                 highestbonus=separetebonus
+                                 )
         dlgdraw.exec_()
 
     def onsystem(self):
@@ -334,6 +341,8 @@ class drawlotto(QtCore.QObject):
 
         self.random_addit = []
         self.random_number = 0
+        self.ballbonus = []
+        self.ballnumber = []
 
     def draw(self):
         """draw of the lotto numbers
@@ -349,6 +358,14 @@ class drawlotto(QtCore.QObject):
                 drawn_numbers += self.data['addit_numbers']
         self.random_number = random.sample(range(1, self.data['max_draw'] + 1),
                                            drawn_numbers)
+        if self.data['with_addit'] and not self.data['sep_addit_numbers']:
+            self.ballnumber = self.random_number[:self.data['draw_numbers']]
+            self.ballbonus = self.random_number[self.data['draw_numbers']:
+                                                self.data['draw_numbers'] +
+                                                self.data['addit_numbers']]
+        else:
+            self.ballnumber = self.random_number
+            self.ballbonus = self.random_addit
 
     def picknumber(self, turn):
         """pick of a lotto number
