@@ -464,28 +464,3 @@ def gui(arguments):
     app.installTranslator(translator)
     dialog = LottoSimuDialog()
     sys.exit(app.exec_())
-
-
-if __name__ == "__main__":
-    # gui('')
-    locale = str(QtCore.QLocale.system().name())
-    app = QtWidgets.QApplication(sys.argv)
-    translator = QtCore.QTranslator()
-    translator.load(os.path.abspath(os.path.join(os.path.dirname(__file__),
-                    "translation", "lotto1_" + locale)))
-    app.installTranslator(translator)
-    lt = drawlotto(with_addit=False, addit_numbers=2, sep_addit_numbers=True,
-                   max_addit=10)
-    lt.draw()
-    print(lt.random_number, lt.random_addit)
-    print(lt.random_number + lt.random_addit)
-    print(lt.picknumber(-1))
-    for x in range(len(lt.random_number + lt.random_addit) + 1):
-        print(lt.picknumber(x))
-    lt.data['with_addit'] = True
-    lt.draw()
-    print(lt.random_number, lt.random_addit)
-    print(lt.random_number + lt.random_addit)
-    print(lt.picknumber(-1))
-    for x in range(len(lt.random_number + lt.random_addit) + 1):
-        print(lt.picknumber(x))

@@ -119,7 +119,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         """getValues"""
         dialog = LottoSettingsDialog(sysdat, parent)
         result = dialog.ui.exec_()
-        return (dialog.values(), result == QtGui.QDialog.Accepted)
+        return (dialog.values(), result == QtWidgets.QDialog.Accepted)
 
 
 class lottosystemdata():
@@ -176,23 +176,3 @@ def gui(arguments, sysdat):
                     "translation", "lotto1_" + locale)))
     app.installTranslator(translator)
     print(LottoSettingsDialog.getValues(sysdat))
-
-if __name__ == "__main__":
-    sysdat = lottosystemdata()
-    gui('', sysdat)
-    sysdat.writetofile()
-    # settings = QtCore.QSettings('pylottosimu', 'pylottosimu')
-
-    # settings.setValue('int_value', 42)
-    # settings.setValue('point_value', QtCore.QPoint(10, 12))
-
-    # This will write the setting to the platform specific storage.
-    # del settings
-
-    # settings = QtCore.QSettings('foo', 'foo')
-
-    # int_value = settings.value('int_value', type=int)
-    # print("int_value: %s" % repr(int_value))
-
-    # point_value = settings.value('point_value', type=QtCore.QPoint)
-    # print("point_value: %s" % repr(point_value))

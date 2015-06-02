@@ -38,6 +38,9 @@ __author__ = 'mar'
 
 
 class show_drawingTestCase(unittest.TestCase):
+    """
+    Test of drawing
+    """
 
     def setUp(self):
         '''Creates the QApplication instance'''
