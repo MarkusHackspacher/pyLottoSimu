@@ -4,7 +4,7 @@
 """
 pyLottoSimu, load module lotto
 
-Copyright (C) <2014> Markus Hackspacher
+Copyright (C) <2014-2015> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
@@ -26,14 +26,14 @@ from distutils.core import setup
 
 
 setup(name='pyLottoSimu',
-      version='1.5',
+      version='1.6',
       description='Python Lotto Simulator',
       author='Markus Hackspacher',
       author_email='hackspacher@gmx.de',
       url='http://markush.cwsurf.de/joomla_17/index.php/python/pylottosimu',
       download_url='https://github.com/MarkusHackspacher/pyLottoSimu',
       packages=['pylottosimu', 'pylottosimu.dialog'],
-      license='GPL',
+      license='GPLv3',
       console=["pylottosimu.pyw"],
       options={"py2exe": {"dll_excludes": ["MSVCP90.dll", "HID.DLL",
                                            "w9xpopen.exe"],

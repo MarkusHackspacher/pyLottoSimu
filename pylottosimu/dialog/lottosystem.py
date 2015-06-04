@@ -149,7 +149,15 @@ class lottosystemdata():
             'with_addit': True,
             'addit_numbers': 2,
             'sep_addit_numbers': True,
-            'max_addit': 11
+            'max_addit': 11},
+            {
+            'name': 'Powerball Lottery US',
+            'max_draw': 59,
+            'draw_numbers': 5,
+            'with_addit': True,
+            'addit_numbers': 1,
+            'sep_addit_numbers': True,
+            'max_addit': 35
             }
         ]
 

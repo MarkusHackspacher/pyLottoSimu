@@ -25,5 +25,14 @@
         "name": "EuroMillionen",
         "sep_addit_numbers": true,
         "with_addit": true
+    },
+    {
+        "addit_numbers": 1,
+        "draw_numbers": 5,
+        "max_addit": 35,
+        "max_draw": 59,
+        "name": "Powerball Lottery",
+        "sep_addit_numbers": true,
+        "with_addit": true
     }
 ]

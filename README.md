@@ -12,7 +12,7 @@ pyLottoSimu
 
 Lotto Generator und Simulator
 
-a program for the german lottery "pick 6 out of 49" system.
+a simulation of the German (6 of 49), Austria (6 of 45) or EuroMillionen (5 of 50 plus 2) lottery system.
 
 install
 -------
