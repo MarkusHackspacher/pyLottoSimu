@@ -43,7 +43,7 @@ if sys.version_info >= (3, 0):
     else:
         import pylottosimu.lottokugeln_rc3 as lottokugeln_rc
     from pylottosimu.dialog.show_drawing import DlgShowDrawing
-    import pylottosimu.dialog.lottosystem as DlgLottoSystem
+    import pylottosimu.lottosystem as DlgLottoSystem
     unicode = str
 else:
     if QtCore.QT_VERSION >= 0x050000:
@@ -51,7 +51,7 @@ else:
     else:
         import lottokugeln_rc as lottokugeln_rc
     from dialog.show_drawing import DlgShowDrawing
-    import dialog.lottosystem as DlgLottoSystem
+    import lottosystem as DlgLottoSystem
     range = xrange
 
 
@@ -65,10 +65,11 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
         # Set up the user interface from Designer.
         self.ui = uic.loadUi(os.path.abspath(os.path.join(
-                             os.path.dirname(__file__), "lottosimu_gui.ui")))
+                             os.path.dirname(sys.argv[0]),
+                             "pylottosimu", "lottosimu_gui.ui")))
         self.ui.setWindowIcon(
-            QtGui.QIcon(os.path.abspath(os.path.join(os.path.dirname(__file__),
-                        "..", "misc", "pyLottoSimu.svg"))))
+            QtGui.QIcon(os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]),
+                        "misc", "pyLottoSimu.svg"))))
 
         self.action_lottosim()
         self.timer = QtCore.QTimer(self)
@@ -459,8 +460,9 @@ def gui(arguments):
         print ("locale: {}".format(locale))
     app = QtWidgets.QApplication(sys.argv)
     translator = QtCore.QTranslator()
-    translator.load(os.path.abspath(os.path.join(os.path.dirname(__file__),
-                    "translation", "lotto1_" + locale)))
+    translator.load(os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]),
+                    "pylottosimu", "translation",
+                    "lotto1_{}".format(locale))))
     app.installTranslator(translator)
     dialog = LottoSimuDialog()
     sys.exit(app.exec_())

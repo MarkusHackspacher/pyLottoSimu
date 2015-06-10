@@ -47,10 +47,11 @@ class LottoSettingsDialog(QtWidgets.QDialog):
 
         # Set up the user interface from Designer.
         self.ui = uic.loadUi(os.path.abspath(os.path.join(
-                             os.path.dirname(__file__), "lottosystem.ui")))
+            os.path.dirname(sys.argv[0]),
+            "pylottosimu", "lottosystem.ui")))
         self.ui.setWindowIcon(
-            QtGui.QIcon(os.path.abspath(os.path.join(os.path.dirname(__file__),
-                        "..", "..", "misc", "pyLottoSimu.svg"))))
+            QtGui.QIcon(os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]),
+                        "misc", "pyLottoSimu.svg"))))
 
         self.systemdata = sysdat
         for systemname in self.systemdata.data:
