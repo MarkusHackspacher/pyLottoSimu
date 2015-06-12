@@ -68,8 +68,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                              os.path.dirname(sys.argv[0]),
                              "pylottosimu", "lottosimu_gui.ui")))
         self.ui.setWindowIcon(
-            QtGui.QIcon(os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]),
-                        "misc", "pyLottoSimu.svg"))))
+            QtGui.QIcon(os.path.abspath(os.path.join(
+                os.path.dirname(sys.argv[0]), "misc", "pyLottoSimu.svg"))))
 
         self.action_lottosim()
         self.timer = QtCore.QTimer(self)
@@ -461,8 +461,7 @@ def gui(arguments):
     app = QtWidgets.QApplication(sys.argv)
     translator = QtCore.QTranslator()
     translator.load(os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]),
-                    "pylottosimu", "translation",
-                    "lotto1_{}".format(locale))))
+                    "pylottosimu", "translation", "lotto1_{}".format(locale))))
     app.installTranslator(translator)
     dialog = LottoSimuDialog()
     sys.exit(app.exec_())
