@@ -22,8 +22,29 @@ You should have received a copy of the GNU General Public License
 along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
 import sys
+import os
+from PyQt5 import QtCore, QtWidgets
 
-import pylottosimu
+from pylottosimu import pylotto
 
 
-pylottosimu.gui(sys.argv)
+def gui(arguments):
+    """Open the GUI
+    @param arguments: language, see in folder translate
+    @type arguments: string
+    @return: none
+    """
+    if len(arguments) > 1:
+        locale = arguments[1]
+    else:
+        locale = str(QtCore.QLocale.system().name())
+        print ("locale: {}".format(locale))
+    app = QtWidgets.QApplication(sys.argv)
+    translator = QtCore.QTranslator()
+    translator.load(os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]),
+                    "pylottosimu", "translation", "lotto1_{}".format(locale))))
+    app.installTranslator(translator)
+    dialog = pylotto.LottoSimuDialog()
+    sys.exit(app.exec_())
+
+gui(sys.argv)

@@ -167,22 +167,3 @@ class lottosystemdata():
         with open('lottosystems.josn', 'w') as outfile:
             json.dump(self.data, outfile, sort_keys=True,
                       indent=4, separators=(',', ': '))
-
-
-def gui(arguments, sysdat):
-    """Open the GUI of the LottoSettings Dialog
-    @param arguments: language, see in folder translate
-    @type arguments: string
-    @return: none
-    """
-    if len(arguments) > 1:
-        locale = arguments[1]
-    else:
-        locale = str(QtCore.QLocale.system().name())
-        print ("locale: {}".format(locale))
-    app = QtWidgets.QApplication([])
-    translator = QtCore.QTranslator()
-    translator.load(os.path.abspath(os.path.join(os.path.dirname(__file__),
-                    "translation", "lotto1_" + locale)))
-    app.installTranslator(translator)
-    print(LottoSettingsDialog.getValues(sysdat))

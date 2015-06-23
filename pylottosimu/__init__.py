@@ -20,14 +20,3 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
-
-import pylottosimu.pylotto
-
-
-def gui(arguments):
-    """Open the GUI
-    @param arguments: language, see in folder translate
-    @type arguments: string
-    @return: none
-    """
-    pylotto.gui(arguments)

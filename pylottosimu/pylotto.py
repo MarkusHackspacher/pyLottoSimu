@@ -445,23 +445,3 @@ class drawlotto(QtCore.QObject):
                 self.random_number[turn])
             self.LastTextnumber = textnumber
         return text
-
-
-def gui(arguments):
-    """Open the GUI
-    @param arguments: language, see in folder translate
-    @type arguments: string
-    @return: none
-    """
-    if len(arguments) > 1:
-        locale = arguments[1]
-    else:
-        locale = str(QtCore.QLocale.system().name())
-        print ("locale: {}".format(locale))
-    app = QtWidgets.QApplication(sys.argv)
-    translator = QtCore.QTranslator()
-    translator.load(os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]),
-                    "pylottosimu", "translation", "lotto1_{}".format(locale))))
-    app.installTranslator(translator)
-    dialog = LottoSimuDialog()
-    sys.exit(app.exec_())
