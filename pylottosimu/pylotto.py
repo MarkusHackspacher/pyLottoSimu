@@ -20,7 +20,6 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
-__doc__ = "The signals for the GUI"
 
 import os
 import sys
@@ -29,13 +28,7 @@ from datetime import datetime
 from random import randint
 import random
 
-try:
-    from PyQt5 import QtGui, QtCore, QtWidgets, uic
-    print ("pyQt5")
-except ImportError:
-    from PyQt4 import QtGui as QtWidgets
-    from PyQt4 import QtGui, QtCore, uic
-    print ("pyQt4")
+from PyQt5 import QtGui, QtCore, QtWidgets, uic
 
 if sys.version_info >= (3, 0):
     if QtCore.QT_VERSION >= 0x050000:
@@ -44,7 +37,6 @@ if sys.version_info >= (3, 0):
         import pylottosimu.lottokugeln_rc3 as lottokugeln_rc
     from pylottosimu.dialog.show_drawing import DlgShowDrawing
     import pylottosimu.lottosystem as DlgLottoSystem
-    unicode = str
 else:
     if QtCore.QT_VERSION >= 0x050000:
         import pylottosimu.lottokugeln_rc3_qt5 as lottokugeln_rc
@@ -53,6 +45,9 @@ else:
     from dialog.show_drawing import DlgShowDrawing
     import lottosystem as DlgLottoSystem
     range = xrange
+    str = unicode
+
+__doc__ = "The signals for the GUI"
 
 
 class LottoSimuDialog(QtWidgets.QMainWindow):
@@ -244,7 +239,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             text = self.tr("Error, no valid numbers available!")
         dt = datetime.now()
         texttr = self.tr("{} {} out of {}: {}")
-        text = unicode(texttr).format(dt.strftime("%H:%M:%S:"),
+        text = str(texttr).format(dt.strftime("%H:%M:%S:"),
                                       self.lottodraw.data['draw_numbers'],
                                       self.lottodraw.data['max_draw'],
                                       text)
@@ -376,13 +371,13 @@ class drawlotto(QtCore.QObject):
             text = self.tr(
                 "We are already at the winning number {0}, and thus the "
                 "penultimate number of today's draw. It is the {1}.")
-            text = unicode(text).format(self.countnumbers[turn],
-                                        self.random_number[turn])
+            text = str(text.format(self.countnumbers[turn],
+                                    self.random_number[turn]))
         elif turn == (self.data['draw_numbers'] - 1):
             text = self.tr('And now we come to the {0} and last'
                            'winning number, it is the {1}.')
-            text = unicode(text).format(self.countnumbers[turn],
-                                        self.random_number[turn])
+            text = str(text).format(self.countnumbers[turn],
+                                    self.random_number[turn])
 
         elif (turn >= (self.data['draw_numbers'] + self.data['addit_numbers'])
                 and self.data['with_addit'] is True
@@ -395,7 +390,7 @@ class drawlotto(QtCore.QObject):
                     textr_addit = self.tr("the bonus numbers are{0}, ")
                 else:
                     textr_addit = self.tr("the bonus number is{0}, ")
-                text_addit = unicode(textr_addit).format(text_addit_number)
+                text_addit = str(textr_addit).format(text_addit_number)
             else:
                 text_addit = ""
             text_random_number = "".join(map(" {0:02d}".format, sorted(
@@ -403,11 +398,11 @@ class drawlotto(QtCore.QObject):
             text = self.tr("That was today's lottery draw, "
                            "the figures were:{0}, {1}"
                            "I wish you a nice evening! Bye, bye!")
-            text = unicode(text).format(text_random_number, text_addit)
+            text = str(text).format(text_random_number, text_addit)
         elif turn == -1:
             if self.data['with_addit']:
                 textr_addit = self.tr("with {0} additional numbers ")
-                text_addit = unicode(textr_addit).format(
+                text_addit = str(textr_addit).format(
                     self.data['addit_numbers'])
             else:
                 text_addit = ""
@@ -417,23 +412,23 @@ class drawlotto(QtCore.QObject):
             dttext = dt.strftime("%d %B %Y um %H:%M")
             if sys.version_info < (3, 0):
                 dttext = dttext.decode('utf-8')
-            text = unicode(textr).format(
+            text = str(textr).format(
                 dttext,
                 self.data['draw_numbers'],
                 self.data['max_draw'],
                 text_addit)
         elif turn == 0:
             textr = self.tr('And the first winning number is the {0}.')
-            text = unicode(textr).format(self.random_number[turn])
+            text = str(textr).format(self.random_number[turn])
             self.LastTextnumber = -1
         elif turn > (self.data['draw_numbers'] - 1):
             if self.data['with_addit'] is True:
                 textr = self.tr('The additional number is the {0}.')
                 if self.data['sep_addit_numbers']:
-                    text = unicode(textr).format(self.random_addit[turn
-                                                 - self.data['draw_numbers']])
+                    text = str(textr).format(self.random_addit[turn
+                                             - self.data['draw_numbers']])
                 else:
-                    text = unicode(textr).format(self.random_number[turn])
+                    text = str(textr).format(self.random_number[turn])
         else:
             text = 'no'
             while True:

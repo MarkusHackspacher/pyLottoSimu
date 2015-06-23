@@ -25,16 +25,7 @@ import os
 import sys
 import json
 
-try:
-    from PyQt5 import QtGui, QtCore, QtWidgets, uic
-except ImportError:
-    from PyQt4 import QtGui as QtWidgets
-    from PyQt4 import QtGui, QtCore, uic
-
-if sys.version_info >= (3, 0):
-    unicode = str
-else:
-    range = xrange
+from PyQt5 import QtGui, QtCore, QtWidgets, uic
 
 
 class LottoSettingsDialog(QtWidgets.QDialog):
@@ -103,7 +94,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
 
     def values(self):
         """Values"""
-        return (unicode(self.ui.combo_name.currentText()),
+        return (str(self.ui.combo_name.currentText()),
                 self.ui.spinBox_max_draw.valueFromText(
                     self.ui.spinBox_max_draw.text()),
                 self.ui.spinBox_draw_numbers.valueFromText(
