@@ -240,9 +240,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         dt = datetime.now()
         texttr = self.tr("{} {} out of {}: {}")
         text = str(texttr).format(dt.strftime("%H:%M:%S:"),
-                                      self.lottodraw.data['draw_numbers'],
-                                      self.lottodraw.data['max_draw'],
-                                      text)
+                                  self.lottodraw.data['draw_numbers'],
+                                  self.lottodraw.data['max_draw'], text)
         self.ui.plaintextedit.appendPlainText(text)
 
     def onclean_output_text(self):
@@ -372,7 +371,7 @@ class drawlotto(QtCore.QObject):
                 "We are already at the winning number {0}, and thus the "
                 "penultimate number of today's draw. It is the {1}.")
             text = str(text.format(self.countnumbers[turn],
-                                    self.random_number[turn]))
+                                   self.random_number[turn]))
         elif turn == (self.data['draw_numbers'] - 1):
             text = self.tr('And now we come to the {0} and last'
                            'winning number, it is the {1}.')
