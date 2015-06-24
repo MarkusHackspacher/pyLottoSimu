@@ -37,7 +37,7 @@ translate your language file: lotto1_xx.ts, and produce the .ts translation file
 lrelease complete.pro
 ```
 
-![Image](misc/pyLottoSimu_screenshot_en.png "simulate a lotto draw.")
+![Image](misc/pyLottoSimu_screenshot_en.png "screenshot")
 
 Installieren
 -------------
@@ -68,6 +68,7 @@ Die Zahlen auswählen und mit 'Start' die Simulation starten.
 Dabei kann mit dem Schieber oben links die Geschwindigkeit verändert werden.
 
 Auf der Webseite gibt es [Videos](http://markush.cwsurf.de/joomla_17/index.php/python/pylottosimu/8-lotto-generator-und-simulator) zu dem Programm.
+![Image](misc/pyLottoSimu_screenshot_de.png "screenshot (german)")
 
 License
 -------
