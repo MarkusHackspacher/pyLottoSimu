@@ -29,19 +29,12 @@ from random import randint
 import random
 
 from PyQt5 import QtGui, QtCore, QtWidgets, uic
+import pylottosimu.lottokugeln_rc3_qt5 as lottokugeln_rc
 
 if sys.version_info >= (3, 0):
-    if QtCore.QT_VERSION >= 0x050000:
-        import pylottosimu.lottokugeln_rc3_qt5 as lottokugeln_rc
-    else:
-        import pylottosimu.lottokugeln_rc3 as lottokugeln_rc
     from pylottosimu.dialog.show_drawing import DlgShowDrawing
     import pylottosimu.lottosystem as DlgLottoSystem
 else:
-    if QtCore.QT_VERSION >= 0x050000:
-        import pylottosimu.lottokugeln_rc3_qt5 as lottokugeln_rc
-    else:
-        import lottokugeln_rc as lottokugeln_rc
     from dialog.show_drawing import DlgShowDrawing
     import lottosystem as DlgLottoSystem
     range = xrange
