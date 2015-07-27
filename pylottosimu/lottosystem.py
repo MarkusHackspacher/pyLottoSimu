@@ -116,17 +116,28 @@ class LottoSettingsDialog(QtWidgets.QDialog):
 
 
 class lottosystemdata():
-    def __init__(self, name='Lotto DE', max_draw=49, draw_numbers=6,
-                 with_addit=False, addit_numbers=0, sep_addit_numbers=False,
-                 max_addit=0):
-        self.data = [{
-            'name': name,
-            'max_draw': max_draw,
-            'draw_numbers': draw_numbers,
-            'with_addit': with_addit,
-            'addit_numbers': addit_numbers,
-            'sep_addit_numbers': sep_addit_numbers,
-            'max_addit': max_addit},
+    def __init__(self):
+        self.data = self.fixdata()
+
+    def writetofile(self):
+        with open('lottosystems.json', 'w') as outfile:
+            json.dump(self.data, outfile, sort_keys=True,
+                      indent=4, separators=(',', ': '))
+
+    def readfile(self):
+        with open('lottosystems.json') as data_file:
+            data = json.load(data_file)
+        return data
+
+    def fixdata(self):
+        data = [{
+            'name': 'Lotto DE',
+            'max_draw': 49,
+            'draw_numbers': 6,
+            'with_addit': False,
+            'addit_numbers': 0,
+            'sep_addit_numbers': False,
+            'max_addit': 0},
             {
             'name': 'Lotto AT',
             'max_draw': 45,
@@ -151,10 +162,5 @@ class lottosystemdata():
             'addit_numbers': 1,
             'sep_addit_numbers': True,
             'max_addit': 35
-            }
-        ]
-
-    def writetofile(self):
-        with open('lottosystems.josn', 'w') as outfile:
-            json.dump(self.data, outfile, sort_keys=True,
-                      indent=4, separators=(',', ': '))
+            }]
+        return data
