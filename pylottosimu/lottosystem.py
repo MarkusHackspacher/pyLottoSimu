@@ -117,7 +117,10 @@ class LottoSettingsDialog(QtWidgets.QDialog):
 
 class lottosystemdata():
     def __init__(self):
-        self.data = self.fixdata()
+        try:
+            self.data = self.readfile()
+        except:
+            self.data = self.fixdata()
 
     def writetofile(self):
         with open('lottosystems.json', 'w') as outfile:
