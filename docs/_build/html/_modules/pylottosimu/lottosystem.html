@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pylottosimu.lottosystem &mdash; pyLottoSimu 1.6 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="pyLottoSimu 1.6 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for pylottosimu.lottosystem</h1><div class="highlight"><pre>
+<span class="c">#!/usr/bin/env python</span>
+<span class="c"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">pyLottoSimu</span>
+
+<span class="sd">Copyright (C) &lt;2012-2015&gt; Markus Hackspacher</span>
+
+<span class="sd">This file is part of pyLottoSimu.</span>
+
+<span class="sd">pyLottoSimu is free software: you can redistribute it and/or modify</span>
+<span class="sd">it under the terms of the GNU General Public License as published by</span>
+<span class="sd">the Free Software Foundation, either version 3 of the License, or</span>
+<span class="sd">(at your option) any later version.</span>
+
+<span class="sd">pyLottoSimu is distributed in the hope that it will be useful,</span>
+<span class="sd">but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="sd">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="sd">GNU Lesser General Public License for more details.</span>
+
+<span class="sd">You should have received a copy of the GNU General Public License</span>
+<span class="sd">along with pyLottoSimu.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">from</span> <span class="nn">PyQt5</span> <span class="kn">import</span> <span class="n">QtGui</span><span class="p">,</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">uic</span>
+
+
+<div class="viewcode-block" id="LottoSettingsDialog"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.lottosystem.LottoSettingsDialog">[docs]</a><span class="k">class</span> <span class="nc">LottoSettingsDialog</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QDialog</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The GUI of Settings. &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sysdat</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Inital user interface and slots</span>
+<span class="sd">        @return: none</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">LottoSettingsDialog</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+
+        <span class="c"># Set up the user interface from Designer.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span> <span class="o">=</span> <span class="n">uic</span><span class="o">.</span><span class="n">loadUi</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+            <span class="s">&quot;pylottosimu&quot;</span><span class="p">,</span> <span class="s">&quot;lottosystem.ui&quot;</span><span class="p">)))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">setWindowIcon</span><span class="p">(</span>
+            <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+                <span class="s">&quot;misc&quot;</span><span class="p">,</span> <span class="s">&quot;pyLottoSimu.svg&quot;</span><span class="p">))))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">systemdata</span> <span class="o">=</span> <span class="n">sysdat</span>
+        <span class="k">for</span> <span class="n">systemname</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">systemdata</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">combo_name</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">systemname</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">combo_name</span><span class="o">.</span><span class="n">currentIndexChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">setvalues</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">check_with_addit</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">with_addit</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">check_sep_addit_numbers</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sep_addit_numbers</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setvalues</span><span class="p">()</span>
+
+<div class="viewcode-block" id="LottoSettingsDialog.init"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.lottosystem.LottoSettingsDialog.init">[docs]</a>    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initial variable</span>
+<span class="sd">        @return: none</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+</div>
+<div class="viewcode-block" id="LottoSettingsDialog.sep_addit_numbers"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.lottosystem.LottoSettingsDialog.sep_addit_numbers">[docs]</a>    <span class="k">def</span> <span class="nf">sep_addit_numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">check</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">check_sep_addit_numbers</span><span class="o">.</span><span class="n">isChecked</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_max_addit</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">check</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_max_addit</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">check</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="LottoSettingsDialog.with_addit"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.lottosystem.LottoSettingsDialog.with_addit">[docs]</a>    <span class="k">def</span> <span class="nf">with_addit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">check</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">check_with_addit</span><span class="o">.</span><span class="n">isChecked</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_addit_numbers</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">check</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_addit_numbers</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">check</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_sep_addit_numbers</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">check</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">check_sep_addit_numbers</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">check</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">check</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">check_sep_addit_numbers</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sep_addit_numbers</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="LottoSettingsDialog.setvalues"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.lottosystem.LottoSettingsDialog.setvalues">[docs]</a>    <span class="k">def</span> <span class="nf">setvalues</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Set Values&quot;&quot;&quot;</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">combo_name</span><span class="o">.</span><span class="n">currentIndex</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_max_draw</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">systemdata</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s">&#39;max_draw&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_draw_numbers</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">systemdata</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">check_with_addit</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">systemdata</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s">&#39;with_addit&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_addit_numbers</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">systemdata</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s">&#39;addit_numbers&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">check_sep_addit_numbers</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">systemdata</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s">&#39;sep_addit_numbers&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_max_addit</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">systemdata</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="s">&#39;max_addit&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">with_addit</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="LottoSettingsDialog.values"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.lottosystem.LottoSettingsDialog.values">[docs]</a>    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Values&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">combo_name</span><span class="o">.</span><span class="n">currentText</span><span class="p">()),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_max_draw</span><span class="o">.</span><span class="n">valueFromText</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_max_draw</span><span class="o">.</span><span class="n">text</span><span class="p">()),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_draw_numbers</span><span class="o">.</span><span class="n">valueFromText</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_draw_numbers</span><span class="o">.</span><span class="n">text</span><span class="p">()),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">check_with_addit</span><span class="o">.</span><span class="n">isChecked</span><span class="p">(),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_addit_numbers</span><span class="o">.</span><span class="n">valueFromText</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_addit_numbers</span><span class="o">.</span><span class="n">text</span><span class="p">()),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">check_sep_addit_numbers</span><span class="o">.</span><span class="n">isChecked</span><span class="p">(),</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_max_addit</span><span class="o">.</span><span class="n">valueFromText</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">spinBox_max_addit</span><span class="o">.</span><span class="n">text</span><span class="p">()))</span>
+
+    <span class="c"># static method to create the dialog and return (date, time, accepted)</span></div>
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="LottoSettingsDialog.getValues"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.lottosystem.LottoSettingsDialog.getValues">[docs]</a>    <span class="k">def</span> <span class="nf">getValues</span><span class="p">(</span><span class="n">sysdat</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;getValues&quot;&quot;&quot;</span>
+        <span class="n">dialog</span> <span class="o">=</span> <span class="n">LottoSettingsDialog</span><span class="p">(</span><span class="n">sysdat</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">dialog</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">dialog</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">result</span> <span class="o">==</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QDialog</span><span class="o">.</span><span class="n">Accepted</span><span class="p">)</span>
+
+</div></div>
+<div class="viewcode-block" id="lottosystemdata"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.lottosystem.lottosystemdata">[docs]</a><span class="k">class</span> <span class="nc">lottosystemdata</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">readfile</span><span class="p">()</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fixdata</span><span class="p">()</span>
+
+<div class="viewcode-block" id="lottosystemdata.writetofile"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.lottosystem.lottosystemdata.writetofile">[docs]</a>    <span class="k">def</span> <span class="nf">writetofile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;lottosystems.json&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
+            <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">outfile</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                      <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">separators</span><span class="o">=</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">,</span> <span class="s">&#39;: &#39;</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="lottosystemdata.readfile"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.lottosystem.lottosystemdata.readfile">[docs]</a>    <span class="k">def</span> <span class="nf">readfile</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;lottosystems.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span>
+</div>
+<div class="viewcode-block" id="lottosystemdata.fixdata"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.lottosystem.lottosystemdata.fixdata">[docs]</a>    <span class="k">def</span> <span class="nf">fixdata</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">[{</span>
+            <span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="s">&#39;Lotto DE&#39;</span><span class="p">,</span>
+            <span class="s">&#39;max_draw&#39;</span><span class="p">:</span> <span class="mi">49</span><span class="p">,</span>
+            <span class="s">&#39;draw_numbers&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+            <span class="s">&#39;with_addit&#39;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+            <span class="s">&#39;addit_numbers&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s">&#39;sep_addit_numbers&#39;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+            <span class="s">&#39;max_addit&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+            <span class="p">{</span>
+            <span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="s">&#39;Lotto AT&#39;</span><span class="p">,</span>
+            <span class="s">&#39;max_draw&#39;</span><span class="p">:</span> <span class="mi">45</span><span class="p">,</span>
+            <span class="s">&#39;draw_numbers&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+            <span class="s">&#39;with_addit&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+            <span class="s">&#39;addit_numbers&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s">&#39;sep_addit_numbers&#39;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+            <span class="s">&#39;max_addit&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+            <span class="p">{</span>
+            <span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="s">&#39;EuroMillionen&#39;</span><span class="p">,</span>
+            <span class="s">&#39;max_draw&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+            <span class="s">&#39;draw_numbers&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="s">&#39;with_addit&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+            <span class="s">&#39;addit_numbers&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s">&#39;sep_addit_numbers&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+            <span class="s">&#39;max_addit&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">},</span>
+            <span class="p">{</span>
+            <span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="s">&#39;Powerball Lottery US&#39;</span><span class="p">,</span>
+            <span class="s">&#39;max_draw&#39;</span><span class="p">:</span> <span class="mi">59</span><span class="p">,</span>
+            <span class="s">&#39;draw_numbers&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="s">&#39;with_addit&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+            <span class="s">&#39;addit_numbers&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s">&#39;sep_addit_numbers&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+            <span class="s">&#39;max_addit&#39;</span><span class="p">:</span> <span class="mi">35</span>
+            <span class="p">}]</span>
+        <span class="k">return</span> <span class="n">data</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Markus Hackspacher.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

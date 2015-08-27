@@ -23,8 +23,10 @@ and [Qt5 for Python](http://www.riverbankcomputing.com/software/pyqt/download5).
 Start with
 ```python lotto.pyw [de|fr|es|it|ru]```
 
-Make the documentation as .pdf file:
-```epydoc pylottosimu --pdf```
+Make the documentation as .html file:
+
+     cd docs
+     make html
 
 To translate the program or make a translation in your language,
 insert in the complete.pro your language code.
@@ -51,8 +53,10 @@ und [Qt5 für Python](http://www.riverbankcomputing.com/software/pyqt/download5)
 Start mit: 
 ```python lotto.pyw [de|fr|es|it|ru]```
 
-Documentation als .pdf Datei aus den Kommentaren des Quelltextes erstellen lassen:
-```epydoc pylottosimu --pdf```
+Documentation als .html Datei aus den Kommentaren des Quelltextes erstellen lassen:
+
+     cd docs
+     make html
 
 Bedienen
 ---------

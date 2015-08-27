@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pylottosimu.pylotto &mdash; pyLottoSimu 1.6 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="pyLottoSimu 1.6 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for pylottosimu.pylotto</h1><div class="highlight"><pre>
+<span class="c">#!/usr/bin/env python</span>
+<span class="c"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">pyLottoSimu</span>
+
+<span class="sd">Copyright (C) &lt;2012-2015&gt; Markus Hackspacher</span>
+
+<span class="sd">This file is part of pyLottoSimu.</span>
+
+<span class="sd">pyLottoSimu is free software: you can redistribute it and/or modify</span>
+<span class="sd">it under the terms of the GNU General Public License as published by</span>
+<span class="sd">the Free Software Foundation, either version 3 of the License, or</span>
+<span class="sd">(at your option) any later version.</span>
+
+<span class="sd">pyLottoSimu is distributed in the hope that it will be useful,</span>
+<span class="sd">but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="sd">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="sd">GNU Lesser General Public License for more details.</span>
+
+<span class="sd">You should have received a copy of the GNU General Public License</span>
+<span class="sd">along with pyLottoSimu.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">webbrowser</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="kn">from</span> <span class="nn">PyQt5</span> <span class="kn">import</span> <span class="n">QtGui</span><span class="p">,</span> <span class="n">QtCore</span><span class="p">,</span> <span class="n">QtWidgets</span><span class="p">,</span> <span class="n">uic</span>
+<span class="kn">import</span> <span class="nn">pylottosimu.lottokugeln_rc3_qt5</span> <span class="kn">as</span> <span class="nn">lottokugeln_rc</span>
+
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">pylottosimu.dialog.show_drawing</span> <span class="kn">import</span> <span class="n">DlgShowDrawing</span>
+    <span class="kn">import</span> <span class="nn">pylottosimu.lottosystem</span> <span class="kn">as</span> <span class="nn">DlgLottoSystem</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">dialog.show_drawing</span> <span class="kn">import</span> <span class="n">DlgShowDrawing</span>
+    <span class="kn">import</span> <span class="nn">lottosystem</span> <span class="kn">as</span> <span class="nn">DlgLottoSystem</span>
+    <span class="nb">range</span> <span class="o">=</span> <span class="nb">xrange</span>
+    <span class="nb">str</span> <span class="o">=</span> <span class="nb">unicode</span>
+
+<span class="n">__doc__</span> <span class="o">=</span> <span class="s">&quot;The signals for the GUI&quot;</span>
+
+
+<div class="viewcode-block" id="LottoSimuDialog"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.LottoSimuDialog">[docs]</a><span class="k">class</span> <span class="nc">LottoSimuDialog</span><span class="p">(</span><span class="n">QtWidgets</span><span class="o">.</span><span class="n">QMainWindow</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The GUI and programm of the pyLottoSimu. &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Inital user interface and slots</span>
+<span class="sd">        @return: none</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QDialog</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="c"># Set up the user interface from Designer.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span> <span class="o">=</span> <span class="n">uic</span><span class="o">.</span><span class="n">loadUi</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                             <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+                             <span class="s">&quot;pylottosimu&quot;</span><span class="p">,</span> <span class="s">&quot;lottosimu_gui.ui&quot;</span><span class="p">)))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">setWindowIcon</span><span class="p">(</span>
+            <span class="n">QtGui</span><span class="o">.</span><span class="n">QIcon</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="s">&quot;misc&quot;</span><span class="p">,</span> <span class="s">&quot;pyLottoSimu.svg&quot;</span><span class="p">))))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">action_lottosim</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">QTimer</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="c"># Slots</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_random_numbers</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">onrandom_numbers_generator</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">clean_output_text</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">onclean_output_text</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_start</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">onbtn_start</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">action_quit</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">onclose</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">action_info</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">oninfo</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">action_go_to_the_website</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">onwebsite</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">action_lotto_simulation</span><span class="o">.</span><span class="n">changed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">action_lottosim</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_draw_overview</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">onbtn_draw_overview</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">timeout</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ontimer</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">statusBar</span><span class="p">()</span><span class="o">.</span><span class="n">showMessage</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;ready&#39;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">actionLotto_system</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">onsystem</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">turn</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">random_number</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delay_of_next_number</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">horizontalSlider</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span> <span class="o">=</span> <span class="n">drawlotto</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_numbers</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<div class="viewcode-block" id="LottoSimuDialog.ontimer"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.LottoSimuDialog.ontimer">[docs]</a>    <span class="k">def</span> <span class="nf">ontimer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Start time to show a number.</span>
+<span class="sd">        @return: none</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="n">verz</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">horizontalSlider</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">delay_of_next_number</span> <span class="o">&gt;=</span> <span class="n">verz</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">delay_of_next_number</span> <span class="o">=</span> <span class="n">verz</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delay_of_next_number</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">delay_of_next_number</span> <span class="o">&lt;</span> <span class="mi">10</span> \
+                <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delay_of_next_number</span> <span class="o">&lt;</span> <span class="mi">17</span>
+                    <span class="ow">and</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delay_of_next_number</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> \
+                <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delay_of_next_number</span> <span class="o">&lt;</span> <span class="mi">25</span>
+                    <span class="ow">and</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delay_of_next_number</span> <span class="o">%</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> \
+                <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delay_of_next_number</span> <span class="o">%</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_big_number</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span>
+                <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;max_draw&#39;</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">delay_of_next_number</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">show_next_number</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">delay_of_next_number</span> <span class="o">=</span> <span class="n">verz</span>
+</div>
+<div class="viewcode-block" id="LottoSimuDialog.show_next_number"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.LottoSimuDialog.show_next_number">[docs]</a>    <span class="k">def</span> <span class="nf">show_next_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Simulation of the draw and show the next Number on the Screen.</span>
+<span class="sd">        @return: none</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">turn</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_draw_overview</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">LastTextnumber</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">turn</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">random_number</span>
+                             <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">random_addit</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">rdbtn_show_draw_after</span><span class="o">.</span><span class="n">isChecked</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">onbtn_draw_overview</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_draw_overview</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_last_draw_number</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">((</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">random_number</span> <span class="o">+</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">random_addit</span><span class="p">)[</span><span class="bp">self</span><span class="o">.</span><span class="n">turn</span><span class="p">]))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_big_number</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">((</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">random_number</span> <span class="o">+</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">random_addit</span><span class="p">)[</span><span class="bp">self</span><span class="o">.</span><span class="n">turn</span><span class="p">]))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">plaintextedit</span><span class="o">.</span><span class="n">appendPlainText</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">picknumber</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">turn</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">turn</span> <span class="o">+=</span> <span class="mi">1</span>
+</div>
+<div class="viewcode-block" id="LottoSimuDialog.onbtn_draw_overview"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.LottoSimuDialog.onbtn_draw_overview">[docs]</a>    <span class="k">def</span> <span class="nf">onbtn_draw_overview</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;show dialog of the draw</span>
+<span class="sd">        @return: none</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">separetebonus</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;sep_addit_numbers&#39;</span><span class="p">]:</span>
+            <span class="n">separetebonus</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;max_addit&#39;</span><span class="p">]</span>
+
+        <span class="n">dlgdraw</span> <span class="o">=</span> <span class="n">DlgShowDrawing</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">ballnumber</span><span class="p">,</span>
+                                 <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;max_draw&#39;</span><span class="p">],</span>
+                                 <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">ballbonus</span><span class="p">,</span>
+                                 <span class="n">highestbonus</span><span class="o">=</span><span class="n">separetebonus</span>
+                                 <span class="p">)</span>
+        <span class="n">dlgdraw</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="LottoSimuDialog.onsystem"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.LottoSimuDialog.onsystem">[docs]</a>    <span class="k">def</span> <span class="nf">onsystem</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;show dialog of the draw</span>
+<span class="sd">        @return: none</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">sysdat</span> <span class="o">=</span> <span class="n">DlgLottoSystem</span><span class="o">.</span><span class="n">lottosystemdata</span><span class="p">()</span>
+        <span class="n">system</span> <span class="o">=</span> <span class="n">DlgLottoSystem</span><span class="o">.</span><span class="n">LottoSettingsDialog</span><span class="o">.</span><span class="n">getValues</span><span class="p">(</span><span class="n">sysdat</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">system</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">system</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;max_draw&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">system</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">system</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;with_addit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">system</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;addit_numbers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">system</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;sep_addit_numbers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">system</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;max_addit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">system</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">6</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_numbers</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_draw_overview</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="LottoSimuDialog.onbtn_start"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.LottoSimuDialog.onbtn_start">[docs]</a>    <span class="k">def</span> <span class="nf">onbtn_start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Start simulation with the first drawing</span>
+<span class="sd">        init timer with the valve from the Scrollbar</span>
+<span class="sd">        the next drawing starts with the timer event.</span>
+<span class="sd">        @return: none</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_last_draw_number</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">turn</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">plaintextedit</span><span class="o">.</span><span class="n">setPlainText</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">picknumber</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delay_of_next_number</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">horizontalSlider</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="LottoSimuDialog.action_lottosim"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.LottoSimuDialog.action_lottosim">[docs]</a>    <span class="k">def</span> <span class="nf">action_lottosim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Changing the layout for simulation or generation</span>
+<span class="sd">        Move the textedit and change the visible.</span>
+<span class="sd">        @return: none</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">plaintextedit</span><span class="o">.</span><span class="n">setPlainText</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">action_lotto_simulation</span><span class="o">.</span><span class="n">isChecked</span><span class="p">():</span>
+            <span class="c"># lotto simulation</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">statusBar</span><span class="p">()</span><span class="o">.</span><span class="n">showMessage</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;lotto simulation&#39;</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">plaintextedit</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">441</span><span class="p">,</span> <span class="mi">136</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_random_numbers</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">clean_output_text</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_Lottozahlen</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_big_number</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_last_draw_number</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_speed</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_big_number</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_last_draw_number</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_start</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">horizontalSlider</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_draw_overview</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">rdbtn_show_draw_after</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c"># random numbers</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">statusBar</span><span class="p">()</span><span class="o">.</span><span class="n">showMessage</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;random numbers&#39;</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">plaintextedit</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QRect</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">441</span><span class="p">,</span> <span class="mi">111</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_random_numbers</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">clean_output_text</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_Lottozahlen</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_big_number</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_last_draw_number</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">label_speed</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_start</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">horizontalSlider</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">btn_draw_overview</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">rdbtn_show_draw_after</span><span class="o">.</span><span class="n">setVisible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="LottoSimuDialog.onrandom_numbers_generator"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.LottoSimuDialog.onrandom_numbers_generator">[docs]</a>    <span class="k">def</span> <span class="nf">onrandom_numbers_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Show the output from the random number generator.</span>
+<span class="sd">        @return: none</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">random_number</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="s">&quot; {0:02d}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">random_number</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&quot;Error, no valid numbers available!&quot;</span><span class="p">)</span>
+        <span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="n">texttr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&quot;{} {} out of {}: {}&quot;</span><span class="p">)</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">texttr</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&quot;%H:%M:%S:&quot;</span><span class="p">),</span>
+                                  <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">],</span>
+                                  <span class="bp">self</span><span class="o">.</span><span class="n">lottodraw</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;max_draw&#39;</span><span class="p">],</span> <span class="n">text</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">plaintextedit</span><span class="o">.</span><span class="n">appendPlainText</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="LottoSimuDialog.onclean_output_text"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.LottoSimuDialog.onclean_output_text">[docs]</a>    <span class="k">def</span> <span class="nf">onclean_output_text</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clean the output text</span>
+<span class="sd">        @return: none&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">plaintextedit</span><span class="o">.</span><span class="n">setPlainText</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="LottoSimuDialog.oninfo"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.LottoSimuDialog.oninfo">[docs]</a>    <span class="k">def</span> <span class="nf">oninfo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;info message box</span>
+<span class="sd">        @return: none&quot;&quot;&quot;</span>
+        <span class="n">infobox</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QMessageBox</span><span class="p">()</span>
+        <span class="n">infobox</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;Info&#39;</span><span class="p">))</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span>
+            <span class="s">&#39;simulation of a random draw</span><span class="se">\n\n</span><span class="s">&#39;</span>
+            <span class="s">&#39;based on an idea of imageupload,</span><span class="se">\n</span><span class="s">&#39;</span>
+            <span class="s">&#39;http://www.my-image-upload.de/</span><span class="se">\n\n</span><span class="s">&#39;</span>
+            <span class="s">&#39;GNU GPL v3</span><span class="se">\n</span><span class="s">&#39;</span>
+            <span class="s">&#39;http://www.gnu.org/licenses/&#39;</span><span class="p">)</span>
+        <span class="n">infobox</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;Created with Python by Markus Hackspacher &#39;</span>
+                       <span class="s">&#39;http://markush.cwsurf.de&#39;</span><span class="p">)</span>
+        <span class="n">infobox</span><span class="o">.</span><span class="n">setInformativeText</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">infobox</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="LottoSimuDialog.onwebsite"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.LottoSimuDialog.onwebsite">[docs]</a>    <span class="k">def</span> <span class="nf">onwebsite</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Open website</span>
+<span class="sd">        @return: none</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">webbrowser</span><span class="o">.</span><span class="n">open_new_tab</span><span class="p">(</span>
+            <span class="s">&quot;http://markush.cwsurf.de/joomla_17/index.php/python/pylottosimu/&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="LottoSimuDialog.onclose"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.LottoSimuDialog.onclose">[docs]</a>    <span class="k">def</span> <span class="nf">onclose</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Close the GUI</span>
+<span class="sd">        @return: none&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+</div></div>
+<div class="viewcode-block" id="drawlotto"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.drawlotto">[docs]</a><span class="k">class</span> <span class="nc">drawlotto</span><span class="p">(</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;Lotto DE&#39;</span><span class="p">,</span> <span class="n">max_draw</span><span class="o">=</span><span class="mi">49</span><span class="p">,</span> <span class="n">draw_numbers</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+                 <span class="n">with_addit</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">addit_numbers</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sep_addit_numbers</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                 <span class="n">max_addit</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;simulate a lotto draw</span>
+<span class="sd">        @param name: name of game</span>
+<span class="sd">        @type name: string</span>
+<span class="sd">        @param max_draw: maximal draw numbers</span>
+<span class="sd">        @type max_draw: int</span>
+<span class="sd">        @param draw_numbers: the draw numbers</span>
+<span class="sd">        @type draw_numbers: int</span>
+<span class="sd">        @param with_addit: with additional number</span>
+<span class="sd">        @type with_addit: bool</span>
+<span class="sd">        @param addit_numbers: the additional numbers</span>
+<span class="sd">        @type addit_numbers: int</span>
+<span class="sd">        @param sep_addit_numbers: separates additional numbers</span>
+<span class="sd">        @type sep_addit_numbers: bool</span>
+<span class="sd">        @param max_addit: maximal additional numbers</span>
+<span class="sd">        @type max_addit: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QDialog</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+            <span class="s">&#39;max_draw&#39;</span><span class="p">:</span> <span class="n">max_draw</span><span class="p">,</span>
+            <span class="s">&#39;draw_numbers&#39;</span><span class="p">:</span> <span class="n">draw_numbers</span><span class="p">,</span>
+            <span class="s">&#39;with_addit&#39;</span><span class="p">:</span> <span class="n">with_addit</span><span class="p">,</span>
+            <span class="s">&#39;addit_numbers&#39;</span><span class="p">:</span> <span class="n">addit_numbers</span><span class="p">,</span>
+            <span class="s">&#39;sep_addit_numbers&#39;</span><span class="p">:</span> <span class="n">sep_addit_numbers</span><span class="p">,</span>
+            <span class="s">&#39;max_addit&#39;</span><span class="p">:</span> <span class="n">max_addit</span><span class="p">}</span>
+
+        <span class="n">textselection_tr</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span>
+                <span class="s">&quot;And now we come to the winning number {0}, it is the {1}.&quot;</span><span class="p">),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span>
+                <span class="s">&quot;The {0} lotto number of today&#39;s draw is the {1}.&quot;</span><span class="p">),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span>
+                <span class="s">&quot;We come to the {0} winning number, this is the {1}.&quot;</span><span class="p">,),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span>
+                <span class="s">&quot;Now we come to {0} number of today&#39;s draw ... {1}.&quot;</span><span class="p">,),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;The {0} winning number is {1}.&#39;</span><span class="p">)]</span>
+        <span class="n">countnumbers_tr</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;first&#39;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;second&#39;</span><span class="p">),</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;third&#39;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;fourth&#39;</span><span class="p">),</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;fifth&#39;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;sixth&#39;</span><span class="p">),</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;seventh&#39;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;eighth&#39;</span><span class="p">),</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;ninth&#39;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;10th&#39;</span><span class="p">),</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;11th&#39;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;12th&#39;</span><span class="p">),</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;13th&#39;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;14th&#39;</span><span class="p">),</span>
+                           <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;15th&#39;</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">textselection</span> <span class="o">=</span> <span class="n">textselection_tr</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">countnumbers</span> <span class="o">=</span> <span class="n">countnumbers_tr</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">textselection</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">unicode</span><span class="p">,</span> <span class="n">textselection_tr</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">countnumbers</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">unicode</span><span class="p">,</span> <span class="n">countnumbers_tr</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">random_addit</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">random_number</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ballbonus</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ballnumber</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="drawlotto.draw"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.drawlotto.draw">[docs]</a>    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;draw of the lotto numbers</span>
+
+<span class="sd">        :returns: none</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">drawn_numbers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;with_addit&#39;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;sep_addit_numbers&#39;</span><span class="p">]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">random_addit</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
+                    <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;max_addit&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;addit_numbers&#39;</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">drawn_numbers</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;addit_numbers&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">random_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;max_draw&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                                           <span class="n">drawn_numbers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;with_addit&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;sep_addit_numbers&#39;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ballnumber</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_number</span><span class="p">[:</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">]]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ballbonus</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_number</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">]:</span>
+                                                <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">]</span> <span class="o">+</span>
+                                                <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;addit_numbers&#39;</span><span class="p">]]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ballnumber</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_number</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ballbonus</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">random_addit</span>
+</div>
+<div class="viewcode-block" id="drawlotto.picknumber"><a class="viewcode-back" href="../../pylottosimu.html#pylottosimu.pylotto.drawlotto.picknumber">[docs]</a>    <span class="k">def</span> <span class="nf">picknumber</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">turn</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;pick of a lotto number</span>
+
+<span class="sd">        @return: pick</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">turn</span> <span class="o">==</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span>
+                <span class="s">&quot;We are already at the winning number {0}, and thus the &quot;</span>
+                <span class="s">&quot;penultimate number of today&#39;s draw. It is the {1}.&quot;</span><span class="p">)</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">countnumbers</span><span class="p">[</span><span class="n">turn</span><span class="p">],</span>
+                                   <span class="bp">self</span><span class="o">.</span><span class="n">random_number</span><span class="p">[</span><span class="n">turn</span><span class="p">]))</span>
+        <span class="k">elif</span> <span class="n">turn</span> <span class="o">==</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;And now we come to the {0} and last&#39;</span>
+                           <span class="s">&#39;winning number, it is the {1}.&#39;</span><span class="p">)</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">countnumbers</span><span class="p">[</span><span class="n">turn</span><span class="p">],</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">random_number</span><span class="p">[</span><span class="n">turn</span><span class="p">])</span>
+
+        <span class="k">elif</span> <span class="p">(</span><span class="n">turn</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;addit_numbers&#39;</span><span class="p">])</span>
+                <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;with_addit&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">True</span>
+                <span class="ow">or</span> <span class="n">turn</span> <span class="o">&gt;=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">])</span>
+                <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;with_addit&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;with_addit&#39;</span><span class="p">]:</span>
+                <span class="n">text_addit_number</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="s">&quot; {0:02d}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">ballbonus</span><span class="p">[:])))</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ballbonus</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="n">textr_addit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&quot;the bonus numbers are{0}, &quot;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">textr_addit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&quot;the bonus number is{0}, &quot;</span><span class="p">)</span>
+                <span class="n">text_addit</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">textr_addit</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">text_addit_number</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">text_addit</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+            <span class="n">text_random_number</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="s">&quot; {0:02d}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ballnumber</span><span class="p">[:])))</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&quot;That was today&#39;s lottery draw, &quot;</span>
+                           <span class="s">&quot;the figures were:{0}, {1}&quot;</span>
+                           <span class="s">&quot;I wish you a nice evening! Bye, bye!&quot;</span><span class="p">)</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">text_random_number</span><span class="p">,</span> <span class="n">text_addit</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">turn</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;with_addit&#39;</span><span class="p">]:</span>
+                <span class="n">textr_addit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&quot;with {0} additional numbers &quot;</span><span class="p">)</span>
+                <span class="n">text_addit</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">textr_addit</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;addit_numbers&#39;</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">text_addit</span> <span class="o">=</span> <span class="s">&quot;&quot;</span>
+            <span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+            <span class="n">textr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;Welcome to the lottery draw,</span><span class="se">\n</span><span class="s">&#39;</span>
+                            <span class="s">&#39;at {0}.</span><span class="se">\n</span><span class="s">numbers are drawn: {1} out of {2} {3}!&#39;</span><span class="p">)</span>
+            <span class="n">dttext</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%d</span><span class="s"> %B %Y um %H:%M&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="n">dttext</span> <span class="o">=</span> <span class="n">dttext</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">textr</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">dttext</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;max_draw&#39;</span><span class="p">],</span>
+                <span class="n">text_addit</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">turn</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">textr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;And the first winning number is the {0}.&#39;</span><span class="p">)</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">textr</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">random_number</span><span class="p">[</span><span class="n">turn</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">LastTextnumber</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">turn</span> <span class="o">&gt;</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;with_addit&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="n">textr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s">&#39;The additional number is the {0}.&#39;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;sep_addit_numbers&#39;</span><span class="p">]:</span>
+                    <span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">textr</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">random_addit</span><span class="p">[</span><span class="n">turn</span>
+                                             <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s">&#39;draw_numbers&#39;</span><span class="p">]])</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">textr</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">random_number</span><span class="p">[</span><span class="n">turn</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="s">&#39;no&#39;</span>
+            <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="n">textnumber</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">textselection</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">textnumber</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">LastTextnumber</span><span class="p">:</span>
+                    <span class="k">break</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">textselection</span><span class="p">[</span><span class="n">textnumber</span><span class="p">]</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">countnumbers</span><span class="p">[</span><span class="n">turn</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">random_number</span><span class="p">[</span><span class="n">turn</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">LastTextnumber</span> <span class="o">=</span> <span class="n">textnumber</span>
+        <span class="k">return</span> <span class="n">text</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Markus Hackspacher.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
