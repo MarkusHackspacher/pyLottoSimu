@@ -47,7 +47,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
     """The GUI and programm of the pyLottoSimu. """
     def __init__(self):
         """Inital user interface and slots
-        @return: none
+
+        :returns: none
         """
         QtWidgets.QDialog.__init__(self)
 
@@ -85,7 +86,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
     def ontimer(self):
         """Start time to show a number.
-        @return: none
+
+        :returns: none
         """
         self.timer.stop()
         verz = self.ui.horizontalSlider.value()
@@ -108,7 +110,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
     def show_next_number(self):
         """Simulation of the draw and show the next Number on the Screen.
-        @return: none
+
+        :returns: none
         """
         if self.turn == 0:
             self.ui.btn_draw_overview.setVisible(False)
@@ -136,7 +139,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
     def onbtn_draw_overview(self):
         """show dialog of the draw
-        @return: none
+
+        :returns: none
         """
         separetebonus = False
         if self.lottodraw.data['sep_addit_numbers']:
@@ -151,7 +155,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
     def onsystem(self):
         """show dialog of the draw
-        @return: none
+
+        :returns: none
         """
         sysdat = DlgLottoSystem.lottosystemdata()
         system = DlgLottoSystem.LottoSettingsDialog.getValues(sysdat)
@@ -172,7 +177,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """Start simulation with the first drawing
         init timer with the valve from the Scrollbar
         the next drawing starts with the timer event.
-        @return: none
+
+        :returns: none
         """
         self.ui.label_last_draw_number.setText("")
         self.turn = 0
@@ -184,7 +190,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
     def action_lottosim(self):
         """Changing the layout for simulation or generation
         Move the textedit and change the visible.
-        @return: none
+
+        :returns: none
         """
         self.ui.plaintextedit.setPlainText("")
         if self.ui.action_lotto_simulation.isChecked():
@@ -222,7 +229,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
     def onrandom_numbers_generator(self):
         """Show the output from the random number generator.
-        @return: none
+
+        :returns: none
         """
         self.lottodraw.draw()
         if self.lottodraw.random_number:
@@ -239,12 +247,14 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
     def onclean_output_text(self):
         """Clean the output text
-        @return: none"""
+
+        :returns: none"""
         self.ui.plaintextedit.setPlainText("")
 
     def oninfo(self):
         """info message box
-        @return: none"""
+
+        :returns: none"""
         infobox = QtWidgets.QMessageBox()
         infobox.setWindowTitle(self.tr('Info'))
         text = self.tr(
@@ -261,14 +271,16 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
     def onwebsite(self):
         """Open website
-        @return: none
+
+        :returns: none
         """
         webbrowser.open_new_tab(
             "http://markush.cwsurf.de/joomla_17/index.php/python/pylottosimu/")
 
     def onclose(self):
         """Close the GUI
-        @return: none"""
+
+        :returns: none"""
         self.ui.close()
 
 
@@ -359,7 +371,7 @@ class drawlotto(QtCore.QObject):
     def picknumber(self, turn):
         """pick of a lotto number
 
-        @return: pick
+        :returns: pick
         """
         if turn == (self.data['draw_numbers'] - 2):
             text = self.tr(
