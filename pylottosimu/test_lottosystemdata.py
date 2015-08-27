@@ -23,7 +23,7 @@ along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
 import unittest
 from pprint import pprint
-from lottosystem import lottosystemdata
+from pylottosimu.lottosystem import lottosystemdata
 
 
 class TestCodeFormat(unittest.TestCase):
@@ -34,7 +34,7 @@ class TestCodeFormat(unittest.TestCase):
     def test_readfile(self):
         data = self.lottosystem.readfile()
         fixdata = self.lottosystem.fixdata()
-        print data[0]['name']
+        print(data[0]['name'])
         self.assertEqual(data[0]['name'], fixdata[0]['name'])
 
 if __name__ == '__main__':

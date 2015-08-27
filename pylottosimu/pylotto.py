@@ -334,7 +334,8 @@ class drawlotto(QtCore.QObject):
 
     def draw(self):
         """draw of the lotto numbers
-        @return: none
+
+        :returns: none
         """
         drawn_numbers = self.data['draw_numbers']
         if self.data['with_addit']:
@@ -357,6 +358,7 @@ class drawlotto(QtCore.QObject):
 
     def picknumber(self, turn):
         """pick of a lotto number
+
         @return: pick
         """
         if turn == (self.data['draw_numbers'] - 2):

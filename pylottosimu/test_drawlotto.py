@@ -23,7 +23,7 @@ along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
 import unittest
 
-import pylotto
+import pylottosimu.pylotto
 
 
 class drawlottoTestCase(unittest.TestCase):
