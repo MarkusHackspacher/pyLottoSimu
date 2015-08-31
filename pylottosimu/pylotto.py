@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-pyLottoSimu
+..pyLottoSimu
 
 Copyright (C) <2012-2015> Markus Hackspacher
 
