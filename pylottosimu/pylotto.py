@@ -43,7 +43,8 @@ __doc__ = "The signals for the GUI"
 
 
 class LottoSimuDialog(QtWidgets.QMainWindow):
-    """The GUI and programm of the pyLottoSimu. """
+    """The GUI and programm of the pyLottoSimu.
+    """
     def __init__(self):
         """Inital user interface and slots
 
@@ -284,25 +285,27 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
 
 class drawlotto(QtCore.QObject):
+    """simulate a lotto draw
+
+    :param name: name of game
+    :type name: string
+    :param max_draw: maximal draw numbers
+    :type max_draw: int
+    :param draw_numbers: the draw numbers
+    :type draw_numbers: int
+    :param with_addit: with additional number
+    :type with_addit: bool
+    :param addit_numbers: the additional numbers
+    :type addit_numbers: int
+    :param sep_addit_numbers: separates additional numbers
+    :type sep_addit_numbers: bool
+    :param max_addit: maximal additional numbers
+    :type max_addit: int
+    """
+
     def __init__(self, name='Lotto DE', max_draw=49, draw_numbers=6,
                  with_addit=False, addit_numbers=0, sep_addit_numbers=False,
                  max_addit=0):
-        """simulate a lotto draw
-        @param name: name of game
-        @type name: string
-        @param max_draw: maximal draw numbers
-        @type max_draw: int
-        @param draw_numbers: the draw numbers
-        @type draw_numbers: int
-        @param with_addit: with additional number
-        @type with_addit: bool
-        @param addit_numbers: the additional numbers
-        @type addit_numbers: int
-        @param sep_addit_numbers: separates additional numbers
-        @type sep_addit_numbers: bool
-        @param max_addit: maximal additional numbers
-        @type max_addit: int
-        """
         QtWidgets.QDialog.__init__(self)
         self.data = {
             'name': name,
