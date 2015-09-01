@@ -1,0 +1,248 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pyLottoSimu 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-01 20:29+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../pylottosimu.rst:2
+msgid "pylottosimu package"
+msgstr ""
+
+#: ../../pylottosimu.rst:5
+msgid "Subpackages"
+msgstr ""
+
+#: ../../pylottosimu.rst:12
+msgid "Submodules"
+msgstr ""
+
+#: ../../pylottosimu.rst:15
+msgid "pylottosimu.lottokugeln_rc3_qt5 module"
+msgstr ""
+
+#: ../../pylottosimu.rst:23
+msgid "pylottosimu.lottosystem module"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.pydocstring of
+#: pylottosimu.lottosystem.LottoSettingsDialog:1
+msgid "Bases: :class:`PyQt5.QtWidgets.QDialog`"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.pydocstring of
+#: pylottosimu.lottosystem.LottoSettingsDialog:1
+msgid "The GUI of Settings."
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.pydocstring of
+#: pylottosimu.lottosystem.LottoSettingsDialog.init:1
+msgid "Initial variable @return: none"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.pydocstring of
+#: pylottosimu.lottosystem.LottoSettingsDialog.setvalues:1
+msgid "Set Values"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.pydocstring of
+#: pylottosimu.lottosystem.LottoSettingsDialog.values:1
+msgid "Values"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.pydocstring of
+#: pylottosimu.lottosystem.lottosystemdata:1
+msgid "Bases: :class:`object`"
+msgstr ""
+
+#: ../../pylottosimu.rst:31
+msgid "pylottosimu.pylotto module"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of pylottosimu.pylotto:1
+msgid "The signals for the GUI"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog:1
+msgid "Bases: :class:`PyQt5.QtWidgets.QMainWindow`"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog:1
+msgid "The GUI and programm of the pyLottoSimu."
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.action_lottosim:1
+msgid ""
+"Changing the layout for simulation or generation Move the textedit and "
+"change the visible."
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.action_lottosim:4
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onbtn_draw_overview:3
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onbtn_start:5
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onclean_output_text:3
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onclose:3
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.oninfo:3
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onrandom_numbers_generator:3
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onsystem:3
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.ontimer:3
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onwebsite:3
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.show_next_number:3
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.drawlotto.draw:3
+msgid "none"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onbtn_draw_overview:1
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onsystem:1
+msgid "show dialog of the draw"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onbtn_start:1
+msgid ""
+"Start simulation with the first drawing init timer with the valve from the "
+"Scrollbar the next drawing starts with the timer event."
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onclean_output_text:1
+msgid "Clean the output text"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onclose:1
+msgid "Close the GUI"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.oninfo:1
+msgid "info message box"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onrandom_numbers_generator:1
+msgid "Show the output from the random number generator."
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.ontimer:1
+msgid "Start time to show a number."
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.onwebsite:1
+msgid "Open website"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.show_next_number:1
+msgid "Simulation of the draw and show the next Number on the Screen."
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of pylottosimu.pylotto.drawlotto:1
+msgid "Bases: :class:`PyQt5.QtCore.QObject`"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.drawlotto.draw:1
+msgid "draw of the lotto numbers"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.drawlotto.picknumber:1
+msgid "pick of a lotto number"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.drawlotto.picknumber:3
+msgid "pick"
+msgstr ""
+
+#: ../../pylottosimu.rst:39
+msgid "pylottosimu.test_drawlotto module"
+msgstr ""
+
+#: ../../../pylottosimu/test_drawlotto.pydocstring of
+#: pylottosimu.test_drawlotto.drawlottoTestCase:1
+#: ../../../pylottosimu/test_lottosystemdata.pydocstring of
+#: pylottosimu.test_lottosystemdata.TestCodeFormat:1
+#: ../../../pylottosimu/test_pep8.pydocstring of
+#: pylottosimu.test_pep8.TestCodeFormat:1
+#: ../../../pylottosimu/test_show_drawing.pydocstring of
+#: pylottosimu.test_show_drawing.show_drawingTestCase:1
+msgid "Bases: :class:`unittest.case.TestCase`"
+msgstr ""
+
+#: ../../pylottosimu.rst:47
+msgid "pylottosimu.test_lottosystemdata module"
+msgstr ""
+
+#: ../../pylottosimu.rst:55
+msgid "pylottosimu.test_pep8 module"
+msgstr ""
+
+#: ../../../pylottosimu/test_pep8.pydocstring of
+#: pylottosimu.test_pep8.TestCodeFormat.test_pep8_conformance:1
+msgid "Test that we conform to PEP8."
+msgstr ""
+
+#: ../../pylottosimu.rst:63 ../../../pylottosimu/test_show_drawing.pydocstring
+#: of pylottosimu.test_show_drawing:1
+msgid "pylottosimu.test_show_drawing module"
+msgstr ""
+
+#: ../../../pylottosimu/test_show_drawing.pydocstring of
+#: pylottosimu.test_show_drawing.show_drawingTestCase:1
+msgid "Test of drawing"
+msgstr ""
+
+#: ../../../pylottosimu/test_show_drawing.pydocstring of
+#: pylottosimu.test_show_drawing.show_drawingTestCase.setUp:1
+msgid "Creates the QApplication instance"
+msgstr ""
+
+#: ../../../pylottosimu/test_show_drawing.pydocstring of
+#: pylottosimu.test_show_drawing.show_drawingTestCase.tearDown:1
+msgid "Deletes the reference owned by self"
+msgstr ""
+
+#: ../../../pylottosimu/test_show_drawing.pydocstring of
+#: pylottosimu.test_show_drawing.show_drawingTestCase.test_ballnumbers:1
+#: ../../../pylottosimu/test_show_drawing.pydocstring of
+#: pylottosimu.test_show_drawing.show_drawingTestCase.test_bonusnumbers:1
+#: ../../../pylottosimu/test_show_drawing.pydocstring of
+#: pylottosimu.test_show_drawing.show_drawingTestCase.test_bonusnumbersseparate:1
+msgid "test"
+msgstr ""
+
+#: ../../../pylottosimu/test_show_drawing.pydocstring of
+#: pylottosimu.test_show_drawing.show_drawingTestCase.test_setting:1
+msgid "settings"
+msgstr ""
+
+#: ../../pylottosimu.rst:72
+msgid "Module contents"
+msgstr ""

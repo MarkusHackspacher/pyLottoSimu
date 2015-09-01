@@ -1,0 +1,99 @@
+#
+# Markus Hackspacher <hackspacher@gmx.de>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: pyLottoSimu 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-01 20:29+0200\n"
+"PO-Revision-Date: 2015-09-01 20:49+0200\n"
+"Last-Translator: Markus Hackspacher <hackspacher@gmx.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: ../../index.rst:7
+msgid "Welcome to pyLottoSimu's documentation!"
+msgstr ""
+
+#: ../../index.rst:11
+msgid ""
+"a simulation of the German (6 of 49), Austria (6 of 45) or EuroMillionen (5 "
+"of 50 plus 2) lottery system."
+msgstr ""
+
+#: ../../index.rst:14
+msgid ""
+"The pyLottoSimu program generates random lottery numbers and can simulate a "
+"draw. In the simulation view a Lotto Ball is visible on the numbers rotate "
+"faster and faster, and is finally available, this is the text, the first "
+"number of today\\'s draw was the ... Maybe it was indeed actually the "
+"numbers of the next draw, of course are here, all the figures provided "
+"without guarantee."
+msgstr ""
+
+#: ../../index.rst:22
+msgid "Start"
+msgstr "Start"
+
+#: ../../index.rst:24
+msgid "The program requires Python_ 2.7 or 3.x and `Qt5 for Python`_."
+msgstr ""
+
+#: ../../index.rst:29
+msgid "Start with::"
+msgstr ""
+
+#: ../../index.rst:34
+msgid "Documentation"
+msgstr ""
+
+#: ../../index.rst:36
+msgid "Make the documentation as .html file::"
+msgstr ""
+
+#: ../../index.rst:42
+msgid "Translate"
+msgstr "Übersetzen"
+
+#: ../../index.rst:44
+msgid ""
+"To translate the program or make a translation in your language, insert in "
+"the complete.pro your language code. ::"
+msgstr ""
+
+#: ../../index.rst:51
+msgid ""
+"translate your language file: lotto1_xx.ts, and produce the .ts translation "
+"files with::"
+msgstr ""
+
+#: ../../index.rst:58
+msgid "Contents:"
+msgstr ""
+
+#: ../../index.rst:67
+msgid "Indices and tables"
+msgstr ""
+
+#: ../../index.rst:69
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../index.rst:70
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
+
+#: ../../index.rst:71
+msgid ":ref:`search`"
+msgstr ":ref:`search`"
+
+#: ../../index.rst:9
+msgid "Lotto Generator and Simulator"
+msgstr "Lotto Generator und Simulator"
+
+#~ msgid "Lotto Generator und Simulator"
+#~ msgstr "Lotto Generator und Simulator"
