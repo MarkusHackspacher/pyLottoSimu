@@ -55,7 +55,7 @@ und [Qt5 für Python](http://www.riverbankcomputing.com/software/pyqt/download5)
 Start mit: 
 ```python lotto.pyw [de|fr|es|it|ru]```
 
-Documentation als .html Datei aus den Kommentaren des Quelltextes erstellen lassen:
+Dokumentation als .html Datei aus den Kommentaren des Quelltextes erstellen lassen:
 
      cd docs
      make html

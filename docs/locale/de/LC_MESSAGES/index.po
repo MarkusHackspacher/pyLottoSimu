@@ -17,13 +17,15 @@ msgstr ""
 
 #: ../../index.rst:7
 msgid "Welcome to pyLottoSimu's documentation!"
-msgstr ""
+msgstr "Willkommen bei pyLottoSimu Dokumentation"
 
 #: ../../index.rst:11
 msgid ""
 "a simulation of the German (6 of 49), Austria (6 of 45) or EuroMillionen (5 "
 "of 50 plus 2) lottery system."
 msgstr ""
+"Eine Simulation der Deutschen 6 aus 49, der Österreichischen 6 aus 45 "
+"oder der EuroMillionen (5 aus 50 plus 2) Lotterie."
 
 #: ../../index.rst:14
 msgid ""
@@ -34,26 +36,31 @@ msgid ""
 "numbers of the next draw, of course are here, all the figures provided "
 "without guarantee."
 msgstr ""
-
+"Das pyLottoSimu Programm generiert zufällige Lottozahlen und kann eine "
+"Ziehung simulieren. In der Simulationsansicht ist eine Lottokugel sichtbar, "
+"auf der die Zahlen immer schneller rotieren, Und schließlich stehen bleibt, "
+"dazu kommt der Text, die erste Zahl der heutigen Ziehung war die ... "
+"Vielleicht waren es ja tatsächlich die Zahlen der nächsten Ziehung, "
+"natürlich sind auch hier, alle Zahlen ohne Gewähr."
 #: ../../index.rst:22
 msgid "Start"
 msgstr "Start"
 
 #: ../../index.rst:24
 msgid "The program requires Python_ 2.7 or 3.x and `Qt5 for Python`_."
-msgstr ""
+msgstr "Das Programm verwendet Python_ 2.7 oder 3.x und `Qt5 for Python`_."
 
 #: ../../index.rst:29
 msgid "Start with::"
-msgstr ""
+msgstr "Start mit::"
 
 #: ../../index.rst:34
 msgid "Documentation"
-msgstr ""
+msgstr "Dokumentation"
 
 #: ../../index.rst:36
 msgid "Make the documentation as .html file::"
-msgstr ""
+msgstr "Dokumentation als .html Datei aus den Kommentaren des Quelltextes erstellen lassen::"
 
 #: ../../index.rst:42
 msgid "Translate"
@@ -70,14 +77,14 @@ msgid ""
 "translate your language file: lotto1_xx.ts, and produce the .ts translation "
 "files with::"
 msgstr ""
-
+"Übersetzen der Sprachdatei: lotto1_xx.ts::"
 #: ../../index.rst:58
 msgid "Contents:"
-msgstr ""
+msgstr "Inhalt"
 
 #: ../../index.rst:67
 msgid "Indices and tables"
-msgstr ""
+msgstr "Indizes und Tabellen"
 
 #: ../../index.rst:69
 msgid ":ref:`genindex`"
