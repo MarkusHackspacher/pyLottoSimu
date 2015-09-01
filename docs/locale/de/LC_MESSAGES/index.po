@@ -71,7 +71,8 @@ msgid ""
 "To translate the program or make a translation in your language, insert in "
 "the complete.pro your language code. ::"
 msgstr ""
-
+"Um das Programm zu übersetzen oder eine Übersetzung in Ihrer Sprache hinzu zufügen, "
+"legen Sie in der complete.pro eine Zeile mit ihren Sprachcode an. ::"
 #: ../../index.rst:51
 msgid ""
 "translate your language file: lotto1_xx.ts, and produce the .ts translation "
