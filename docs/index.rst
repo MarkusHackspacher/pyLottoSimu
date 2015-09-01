@@ -6,7 +6,7 @@
 Welcome to pyLottoSimu's documentation!
 =======================================
 
-Lotto Generator und Simulator
+Lotto Generator and Simulator
 
 a simulation of the German (6 of 49), Austria (6 of 45)
 or EuroMillionen (5 of 50 plus 2) lottery system.

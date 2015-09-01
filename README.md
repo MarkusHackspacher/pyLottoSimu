@@ -9,6 +9,8 @@ pyLottoSimu
 (https://github.com/MarkusHackspacher/pyLottoSimu/blob/master/LICENSE)
 [![Join the chat at https://gitter.im/MarkusHackspacher/pyLottoSimu](https://badges.gitter.im/Join%20Chat.svg)]
 (https://gitter.im/MarkusHackspacher/pyLottoSimu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Documentation Status](https://readthedocs.org/projects/pylottosimu/badge/?version=latest)]
+(https://readthedocs.org/projects/pylottosimu/?badge=latest)
 
 Lotto Generator und Simulator
 
