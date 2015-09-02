@@ -20,12 +20,10 @@
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
 """
-pylottosimu.test_show_drawing module
-"""
+test the dialog module
 
-__author__ = 'Markus Hackspacher'
-__license__ = "GPL"
-__copyright__ = "<2015> Markus Hackspacher"
+show_drawing
+"""
 
 import sys
 import unittest
@@ -34,6 +32,9 @@ from PyQt5.QtTest import QTest
 from PyQt5.QtCore import Qt
 _instance = None
 
+__author__ = 'Markus Hackspacher'
+__license__ = "GPL"
+__copyright__ = "<2015> Markus Hackspacher"
 
 if sys.version_info >= (3, 0):
     from pylottosimu.dialog.show_drawing import DlgShowDrawing
@@ -75,17 +76,17 @@ class show_drawingTestCase(unittest.TestCase):
         self.assertEqual(dialog.Btn_Numerary_1to49[5].isFlat(), True)
 
     def test_ballnumbers(self):
-        '''test'''
+        '''test ballnumbers'''
         dialog = DlgShowDrawing([2], 5)
         self.assertTrue(dialog)
 
     def test_bonusnumbers(self):
-        '''test'''
+        '''test bonusnumbers'''
         dialog = DlgShowDrawing([2], 5, [1])
         self.assertTrue(dialog)
 
     def test_bonusnumbersseparate(self):
-        '''test'''
+        '''test separate bonusnumbers'''
         dialog = DlgShowDrawing([2], 5, [1, 2], 2)
         self.assertTrue(dialog)
 

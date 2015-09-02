@@ -94,12 +94,12 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         if self.delay_of_next_number >= verz:
             self.delay_of_next_number = verz
         self.delay_of_next_number -= 1
-        if self.delay_of_next_number < 10 \
-                or (self.delay_of_next_number < 17
-                    and (self.delay_of_next_number % 2) == 0) \
-                or (self.delay_of_next_number < 25
-                    and (self.delay_of_next_number % 3) == 0) \
-                or (self.delay_of_next_number % 4) == 0:
+        if (self.delay_of_next_number < 10 or
+                (self.delay_of_next_number < 17 and
+                    (self.delay_of_next_number % 2) == 0) or
+                (self.delay_of_next_number < 25 and
+                    (self.delay_of_next_number % 3) == 0) or
+                (self.delay_of_next_number % 4) == 0):
             self.ui.label_big_number.setText(str(
                 random.sample(range(1, int(
                     self.lottodraw.data['max_draw']) + 1), 1)[0]))
@@ -117,8 +117,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             self.ui.btn_draw_overview.setVisible(False)
             self.LastTextnumber = -1
 
-        if self.turn >= len((self.lottodraw.random_number
-                             + self.lottodraw.random_addit)):
+        if self.turn >= len((self.lottodraw.random_number +
+                             self.lottodraw.random_addit)):
             self.timer.stop()
             text = ''
             if self.ui.rdbtn_show_draw_after.isChecked():
@@ -387,10 +387,11 @@ class drawlotto(QtCore.QObject):
             text = str(text).format(self.countnumbers[turn],
                                     self.random_number[turn])
 
-        elif (turn >= (self.data['draw_numbers'] + self.data['addit_numbers'])
-                and self.data['with_addit'] is True
-                or turn >= (self.data['draw_numbers'])
-                and self.data['with_addit'] is False):
+        elif (turn >= (self.data['draw_numbers'] +
+                       self.data['addit_numbers']) and
+                self.data['with_addit'] is True or
+                turn >= (self.data['draw_numbers']) and
+                self.data['with_addit'] is False):
             if self.data['with_addit']:
                 text_addit_number = "".join(map(" {0:02d}".format, sorted(
                     self.ballbonus[:])))
@@ -433,8 +434,8 @@ class drawlotto(QtCore.QObject):
             if self.data['with_addit'] is True:
                 textr = self.tr('The additional number is the {0}.')
                 if self.data['sep_addit_numbers']:
-                    text = str(textr).format(self.random_addit[turn
-                                             - self.data['draw_numbers']])
+                    text = str(textr).format(self.random_addit[turn -
+                                             self.data['draw_numbers']])
                 else:
                     text = str(textr).format(self.random_number[turn])
         else:
