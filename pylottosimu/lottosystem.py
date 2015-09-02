@@ -28,7 +28,13 @@ from PyQt5 import QtGui, QtCore, QtWidgets, uic
 
 
 class LottoSettingsDialog(QtWidgets.QDialog):
-    """The GUI of Settings. """
+    """The GUI of Settings.
+
+    :param sysdat: Lotto setting
+    :type sysdat: string
+    :param parent: parent window
+    :type parent: string
+    """
     def __init__(self, sysdat, parent=None):
         """Inital user interface and slots
         @return: none
@@ -55,7 +61,8 @@ class LottoSettingsDialog(QtWidgets.QDialog):
 
     def init(self):
         """Initial variable
-        @return: none
+
+        :returns: none
         """
         pass
 
@@ -105,16 +112,24 @@ class LottoSettingsDialog(QtWidgets.QDialog):
                 self.ui.spinBox_max_addit.valueFromText(
                     self.ui.spinBox_max_addit.text()))
 
-    # static method to create the dialog and return (date, time, accepted)
     @staticmethod
     def getValues(sysdat, parent=None):
-        """getValues"""
+        """static method to create the dialog and return
+        (dialog.values, accepted)
+
+        :param sysdat: Lotto setting
+        :type sysdat: string
+        :returns: dialog.values, accepted
+        """
         dialog = LottoSettingsDialog(sysdat, parent)
         result = dialog.ui.exec_()
         return (dialog.values(), result == QtWidgets.QDialog.Accepted)
 
 
 class lottosystemdata():
+    """
+    Read and write the data set of the lottosystem
+    """
     def __init__(self):
         try:
             self.data = self.readfile()
@@ -127,11 +142,17 @@ class lottosystemdata():
                       indent=4, separators=(',', ': '))
 
     def readfile(self):
+        """read lottosystems.json
+
+        :returns: data"""
         with open('lottosystems.json') as data_file:
             data = json.load(data_file)
         return data
 
     def fixdata(self):
+        """read fix data set of the lottosystem
+
+        :returns: data"""
         data = [{
             'name': 'Lotto DE',
             'max_draw': 49,
