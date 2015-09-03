@@ -13,8 +13,8 @@ msgstr ""
 
 #: ../../code.rst:2
 msgid "Auto Generated Dokumentation"
-msgstr ""
+msgstr "Automatische generierte Dokumentation"
 
 #: ../../code.rst:5
 msgid "Module contents"
-msgstr ""
+msgstr "Modulinhalte"

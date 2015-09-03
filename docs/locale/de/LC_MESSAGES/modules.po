@@ -13,4 +13,4 @@ msgstr ""
 
 #: ../../modules.rst:2
 msgid "pylottosimu"
-msgstr ""
+msgstr "pylottosimu"

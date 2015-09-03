@@ -111,7 +111,7 @@ msgstr ""
 #: ../../../pylottosimu/pylotto.pydocstring of
 #: pylottosimu.pylotto.drawlotto.draw:3
 msgid "none"
-msgstr ""
+msgstr "keine"
 
 #: ../../../pylottosimu/pylotto.pydocstring of
 #: pylottosimu.pylotto.LottoSimuDialog.onbtn_draw_overview:1
@@ -245,4 +245,4 @@ msgstr ""
 
 #: ../../pylottosimu.rst:72
 msgid "Module contents"
-msgstr ""
+msgstr "Modulinhalte"

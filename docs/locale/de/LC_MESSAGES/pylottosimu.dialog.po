@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../../pylottosimu.dialog.rst:2
 msgid "pylottosimu.dialog package"
-msgstr ""
+msgstr "pylottosimu.dialog"
 
 #: ../../pylottosimu.dialog.rst:5
 msgid "Submodules"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../pylottosimu.dialog.rst:8
 msgid "pylottosimu.dialog.show_drawing module"
-msgstr ""
+msgstr "pylottosimu.dialog.show_drawing"
 
 #: ../../../pylottosimu/dialog/show_drawing.pydocstring of
 #: pylottosimu.dialog.show_drawing.DlgShowDrawing:1
@@ -31,8 +31,8 @@ msgstr ""
 #: ../../../pylottosimu/dialog/show_drawing.pydocstring of
 #: pylottosimu.dialog.show_drawing.DlgShowDrawing:1
 msgid "Show the numbers in a dialog box"
-msgstr ""
+msgstr "Anzeige der numern in der Dialogbox"
 
 #: ../../pylottosimu.dialog.rst:17
 msgid "Module contents"
-msgstr ""
+msgstr "Modulinhalte"

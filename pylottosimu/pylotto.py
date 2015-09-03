@@ -20,6 +20,8 @@
 # You should have received a copy of the GNU General Public License
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
+from __future__ import absolute_import
+
 import os
 import sys
 import webbrowser
@@ -29,13 +31,11 @@ import random
 
 from PyQt5 import QtGui, QtCore, QtWidgets, uic
 import pylottosimu.lottokugeln_rc3_qt5 as lottokugeln_rc
+import pylottosimu.dialog.lottosettingdialog as DlgLottoSystem
+from pylottosimu.dialog.show_drawing import DlgShowDrawing
+from pylottosimu.lottosystem import lottosystemdata
 
-if sys.version_info >= (3, 0):
-    from pylottosimu.dialog.show_drawing import DlgShowDrawing
-    import pylottosimu.lottosystem as DlgLottoSystem
-else:
-    from dialog.show_drawing import DlgShowDrawing
-    import lottosystem as DlgLottoSystem
+if sys.version_info < (3, 0):
     range = xrange
     str = unicode
 
@@ -43,10 +43,10 @@ __doc__ = "The signals for the GUI"
 
 
 class LottoSimuDialog(QtWidgets.QMainWindow):
-    """The GUI and programm of the pyLottoSimu.
+    """The GUI and program of the pyLottoSimu.
     """
     def __init__(self):
-        """Inital user interface and slots
+        """Initial user interface and slots
 
         :returns: none
         """
@@ -158,7 +158,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
         :returns: none
         """
-        sysdat = DlgLottoSystem.lottosystemdata()
+        sysdat = lottosystemdata()
         system = DlgLottoSystem.LottoSettingsDialog.getValues(sysdat)
 
         if system[1]:
@@ -189,7 +189,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
     def action_lottosim(self):
         """Changing the layout for simulation or generation
-        Move the textedit and change the visible.
+        and change the visible of the buttons.
 
         :returns: none
         """
