@@ -22,14 +22,17 @@
 import unittest
 from pprint import pprint
 from pylottosimu.lottosystem import lottosystemdata
+"""Testcase of module pylottosimu.lottosystemdata"""
 
 
 class TestCodeFormat(unittest.TestCase):
-
+    """Test the code format of the file"""
     def setUp(self):
-        self.lottosystem =lottosystemdata()
+        self.lottosystem = lottosystemdata()
 
     def test_readfile(self):
+        """read the lottosystems.json file
+        """
         data = self.lottosystem.readfile()
         fixdata = self.lottosystem.fixdata()
         print(data[0]['name'])

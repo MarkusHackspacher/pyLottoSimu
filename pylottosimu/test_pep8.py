@@ -31,8 +31,10 @@ class TestCodeFormat(unittest.TestCase):
         result = pep8style.check_files(['pylotto.py',
                                         'test_drawlotto.py',
                                         'test_show_drawing.py',
+                                        'test_lottosystemdata.py',
                                         'lottosystem.py',
-                                        'dialog/show_drawing.py'])
+                                        'dialog/show_drawing.py',
+                                        'dialog/lottosettingdialog.py'])
         self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")
 
