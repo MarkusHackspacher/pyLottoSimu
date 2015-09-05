@@ -38,20 +38,6 @@ Make the documentation as .html file::
   cd docs
   make html
 
-Translate
----------
-
-To translate the program or make a translation in your language,
-insert in the complete.pro your language code.
-::
-
-  cd pylottosimu
-  pylupdate4 complete.pro
-
-translate your language file: lotto1_xx.ts, and produce the .ts translation files with::
-
-  lrelease complete.pro
-
 .. image:: ../misc/pyLottoSimu_screenshot_en.png
 
 
@@ -60,8 +46,9 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   translate
+   history
    modules
-   code
 
 Indices and tables
 ==================

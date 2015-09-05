@@ -1,0 +1,94 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pyLottoSimu 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-05 21:41+0200\n"
+"PO-Revision-Date: 2015-09-05 21:41+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../history.rst:2
+msgid "History"
+msgstr "Historie"
+
+#: ../../history.rst:5
+msgid "Version"
+msgstr "Version"
+
+#: ../../history.rst:10
+msgid "Version 1.6"
+msgstr "Version 1.6"
+
+#: ../../history.rst:26
+msgid ""
+"If anyone would like to offer this program as a gimmick on his website, "
+"thereby adjusts the link to the homepage it can do like to feel free."
+msgstr ""
+"Wenn jemand diese Programm als Gimmick auf seiner Homepage anbieten möchte, "
+"dabei den Link zur Homepage anpasst kann es gern tun."
+
+#: ../../history.rst:30
+msgid "Version 1.5"
+msgstr "Version 1.5"
+
+#: ../../history.rst:32
+msgid "The Version 1.5 from February 20, 2014, can be start with Qt4 or QT5."
+msgstr ""
+"Die Version 1.5 vom 20. Februar 2014, lässt  sich mit Qt4 oder mit Qt5 "
+"starten."
+
+#: ../../history.rst:35
+msgid "Version 1.4"
+msgstr "Version 1.4"
+
+#: ../../history.rst:37
+msgid ""
+"The renewals in Version 1.4 of October 3, 2013 from pyLottoSimu is "
+"multilingualism there are now nine languages. And in Program window there is"
+" a major change, it can now Select whether the number overview window to "
+"appear automatically after the draw."
+msgstr ""
+"Die Erneuerungen in der Version 1.4 von 3.Oktober 2013 vom pyLottoSimu ist "
+"die Mehrsprachigkeit mittlerweile sind es neun Sprachen. Und im "
+"Programmfenster gibt es auch einen größere Änderung, es lässt sich jetzt "
+"Auswählen ob das Zahlenübersichtsfenster automatisch nach der Ziehung "
+"angezeigt werden soll."
+
+#: ../../history.rst:43
+msgid "Preview"
+msgstr "Vorschau"
+
+#: ../../history.rst:12
+msgid ""
+"The  version 1.6 from June 3, 2015 could be choose between four lottery "
+"systems, the German 6 out of 49 is default, the Austrian 6 out of 45 with a "
+"bonus number, the Euro 5 million from 50 with two Super numbers 1-11 and as "
+"well as the American Powerball Lottery 5 of 59 and a Bonus number in the "
+"range 1 to 35th Under the hood, the program logic of the surface is no "
+"longer dependent and it will in the next version also use the program "
+"without a graphical Enter surface. So the program structure is clearly "
+"arranged and it may be better to reuse parts of the program in other "
+"programs. Furthermore can be with Python tools create an .exe file::"
+msgstr ""
+"Bei der Version 1.6 vom 3. Juni 2015 ist es möglich zwischen vier "
+"Lottosysteme zu wählen, das deutsche Lotto 6 aus 49 ist default, das "
+"Österreichische 6 aus 45 mit einer Zusatzzahl, die EuroMillionen 5 aus 50 "
+"mit zwei Superzahlen zwischen 1 und 11 und sowie die Amerikanische Powerball"
+" Lottery 5 aus 59 und eine Zusatzzahl im Bereich 1 bis 35. Unter der Haube "
+"ist die Programmlogik von der Oberfläche unabhängiger und es wird in der "
+"nächsten Version auch das Programm ohne eine grafische Oberfläche geben. So "
+"wird die Programmstruktur übersichtlicher und es lassen sich besser "
+"Programmteile in anderen Programmen wiederverwenden. Desweiteren lässt sich "
+"mit Pythontools eine .exe Datei erstellen::"
+
+#: ../../history.rst:7
+msgid "The current version is 1.6.1 from September 2, 2015. And need PyQt5."
+msgstr "Die aktuelle version ist die 1.6.1 vom 2. September 2015. Und benötigt pyQt5"
+
+#: ../../history.rst:45
+msgid "The program starts with the last selected lotto system."
+msgstr "das Programm startet mit dem zuletzt gewählen Lotosystem."

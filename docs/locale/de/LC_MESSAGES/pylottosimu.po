@@ -32,31 +32,6 @@ msgid "pylottosimu.lottosystem module"
 msgstr ""
 
 #: ../../../pylottosimu/lottosystem.pydocstring of
-#: pylottosimu.lottosystem.LottoSettingsDialog:1
-msgid "Bases: :class:`PyQt5.QtWidgets.QDialog`"
-msgstr ""
-
-#: ../../../pylottosimu/lottosystem.pydocstring of
-#: pylottosimu.lottosystem.LottoSettingsDialog:1
-msgid "The GUI of Settings."
-msgstr ""
-
-#: ../../../pylottosimu/lottosystem.pydocstring of
-#: pylottosimu.lottosystem.LottoSettingsDialog.init:1
-msgid "Initial variable @return: none"
-msgstr ""
-
-#: ../../../pylottosimu/lottosystem.pydocstring of
-#: pylottosimu.lottosystem.LottoSettingsDialog.setvalues:1
-msgid "Set Values"
-msgstr ""
-
-#: ../../../pylottosimu/lottosystem.pydocstring of
-#: pylottosimu.lottosystem.LottoSettingsDialog.values:1
-msgid "Values"
-msgstr ""
-
-#: ../../../pylottosimu/lottosystem.pydocstring of
 #: pylottosimu.lottosystem.lottosystemdata:1
 msgid "Bases: :class:`object`"
 msgstr ""
@@ -72,18 +47,6 @@ msgstr ""
 #: ../../../pylottosimu/pylotto.pydocstring of
 #: pylottosimu.pylotto.LottoSimuDialog:1
 msgid "Bases: :class:`PyQt5.QtWidgets.QMainWindow`"
-msgstr ""
-
-#: ../../../pylottosimu/pylotto.pydocstring of
-#: pylottosimu.pylotto.LottoSimuDialog:1
-msgid "The GUI and programm of the pyLottoSimu."
-msgstr ""
-
-#: ../../../pylottosimu/pylotto.pydocstring of
-#: pylottosimu.pylotto.LottoSimuDialog.action_lottosim:1
-msgid ""
-"Changing the layout for simulation or generation Move the textedit and "
-"change the visible."
 msgstr ""
 
 #: ../../../pylottosimu/pylotto.pydocstring of
@@ -209,8 +172,7 @@ msgstr ""
 msgid "Test that we conform to PEP8."
 msgstr ""
 
-#: ../../pylottosimu.rst:63 ../../../pylottosimu/test_show_drawing.pydocstring
-#: of pylottosimu.test_show_drawing:1
+#: ../../pylottosimu.rst:63
 msgid "pylottosimu.test_show_drawing module"
 msgstr ""
 
@@ -230,15 +192,6 @@ msgid "Deletes the reference owned by self"
 msgstr ""
 
 #: ../../../pylottosimu/test_show_drawing.pydocstring of
-#: pylottosimu.test_show_drawing.show_drawingTestCase.test_ballnumbers:1
-#: ../../../pylottosimu/test_show_drawing.pydocstring of
-#: pylottosimu.test_show_drawing.show_drawingTestCase.test_bonusnumbers:1
-#: ../../../pylottosimu/test_show_drawing.pydocstring of
-#: pylottosimu.test_show_drawing.show_drawingTestCase.test_bonusnumbersseparate:1
-msgid "test"
-msgstr ""
-
-#: ../../../pylottosimu/test_show_drawing.pydocstring of
 #: pylottosimu.test_show_drawing.show_drawingTestCase.test_setting:1
 msgid "settings"
 msgstr ""
@@ -246,3 +199,143 @@ msgstr ""
 #: ../../pylottosimu.rst:72
 msgid "Module contents"
 msgstr "Modulinhalte"
+
+#: ../../../pylottosimu/lottosystem.pydocstring of
+#: pylottosimu.lottosystem.lottosystemdata:1
+msgid "Read and write the data set of the lottosystem"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.pydocstring of
+#: pylottosimu.lottosystem.lottosystemdata.fixdata:1
+msgid "read fix data set of the lottosystem"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.pydocstring of
+#: pylottosimu.lottosystem.lottosystemdata.fixdata:3
+#: ../../../pylottosimu/lottosystem.pydocstring of
+#: pylottosimu.lottosystem.lottosystemdata.readfile:3
+msgid "data"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.pydocstring of
+#: pylottosimu.lottosystem.lottosystemdata.projectpath:1
+msgid "open in the home path and create a direction."
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.pydocstring of
+#: pylottosimu.lottosystem.lottosystemdata.projectpath:3
+msgid ":return:path of the project"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.pydocstring of
+#: pylottosimu.lottosystem.lottosystemdata.readfile:1
+msgid "read lottosystems.json"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog:1
+msgid "The GUI and program of the pyLottoSimu."
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.LottoSimuDialog.action_lottosim:1
+msgid ""
+"Changing the layout for simulation or generation and change the visible of "
+"the buttons."
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of pylottosimu.pylotto.drawlotto:1
+msgid "simulate a lotto draw"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of pylottosimu.pylotto.drawlotto:3
+msgid "name of game"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of pylottosimu.pylotto.drawlotto:5
+msgid "maximal draw numbers"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of pylottosimu.pylotto.drawlotto:7
+msgid "the draw numbers"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of pylottosimu.pylotto.drawlotto:9
+msgid "with additional number"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.drawlotto:11
+msgid "the additional numbers"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.drawlotto:13
+msgid "separates additional numbers"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.pydocstring of
+#: pylottosimu.pylotto.drawlotto:15
+msgid "maximal additional numbers"
+msgstr ""
+
+#: ../../../pylottosimu/test_lottosystemdata.pydocstring of
+#: pylottosimu.test_lottosystemdata.TestCodeFormat:1
+msgid "Test the code format of the file"
+msgstr ""
+
+#: ../../../pylottosimu/test_lottosystemdata.pydocstring of
+#: pylottosimu.test_lottosystemdata.TestCodeFormat.test_readfile:1
+msgid "read the lottosystems.json file"
+msgstr ""
+
+#: ../../../pylottosimu/test_show_drawing.pydocstring of
+#: pylottosimu.test_show_drawing:1
+msgid "test the dialog module"
+msgstr ""
+
+#: ../../../pylottosimu/test_show_drawing.pydocstring of
+#: pylottosimu.test_show_drawing:3
+msgid "show_drawing"
+msgstr ""
+
+#: ../../../pylottosimu/test_show_drawing.pydocstring of
+#: pylottosimu.test_show_drawing.show_drawingTestCase.test_ballnumbers:1
+msgid "test ballnumbers"
+msgstr ""
+
+#: ../../../pylottosimu/test_show_drawing.pydocstring of
+#: pylottosimu.test_show_drawing.show_drawingTestCase.test_bonusnumbers:1
+msgid "test bonusnumbers"
+msgstr ""
+
+#: ../../../pylottosimu/test_show_drawing.pydocstring of
+#: pylottosimu.test_show_drawing.show_drawingTestCase.test_bonusnumbersseparate:1
+msgid "test separate bonusnumbers"
+msgstr ""
+
+#~ msgid "Bases: :class:`PyQt5.QtWidgets.QDialog`"
+#~ msgstr ""
+
+#~ msgid "The GUI of Settings."
+#~ msgstr ""
+
+#~ msgid "Initial variable @return: none"
+#~ msgstr ""
+
+#~ msgid "Set Values"
+#~ msgstr ""
+
+#~ msgid "Values"
+#~ msgstr ""
+
+#~ msgid "The GUI and programm of the pyLottoSimu."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Changing the layout for simulation or generation Move the textedit and "
+#~ "change the visible."
+#~ msgstr ""
+
+#~ msgid "test"
+#~ msgstr ""
