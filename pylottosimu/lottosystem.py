@@ -29,16 +29,13 @@ class lottosystemdata():
     """
     Read and write the data set of the lottosystem
 
-    .. todo::
-        at program start:
-        look for the right path in the home environ
-        load json and last use lotto
 
-        if not exits:
-        save the json file in the home
+    .. todo:: at program start: look for the right path in the home environ
+     load json and last use lotto
 
-        program exit:
-        save the last use lotto system
+    .. todo:: if not exits: save the json file in the home
+
+    .. todo:: program exit: save the last use lotto system
 
     """
     def __init__(self):
