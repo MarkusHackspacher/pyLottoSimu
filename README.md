@@ -1,6 +1,7 @@
 pyLottoSimu
 ===========
 
+![Github Releases](https://img.shields.io/github/release/markushackspacher/pylottosimu.svg)
 ![Stars](https://img.shields.io/github/stars/MarkusHackspacher/pyLottoSimu.svg)
 [![license-GPLv3](https://img.shields.io/badge/license-GPLv3-blue.svg)]
 (https://github.com/MarkusHackspacher/pyLottoSimu/blob/master/LICENSE)
@@ -10,8 +11,6 @@ pyLottoSimu
 (https://readthedocs.org/projects/pylottosimu/?badge=latest)
 [![Build Status](https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/status.png)]
 (https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/latest)
-[![Github Releases](https://img.shields.io/github/downloads/MarkusHackspacher/pyLottoSimu/latest/total.svg)]
-(https://github.com/MarkusHackspacher/pyLottoSimu)
 
 Lotto Generator und Simulator
 
