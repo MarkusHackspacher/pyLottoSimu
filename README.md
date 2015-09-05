@@ -10,6 +10,8 @@ pyLottoSimu
 (https://readthedocs.org/projects/pylottosimu/?badge=latest)
 [![Build Status](https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/status.png)]
 (https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/latest)
+[![Github Releases](https://img.shields.io/github/downloads/atom/atom/latest/total.svg)]
+(https://github.com/MarkusHackspacher/pyLottoSimu)
 
 Lotto Generator und Simulator
 

@@ -33,6 +33,7 @@ class TestCodeFormat(unittest.TestCase):
     def test_readfile(self):
         """read the lottosystems.json file
         """
+        self.lottosystem.writetofile()
         data = self.lottosystem.readfile()
         fixdata = self.lottosystem.fixdata()
         print(data[0]['name'])

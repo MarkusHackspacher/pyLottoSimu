@@ -3,9 +3,12 @@
 *.pyo
 *.pyt
 *.pytc
+*.json
+
 .eric4project/
 lotto/.directory
 lotto/datenbank.sqlite
 pyLottoverwaltung.e4p
 pyLottoSimu/docs/_build/
+
 .directory
