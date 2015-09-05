@@ -29,7 +29,7 @@ class lottosystemdata():
     """
     Read and write the data set of the lottosystem
 
-    ToDo:
+    .. todo::
     at program start:
     look for the right path in the home environ
     load json and last use lotto
