@@ -87,22 +87,3 @@ msgstr ":ref:`search`"
 #: ../../index.rst:9
 msgid "Lotto Generator and Simulator"
 msgstr "Lotto Generator und Simulator"
-
-#~ msgid "Translate"
-#~ msgstr "Übersetzen"
-
-#~ msgid ""
-#~ "To translate the program or make a translation in your language, insert in "
-#~ "the complete.pro your language code. ::"
-#~ msgstr ""
-#~ "Um das Programm zu Übersetzen oder eine Übersetzung in Ihrer Sprache "
-#~ "hinzuzufügen, legen Sie in der complete.pro eine Zeile mit ihren Sprachcode "
-#~ "an. ::"
-
-#~ msgid ""
-#~ "translate your language file: lotto1_xx.ts, and produce the .ts translation "
-#~ "files with::"
-#~ msgstr "Übersetzen der Sprachdatei: lotto1_xx.ts::"
-
-#~ msgid "Lotto Generator und Simulator"
-#~ msgstr "Lotto Generator und Simulator"

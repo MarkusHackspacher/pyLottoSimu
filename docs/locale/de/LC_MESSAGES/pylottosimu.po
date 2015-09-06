@@ -13,11 +13,11 @@ msgstr ""
 
 #: ../../pylottosimu.rst:2
 msgid "pylottosimu package"
-msgstr ""
+msgstr "pylottosimu Sammlung"
 
 #: ../../pylottosimu.rst:5
 msgid "Subpackages"
-msgstr ""
+msgstr "Untesammlung"
 
 #: ../../pylottosimu.rst:12
 msgid "Submodules"
@@ -215,7 +215,7 @@ msgstr ""
 #: ../../../pylottosimu/lottosystem.pydocstring of
 #: pylottosimu.lottosystem.lottosystemdata.readfile:3
 msgid "data"
-msgstr ""
+msgstr "Daten"
 
 #: ../../../pylottosimu/lottosystem.pydocstring of
 #: pylottosimu.lottosystem.lottosystemdata.projectpath:1
@@ -250,15 +250,15 @@ msgstr ""
 
 #: ../../../pylottosimu/pylotto.pydocstring of pylottosimu.pylotto.drawlotto:3
 msgid "name of game"
-msgstr ""
+msgstr "Name des Spiels"
 
 #: ../../../pylottosimu/pylotto.pydocstring of pylottosimu.pylotto.drawlotto:5
 msgid "maximal draw numbers"
-msgstr ""
+msgstr "Anzahl der Nummern"
 
 #: ../../../pylottosimu/pylotto.pydocstring of pylottosimu.pylotto.drawlotto:7
 msgid "the draw numbers"
-msgstr ""
+msgstr "Die Losnumern"
 
 #: ../../../pylottosimu/pylotto.pydocstring of pylottosimu.pylotto.drawlotto:9
 msgid "with additional number"
@@ -313,29 +313,3 @@ msgstr ""
 #: pylottosimu.test_show_drawing.show_drawingTestCase.test_bonusnumbersseparate:1
 msgid "test separate bonusnumbers"
 msgstr ""
-
-#~ msgid "Bases: :class:`PyQt5.QtWidgets.QDialog`"
-#~ msgstr ""
-
-#~ msgid "The GUI of Settings."
-#~ msgstr ""
-
-#~ msgid "Initial variable @return: none"
-#~ msgstr ""
-
-#~ msgid "Set Values"
-#~ msgstr ""
-
-#~ msgid "Values"
-#~ msgstr ""
-
-#~ msgid "The GUI and programm of the pyLottoSimu."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Changing the layout for simulation or generation Move the textedit and "
-#~ "change the visible."
-#~ msgstr ""
-
-#~ msgid "test"
-#~ msgstr ""
