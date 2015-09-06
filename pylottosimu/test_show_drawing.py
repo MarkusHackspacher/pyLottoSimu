@@ -67,13 +67,13 @@ class show_drawingTestCase(unittest.TestCase):
         '''settings'''
         dialog = DlgShowDrawing([3, 4], 6)
         self.assertTrue(dialog)
-        self.assertEqual(dialog.Btn_Numerary_1to49[0].text(), '1')
-        self.assertEqual(dialog.Btn_Numerary_1to49[0].isFlat(), True)
-        self.assertEqual(dialog.Btn_Numerary_1to49[1].isFlat(), True)
-        self.assertEqual(dialog.Btn_Numerary_1to49[2].isFlat(), False)
-        self.assertEqual(dialog.Btn_Numerary_1to49[3].isFlat(), False)
-        self.assertEqual(dialog.Btn_Numerary_1to49[4].isFlat(), True)
-        self.assertEqual(dialog.Btn_Numerary_1to49[5].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[0].text(), '1')
+        self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[1].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[2].isFlat(), False)
+        self.assertEqual(dialog.btn_drawnumbers[3].isFlat(), False)
+        self.assertEqual(dialog.btn_drawnumbers[4].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[5].isFlat(), True)
 
     def test_ballnumbers(self):
         '''test ballnumbers'''

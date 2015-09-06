@@ -26,10 +26,18 @@ from pylottosimu import pylotto
 
 class drawlottoTestCase(unittest.TestCase):
     def setUp(self):
+        """Init class pylotto.drawlotto
+
+        :return: none
+        """
         self.lotto = pylotto.drawlotto(with_addit=False, addit_numbers=2,
                                        sep_addit_numbers=True, max_addit=10)
 
     def test_setting(self):
+        """Test lotto.data
+
+        :return: none
+        """
         self.assertEqual(self.lotto.data['name'], 'Lotto DE')
         self.assertEqual(self.lotto.data['max_draw'], 49)
         self.assertEqual(self.lotto.data['draw_numbers'], 6)
@@ -39,6 +47,10 @@ class drawlottoTestCase(unittest.TestCase):
         self.assertEqual(self.lotto.data['max_addit'], 10)
 
     def test_draw(self):
+        """test draw without a additional number
+
+        :return: none
+        """
         self.lotto.data['with_addit'] = False
         self.lotto.draw()
         self.assertEqual(len(self.lotto.random_number), 6)
@@ -47,6 +59,10 @@ class drawlottoTestCase(unittest.TestCase):
         self.assertEqual(len(self.lotto.ballbonus), 0)
 
     def test_draw_addit(self):
+        """test draw with a additional number
+
+        :return: none
+        """
         self.lotto.data['with_addit'] = True
         self.lotto.data['sep_addit_numbers'] = False
         self.lotto.draw()
@@ -56,6 +72,10 @@ class drawlottoTestCase(unittest.TestCase):
         self.assertEqual(len(self.lotto.ballbonus), 2)
 
     def test_draw_addit_sep(self):
+        """test draw with a separate additional number
+
+        :return: none
+        """
         self.lotto.data['with_addit'] = True
         self.lotto.data['sep_addit_numbers'] = True
         self.lotto.draw()

@@ -4,6 +4,14 @@ pylottosimu.dialog package
 Submodules
 ----------
 
+pylottosimu.dialog.lottosettingdialog module
+--------------------------------------------
+
+.. automodule:: pylottosimu.dialog.lottosettingdialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 pylottosimu.dialog.show_drawing module
 --------------------------------------
 

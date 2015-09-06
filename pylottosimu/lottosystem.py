@@ -48,7 +48,7 @@ class lottosystemdata():
     def projectpath(self):
         """ open in the home path and create a direction.
 
-        :return:path of the project
+        :returns: path of the project
         """
         path = os.environ['HOME']
         if os.path.exists(path):

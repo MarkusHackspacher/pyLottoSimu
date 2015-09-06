@@ -22,25 +22,29 @@
 import os
 import sys
 
-try:
-    from PyQt5 import QtGui, QtCore, QtWidgets
-except ImportError:
-    from PyQt4 import QtGui as QtWidgets
-    from PyQt4 import QtGui, QtCore
+from PyQt5 import QtGui, QtCore, QtWidgets
+
 if sys.version_info < (3, 0):
     range = xrange
 
 
 class DlgShowDrawing(QtWidgets.QDialog):
-    """Show the numbers in a dialog box"""
+    """Show the numbers in a dialog box
+
+    :param ballnumbers: the number of draw
+    :type ballnumbers: tuple of int
+    :param highestnumber: the number of the PushButtons
+    :type highestnumber: int
+    :param bonusnumbers: the bonus numbers
+    :type bonusnumbers: int
+    :param highestbonus: the highest bonus number (separate numbers)
+    :type highestbonus: int
+
+    :returns: None
+    """
     def __init__(self, ballnumbers, highestnumber, bonusnumbers=False,
                  highestbonus=False):
         """
-        @param ballnumbers: the number of draw
-        @param highestnumber: the number of the PushButtons
-        @type ballnumbers: tuple of int
-        @type highestnumber: int
-        @return: none
         """
         QtWidgets.QDialog.__init__(self)
 
@@ -57,37 +61,48 @@ class DlgShowDrawing(QtWidgets.QDialog):
 
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridbonus = QtWidgets.QGridLayout()
+        self.ballnumbers = ballnumbers
+        self.highestnumber = highestnumber
+        self.bonusnumbers = bonusnumbers
+        self.highestbonus = highestbonus
 
-        # Array of Button from 1 to 49
-        self.Btn_Numerary_1to49 = [QtWidgets.QPushButton(self)
-                                   for _ in range(highestnumber)]
-        for buttonnumber, button in enumerate(self.Btn_Numerary_1to49):
+        self.initbuttons()
+
+    def initbuttons(self):
+        """Array of buttons from 1 to the highest number
+        and buttons for the additional numbers
+
+        :return: None
+        """
+        self.btn_drawnumbers = [QtWidgets.QPushButton(self)
+                                for _ in range(self.highestnumber)]
+        for buttonnumber, button in enumerate(self.btn_drawnumbers):
             button.setMaximumSize(QtCore.QSize(58, 58))
             button.setAutoFillBackground(True)
             self.gridLayout.addWidget(
                 button, int(buttonnumber / 7), int(buttonnumber % 7), 1, 1)
             button.setText(str(buttonnumber + 1))
 
-            if buttonnumber + 1 in ballnumbers:
+            if buttonnumber + 1 in self.ballnumbers:
                 button.setFlat(False)
                 button.setStyleSheet("color: red;")
-            elif bonusnumbers and not highestbonus:
-                if buttonnumber + 1 in bonusnumbers:
+            elif self.bonusnumbers and not self.highestbonus:
+                if buttonnumber + 1 in self.bonusnumbers:
                     button.setFlat(False)
                     button.setStyleSheet("color: blue;")
             else:
                 button.setFlat(True)
 
-        if highestbonus:
+        if self.highestbonus:
             self.btnnumerarybonus = [QtWidgets.QPushButton(self)
-                                     for _ in range(highestbonus)]
+                                     for _ in range(self.highestbonus)]
             for buttonnumber, button in enumerate(self.btnnumerarybonus):
                 button.setMaximumSize(QtCore.QSize(58, 58))
                 button.setAutoFillBackground(True)
                 self.gridbonus.addWidget(
                     button, int(buttonnumber / 7), int(buttonnumber % 7), 1, 1)
                 button.setText(str(buttonnumber + 1))
-                if buttonnumber + 1 in bonusnumbers:
+                if buttonnumber + 1 in self.bonusnumbers:
                     button.setFlat(False)
                     button.setStyleSheet("color: blue;")
                 else:
@@ -95,7 +110,7 @@ class DlgShowDrawing(QtWidgets.QDialog):
 
         self.setWindowTitle(self.tr("Show Drawing"))
         self.boxLayout.addLayout(self.gridLayout)
-        if highestbonus:
+        if self.highestbonus:
             self.boxLayout.addLayout(self.gridbonus)
         self.boxLayout.addWidget(self.buttonBox)
         self.buttonBox.accepted.connect(self.accept)

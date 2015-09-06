@@ -38,7 +38,6 @@ class LottoSettingsDialog(QtWidgets.QDialog):
     """
     def __init__(self, sysdat, parent=None):
         """Inital user interface and slots
-        @return: none
         """
         super(LottoSettingsDialog, self).__init__(parent)
 
@@ -121,6 +120,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         :param sysdat: Lotto setting
         :type sysdat: string
         :returns: dialog.values, accepted
+        :rtype: array of int, bool
         """
         dialog = LottoSettingsDialog(sysdat, parent)
         result = dialog.ui.exec_()

@@ -36,6 +36,7 @@ Documentation
 Make the documentation as .html file::
 
   cd docs
+  sphinx-apidoc -f -o . ../pylottosimu
   make html
 
 .. image:: ../misc/pyLottoSimu_screenshot_en.png
