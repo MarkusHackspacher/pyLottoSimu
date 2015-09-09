@@ -1,6 +1,8 @@
 History
 =======
 
+.. contents::
+
 Version
 -------
 

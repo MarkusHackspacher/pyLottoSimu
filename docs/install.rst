@@ -1,0 +1,53 @@
+Installation
+============
+
+Installing pyLottoSimu should usually be quite easy, as you can simply unpack
+and run pyLottoSimu in place if you wish to do so.
+
+.. contents::
+
+
+dependencies
+------------
+
+You'll need these dependencies to run the program:
+
+ * `python <http://www.python.org>`_ - The python programming language along with python-setuptools
+ * `pyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 for Python
+
+build the help
+
+ * `Sphinx <http://sphinx-doc.org/>`_ - Documentation
+
+code test
+
+ * `pep8 <https://pypi.python.org/pypi/pep8>`_ - Python style guide checker
+
+version control system Git
+
+ * `Git <https://git-scm.com/>`_ - Git - distributed version control system
+
+
+Installing Debian or Ubuntu
+---------------------------
+
+First you need to your computer these programs: Python, pyQt5 and version control system git::
+
+    # sudo apt-get install python python-qt5 git
+
+Then you copied the source code of the program on your computer,
+either download the zip file of the project or download with the version control system::
+
+    # git clone https://github.com/MarkusHackspacher/pyLottoSimu.git
+
+change the directory and run::
+
+    cd pyLottoSimu
+    ./lotto.pyw
+
+alternative::
+
+    python lotto.pyw [de|fr|es|it|ru]
+    python3 lotto.pyw [de|fr|es|it|ru]
+
+

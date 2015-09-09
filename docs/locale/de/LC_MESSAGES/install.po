@@ -1,0 +1,104 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pyLottoSimu 1.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-09 10:07+0200\n"
+"PO-Revision-Date: 2015-09-09 10:07+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../install.rst:2
+msgid "Installation"
+msgstr "Installation"
+
+#: ../../install.rst:4
+msgid ""
+"Installing pyLottoSimu should usually be quite easy, as you can simply "
+"unpack and run pyLottoSimu in place if you wish to do so."
+msgstr ""
+"pyLottoSimu zu starten ist echt einfach, in ein Verzeichniss "
+"nach Wunsch den Quelltext entpacken und starten"
+
+#: ../../install.rst:11
+msgid "dependencies"
+msgstr "Abhängigkeiten"
+
+#: ../../install.rst:13
+msgid "You'll need these dependencies to run the program:"
+msgstr "Diese Programme brauchst du um pyLottoSimu zu starten:"
+
+#: ../../install.rst:18
+msgid "build the help"
+msgstr "Hilfe generieren"
+
+#: ../../install.rst:22
+msgid "code test"
+msgstr "Codestyle Test"
+
+#: ../../install.rst:26
+msgid "version control system Git"
+msgstr "Versionsverwaltung Git"
+
+#: ../../install.rst:32
+msgid "Installing Debian or Ubuntu"
+msgstr "Installation bei Debian oder Ubuntu"
+
+#: ../../install.rst:34
+msgid ""
+"First you need to your computer these programs: Python, pyQt5 and version "
+"control system git::"
+msgstr ""
+"Zuerst brauchst du auf deinen Rechner diese Programme: Python und pyQt5 und "
+"optimal die Versionsverwaltung Git."
+
+#: ../../install.rst:38
+msgid ""
+"Then you copied the source code of the program on your computer, either "
+"download the zip file of the project or download with the version control "
+"system::"
+msgstr ""
+"Dann kopiert du den Quellcode des Programmes auf deinem Rechner, entweder "
+"das zip File von den Projekt herunterladen oder eleganter mit der "
+"Versionsverwaltung Git herunterladen::"
+
+#: ../../install.rst:43
+msgid "change the directory and run::"
+msgstr "In das Verzeichniss wechseln und starten"
+
+#: ../../install.rst:15
+msgid ""
+"`python <http://www.python.org>`_ - The python programming language along "
+"with python-setuptools"
+msgstr ""
+"`python <http://www.python.org>`_ - Die Python Programmiersprache"
+
+#: ../../install.rst:16
+msgid ""
+"`pyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 "
+"for Python"
+msgstr ""
+"`pyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 "
+"für Python"
+
+#: ../../install.rst:20
+msgid "`Sphinx <http://sphinx-doc.org/>`_ - Documentation"
+msgstr "`Sphinx <http://sphinx-doc.org/>`_ - Dokumentation"
+
+#: ../../install.rst:24
+msgid ""
+"`pep8 <https://pypi.python.org/pypi/pep8>`_ - Python style guide checker"
+msgstr ""
+"`pep8 <https://pypi.python.org/pypi/pep8>`_ - Python Codestyle"
+
+#: ../../install.rst:28
+msgid ""
+"`Git <https://git-scm.com/>`_ - Git - distributed version control system"
+msgstr ""
+
+#: ../../install.rst:48
+msgid "alternative::"
+msgstr "Alternative::"

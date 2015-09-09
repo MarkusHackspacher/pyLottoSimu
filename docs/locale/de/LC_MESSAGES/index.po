@@ -68,19 +68,19 @@ msgstr ""
 msgid "Contents:"
 msgstr "Inhalt"
 
-#: ../../index.rst:55
+#: ../../index.rst:56
 msgid "Indices and tables"
 msgstr "Indizes und Tabellen"
 
-#: ../../index.rst:57
+#: ../../index.rst:58
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
-#: ../../index.rst:58
+#: ../../index.rst:59
 msgid ":ref:`modindex`"
 msgstr ":ref:`modindex`"
 
-#: ../../index.rst:59
+#: ../../index.rst:60
 msgid ":ref:`search`"
 msgstr ":ref:`search`"
 
