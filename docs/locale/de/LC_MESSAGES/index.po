@@ -64,23 +64,23 @@ msgstr ""
 "Dokumentation als .html Datei aus den Kommentaren des Quelltextes erstellen "
 "lassen::"
 
-#: ../../index.rst:44
+#: ../../index.rst:45
 msgid "Contents:"
 msgstr "Inhalt"
 
-#: ../../index.rst:54
+#: ../../index.rst:55
 msgid "Indices and tables"
 msgstr "Indizes und Tabellen"
 
-#: ../../index.rst:56
+#: ../../index.rst:57
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
-#: ../../index.rst:57
+#: ../../index.rst:58
 msgid ":ref:`modindex`"
 msgstr ":ref:`modindex`"
 
-#: ../../index.rst:58
+#: ../../index.rst:59
 msgid ":ref:`search`"
 msgstr ":ref:`search`"
 

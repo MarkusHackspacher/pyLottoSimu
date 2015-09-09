@@ -17,22 +17,110 @@ msgstr "pylottosimu.dialog"
 
 #: ../../pylottosimu.dialog.rst:5
 msgid "Submodules"
-msgstr ""
+msgstr "Untermodule"
 
-#: ../../pylottosimu.dialog.rst:8
+#: ../../pylottosimu.dialog.rst:16
 msgid "pylottosimu.dialog.show_drawing module"
 msgstr "pylottosimu.dialog.show_drawing"
 
+#: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
+#: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog:1
 #: ../../../pylottosimu/dialog/show_drawing.pydocstring of
 #: pylottosimu.dialog.show_drawing.DlgShowDrawing:1
 msgid "Bases: :class:`PyQt5.QtWidgets.QDialog`"
-msgstr ""
+msgstr "Bases: :class:`PyQt5.QtWidgets.QDialog`"
 
 #: ../../../pylottosimu/dialog/show_drawing.pydocstring of
 #: pylottosimu.dialog.show_drawing.DlgShowDrawing:1
 msgid "Show the numbers in a dialog box"
 msgstr "Anzeige der numern in der Dialogbox"
 
-#: ../../pylottosimu.dialog.rst:17
+#: ../../pylottosimu.dialog.rst:25
 msgid "Module contents"
 msgstr "Modulinhalte"
+
+#: ../../pylottosimu.dialog.rst:8
+msgid "pylottosimu.dialog.lottosettingdialog module"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
+#: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog:1
+msgid "The GUI of Settings."
+msgstr ""
+
+#: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
+#: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog:3
+#: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
+#: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog.getValues:4
+msgid "Lotto setting"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
+#: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog:5
+msgid "parent window"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
+#: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog.getValues:1
+msgid ""
+"static method to create the dialog and return (dialog.values, accepted)"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
+#: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog.getValues:6
+msgid "dialog.values, accepted"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
+#: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog.init:1
+msgid "Initial variable"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
+#: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog.init:3
+msgid "none"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
+#: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog.setvalues:1
+msgid "Set Values"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
+#: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog.values:1
+msgid "Values"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/show_drawing.pydocstring of
+#: pylottosimu.dialog.show_drawing.DlgShowDrawing:3
+msgid "the number of draw"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/show_drawing.pydocstring of
+#: pylottosimu.dialog.show_drawing.DlgShowDrawing:5
+msgid "the number of the PushButtons"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/show_drawing.pydocstring of
+#: pylottosimu.dialog.show_drawing.DlgShowDrawing:7
+msgid "the bonus numbers"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/show_drawing.pydocstring of
+#: pylottosimu.dialog.show_drawing.DlgShowDrawing:9
+msgid "the highest bonus number (separate numbers)"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/show_drawing.pydocstring of
+#: pylottosimu.dialog.show_drawing.DlgShowDrawing:12
+#: ../../../pylottosimu/dialog/show_drawing.pydocstring of
+#: pylottosimu.dialog.show_drawing.DlgShowDrawing.initbuttons:4
+msgid "None"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/show_drawing.pydocstring of
+#: pylottosimu.dialog.show_drawing.DlgShowDrawing.initbuttons:1
+msgid ""
+"Array of buttons from 1 to the highest number and buttons for the additional"
+" numbers"
+msgstr ""
