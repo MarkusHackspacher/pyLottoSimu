@@ -57,6 +57,8 @@ class LottoSettingsDialog(QtWidgets.QDialog):
                 "pylottosimu", "lottokugel.svg")))
         self.ui.scrollArea.setWidget(self.imageLabel)
 
+
+
         self.systemdata = sysdat
         for systemname in self.systemdata.data:
             self.ui.combo_name.addItem(systemname['name'])

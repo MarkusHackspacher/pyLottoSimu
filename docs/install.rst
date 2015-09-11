@@ -33,7 +33,8 @@ Installing Debian or Ubuntu
 
 First you need to your computer these programs: Python, pyQt5 and version control system git::
 
-    # sudo apt-get install python python-qt5 git
+    # sudo apt-get install python python-pyqt5 python-pyqt5.qtsvg git
+    # sudo apt-get install python3 python3-pyqt5 python3-pyqt5.qtsvg git
 
 Then you copied the source code of the program on your computer,
 either download the zip file of the project or download with the version control system::

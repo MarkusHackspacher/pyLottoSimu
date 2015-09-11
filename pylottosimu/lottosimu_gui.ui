@@ -56,10 +56,34 @@
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">QFrame#main_frame { border-image: url(:/lottokugel.png)}
-#QLabel {	background-color: rgb(220, 220, 220)}
-QLabel#label_big_number, QLabel#label_last_draw_number {	background-color: none}</string>
+    <string notr="true">QLabel#label_big_number, QLabel#label_last_draw_number {	background-color: none}</string>
    </property>
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>480</width>
+      <height>320</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>480</width>
+       <height>320</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
    <widget class="QFrame" name="main_frame">
     <property name="enabled">
      <bool>true</bool>
@@ -339,7 +363,20 @@ QLabel#label_big_number, QLabel#label_last_draw_number {	background-color: none}
       </item>
      </layout>
     </widget>
+    <zorder>label_Lottozahlen</zorder>
+    <zorder>layoutWidget</zorder>
+    <zorder>btn_random_numbers</zorder>
+    <zorder>clean_output_text</zorder>
+    <zorder>btn_start</zorder>
+    <zorder>horizontalSlider</zorder>
+    <zorder>label_speed</zorder>
+    <zorder>label_last_draw_number</zorder>
+    <zorder>verticalLayoutWidget</zorder>
+    <zorder>plaintextedit</zorder>
+    <zorder>label_big_number</zorder>
    </widget>
+   <zorder>scrollArea</zorder>
+   <zorder>main_frame</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -347,7 +384,7 @@ QLabel#label_big_number, QLabel#label_last_draw_number {	background-color: none}
      <x>0</x>
      <y>0</y>
      <width>480</width>
-     <height>20</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_file">

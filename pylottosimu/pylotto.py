@@ -30,7 +30,7 @@ from random import randint
 import random
 
 from PyQt5 import QtGui, QtCore, QtWidgets, uic
-import pylottosimu.lottokugeln_rc3_qt5 as lottokugeln_rc
+from PyQt5.QtSvg import QSvgWidget
 import pylottosimu.dialog.lottosettingdialog as DlgLottoSystem
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
 from pylottosimu.lottosystem import lottosystemdata
@@ -59,6 +59,12 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.setWindowIcon(
             QtGui.QIcon(os.path.abspath(os.path.join(
                 os.path.dirname(sys.argv[0]), "misc", "pyLottoSimu.svg"))))
+
+        self.imageLabel = QSvgWidget()
+        self.imageLabel.renderer().load(os.path.abspath(os.path.join(
+                os.path.dirname(sys.argv[0]),
+                "pylottosimu", "lottokugel.svg")))
+        self.ui.scrollArea.setWidget(self.imageLabel)
 
         self.action_lottosim()
         self.timer = QtCore.QTimer(self)
