@@ -23,7 +23,8 @@
 import os
 import sys
 
-from PyQt5 import QtGui, QtCore, QtWidgets, uic
+from PyQt5 import QtGui, QtWidgets, uic
+from PyQt5.QtSvg import QSvgWidget
 
 __author__ = 'mar'
 
@@ -44,11 +45,17 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         # Set up the user interface from Designer.
         self.ui = uic.loadUi(os.path.abspath(os.path.join(
             os.path.dirname(sys.argv[0]),
-            "pylottosimu", "lottosystem.ui")))
+            "pylottosimu", "dialog", "lottosystem.ui")))
         self.ui.setWindowIcon(
             QtGui.QIcon(os.path.abspath(os.path.join(
                 os.path.dirname(sys.argv[0]),
                 "misc", "pyLottoSimu.svg"))))
+
+        self.imageLabel = QSvgWidget()
+        self.imageLabel.renderer().load(os.path.abspath(os.path.join(
+                os.path.dirname(sys.argv[0]),
+                "pylottosimu", "lottokugel.svg")))
+        self.ui.scrollArea.setWidget(self.imageLabel)
 
         self.systemdata = sysdat
         for systemname in self.systemdata.data:
@@ -58,13 +65,6 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         self.ui.check_sep_addit_numbers.clicked.connect(self.sep_addit_numbers)
 
         self.setvalues()
-
-    def init(self):
-        """Initial variable
-
-        :returns: none
-        """
-        pass
 
     def sep_addit_numbers(self):
         check = self.ui.check_sep_addit_numbers.isChecked()
