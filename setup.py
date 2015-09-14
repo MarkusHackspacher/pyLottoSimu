@@ -26,7 +26,7 @@ from distutils.core import setup
 
 
 setup(name='pyLottoSimu',
-      version='1.6',
+      version='1.6.1',
       description='Python Lotto Simulator',
       author='Markus Hackspacher',
       author_email='hackspacher@gmx.de',
@@ -34,7 +34,8 @@ setup(name='pyLottoSimu',
       download_url='https://github.com/MarkusHackspacher/pyLottoSimu',
       packages=['pylottosimu'],
       data_files=[('pylottosimu', ["pylottosimu/lottosimu_gui.ui",
-                                   "pylottosimu/dialog/lottosystem.ui"]),
+                                   "pylottosimu/lottokugel.svg"]),
+                  ('pylottosimu/dialog', ["pylottosimu/dialog/lottosystem.ui"]),
                   ('misc', ["misc/pyLottoSimu.svg"]),
                   ('pylottosimu/translation',
                    ["pylottosimu/translation/lotto1_de.qm",
