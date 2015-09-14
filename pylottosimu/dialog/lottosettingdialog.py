@@ -125,3 +125,12 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         dialog = LottoSettingsDialog(sysdat, parent)
         result = dialog.ui.exec_()
         return (dialog.values(), result == QtWidgets.QDialog.Accepted)
+
+if __name__ == '__main__':
+    app = QtGui.QApplication(sys.argv)
+
+    sysdat = lottosystemdata()
+    system = DlgLottoSystem.LottoSettingsDialog.getValues(sysdat)
+    print(system)
+
+    sys.exit(app.exec_())
