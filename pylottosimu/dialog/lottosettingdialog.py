@@ -129,8 +129,27 @@ class LottoSettingsDialog(QtWidgets.QDialog):
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
 
-    sysdat = lottosystemdata()
-    system = DlgLottoSystem.LottoSettingsDialog.getValues(sysdat)
+    data = [
+            {
+                'name': 'Lotto DE',
+                'max_draw': 49,
+                'draw_numbers': 6,
+                'with_addit': False,
+                'addit_numbers': 0,
+                'sep_addit_numbers': False,
+                'max_addit': 0
+            },
+            {
+                'name': 'Lotto AT',
+                'max_draw': 45,
+                'draw_numbers': 6,
+                'with_addit': True,
+                'addit_numbers': 1,
+                'sep_addit_numbers': False,
+                'max_addit': 0
+            }]
+
+    system = LottoSettingsDialog.getValues(data)
     print(system)
 
     sys.exit(app.exec_())
