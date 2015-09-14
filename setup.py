@@ -21,7 +21,7 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
-from py2exe.build_exe import py2exe
+import py2exe
 from distutils.core import setup
 
 
