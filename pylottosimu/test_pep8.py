@@ -29,7 +29,9 @@ class TestCodeFormat(unittest.TestCase):
         """Test that we conform to PEP8."""
         pep8style = pep8.StyleGuide(quiet=False)
         result = pep8style.check_files(['pylotto.py',
+                                        '../setup.py',
                                         'test_drawlotto.py',
+                                        'test_pep8.py',
                                         'test_show_drawing.py',
                                         'test_lottosystemdata.py',
                                         'lottosystem.py',
