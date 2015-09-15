@@ -328,22 +328,19 @@ msgstr ""
 #: ../../../pylottosimu/test_drawlotto.pydocstring of
 #: pylottosimu.test_drawlotto.drawlottoTestCase.test_draw:1
 msgid "test draw without a additional number"
-msgstr ""
+msgstr "Teste Ziehung ohne eine Zusatzzahl"
 
 #: ../../../pylottosimu/test_drawlotto.pydocstring of
 #: pylottosimu.test_drawlotto.drawlottoTestCase.test_draw_addit:1
 msgid "test draw with a additional number"
-msgstr ""
+msgstr "Teste Ziehung mit einer Zusatzzahl"
 
 #: ../../../pylottosimu/test_drawlotto.pydocstring of
 #: pylottosimu.test_drawlotto.drawlottoTestCase.test_draw_addit_sep:1
 msgid "test draw with a separate additional number"
-msgstr ""
+msgstr "Teste Ziehung mit einer seperaten Zusatzzahl"
 
 #: ../../../pylottosimu/test_drawlotto.pydocstring of
 #: pylottosimu.test_drawlotto.drawlottoTestCase.test_setting:1
 msgid "Test lotto.data"
-msgstr ""
-
-#~ msgid "pylottosimu.lottokugeln_rc3_qt5 module"
-#~ msgstr ""
+msgstr "Test lotto.data"
