@@ -270,8 +270,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             'GNU GPL v3\n'
             'http://www.gnu.org/licenses/')
         infobox.setText(text)
-        text = self.tr('Created with Python by Markus Hackspacher '
-                       'http://markush.cwsurf.de')
+        text = self.tr('More Information about the program at '
+                       'http://pylottosimu.readthedocs.org')
         infobox.setInformativeText(text)
         infobox.exec_()
 
@@ -281,7 +281,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         :returns: none
         """
         webbrowser.open_new_tab(
-            "http://markush.cwsurf.de/joomla_17/index.php/python/pylottosimu/")
+            "http://pylottosimu.readthedocs.org")
 
     def onclose(self):
         """Close the GUI

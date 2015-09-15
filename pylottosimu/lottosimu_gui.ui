@@ -25,6 +25,9 @@
   <property name="windowTitle">
    <string>pyLottoSimu</string>
   </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
   <widget class="QWidget" name="widget_lottery_numbers">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -75,8 +78,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>480</width>
-       <height>320</height>
+       <width>478</width>
+       <height>318</height>
       </rect>
      </property>
      <property name="autoFillBackground">
@@ -375,8 +378,6 @@
     <zorder>plaintextedit</zorder>
     <zorder>label_big_number</zorder>
    </widget>
-   <zorder>scrollArea</zorder>
-   <zorder>main_frame</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -460,8 +461,5 @@
    </property>
   </action>
  </widget>
- <resources>
-  <include location="lottokugeln.qrc"/>
- </resources>
  <connections/>
 </ui>

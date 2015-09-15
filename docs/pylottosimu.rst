@@ -11,13 +11,6 @@ Subpackages
 Submodules
 ----------
 
-pylottosimu.lottokugeln_rc3_qt5 module
---------------------------------------
-
-.. automodule:: pylottosimu.lottokugeln_rc3_qt5
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 pylottosimu.lottosystem module
 ------------------------------

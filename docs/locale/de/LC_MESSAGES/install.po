@@ -6,7 +6,7 @@ msgstr ""
 "POT-Creation-Date: 2015-09-09 10:07+0200\n"
 "PO-Revision-Date: 2015-09-09 10:07+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: German\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,8 +20,8 @@ msgid ""
 "Installing pyLottoSimu should usually be quite easy, as you can simply "
 "unpack and run pyLottoSimu in place if you wish to do so."
 msgstr ""
-"pyLottoSimu zu starten ist echt einfach, in ein Verzeichniss "
-"nach Wunsch den Quelltext entpacken und starten"
+"pyLottoSimu zu starten ist echt einfach, in ein Verzeichniss nach Wunsch den"
+" Quelltext entpacken und starten"
 
 #: ../../install.rst:11
 msgid "dependencies"
@@ -55,7 +55,7 @@ msgstr ""
 "Zuerst brauchst du auf deinen Rechner diese Programme: Python und pyQt5 und "
 "optimal die Versionsverwaltung Git."
 
-#: ../../install.rst:38
+#: ../../install.rst:39
 msgid ""
 "Then you copied the source code of the program on your computer, either "
 "download the zip file of the project or download with the version control "
@@ -65,7 +65,7 @@ msgstr ""
 "das zip File von den Projekt herunterladen oder eleganter mit der "
 "Versionsverwaltung Git herunterladen::"
 
-#: ../../install.rst:43
+#: ../../install.rst:44
 msgid "change the directory and run::"
 msgstr "In das Verzeichniss wechseln und starten"
 
@@ -73,8 +73,7 @@ msgstr "In das Verzeichniss wechseln und starten"
 msgid ""
 "`python <http://www.python.org>`_ - The python programming language along "
 "with python-setuptools"
-msgstr ""
-"`python <http://www.python.org>`_ - Die Python Programmiersprache"
+msgstr "`python <http://www.python.org>`_ - Die Python Programmiersprache"
 
 #: ../../install.rst:16
 msgid ""
@@ -91,14 +90,14 @@ msgstr "`Sphinx <http://sphinx-doc.org/>`_ - Dokumentation"
 #: ../../install.rst:24
 msgid ""
 "`pep8 <https://pypi.python.org/pypi/pep8>`_ - Python style guide checker"
-msgstr ""
-"`pep8 <https://pypi.python.org/pypi/pep8>`_ - Python Codestyle"
+msgstr "`pep8 <https://pypi.python.org/pypi/pep8>`_ - Python Codestyle"
 
 #: ../../install.rst:28
 msgid ""
 "`Git <https://git-scm.com/>`_ - Git - distributed version control system"
 msgstr ""
+"`Git <https://git-scm.com/>`_ - Git - Versionskontrollsystem"
 
-#: ../../install.rst:48
+#: ../../install.rst:49
 msgid "alternative::"
 msgstr "Alternative::"

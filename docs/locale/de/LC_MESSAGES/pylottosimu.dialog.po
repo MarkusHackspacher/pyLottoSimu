@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: pyLottoSimu 1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-01 20:29+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-09-05 21:41+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -72,16 +72,6 @@ msgid "dialog.values, accepted"
 msgstr ""
 
 #: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
-#: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog.init:1
-msgid "Initial variable"
-msgstr ""
-
-#: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
-#: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog.init:3
-msgid "none"
-msgstr ""
-
-#: ../../../pylottosimu/dialog/lottosettingdialog.pydocstring of
 #: pylottosimu.dialog.lottosettingdialog.LottoSettingsDialog.setvalues:1
 msgid "Set Values"
 msgstr ""
@@ -124,3 +114,9 @@ msgid ""
 "Array of buttons from 1 to the highest number and buttons for the additional"
 " numbers"
 msgstr ""
+
+#~ msgid "Initial variable"
+#~ msgstr ""
+
+#~ msgid "none"
+#~ msgstr ""

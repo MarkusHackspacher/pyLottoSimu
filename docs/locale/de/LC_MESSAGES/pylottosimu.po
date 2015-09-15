@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: pyLottoSimu 1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-01 20:29+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-09-15 21:41+0200E\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,26 +23,22 @@ msgstr "Unterpakete"
 msgid "Submodules"
 msgstr "Untermodule"
 
-#: ../../pylottosimu.rst:15
-msgid "pylottosimu.lottokugeln_rc3_qt5 module"
-msgstr ""
-
-#: ../../pylottosimu.rst:23
+#: ../../pylottosimu.rst:16
 msgid "pylottosimu.lottosystem module"
-msgstr ""
+msgstr "pylottosimu.lottosystem Modul"
 
 #: ../../../pylottosimu/lottosystem.pydocstring of
 #: pylottosimu.lottosystem.lottosystemdata:1
 msgid "Bases: :class:`object`"
 msgstr ""
 
-#: ../../pylottosimu.rst:31
+#: ../../pylottosimu.rst:24
 msgid "pylottosimu.pylotto module"
-msgstr ""
+msgstr "pylottosimu.pylotto Modul"
 
 #: ../../../pylottosimu/pylotto.pydocstring of pylottosimu.pylotto:1
 msgid "The signals for the GUI"
-msgstr ""
+msgstr "Signale für die GUI"
 
 #: ../../../pylottosimu/pylotto.pydocstring of
 #: pylottosimu.pylotto.LottoSimuDialog:1
@@ -154,7 +150,7 @@ msgstr ""
 msgid "pick"
 msgstr ""
 
-#: ../../pylottosimu.rst:39
+#: ../../pylottosimu.rst:32
 msgid "pylottosimu.test_drawlotto module"
 msgstr ""
 
@@ -169,11 +165,11 @@ msgstr ""
 msgid "Bases: :class:`unittest.case.TestCase`"
 msgstr ""
 
-#: ../../pylottosimu.rst:47
+#: ../../pylottosimu.rst:40
 msgid "pylottosimu.test_lottosystemdata module"
 msgstr ""
 
-#: ../../pylottosimu.rst:55
+#: ../../pylottosimu.rst:48
 msgid "pylottosimu.test_pep8 module"
 msgstr ""
 
@@ -182,7 +178,7 @@ msgstr ""
 msgid "Test that we conform to PEP8."
 msgstr ""
 
-#: ../../pylottosimu.rst:63
+#: ../../pylottosimu.rst:56
 msgid "pylottosimu.test_show_drawing module"
 msgstr ""
 
@@ -206,7 +202,7 @@ msgstr ""
 msgid "settings"
 msgstr "Einstellungen"
 
-#: ../../pylottosimu.rst:72
+#: ../../pylottosimu.rst:65
 msgid "Module contents"
 msgstr "Modulinhalte"
 
@@ -348,3 +344,6 @@ msgstr ""
 #: pylottosimu.test_drawlotto.drawlottoTestCase.test_setting:1
 msgid "Test lotto.data"
 msgstr ""
+
+#~ msgid "pylottosimu.lottokugeln_rc3_qt5 module"
+#~ msgstr ""
