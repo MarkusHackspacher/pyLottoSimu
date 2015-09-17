@@ -29,12 +29,9 @@ from datetime import datetime
 from random import randint
 import random
 
-# from PyQt5 import QtGui, QtCore, QtWidgets, uic
-# from PyQt5.QtSvg import QSvgWidget
 import pylottosimu.dialog.lottosettingdialog as DlgLottoSystem
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
 from pylottosimu.lottosystem import lottosystemdata
-
 
 _FORCE_PYSIDE = False
 
