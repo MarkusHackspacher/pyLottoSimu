@@ -29,11 +29,38 @@ from datetime import datetime
 from random import randint
 import random
 
-from PyQt5 import QtGui, QtCore, QtWidgets, uic
-from PyQt5.QtSvg import QSvgWidget
+# from PyQt5 import QtGui, QtCore, QtWidgets, uic
+# from PyQt5.QtSvg import QSvgWidget
 import pylottosimu.dialog.lottosettingdialog as DlgLottoSystem
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
 from pylottosimu.lottosystem import lottosystemdata
+
+
+_FORCE_PYSIDE = False
+
+try:
+    if _FORCE_PYSIDE:
+        raise ImportError('_FORCE_PYSIDE')
+    from PyQt5 import QtGui, QtCore, QtWidgets, uic
+    from PyQt5.QtSvg import QSvgWidget
+
+    def QtLoadUI(uifile):
+        return uic.loadUi(uifile)
+
+except ImportError:
+    # from pysideuic import uic,
+    from PySide import QtGui, QtCore
+    from PySide import QtGui as QtWidgets
+    from PySide.QtSvg import QSvgWidget
+
+    def QtLoadUI(uifile):
+        from PySide import QtUiTools
+        loader = QtUiTools.QUiLoader()
+        uif = QtCore.QFile(uifile)
+        uif.open(QtCore.QFile.ReadOnly)
+        result = loader.load(uif)
+        uif.close()
+        return result
 
 if sys.version_info < (3, 0):
     range = xrange
@@ -50,10 +77,10 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
         :returns: none
         """
-        QtWidgets.QDialog.__init__(self)
+        super(LottoSimuDialog, self).__init__()
 
         # Set up the user interface from Designer.
-        self.ui = uic.loadUi(os.path.abspath(os.path.join(
+        self.ui = QtLoadUI(os.path.abspath(os.path.join(
                              os.path.dirname(sys.argv[0]),
                              "pylottosimu", "lottosimu_gui.ui")))
         self.ui.setWindowIcon(
@@ -312,7 +339,7 @@ class drawlotto(QtCore.QObject):
     def __init__(self, name='Lotto DE', max_draw=49, draw_numbers=6,
                  with_addit=False, addit_numbers=0, sep_addit_numbers=False,
                  max_addit=0):
-        QtWidgets.QDialog.__init__(self)
+        super(drawlotto, self).__init__()
         self.data = {
             'name': name,
             'max_draw': max_draw,

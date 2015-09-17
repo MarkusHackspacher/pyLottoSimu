@@ -23,16 +23,27 @@ along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
 import sys
 import os
-from PyQt5 import QtCore, QtWidgets
+
+_FORCE_PYSIDE = False
+
+try:
+    if _FORCE_PYSIDE:
+        raise ImportError('_FORCE_PYSIDE')
+    from PyQt5 import QtCore, QtWidgets
+except ImportError:
+    from PySide import QtCore
+    from PySide import QtGui as QtWidgets
+
 
 from pylottosimu import pylotto
 
 
 def gui(arguments):
     """Open the GUI
-    @param arguments: language, see in folder translate
-    @type arguments: string
-    @return: none
+
+    :param arguments: language, see in folder translate
+    :type arguments: string
+    :returns: none
     """
     if len(arguments) > 1:
         locale = arguments[1]

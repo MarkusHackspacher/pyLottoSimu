@@ -23,8 +23,29 @@
 import os
 import sys
 
-from PyQt5 import QtGui, QtWidgets, uic
-from PyQt5.QtSvg import QSvgWidget
+_FORCE_PYSIDE = False
+
+try:
+    if _FORCE_PYSIDE:
+        raise ImportError('_FORCE_PYSIDE')
+    from PyQt5 import QtGui, QtWidgets, uic
+    from PyQt5.QtSvg import QSvgWidget
+
+    def QtLoadUI(uifile):
+        return uic.loadUi(uifile)
+except ImportError:
+    from PySide import QtGui, QtCore
+    from PySide import QtGui as QtWidgets
+    from PySide.QtSvg import QSvgWidget
+
+    def QtLoadUI(uifile):
+        from PySide import QtUiTools
+        loader = QtUiTools.QUiLoader()
+        uif = QtCore.QFile(uifile)
+        uif.open(QtCore.QFile.ReadOnly)
+        result = loader.load(uif)
+        uif.close()
+        return result
 
 __author__ = 'mar'
 
@@ -43,7 +64,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         super(LottoSettingsDialog, self).__init__(parent)
 
         # Set up the user interface from Designer.
-        self.ui = uic.loadUi(os.path.abspath(os.path.join(
+        self.ui = QtLoadUI(os.path.abspath(os.path.join(
             os.path.dirname(sys.argv[0]),
             "pylottosimu", "dialog", "lottosystem.ui")))
         self.ui.setWindowIcon(

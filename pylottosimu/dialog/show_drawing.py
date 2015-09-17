@@ -22,7 +22,17 @@
 import os
 import sys
 
-from PyQt5 import QtGui, QtCore, QtWidgets
+# from PyQt5 import QtGui, QtCore, QtWidgets
+
+_FORCE_PYSIDE = False
+
+try:
+    if _FORCE_PYSIDE:
+        raise ImportError('_FORCE_PYSIDE')
+    from PyQt5 import QtGui, QtCore, QtWidgets
+except ImportError:
+    from PySide import QtGui, QtCore
+    from PySide import QtGui as QtWidgets
 
 if sys.version_info < (3, 0):
     range = xrange
