@@ -73,7 +73,6 @@ Modus Simulation:
 Die Zahlen auswählen und mit 'Start' die Simulation starten.
 Dabei kann mit dem Schieber oben links die Geschwindigkeit verändert werden.
 
-Auf der Webseite gibt es [Videos](http://markush.cwsurf.de/joomla_17/index.php/python/pylottosimu/8-lotto-generator-und-simulator) zu dem Programm.
 ![Image](misc/pyLottoSimu_screenshot_de.png "screenshot (german)")
 
 License
