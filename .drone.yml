@@ -1,6 +1,0 @@
-notify:
-  webhook:
-    urls:
-      - "https://webhooks.gitter.im/e/591feedba01546804957"
-    on_success: true
-    on_failure: true
