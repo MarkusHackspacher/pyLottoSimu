@@ -29,7 +29,7 @@ import sys
 import unittest
 
 _FORCE_PYSIDE = False
-_FORCE_PYQT4 = True
+_FORCE_PYQT4 = False
 
 try:
     if _FORCE_PYSIDE or _FORCE_PYQT4:
