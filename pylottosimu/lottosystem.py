@@ -58,6 +58,9 @@ class lottosystemdata():
         return dirname
 
     def writetofile(self):
+        """write lottosystems.json
+
+        :returns: none"""
         with open(os.path.join(
                 self.dirname, 'lottosystems.json'), 'w') as outfile:
             json.dump(self.data, outfile, sort_keys=True,
