@@ -27,9 +27,20 @@ show_drawing
 
 import sys
 import unittest
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtTest import QTest
-from PyQt5.QtCore import Qt
+
+_FORCE_PYSIDE = False
+
+try:
+    if _FORCE_PYSIDE:
+        raise ImportError('_FORCE_PYSIDE')
+    from PyQt5.QtWidgets import QApplication
+    from PyQt5.QtTest import QTest
+    from PyQt5.QtCore import Qt
+except ImportError:
+    from PySide.QtWidgets import QApplication
+    from PySide.QtTest import QTest
+    from PySide.QtCore import Qt
+
 _instance = None
 
 __author__ = 'Markus Hackspacher'
