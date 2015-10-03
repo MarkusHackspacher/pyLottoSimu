@@ -37,9 +37,16 @@ try:
     from PyQt5.QtTest import QTest
     from PyQt5.QtCore import Qt
 except ImportError:
-    from PySide.QtGui import QApplication
-    from PySide.QtTest import QTest
-    from PySide.QtCore import Qt
+    try:
+        if _FORCE_PYSIDE:
+            raise ImportError('_FORCE_PYSIDE')
+        from PySide.QtGui import QApplication
+        from PySide.QtTest import QTest
+        from PySide.QtCore import Qt
+    except ImportError:
+        from PyQt4.QtWidgets import QApplication
+        from PyQt4.QtTest import QTest
+        from PyQt4.QtCore import Qt
 
 _instance = None
 
