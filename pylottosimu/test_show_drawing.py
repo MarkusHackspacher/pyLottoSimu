@@ -37,7 +37,6 @@ try:
     from PyQt5.QtWidgets import QApplication
     from PyQt5.QtTest import QTest
     from PyQt5.QtCore import Qt
-    print("PyQt5")
 except ImportError:
     try:
         if _FORCE_PYQT4:
