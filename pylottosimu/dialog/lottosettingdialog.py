@@ -34,18 +34,26 @@ try:
     def QtLoadUI(uifile):
         return uic.loadUi(uifile)
 except ImportError:
-    from PySide import QtGui, QtCore
-    from PySide import QtGui as QtWidgets
-    from PySide.QtSvg import QSvgWidget
+    try:
+        from PySide import QtGui, QtCore
+        from PySide import QtGui as QtWidgets
+        from PySide.QtSvg import QSvgWidget
 
-    def QtLoadUI(uifile):
-        from PySide import QtUiTools
-        loader = QtUiTools.QUiLoader()
-        uif = QtCore.QFile(uifile)
-        uif.open(QtCore.QFile.ReadOnly)
-        result = loader.load(uif)
-        uif.close()
-        return result
+        def QtLoadUI(uifile):
+            from PySide import QtUiTools
+            loader = QtUiTools.QUiLoader()
+            uif = QtCore.QFile(uifile)
+            uif.open(QtCore.QFile.ReadOnly)
+            result = loader.load(uif)
+            uif.close()
+            return result
+    except ImportError:
+        from PyQt4 import QtGui, QtCore
+        from PyQt4 import QtGui as QtWidgets
+        from PyQt4.QtSvg import QSvgWidget
+
+        def QtLoadUI(uifile):
+            return uic.loadUi(uifile)
 
 __author__ = 'mar'
 

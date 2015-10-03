@@ -62,6 +62,7 @@ except ImportError:
         from PyQt4 import QtGui, QtCore
         from PyQt4 import QtGui as QtWidgets
         from PyQt4.QtSvg import QSvgWidget
+
         def QtLoadUI(uifile):
             return uic.loadUi(uifile)
 
