@@ -29,22 +29,24 @@ import sys
 import unittest
 
 _FORCE_PYSIDE = False
+_FORCE_PYQT4 = True
 
 try:
-    if _FORCE_PYSIDE:
+    if _FORCE_PYSIDE or _FORCE_PYQT4:
         raise ImportError('_FORCE_PYSIDE')
     from PyQt5.QtWidgets import QApplication
     from PyQt5.QtTest import QTest
     from PyQt5.QtCore import Qt
+    print("PyQt5")
 except ImportError:
     try:
-        if _FORCE_PYSIDE:
+        if _FORCE_PYQT4:
             raise ImportError('_FORCE_PYSIDE')
         from PySide.QtGui import QApplication
         from PySide.QtTest import QTest
         from PySide.QtCore import Qt
     except ImportError:
-        from PyQt4.QtWidgets import QApplication
+        from PyQt4.QtGui import QApplication
         from PyQt4.QtTest import QTest
         from PyQt4.QtCore import Qt
 

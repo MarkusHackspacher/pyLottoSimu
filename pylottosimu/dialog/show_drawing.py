@@ -31,8 +31,12 @@ try:
         raise ImportError('_FORCE_PYSIDE')
     from PyQt5 import QtGui, QtCore, QtWidgets
 except ImportError:
-    from PySide import QtGui, QtCore
-    from PySide import QtGui as QtWidgets
+    try:
+        from PySide import QtGui, QtCore
+        from PySide import QtGui as QtWidgets
+    except ImportError:
+        from PyQt4 import QtGui, QtCore
+        from PyQt4 import QtGui as QtWidgets
 
 if sys.version_info < (3, 0):
     range = xrange
