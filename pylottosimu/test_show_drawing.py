@@ -37,7 +37,7 @@ try:
     from PyQt5.QtTest import QTest
     from PyQt5.QtCore import Qt
 except ImportError:
-    from PySide.QtWidgets import QApplication
+    from PySide.QtGui import QApplication
     from PySide.QtTest import QTest
     from PySide.QtCore import Qt
 
