@@ -24,9 +24,9 @@ class Mock(MagicMock):
     def __getattr__(cls, name):
             return Mock()
 
-MOCK_MODULES = ['PyQt5', 'PyQt5.QtWidgets', 'PyQt5.QtTest', 'PyQt5.QtCore',
-                'PyQt4', 'PyQt4.QtGui', 'PyQt4.QtTest', 'PyQt4.QtCore',
-                'PySide','PySide.QtGui','PySide.QtTest','PySide.QtCore']
+MOCK_MODULES = ['PyQt5', 'PyQt5.QtWidgets', 'PyQt5.QtTest', 'PyQt5.QtCore', 'PyQt5.QtSvg',
+                'PyQt4', 'PyQt4.QtGui', 'PyQt4.QtTest', 'PyQt4.QtCore', 'PyQt4.QtSvg',
+                'PySide','PySide.QtGui','PySide.QtTest','PySide.QtCore', 'PySide.QtSvg']
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 
