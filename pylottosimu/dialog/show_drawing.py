@@ -22,23 +22,24 @@
 import os
 import sys
 
-# from PyQt5 import QtGui, QtCore, QtWidgets
-
 _FORCE_PYSIDE = False
 
 try:
     if _FORCE_PYSIDE:
         raise ImportError('_FORCE_PYSIDE')
-    from PyQt5 import QtGui, QtCore, QtWidgets
+    from PyQt5.QtGui import QIcon
+    from PyQt5.QtCore import Qt, QSize
     from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QBoxLayout,\
         QGridLayout, QPushButton
 except ImportError:
     try:
-        from PySide import QtGui, QtCore
+        from PySide.QtGui import QIcon
+        from PySide.QtCore import Qt, QSize
         from PySide.QtGui import QDialog, QDialogButtonBox, QBoxLayout,\
             QGridLayout, QPushButton
     except ImportError:
-        from PyQt4 import QtGui, QtCore
+        from PyQt4.QtGui import QIcon
+        from PyQt4.QtCore import Qt, QSize
         from PyQt4.QtGui import QDialog, QDialogButtonBox, QBoxLayout,\
             QGridLayout, QPushButton
 
@@ -67,11 +68,11 @@ class DlgShowDrawing(QDialog):
         QDialog.__init__(self)
 
         self.setWindowIcon(
-            QtGui.QIcon(os.path.abspath(os.path.join(os.path.dirname(__file__),
+            QIcon(os.path.abspath(os.path.join(os.path.dirname(__file__),
                         "..", "..", "misc", "pyLottoSimu.svg"))))
         self.setModal(True)
         self.buttonBox = QDialogButtonBox(self)
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setOrientation(Qt.Horizontal)
         self.buttonBox.setStandardButtons(QDialogButtonBox.Ok)
 
         self.boxLayout = QBoxLayout(QBoxLayout.TopToBottom, self)
@@ -94,7 +95,7 @@ class DlgShowDrawing(QDialog):
         self.btn_drawnumbers = [QPushButton(self)
                                 for _ in range(self.highestnumber)]
         for buttonnumber, button in enumerate(self.btn_drawnumbers):
-            button.setMaximumSize(QtCore.QSize(58, 58))
+            button.setMaximumSize(QSize(58, 58))
             button.setAutoFillBackground(True)
             self.gridLayout.addWidget(
                 button, int(buttonnumber / 7), int(buttonnumber % 7), 1, 1)
