@@ -27,20 +27,39 @@ _FORCE_PYSIDE = False
 try:
     if _FORCE_PYSIDE:
         raise ImportError('_FORCE_PYSIDE')
-    from PyQt5 import QtGui, QtCore, QtWidgets
+    from PyQt5.QtGui import QIcon
+    from PyQt5.QtCore import Qt
+    from PyQt5.QtCore import QSize
+    from PyQt5.QtWidgets import QDialog
+    from PyQt5.QtWidgets import QDialogButtonBox
+    from PyQt5.QtWidgets import QBoxLayout
+    from PyQt5.QtWidgets import QGridLayout
+    from PyQt5.QtWidgets import QPushButton
 except ImportError:
     try:
-        from PySide import QtGui, QtCore
-        from PySide import QtGui as QtWidgets
+        from PySide.QtGui import QIcon
+        from PySide.QtCore import Qt
+        from PySide.QtCore import QSize
+        from PySide.QtGui import QDialog
+        from PySide.QtGui import QDialogButtonBox
+        from PySide.QtGui import QBoxLayout
+        from PySide.QtGui import QGridLayout
+        from PySide.QtGui import QPushButton
     except ImportError:
-        from PyQt4 import QtGui, QtCore
-        from PyQt4 import QtGui as QtWidgets
+        from PyQt4.QtGui import QIcon
+        from PyQt4.QtCore import Qt
+        from PyQt4.QtCore import QSize
+        from PyQt4.QtGui import QDialog
+        from PyQt4.QtGui import QDialogButtonBox
+        from PyQt4.QtGui import QBoxLayout
+        from PyQt4.QtGui import QGridLayout
+        from PyQt4.QtGui import QPushButton
 
 if sys.version_info < (3, 0):
     range = xrange
 
 
-class DlgShowDrawing(QtWidgets.QDialog):
+class DlgShowDrawing(QDialog):
     """Show the numbers in a dialog box
 
     :param ballnumbers: the number of draw
@@ -58,21 +77,20 @@ class DlgShowDrawing(QtWidgets.QDialog):
                  highestbonus=False):
         """
         """
-        QtWidgets.QDialog.__init__(self)
+        QDialog.__init__(self)
 
         self.setWindowIcon(
-            QtGui.QIcon(os.path.abspath(os.path.join(os.path.dirname(__file__),
-                        "..", "..", "misc", "pyLottoSimu.svg"))))
+            QIcon(os.path.abspath(os.path.join(os.path.dirname(__file__),
+                  "..", "..", "misc", "pyLottoSimu.svg"))))
         self.setModal(True)
-        self.buttonBox = QtWidgets.QDialogButtonBox(self)
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Ok)
+        self.buttonBox = QDialogButtonBox(self)
+        self.buttonBox.setOrientation(Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QDialogButtonBox.Ok)
 
-        self.boxLayout = QtWidgets.QBoxLayout(
-            QtWidgets.QBoxLayout.TopToBottom, self)
+        self.boxLayout = QBoxLayout(QBoxLayout.TopToBottom, self)
 
-        self.gridLayout = QtWidgets.QGridLayout()
-        self.gridbonus = QtWidgets.QGridLayout()
+        self.gridLayout = QGridLayout()
+        self.gridbonus = QGridLayout()
         self.ballnumbers = ballnumbers
         self.highestnumber = highestnumber
         self.bonusnumbers = bonusnumbers
@@ -86,10 +104,10 @@ class DlgShowDrawing(QtWidgets.QDialog):
 
         :return: None
         """
-        self.btn_drawnumbers = [QtWidgets.QPushButton(self)
+        self.btn_drawnumbers = [QPushButton(self)
                                 for _ in range(self.highestnumber)]
         for buttonnumber, button in enumerate(self.btn_drawnumbers):
-            button.setMaximumSize(QtCore.QSize(58, 58))
+            button.setMaximumSize(QSize(58, 58))
             button.setAutoFillBackground(True)
             self.gridLayout.addWidget(
                 button, int(buttonnumber / 7), int(buttonnumber % 7), 1, 1)
@@ -106,7 +124,7 @@ class DlgShowDrawing(QtWidgets.QDialog):
                 button.setFlat(True)
 
         if self.highestbonus:
-            self.btnnumerarybonus = [QtWidgets.QPushButton(self)
+            self.btnnumerarybonus = [QPushButton(self)
                                      for _ in range(self.highestbonus)]
             for buttonnumber, button in enumerate(self.btnnumerarybonus):
                 button.setMaximumSize(QtCore.QSize(58, 58))
