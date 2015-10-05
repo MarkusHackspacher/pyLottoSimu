@@ -39,6 +39,7 @@ try:
     if _FORCE_PYSIDE:
         raise ImportError('_FORCE_PYSIDE')
     from PyQt5 import QtGui, QtCore, QtWidgets, uic
+    from PyQt5.QtWidgets import QMainWindow, QMessageBox
     from PyQt5.QtSvg import QSvgWidget
 
     def QtLoadUI(uifile):
@@ -47,7 +48,7 @@ try:
 except ImportError:
     try:
         from PySide import QtGui, QtCore
-        from PySide import QtGui as QtWidgets
+        from PySide.QtGui import QMainWindow, QMessageBox
         from PySide.QtSvg import QSvgWidget
 
         def QtLoadUI(uifile):
@@ -60,7 +61,7 @@ except ImportError:
             return result
     except ImportError:
         from PyQt4 import QtGui, QtCore
-        from PyQt4 import QtGui as QtWidgets
+        from PyQt4.QtGui import QMainWindow, QMessageBox
         from PyQt4.QtSvg import QSvgWidget
 
         def QtLoadUI(uifile):
@@ -73,7 +74,7 @@ if sys.version_info < (3, 0):
 __doc__ = "The signals for the GUI"
 
 
-class LottoSimuDialog(QtWidgets.QMainWindow):
+class LottoSimuDialog(QMainWindow):
     """The GUI and program of the pyLottoSimu.
     """
     def __init__(self):
@@ -292,7 +293,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """info message box
 
         :returns: none"""
-        infobox = QtWidgets.QMessageBox()
+        infobox = QMessageBox()
         infobox.setWindowTitle(self.tr('Info'))
         text = self.tr(
             'simulation of a random draw\n\n'

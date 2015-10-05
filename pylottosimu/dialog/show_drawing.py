@@ -30,19 +30,23 @@ try:
     if _FORCE_PYSIDE:
         raise ImportError('_FORCE_PYSIDE')
     from PyQt5 import QtGui, QtCore, QtWidgets
+    from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QBoxLayout,\
+        QGridLayout, QPushButton
 except ImportError:
     try:
         from PySide import QtGui, QtCore
-        from PySide import QtGui as QtWidgets
+        from PySide.QtGui import QDialog, QDialogButtonBox, QBoxLayout,\
+            QGridLayout, QPushButton
     except ImportError:
         from PyQt4 import QtGui, QtCore
-        from PyQt4 import QtGui as QtWidgets
+        from PyQt4.QtGui import QDialog, QDialogButtonBox, QBoxLayout,\
+            QGridLayout, QPushButton
 
 if sys.version_info < (3, 0):
     range = xrange
 
 
-class DlgShowDrawing(QtWidgets.QDialog):
+class DlgShowDrawing(QDialog):
     """Show the numbers in a dialog box
 
     :param ballnumbers: the number of draw
@@ -60,21 +64,20 @@ class DlgShowDrawing(QtWidgets.QDialog):
                  highestbonus=False):
         """
         """
-        QtWidgets.QDialog.__init__(self)
+        QDialog.__init__(self)
 
         self.setWindowIcon(
             QtGui.QIcon(os.path.abspath(os.path.join(os.path.dirname(__file__),
                         "..", "..", "misc", "pyLottoSimu.svg"))))
         self.setModal(True)
-        self.buttonBox = QtWidgets.QDialogButtonBox(self)
+        self.buttonBox = QDialogButtonBox(self)
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Ok)
+        self.buttonBox.setStandardButtons(QDialogButtonBox.Ok)
 
-        self.boxLayout = QtWidgets.QBoxLayout(
-            QtWidgets.QBoxLayout.TopToBottom, self)
+        self.boxLayout = QBoxLayout(QBoxLayout.TopToBottom, self)
 
-        self.gridLayout = QtWidgets.QGridLayout()
-        self.gridbonus = QtWidgets.QGridLayout()
+        self.gridLayout = QGridLayout()
+        self.gridbonus = QGridLayout()
         self.ballnumbers = ballnumbers
         self.highestnumber = highestnumber
         self.bonusnumbers = bonusnumbers
@@ -88,7 +91,7 @@ class DlgShowDrawing(QtWidgets.QDialog):
 
         :return: None
         """
-        self.btn_drawnumbers = [QtWidgets.QPushButton(self)
+        self.btn_drawnumbers = [QPushButton(self)
                                 for _ in range(self.highestnumber)]
         for buttonnumber, button in enumerate(self.btn_drawnumbers):
             button.setMaximumSize(QtCore.QSize(58, 58))
@@ -108,7 +111,7 @@ class DlgShowDrawing(QtWidgets.QDialog):
                 button.setFlat(True)
 
         if self.highestbonus:
-            self.btnnumerarybonus = [QtWidgets.QPushButton(self)
+            self.btnnumerarybonus = [QPushButton(self)
                                      for _ in range(self.highestbonus)]
             for buttonnumber, button in enumerate(self.btnnumerarybonus):
                 button.setMaximumSize(QtCore.QSize(58, 58))
