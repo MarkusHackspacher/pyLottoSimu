@@ -20,7 +20,6 @@
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
 import unittest
-from pprint import pprint
 from pylottosimu.lottosystem import lottosystemdata
 """Testcase of module pylottosimu.lottosystemdata"""
 

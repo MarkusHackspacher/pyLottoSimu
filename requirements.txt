@@ -1,1 +1,6 @@
+# unit test requirements
 pep8
+
+# documentation requirements
+mock
+sphinx

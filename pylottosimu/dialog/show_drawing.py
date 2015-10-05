@@ -22,8 +22,6 @@
 import os
 import sys
 
-# from PyQt5 import QtGui, QtCore, QtWidgets
-
 _FORCE_PYSIDE = False
 
 try:
