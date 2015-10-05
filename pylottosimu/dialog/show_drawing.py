@@ -29,19 +29,29 @@ try:
         raise ImportError('_FORCE_PYSIDE')
     from PyQt5.QtGui import QIcon
     from PyQt5.QtCore import Qt, QSize
-    from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QBoxLayout,\
-        QGridLayout, QPushButton
+    from PyQt5.QtCore import QSize
+    from PyQt5.QtWidgets import QDialog
+    from PyQt5.QtWidgets import QDialogButtonBox
+    from PyQt5.QtWidgets import QBoxLayout
+    from PyQt5.QtWidgets import QGridLayout
+    from PyQt5.QtWidgets import QPushButton
 except ImportError:
     try:
         from PySide.QtGui import QIcon
         from PySide.QtCore import Qt, QSize
-        from PySide.QtGui import QDialog, QDialogButtonBox, QBoxLayout,\
-            QGridLayout, QPushButton
+        from PySide.QtGui import QDialog
+        from PySide.QtGui import QDialogButtonBox
+        from PySide.QtGui import QBoxLayout
+        from PySide.QtGui import QGridLayout
+        from PySide.QtGui import QPushButton
     except ImportError:
         from PyQt4.QtGui import QIcon
         from PyQt4.QtCore import Qt, QSize
-        from PyQt4.QtGui import QDialog, QDialogButtonBox, QBoxLayout,\
-            QGridLayout, QPushButton
+        from PyQt4.QtGui import QDialog
+        from PyQt4.QtGui import QDialogButtonBox
+        from PyQt4.QtGui import QBoxLayout
+        from PyQt4.QtGui import QGridLayout
+        from PyQt4.QtGui import QPushButton
 
 if sys.version_info < (3, 0):
     range = xrange

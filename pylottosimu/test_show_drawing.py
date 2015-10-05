@@ -36,7 +36,7 @@ try:
         raise ImportError('_FORCE_PYSIDE')
     from PyQt5.QtWidgets import QApplication
     from PyQt5.QtTest import QTest
-    from PyQt5.QtCore import Qt, QSize
+    from PyQt5.QtCore import Qt
 except ImportError:
     try:
         if _FORCE_PYQT4:
