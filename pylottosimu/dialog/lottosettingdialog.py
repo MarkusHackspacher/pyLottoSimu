@@ -48,7 +48,7 @@ except ImportError:
             uif.close()
             return result
     except ImportError:
-        from PyQt4 import QtGui
+        from PyQt4 import QtGui, uic
         from PyQt4 import QtGui as QtWidgets
         from PyQt4.QtSvg import QSvgWidget
 
