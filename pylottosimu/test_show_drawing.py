@@ -24,9 +24,11 @@ test the dialog module
 
 show_drawing
 """
+from __future__ import absolute_import
 
 import sys
 import unittest
+from pylottosimu.dialog.show_drawing import DlgShowDrawing
 
 _FORCE_PYSIDE = False
 _FORCE_PYQT4 = False
@@ -54,11 +56,6 @@ _instance = None
 __author__ = 'Markus Hackspacher'
 __license__ = "GPL"
 __copyright__ = "<2015> Markus Hackspacher"
-
-if sys.version_info >= (3, 0):
-    from pylottosimu.dialog.show_drawing import DlgShowDrawing
-else:
-    from dialog.show_drawing import DlgShowDrawing
 
 
 class show_drawingTestCase(unittest.TestCase):

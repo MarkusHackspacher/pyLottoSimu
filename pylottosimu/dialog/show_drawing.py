@@ -28,7 +28,7 @@ try:
     if _FORCE_PYSIDE:
         raise ImportError('_FORCE_PYSIDE')
     from PyQt5.QtGui import QIcon
-    from PyQt5.QtCore import Qt, QSize
+    from PyQt5.QtCore import Qt
     from PyQt5.QtCore import QSize
     from PyQt5.QtWidgets import QDialog
     from PyQt5.QtWidgets import QDialogButtonBox
@@ -38,7 +38,8 @@ try:
 except ImportError:
     try:
         from PySide.QtGui import QIcon
-        from PySide.QtCore import Qt, QSize
+        from PySide.QtCore import Qt
+        from PySide.QtCore import QSize
         from PySide.QtGui import QDialog
         from PySide.QtGui import QDialogButtonBox
         from PySide.QtGui import QBoxLayout
@@ -46,7 +47,8 @@ except ImportError:
         from PySide.QtGui import QPushButton
     except ImportError:
         from PyQt4.QtGui import QIcon
-        from PyQt4.QtCore import Qt, QSize
+        from PyQt4.QtCore import Qt
+        from PyQt4.QtCore import QSize
         from PyQt4.QtGui import QDialog
         from PyQt4.QtGui import QDialogButtonBox
         from PyQt4.QtGui import QBoxLayout
@@ -79,7 +81,7 @@ class DlgShowDrawing(QDialog):
 
         self.setWindowIcon(
             QIcon(os.path.abspath(os.path.join(os.path.dirname(__file__),
-                        "..", "..", "misc", "pyLottoSimu.svg"))))
+                  "..", "..", "misc", "pyLottoSimu.svg"))))
         self.setModal(True)
         self.buttonBox = QDialogButtonBox(self)
         self.buttonBox.setOrientation(Qt.Horizontal)
