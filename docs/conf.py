@@ -16,50 +16,19 @@
 import sys
 import os
 import shlex
-# from mock import Mock as MagicMock
+from mock import Mock as MagicMock
 
 
-class Mock(object):
-    """
-    Mock modules.
-    Taken from
-    http://read-the-docs.readthedocs.org/en/latest/faq.html#i-get-import-errors-on-libraries-that-depend-on-c-modules
-    with some slight changes.
-    """
-
+class Mock(MagicMock):
     @classmethod
-    def mock_modules(cls, *modules):
-        for module in modules:
-            sys.modules[module] = cls()
+    def __getattr__(cls, name):
+            return Mock()
 
-    def __init__(self, *args, **kwargs):
-        pass
-
-    def __call__(self, *args, **kwargs):
-        return self.__class__()
-
-    def __getattr__(self, attribute):
-        if attribute in ('__file__', '__path__'):
-            return os.devnull
-        else:
-            # return the *class* object here.  Mocked attributes may be used as
-            # base class in pyudev code, thus the returned mock object must
-            # behave as class, or else Sphinx autodoc will fail to recognize
-            # the mocked base class as such, and "autoclass" will become
-            # meaningless
-            return self.__class__
-
-# mock out native modules used throughout pyudev to enable Sphinx autodoc even
-# if these modules are unavailable, as on readthedocs.org
-Mock.mock_modules('PyQt5', 'PyQt5.QtWidgets', 'PyQt5.QtTest', 'PyQt5.QtCore', 'PyQt5.QtSvg',
+MOCK_MODULES = ['PyQt5', 'PyQt5.QtWidgets', 'PyQt5.QtTest', 'PyQt5.QtCore', 'PyQt5.QtSvg',
                 'PyQt4', 'PyQt4.QtGui', 'PyQt4.QtTest', 'PyQt4.QtCore', 'PyQt4.QtSvg',
                 'PySide','PySide.QtGui','PySide.QtTest','PySide.QtCore', 'PySide.QtSvg',
-                'QtWidgets', 'PyQt5.QtGui')
-
-# mock out the NewEvent function of wxPython.  Let's praise the silly wx API
-def NewEventMock():
-    yield 'event_class'
-    yield 'event_constant'
+                'QtWidgets', 'QDialog', 'PyQt5.QtGui', 'QtWidgets.QDialog']
+sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
