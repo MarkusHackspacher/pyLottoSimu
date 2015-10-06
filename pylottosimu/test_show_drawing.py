@@ -26,7 +26,6 @@ show_drawing
 """
 from __future__ import absolute_import
 
-import sys
 import unittest
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
 
@@ -36,20 +35,14 @@ _FORCE_PYQT4 = False
 try:
     if _FORCE_PYSIDE or _FORCE_PYQT4:
         raise ImportError('_FORCE_PYSIDE')
-    from PyQt5.QtWidgets import QApplication
-    from PyQt5.QtTest import QTest
-    from PyQt5.QtCore import Qt
+    from PyQt5 import QtWidgets
 except ImportError:
     try:
         if _FORCE_PYQT4:
             raise ImportError('_FORCE_PYSIDE')
-        from PySide.QtGui import QApplication
-        from PySide.QtTest import QTest
-        from PySide.QtCore import Qt
+        from PySide import QtGui as QtWidgets
     except ImportError:
-        from PyQt4.QtGui import QApplication
-        from PyQt4.QtTest import QTest
-        from PyQt4.QtCore import Qt
+        from PyQt4 import QtGui as QtWidgets
 
 _instance = None
 
@@ -70,7 +63,7 @@ class show_drawingTestCase(unittest.TestCase):
         super(show_drawingTestCase, self).setUp()
         global _instance
         if _instance is None:
-            _instance = QApplication([])
+            _instance = QtWidgets.QApplication([])
 
         self.app = _instance
 

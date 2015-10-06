@@ -31,8 +31,12 @@ try:
         raise ImportError('_FORCE_PYSIDE')
     from PyQt5 import QtCore, QtWidgets
 except ImportError:
-    from PySide import QtCore
-    from PySide import QtGui as QtWidgets
+    try:
+        from PySide import QtCore
+        from PySide import QtGui as QtWidgets
+    except ImportError:
+        from PyQt4 import QtCore
+        from PyQt4 import QtGui as QtWidgets
 
 
 from pylottosimu import pylotto
