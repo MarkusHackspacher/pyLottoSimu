@@ -29,7 +29,7 @@ from datetime import datetime
 from random import randint
 import random
 
-import pylottosimu.dialog.lottosettingdialog as DlgLottoSystem
+from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
 from pylottosimu.lottosystem import lottosystemdata
 
@@ -38,7 +38,7 @@ _FORCE_PYSIDE = False
 try:
     if _FORCE_PYSIDE:
         raise ImportError('_FORCE_PYSIDE')
-    from PyQt5 import QtGui, QtCore, QtWidgets, uic
+    from PyQt5 import QtGui, QtCore, uic
     from PyQt5.QtWidgets import QMainWindow, QMessageBox
     from PyQt5.QtSvg import QSvgWidget
 
@@ -197,7 +197,7 @@ class LottoSimuDialog(QMainWindow):
         :returns: none
         """
         sysdat = lottosystemdata()
-        system = DlgLottoSystem.LottoSettingsDialog.getValues(sysdat)
+        system = LottoSettingsDialog.getValues(sysdat)
 
         if system[1]:
             self.lottodraw.data['name'] = system[0][0]
