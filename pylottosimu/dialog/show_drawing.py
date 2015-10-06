@@ -20,6 +20,7 @@
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
+import sys
 
 _FORCE_PYSIDE = False
 
@@ -35,8 +36,8 @@ except ImportError:
         from PyQt4 import QtGui, QtCore
         from PyQt4 import QtGui as QtWidgets
 
-#if sys.version_info < (3, 0):
-#    range = xrange
+if sys.version_info < (3, 0):
+    range = xrange
 
 
 class DlgShowDrawing(QtWidgets.QDialog):
