@@ -94,6 +94,7 @@ class DlgShowDrawing(QtWidgets.QDialog):
             self.gridLayout.addWidget(
                 button, int(buttonnumber / 7), int(buttonnumber % 7), 1, 1)
             button.setText(str(buttonnumber + 1))
+            button.setFlat(True)
 
             if buttonnumber + 1 in self.ballnumbers:
                 button.setFlat(False)
@@ -102,8 +103,6 @@ class DlgShowDrawing(QtWidgets.QDialog):
                 if buttonnumber + 1 in self.bonusnumbers:
                     button.setFlat(False)
                     button.setStyleSheet("color: blue;")
-            else:
-                button.setFlat(True)
 
         if self.highestbonus:
             self.btnnumerarybonus = [QtWidgets.QPushButton(self)

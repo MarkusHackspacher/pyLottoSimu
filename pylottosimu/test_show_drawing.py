@@ -88,16 +88,51 @@ class show_drawingTestCase(unittest.TestCase):
         '''test ballnumbers'''
         dialog = DlgShowDrawing([2], 5)
         self.assertTrue(dialog)
+        self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[1].isFlat(), False)
+        self.assertEqual(dialog.btn_drawnumbers[2].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[3].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[4].isFlat(), True)
 
     def test_bonusnumbers(self):
         '''test bonusnumbers'''
         dialog = DlgShowDrawing([2], 5, [1])
         self.assertTrue(dialog)
+        self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), False)
+        self.assertEqual(dialog.btn_drawnumbers[1].isFlat(), False)
+        self.assertEqual(dialog.btn_drawnumbers[2].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[3].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[4].isFlat(), True)
 
     def test_bonusnumbersseparate(self):
         '''test separate bonusnumbers'''
-        dialog = DlgShowDrawing([2], 5, [1, 2], 2)
+        dialog = DlgShowDrawing([2], 5, [1, 2], 3)
         self.assertTrue(dialog)
+        self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[1].isFlat(), False)
+        self.assertEqual(dialog.btn_drawnumbers[2].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[3].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[4].isFlat(), True)
+        self.assertEqual(dialog.btnnumerarybonus[0].isFlat(), False)
+        self.assertEqual(dialog.btnnumerarybonus[1].isFlat(), False)
+        self.assertEqual(dialog.btnnumerarybonus[2].isFlat(), True)
+
+    def test_highernumbers(self):
+        '''test with higher draw numbers as the highest number in the draw
+         in the ballnumbers and in the bonusnumbers
+         '''
+        dialog = DlgShowDrawing([2, 4, 6], 5, [1, 3, 5], 3)
+        self.assertTrue(dialog)
+        self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[1].isFlat(), False)
+        self.assertEqual(dialog.btn_drawnumbers[2].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[3].isFlat(), False)
+        self.assertEqual(dialog.btn_drawnumbers[4].isFlat(), True)
+        self.assertEqual(len(dialog.btn_drawnumbers), 5)
+        self.assertEqual(dialog.btnnumerarybonus[0].isFlat(), False)
+        self.assertEqual(dialog.btnnumerarybonus[1].isFlat(), True)
+        self.assertEqual(dialog.btnnumerarybonus[2].isFlat(), False)
+        self.assertEqual(len(dialog.btnnumerarybonus), 3)
 
 if __name__ == '__main__':
     unittest.main()
