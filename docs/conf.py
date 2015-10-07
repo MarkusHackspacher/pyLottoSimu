@@ -16,8 +16,7 @@
 import sys
 import os
 import shlex
-# from mock import Mock as MagicMock
-import mock
+from mock import Mock as MagicMock
 
 '''
 class Mock(MagicMock):
@@ -27,13 +26,12 @@ class Mock(MagicMock):
     @classmethod
     def __getattr__(cls, name):
             return Mock()
-'''
 
 MOCK_MODULES = ['PyQt5', 'PyQt5.QtSvg',
                 'PyQt4', 'PyQt4.QtSvg',
                 'PySide', 'PySide.QtSvg']
-sys.modules.update((mod_name, mock.Mock()) for mod_name in MOCK_MODULES)
-
+sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
+'''
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -165,7 +163,7 @@ html_favicon = "pyLottoSimu.svg"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+#html_static_path = ['_static']
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied

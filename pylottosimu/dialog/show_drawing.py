@@ -56,9 +56,9 @@ class DlgShowDrawing(QtWidgets.QDialog):
     """
     def __init__(self, ballnumbers, highestnumber, bonusnumbers=False,
                  highestbonus=False):
+        """Init the class DlgShowDrawing
         """
-        """
-        QtWidgets.QDialog.__init__(self)
+        super(DlgShowDrawing, self).__init__()
 
         self.setWindowIcon(
             QtGui.QIcon(os.path.abspath(os.path.join(os.path.dirname(__file__),
