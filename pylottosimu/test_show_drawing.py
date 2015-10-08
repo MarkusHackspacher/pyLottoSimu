@@ -72,8 +72,8 @@ class show_drawingTestCase(unittest.TestCase):
         del self.app
         super(show_drawingTestCase, self).tearDown()
 
-    def test_setting(self):
-        '''settings'''
+    def test_twoballnumber(self):
+        '''test with two ball numbers '''
         dialog = DlgShowDrawing([3, 4], 6)
         self.assertTrue(dialog)
         self.assertEqual(dialog.btn_drawnumbers[0].text(), '1')
@@ -84,8 +84,8 @@ class show_drawingTestCase(unittest.TestCase):
         self.assertEqual(dialog.btn_drawnumbers[4].isFlat(), True)
         self.assertEqual(dialog.btn_drawnumbers[5].isFlat(), True)
 
-    def test_ballnumbers(self):
-        '''test ballnumbers'''
+    def test_ballnumber(self):
+        '''test with one ball numbers'''
         dialog = DlgShowDrawing([2], 5)
         self.assertTrue(dialog)
         self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), True)
@@ -95,17 +95,38 @@ class show_drawingTestCase(unittest.TestCase):
         self.assertEqual(dialog.btn_drawnumbers[4].isFlat(), True)
 
     def test_bonusnumbers(self):
-        '''test bonusnumbers'''
+        '''test ball numbers and bonus numbers in a maximal draw of 5 numbers
+        '''
         dialog = DlgShowDrawing([2], 5, [1])
         self.assertTrue(dialog)
         self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), False)
+        self.assertEqual(dialog.btn_drawnumbers[0].styleSheet(),
+                         'color: blue;')
         self.assertEqual(dialog.btn_drawnumbers[1].isFlat(), False)
+        self.assertEqual(dialog.btn_drawnumbers[1].styleSheet(),
+                         'color: red;')
         self.assertEqual(dialog.btn_drawnumbers[2].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[2].styleSheet(), '')
+        self.assertEqual(dialog.btn_drawnumbers[3].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[4].isFlat(), True)
+
+    def test_samenumbers(self):
+        '''test the same ball numbers and bonus numbers in a maximal draw
+        of 5 numbers
+        '''
+        dialog = DlgShowDrawing([3], 5, [3])
+        self.assertTrue(dialog)
+        self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[0].styleSheet(), '')
+        self.assertEqual(dialog.btn_drawnumbers[1].isFlat(), True)
+        self.assertEqual(dialog.btn_drawnumbers[1].styleSheet(), '')
+        self.assertEqual(dialog.btn_drawnumbers[2].isFlat(), False)
+        self.assertEqual(dialog.btn_drawnumbers[2].styleSheet(), 'color: red;')
         self.assertEqual(dialog.btn_drawnumbers[3].isFlat(), True)
         self.assertEqual(dialog.btn_drawnumbers[4].isFlat(), True)
 
     def test_bonusnumbersseparate(self):
-        '''test separate bonusnumbers'''
+        '''test separate bonus numbers'''
         dialog = DlgShowDrawing([2], 5, [1, 2], 3)
         self.assertTrue(dialog)
         self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), True)
