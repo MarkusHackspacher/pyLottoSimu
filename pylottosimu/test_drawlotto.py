@@ -104,7 +104,7 @@ class drawlottoTestCase(unittest.TestCase):
         self.assertEqual(len(self.lotto.ballnumber), 1)
         self.assertEqual(len(self.lotto.ballbonus), 0)
         self.assertEqual(self.lotto.picknumber(-1)[:28], 'Welcome to the lottery draw,')
-        self.assertEqual(self.lotto.picknumber(0)[:35], 'And the first winning number is the')
+        self.assertEqual(self.lotto.picknumber(0)[:22], 'And now we come to the')
 
     def test_drawtwo(self):
         """test draw two number without a additional number
@@ -120,7 +120,7 @@ class drawlottoTestCase(unittest.TestCase):
         self.assertEqual(len(self.lotto.ballnumber), 2)
         self.assertEqual(len(self.lotto.ballbonus), 0)
         self.assertEqual(self.lotto.picknumber(-1)[:28], 'Welcome to the lottery draw,')
-        self.assertEqual(self.lotto.picknumber(0)[:36], 'We are already at the winning number')
+        self.assertEqual(self.lotto.picknumber(0)[:35], 'And the first winning number is the')
         self.assertEqual(self.lotto.picknumber(1)[:22], 'And now we come to the')
 
     def test_drawthree(self):

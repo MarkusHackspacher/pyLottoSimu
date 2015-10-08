@@ -412,7 +412,7 @@ class drawlotto(QtCore.QObject):
 
         :returns: pick
         """
-        if turn == (self.data['draw_numbers'] - 2):
+        if turn == (self.data['draw_numbers'] - 2) and turn > 0:
             text = self.tr(
                 "We are already at the winning number {0}, and thus the "
                 "penultimate number of today's draw. It is the {1}.")
