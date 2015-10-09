@@ -19,6 +19,7 @@
 # You should have received a copy of the GNU General Public License
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
+from __future__ import unicode_literals
 import unittest
 
 from pylottosimu import pylotto
@@ -57,8 +58,10 @@ class drawlottoTestCase(unittest.TestCase):
         self.assertEqual(len(self.lotto.random_addit), 0)
         self.assertEqual(len(self.lotto.ballnumber), 6)
         self.assertEqual(len(self.lotto.ballbonus), 0)
-        self.assertEqual(self.lotto.picknumber(-1)[:28], 'Welcome to the lottery draw,')
-        self.assertEqual(self.lotto.picknumber(0)[:35], 'And the first winning number is the')
+        self.assertEqual(self.lotto.picknumber(-1)[:28],
+                         'Welcome to the lottery draw,')
+        self.assertEqual(self.lotto.picknumber(0)[:35],
+                         'And the first winning number is the')
 
     def test_draw_addit(self):
         """test draw with a additional number
@@ -72,8 +75,10 @@ class drawlottoTestCase(unittest.TestCase):
         self.assertEqual(len(self.lotto.random_addit), 0)
         self.assertEqual(len(self.lotto.ballnumber), 6)
         self.assertEqual(len(self.lotto.ballbonus), 2)
-        self.assertEqual(self.lotto.picknumber(-1)[:28], 'Welcome to the lottery draw,')
-        self.assertEqual(self.lotto.picknumber(0)[:35], 'And the first winning number is the')
+        self.assertEqual(self.lotto.picknumber(-1)[:28],
+                         'Welcome to the lottery draw,')
+        self.assertEqual(self.lotto.picknumber(0)[:35],
+                         'And the first winning number is the')
 
     def test_draw_addit_sep(self):
         """test draw with a separate additional number
@@ -87,8 +92,10 @@ class drawlottoTestCase(unittest.TestCase):
         self.assertEqual(len(self.lotto.random_addit), 2)
         self.assertEqual(len(self.lotto.ballnumber), 6)
         self.assertEqual(len(self.lotto.ballbonus), 2)
-        self.assertEqual(self.lotto.picknumber(-1)[:28], 'Welcome to the lottery draw,')
-        self.assertEqual(self.lotto.picknumber(0)[:35], 'And the first winning number is the')
+        self.assertEqual(self.lotto.picknumber(-1)[:28],
+                         'Welcome to the lottery draw,')
+        self.assertEqual(self.lotto.picknumber(0)[:35],
+                         'And the first winning number is the')
 
     def test_drawone(self):
         """test draw one number without a additional number
@@ -103,8 +110,11 @@ class drawlottoTestCase(unittest.TestCase):
         self.assertEqual(len(self.lotto.random_addit), 0)
         self.assertEqual(len(self.lotto.ballnumber), 1)
         self.assertEqual(len(self.lotto.ballbonus), 0)
-        self.assertEqual(self.lotto.picknumber(-1)[:28], 'Welcome to the lottery draw,')
-        self.assertEqual(self.lotto.picknumber(0)[:22], 'And now we come to the')
+        self.assertEqual(self.lotto.picknumber(-1)[:28],
+                         'Welcome to the lottery draw,')
+        self.assertEqual(self.lotto.picknumber(0)[:22],
+
+                         'And now we come to the')
 
     def test_drawtwo(self):
         """test draw two number without a additional number
@@ -119,9 +129,12 @@ class drawlottoTestCase(unittest.TestCase):
         self.assertEqual(len(self.lotto.random_addit), 0)
         self.assertEqual(len(self.lotto.ballnumber), 2)
         self.assertEqual(len(self.lotto.ballbonus), 0)
-        self.assertEqual(self.lotto.picknumber(-1)[:28], 'Welcome to the lottery draw,')
-        self.assertEqual(self.lotto.picknumber(0)[:35], 'And the first winning number is the')
-        self.assertEqual(self.lotto.picknumber(1)[:22], 'And now we come to the')
+        self.assertEqual(self.lotto.picknumber(-1)[:28],
+                         'Welcome to the lottery draw,')
+        self.assertEqual(self.lotto.picknumber(0)[:35],
+                         'And the first winning number is the')
+        self.assertEqual(self.lotto.picknumber(1)[:22],
+                         'And now we come to the')
 
     def test_drawthree(self):
         """test draw three number without a additional number
@@ -136,10 +149,25 @@ class drawlottoTestCase(unittest.TestCase):
         self.assertEqual(len(self.lotto.random_addit), 0)
         self.assertEqual(len(self.lotto.ballnumber), 3)
         self.assertEqual(len(self.lotto.ballbonus), 0)
-        self.assertEqual(self.lotto.picknumber(-1)[:28], 'Welcome to the lottery draw,')
-        self.assertEqual(self.lotto.picknumber(0)[:35], 'And the first winning number is the')
-        self.assertEqual(self.lotto.picknumber(1)[:36], 'We are already at the winning number')
-        self.assertEqual(self.lotto.picknumber(2)[:22], 'And now we come to the')
+        self.assertEqual(self.lotto.picknumber(-1)[:28],
+                         'Welcome to the lottery draw,')
+        self.assertEqual(self.lotto.picknumber(0)[:35],
+                         'And the first winning number is the')
+        self.assertEqual(self.lotto.picknumber(1)[:36],
+                         'We are already at the winning number')
+        self.assertEqual(self.lotto.picknumber(2)[:22],
+                         'And now we come to the')
+
+    def test_drawzero(self):
+        """test draw three number without a additional number
+
+        :return: none
+        """
+        self.lotto.data['draw_numbers'] = 0
+        self.lotto.data['with_addit'] = False
+        self.assertEqual(self.lotto.data['draw_numbers'], 0)
+        self.lotto.draw()
+        self.assertEqual(len(self.lotto.random_number), 1)
 
 if __name__ == '__main__':
     unittest.main()
