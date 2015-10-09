@@ -159,7 +159,7 @@ class drawlottoTestCase(unittest.TestCase):
                          'And now we come to the')
 
     def test_drawzero(self):
-        """test draw three number without a additional number
+        """test set draw to no number and make sure to set to one number
 
         :return: none
         """
@@ -168,6 +168,8 @@ class drawlottoTestCase(unittest.TestCase):
         self.assertEqual(self.lotto.data['draw_numbers'], 0)
         self.lotto.draw()
         self.assertEqual(len(self.lotto.random_number), 1)
+        self.assertEqual(self.lotto.picknumber(0)[:22],
+                         'And now we come to the')
 
 if __name__ == '__main__':
     unittest.main()

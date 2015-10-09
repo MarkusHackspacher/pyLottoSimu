@@ -390,6 +390,8 @@ class drawlotto(QtCore.QObject):
 
         :returns: none
         """
+        if self.data['draw_numbers'] < 1:
+            self.data['draw_numbers'] = 1
         drawn_numbers = self.data['draw_numbers']
         if self.data['with_addit']:
             if self.data['sep_addit_numbers']:
@@ -419,7 +421,7 @@ class drawlotto(QtCore.QObject):
                 "We are already at the winning number {0}, and thus the "
                 "penultimate number of today's draw. It is the {1}.")
             text = str(str(text).format(self.countnumbers[turn],
-                                   self.random_number[turn]))
+                                        self.random_number[turn]))
         elif turn == (self.data['draw_numbers'] - 1):
             text = self.tr('And now we come to the {0} and last'
                            'winning number, it is the {1}.')
