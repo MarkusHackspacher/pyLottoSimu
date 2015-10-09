@@ -320,6 +320,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         :returns: none"""
         self.ui.close()
 
+__doc__ = "class drawlotto simulate a lotto draw"
+
 
 class drawlotto(QtCore.QObject):
     """simulate a lotto draw
@@ -416,7 +418,7 @@ class drawlotto(QtCore.QObject):
             text = self.tr(
                 "We are already at the winning number {0}, and thus the "
                 "penultimate number of today's draw. It is the {1}.")
-            text = str(text.format(self.countnumbers[turn],
+            text = str(str(text).format(self.countnumbers[turn],
                                    self.random_number[turn]))
         elif turn == (self.data['draw_numbers'] - 1):
             text = self.tr('And now we come to the {0} and last'

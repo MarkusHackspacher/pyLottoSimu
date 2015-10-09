@@ -38,7 +38,8 @@ except ImportError:
 
 if sys.version_info < (3, 0):
     range = xrange
-"""Dialog of the Drawing
+
+__doc__ = """Dialog of the Drawing
 show the ball numbers till the highest number.
 and the bonus numbers till the highest bonus number.
 """
