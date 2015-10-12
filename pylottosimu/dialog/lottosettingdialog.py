@@ -56,7 +56,12 @@ except ImportError:
             return uic.loadUi(uifile)
 
 __author__ = 'mar'
+__doc__ = """
+class LottoSettingsDialog
+-------------------------
 
+The GUI of Settings. Use lottosystem.ui.
+"""
 
 class LottoSettingsDialog(QtWidgets.QDialog):
     """The GUI of Settings.
