@@ -39,9 +39,12 @@ except ImportError:
 if sys.version_info < (3, 0):
     range = xrange
 
-__doc__ = """Dialog of the Drawing
-show the ball numbers till the highest number.
-and the bonus numbers till the highest bonus number.
+__doc__ = """
+class DlgShowDrawing
+--------------------
+
+show a Dialog with all the ball numbers from the draw
+and the bonus numbers.
 """
 
 

@@ -70,7 +70,20 @@ if sys.version_info < (3, 0):
     range = xrange
     str = unicode
 
-__doc__ = "The signals for the GUI"
+__doc__ = """The signals for the GUI
+
+class LottoSimuDialog
+---------------------
+
+The GUI and program of the pyLottoSimu.
+Use the lottosimu_gui.ui
+
+class drawlotto
+---------------
+
+simulate a lotto draw.
+draw the lotto numbers and give the draw text back
+"""
 
 
 class LottoSimuDialog(QtWidgets.QMainWindow):
@@ -319,8 +332,6 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
         :returns: none"""
         self.ui.close()
-
-__doc__ = "class drawlotto simulate a lotto draw"
 
 
 class drawlotto(QtCore.QObject):
