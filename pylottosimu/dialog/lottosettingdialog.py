@@ -63,6 +63,7 @@ class LottoSettingsDialog
 The GUI of Settings. Use lottosystem.ui.
 """
 
+
 class LottoSettingsDialog(QtWidgets.QDialog):
     """The GUI of Settings.
 
