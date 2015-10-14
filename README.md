@@ -23,48 +23,32 @@ The program requires [Python 2.7 or 3.x](http://www.python.org/download/)
 and [Qt5 for Python](http://www.riverbankcomputing.com/software/pyqt/download5).
 
 Start with
-```python lotto.pyw [de|fr|es|it|ru]```
+
+`python lotto.pyw [de|fr|es|it|ru]`
 
 Make the documentation as .html file:
 
-     cd docs
-     make html
+```
+cd docs
+make html
+```
 
 To translate the program or make a translation in your language,
 insert in the complete.pro your language code.
+
 ```
 cd pylottosimu
 pylupdate4 complete.pro
 ```
+
 translate your language file: lotto1_xx.ts, and produce the .ts translation files with
-```
-lrelease complete.pro
-```
+
+`lrelease complete.pro`
 
 ![Image](misc/pyLottoSimu_screenshot_en.png "screenshot")
 
-Installieren
--------------
-
-Das Programm läuft auf MacOS, Windows und Linux,
-und überall dort wo Python und pyqt installieren lässt!
-
-Das Programm benötigt [Python  2.7 oder 3.x](http://www.python.org/download/) 
-und [Qt5 für Python](http://www.riverbankcomputing.com/software/pyqt/download5) dazu.
-
-Start mit: 
-```python lotto.pyw [de|fr|es|it|ru]```
-
-Dokumentation als .html Datei aus den Kommentaren des Quelltextes erstellen lassen:
-
-     cd docs
-     make html
-
 Bedienen
----------
-Der Modus kann in der Menüleiste angewählt werden
-Anzahl der Zufallszahlen sind zwischen 1 bis 15 wählbar sowie der
- Zahlenbereich zwischen 20 und 90! 
+--------
 
 Modus Zufallsgenerator:
 Die Zahlen auswählen und mit 'Zufallsgenerator ein' starten
@@ -78,22 +62,4 @@ Dabei kann mit dem Schieber oben links die Geschwindigkeit verändert werden.
 License
 -------
 
-pyLottoSimu
-
-Copyright <2012-2015> Markus Hackspacher
-
-This file is part of pyLottoSimu.
-
-pyLottoSimu is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-pyLottoSimu is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
-
+GNU GPL V3
