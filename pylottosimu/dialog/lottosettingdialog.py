@@ -24,9 +24,10 @@ import os
 import sys
 
 _FORCE_PYSIDE = False
+_FORCE_PYQT4 = False
 
 try:
-    if _FORCE_PYSIDE:
+    if _FORCE_PYSIDE or _FORCE_PYQT4:
         raise ImportError('_FORCE_PYSIDE')
     from PyQt5 import QtGui, QtWidgets, uic
     from PyQt5.QtSvg import QSvgWidget
@@ -35,6 +36,8 @@ try:
         return uic.loadUi(uifile)
 except ImportError:
     try:
+        if _FORCE_PYQT4:
+            raise ImportError('_FORCE_PYSIDE')
         from PySide import QtGui, QtCore
         from PySide import QtGui as QtWidgets
         from PySide.QtSvg import QSvgWidget

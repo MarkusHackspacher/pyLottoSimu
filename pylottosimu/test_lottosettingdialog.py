@@ -20,9 +20,15 @@
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
 """
-test the dialog module
+Test the dialog module
+----------------------
 
-show_drawing
+lottosettingdialog
+
+Setup for testing, create the UI_lottosystem.py file:
+
+    cd dialog/
+    pyuic4 --output UI_lottosystem.py lottosystem.ui
 """
 from __future__ import absolute_import
 
