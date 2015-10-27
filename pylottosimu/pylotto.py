@@ -98,20 +98,21 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
         # Set up the user interface from Designer.
         self.ui = QtLoadUI(os.path.abspath(os.path.join(
-                             os.path.dirname(sys.argv[0]),
-                             "pylottosimu", "lottosimu_gui.ui")))
+                           os.path.dirname(sys.argv[0]),
+                           "pylottosimu", "lottosimu_gui.ui")))
         self.ui.setWindowIcon(
             QtGui.QIcon(os.path.abspath(os.path.join(
                 os.path.dirname(sys.argv[0]), "misc", "pyLottoSimu.svg"))))
 
         self.imageLabel = QSvgWidget()
         self.imageLabel.renderer().load(os.path.abspath(os.path.join(
-                os.path.dirname(sys.argv[0]),
-                "pylottosimu", "lottokugel.svg")))
+            os.path.dirname(sys.argv[0]),
+            "pylottosimu", "lottokugel.svg")))
         self.ui.scrollArea.setWidget(self.imageLabel)
 
         self.action_lottosim()
         self.timer = QtCore.QTimer(self)
+        self.sysdat = lottosystemdata()
 
         # Slots
         self.ui.btn_random_numbers.clicked.connect(
@@ -208,8 +209,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
         :returns: none
         """
-        sysdat = lottosystemdata()
-        system = LottoSettingsDialog.getValues(sysdat)
+        system = LottoSettingsDialog.getValues(self.sysdat)
 
         if system[1]:
             self.lottodraw.data['name'] = system[0][0]

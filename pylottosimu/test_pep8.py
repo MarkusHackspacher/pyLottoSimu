@@ -34,6 +34,7 @@ class TestCodeFormat(unittest.TestCase):
                                         'test_pep8.py',
                                         'test_show_drawing.py',
                                         'test_lottosystemdata.py',
+                                        'test_lottosettingdialog.py',
                                         'lottosystem.py',
                                         'dialog/show_drawing.py',
                                         'dialog/lottosettingdialog.py'])

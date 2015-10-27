@@ -14,7 +14,7 @@
 
 # pyLottoSimu is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU Lesser General Public License for more details.
 
 # You should have received a copy of the GNU General Public License
@@ -72,24 +72,29 @@ class LottoSettingsDialog(QtWidgets.QDialog):
     :param parent: parent window
     :type parent: string
     """
-    def __init__(self, sysdat, parent=None):
+    def __init__(self, sysdat, parent=None, test=None):
         """Inital user interface and slots
         """
         super(LottoSettingsDialog, self).__init__(parent)
 
-        # Set up the user interface from Designer.
-        self.ui = QtLoadUI(os.path.abspath(os.path.join(
-            os.path.dirname(sys.argv[0]),
-            "pylottosimu", "dialog", "lottosystem.ui")))
-        self.ui.setWindowIcon(
-            QtGui.QIcon(os.path.abspath(os.path.join(
+        if test:
+            from UI_lottosystem import Ui_Dialog
+            self.ui = Ui_Dialog()
+            self.ui.setupUi(self)
+        else:
+            # Set up the user interface from Designer.
+            self.ui = QtLoadUI(os.path.abspath(os.path.join(
                 os.path.dirname(sys.argv[0]),
-                "misc", "pyLottoSimu.svg"))))
+                "pylottosimu", "dialog", "lottosystem.ui")))
+            self.ui.setWindowIcon(
+                QtGui.QIcon(os.path.abspath(os.path.join(
+                    os.path.dirname(sys.argv[0]),
+                    "misc", "pyLottoSimu.svg"))))
 
         self.imageLabel = QSvgWidget()
         self.imageLabel.renderer().load(os.path.abspath(os.path.join(
-                os.path.dirname(sys.argv[0]),
-                "pylottosimu", "lottokugel.svg")))
+            os.path.dirname(sys.argv[0]),
+            "pylottosimu", "lottokugel.svg")))
         self.ui.scrollArea.setWidget(self.imageLabel)
 
         self.systemdata = sysdat

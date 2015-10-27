@@ -125,13 +125,13 @@ class lottosystemdata():
                 "with_addit": True
             },
             {
-                 "addit_numbers": 1,
-                 "draw_numbers": 5,
-                 "max_addit": 47,
-                 "max_draw": 19,
-                 "name": "Hot Lotto Sizzler",
-                 "sep_addit_numbers": True,
-                 "with_addit": True
+                "addit_numbers": 1,
+                "draw_numbers": 5,
+                "max_addit": 47,
+                "max_draw": 19,
+                "name": "Hot Lotto Sizzler",
+                "sep_addit_numbers": True,
+                "with_addit": True
             }
         ]
         return data
