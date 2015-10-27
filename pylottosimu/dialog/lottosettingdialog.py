@@ -91,11 +91,11 @@ class LottoSettingsDialog(QtWidgets.QDialog):
                     os.path.dirname(sys.argv[0]),
                     "misc", "pyLottoSimu.svg"))))
 
-        self.imageLabel = QSvgWidget()
-        self.imageLabel.renderer().load(os.path.abspath(os.path.join(
-            os.path.dirname(sys.argv[0]),
-            "pylottosimu", "lottokugel.svg")))
-        self.ui.scrollArea.setWidget(self.imageLabel)
+            self.imageLabel = QSvgWidget()
+            self.imageLabel.renderer().load(os.path.abspath(os.path.join(
+                os.path.dirname(sys.argv[0]),
+                "pylottosimu", "lottokugel.svg")))
+            self.ui.scrollArea.setWidget(self.imageLabel)
 
         self.systemdata = sysdat
         for systemname in self.systemdata.data:
