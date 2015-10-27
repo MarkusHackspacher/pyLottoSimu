@@ -75,12 +75,12 @@ class LottoSettingsDialog(QtWidgets.QDialog):
     :param parent: parent window
     :type parent: string
     """
-    def __init__(self, sysdat, parent=None, test=None):
+    def __init__(self, sysdat, parent=None, testcase=None):
         """Inital user interface and slots
         """
         super(LottoSettingsDialog, self).__init__(parent)
 
-        if test:
+        if testcase:
             from UI_lottosystem import Ui_Dialog
             self.ui = Ui_Dialog()
             self.ui.setupUi(self)

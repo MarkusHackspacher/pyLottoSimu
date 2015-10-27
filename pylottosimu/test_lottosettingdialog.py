@@ -82,7 +82,7 @@ class show_drawingTestCase(unittest.TestCase):
     def test_dialog(self):
         '''test '''
         lottosystems = lottosystemdata()
-        dialog = LottoSettingsDialog(lottosystems, test=True)
+        dialog = LottoSettingsDialog(lottosystems, testcase=True)
         self.assertTrue(dialog)
 
 if __name__ == '__main__':
