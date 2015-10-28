@@ -70,8 +70,8 @@ class show_lottosystemdataTestCase(unittest.TestCase):
         # Simple way of making instance a singleton
         super(show_lottosystemdataTestCase, self).setUp()
         global _instance
-        if _instance is None:
-            _instance = QtWidgets.QApplication(sys.argv)
+        # if _instance is None:
+        #    _instance = QtWidgets.QApplication(sys.argv)
 
         self.app = _instance
 
