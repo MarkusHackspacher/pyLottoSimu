@@ -33,6 +33,7 @@ Setup for testing, create the UI_lottosystem.py file:
 from __future__ import absolute_import
 
 import unittest
+import sys
 from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
 from pylottosimu.lottosystem import lottosystemdata
 
@@ -70,9 +71,9 @@ class show_lottosystemdataTestCase(unittest.TestCase):
         super(show_lottosystemdataTestCase, self).setUp()
         global _instance
         if _instance is None:
-            _instance = QtWidgets.QApplication([])
+            _instance = QtWidgets.QApplication(sys.argv)
 
-        self.app = None  # _instance
+        self.app = _instance
 
     def tearDown(self):
         '''Deletes the reference owned by self'''
