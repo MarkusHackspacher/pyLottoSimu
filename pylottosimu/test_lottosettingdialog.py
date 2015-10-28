@@ -70,9 +70,9 @@ class show_lottosystemdataTestCase(unittest.TestCase):
         super(show_lottosystemdataTestCase, self).setUp()
         global _instance
         if _instance is None:
-            _instance = None # QtWidgets.QApplication([])
+            _instance = QtWidgets.QApplication([])
 
-        self.app = None # _instance
+        self.app = None  # _instance
 
     def tearDown(self):
         '''Deletes the reference owned by self'''
