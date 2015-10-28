@@ -81,7 +81,7 @@ class show_lottosystemdataTestCase(unittest.TestCase):
 
     def test_dialog(self):
         '''test '''
-        lottosystems = lottosystemdata()
+        # lottosystems = lottosystemdata()
         # dialog = LottoSettingsDialog(lottosystems, testcase=True)
         # self.assertTrue(dialog)
         self.assertTrue(True)
