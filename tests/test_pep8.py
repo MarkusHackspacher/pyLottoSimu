@@ -31,16 +31,17 @@ class TestCodeFormat(unittest.TestCase):
     def test_pep8_conformance(self):
         """Test that we conform to PEP8."""
         pep8style = pep8.StyleGuide(quiet=False)
-        result = pep8style.check_files(['pylotto.py',
-                                        '../setup.py',
-                                        'test_drawlotto.py',
-                                        'test_pep8.py',
-                                        'test_show_drawing.py',
-                                        'test_lottosystemdata.py',
-                                        'test_lottosettingdialog.py',
-                                        'lottosystem.py',
-                                        'dialog/show_drawing.py',
-                                        'dialog/lottosettingdialog.py'])
+        result = pep8style.check_files(['pylottosimu/pylotto.py',
+                                        'setup.py',
+                                        'tests/test_drawlotto.py',
+                                        'tests/test_pep8.py',
+                                        'tests/test_show_drawing.py',
+                                        'tests/test_lottosystemdata.py',
+                                        'tests/test_lottosettingdialog.py',
+                                        'pylottosimu/lottosystem.py',
+                                        'pylottosimu/dialog/show_drawing.py',
+                                        'pylottosimu/dialog/'
+                                        'lottosettingdialog.py'])
         self.assertEqual(result.total_errors, 0,
                          "Found code style errors (and warnings).")
 

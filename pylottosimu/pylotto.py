@@ -227,7 +227,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
         :returns: none
         """
-        system = LottoSettingsDialog.GetValues(self.sysdat)
+        system = LottoSettingsDialog.get_values(self.sysdat)
 
         if system[1]:
             self.lottodraw.data['name'] = system[0][0]

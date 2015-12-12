@@ -125,14 +125,14 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         self.ui.check_with_addit.clicked.connect(self.with_addit)
         self.ui.check_sep_addit_numbers.clicked.connect(self.sep_addit_numbers)
 
-        self.setvalues()
+        self.set_values()
 
-    def SepAdditNumbers(self):
+    def sep_addit_numbers(self):
         check = self.ui.check_sep_addit_numbers.isChecked()
         self.ui.label_max_addit.setEnabled(check)
         self.ui.spinBox_max_addit.setEnabled(check)
 
-    def WithAddit(self):
+    def with_addit(self):
         check = self.ui.check_with_addit.isChecked()
         self.ui.spinBox_addit_numbers.setEnabled(check)
         self.ui.label_addit_numbers.setEnabled(check)
@@ -140,9 +140,9 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         self.ui.check_sep_addit_numbers.setEnabled(check)
         if check is not True:
             self.ui.check_sep_addit_numbers.setChecked(False)
-        self.SepAdditNumbers()
+        self.sep_addit_numbers()
 
-    def setvalues(self):
+    def set_values(self):
         """Set Values"""
         index = self.ui.combo_name.currentIndex()
         self.ui.spinBox_max_draw.setValue(
@@ -157,7 +157,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
             self.systemdata.data[index]['sep_addit_numbers'])
         self.ui.spinBox_max_addit.setValue(
             self.systemdata.data[index]['max_addit'])
-        self.WithAddit()
+        self.with_addit()
 
     def values(self):
         """Values"""
@@ -174,7 +174,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
                     self.ui.spinBox_max_addit.text()))
 
     @staticmethod
-    def GetValues(sysdat, parent=None):
+    def get_values(sysdat, parent=None):
         """static method to create the dialog and return
         (dialog.values, accepted)
 

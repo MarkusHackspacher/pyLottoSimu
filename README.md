@@ -10,9 +10,12 @@ pyLottoSimu
 [![Documentation Status](https://readthedocs.org/projects/pylottosimu/badge/?version=latest)]
 (https://readthedocs.org/projects/pylottosimu/?badge=latest)
 [![Build Status](https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/status.png)]
+(https://www.quantifiedcode.com/app/project/b69a92a816434db0869b2373cab4765d)
+[![Build Status](https://travis-ci.org/MarkusHackspacher/pyLottoSimu.svg?branch=master)]
+(https://travis-ci.org/MarkusHackspacher/pyLottoSimu)
 (https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/latest)
 [![Code Issues](https://www.quantifiedcode.com/api/v1/project/b69a92a816434db0869b2373cab4765d/badge.svg)]
-(https://www.quantifiedcode.com/app/project/b69a92a816434db0869b2373cab4765d)
+
 Lotto Generator und Simulator
 
 a simulation of Lotto Germany (pick 6 out of 49), Lotto Austria (pick 6 out of 45), EuroMillionen,
