@@ -27,8 +27,8 @@ import json
 
 class lottosystemdata():
     """
-    Read and write the data set of the lottosystem
-
+    The class lottosystemdata loads predefined lotto systems.
+    And read and write a json file of the data set.
 
     .. todo:: at program start: look for the right path in the home environ
      load json and last use lotto
@@ -76,7 +76,13 @@ class lottosystemdata():
         return data
 
     def fixdata(self):
-        """read fix data set of the lottosystem
+        """Returns predefined lottosystems.
+        the following are predefined:
+        Lotto Germany, 6 from 49
+        Lotto Austria, 6 from 45
+        EuroMillionen, 5 from 50
+        Powerball Lottery US, 5 from 59
+        Mega Millions
 
         :returns: data"""
         data = [
@@ -116,20 +122,20 @@ class lottosystemdata():
                 'sep_addit_numbers': True,
                 'max_addit': 35},
             {
-                "addit_numbers": 1,
-                "draw_numbers": 5,
-                "max_addit": 46,
-                "max_draw": 56,
                 "name": "Mega Millions",
+                "max_draw": 56,
+                "draw_numbers": 5,
+                "addit_numbers": 1,
+                "max_addit": 46,
                 "sep_addit_numbers": True,
                 "with_addit": True
             },
             {
-                "addit_numbers": 1,
-                "draw_numbers": 5,
-                "max_addit": 47,
-                "max_draw": 19,
                 "name": "Hot Lotto Sizzler",
+                "max_draw": 19,
+                "draw_numbers": 5,
+                "addit_numbers": 1,
+                "max_addit": 47,
                 "sep_addit_numbers": True,
                 "with_addit": True
             }
