@@ -14,7 +14,7 @@ pyLottoSimu
 
 Lotto Generator und Simulator
 
-a simulation of the German (6 of 49), Austria (6 of 45) or EuroMillionen (5 of 50 plus 2) lottery system.
+a simulation of Lotto Germany (pick 6 out of 49), Lotto Austria (pick 6 out of 45), EuroMillionen, Powerball Lottery US and Mega Millions lottery system.
 
 install
 -------
