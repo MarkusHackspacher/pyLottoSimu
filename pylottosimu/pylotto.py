@@ -501,14 +501,14 @@ class DrawLotto(QtCore.QObject):
             textr = self.tr('And the first winning number is the {0}.')
             text = str(textr).format(self.random_number[turn])
             self.LastTextnumber = -1
-        elif turn > (self.data['draw_numbers'] - 1):
-            if self.data['with_addit'] is True:
-                textr = self.tr('The additional number is the {0}.')
-                if self.data['sep_addit_numbers']:
-                    text = str(textr).format(self.random_addit[turn -
-                                             self.data['draw_numbers']])
-                else:
-                    text = str(textr).format(self.random_number[turn])
+        elif (turn > (self.data['draw_numbers'] - 1) and
+              self.data['with_addit'] is True):
+            textr = self.tr('The additional number is the {0}.')
+            if self.data['sep_addit_numbers']:
+                text = str(textr).format(self.random_addit[turn -
+                                         self.data['draw_numbers']])
+            else:
+                text = str(textr).format(self.random_number[turn])
         else:
             text = 'no'
             while True:

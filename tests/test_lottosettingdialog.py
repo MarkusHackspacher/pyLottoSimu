@@ -51,8 +51,6 @@ except ImportError:
     except ImportError:
         from PyQt4 import QtGui as QtWidgets
 
-_instance = None
-
 __author__ = 'Markus Hackspacher'
 __license__ = "GPL"
 __copyright__ = "<2015> Markus Hackspacher"
@@ -68,11 +66,8 @@ class LottoSystemDataTestCase(unittest.TestCase):
 
         # Simple way of making instance a singleton
         super(LottoSystemDataTestCase, self).setUp()
-        global _instance
-        # if _instance is None:
-        #    _instance = QtWidgets.QApplication(sys.argv)
 
-        self.app = _instance
+        self.app = None
 
     def tearDown(self):
         '''Deletes the reference owned by self'''

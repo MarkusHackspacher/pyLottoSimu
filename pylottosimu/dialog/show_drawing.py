@@ -107,10 +107,10 @@ class DlgShowDrawing(QtWidgets.QDialog):
             if buttonnumber + 1 in self.ballnumbers:
                 button.setFlat(False)
                 button.setStyleSheet("color: red;")
-            elif self.bonusnumbers and not self.highestbonus:
-                if buttonnumber + 1 in self.bonusnumbers:
-                    button.setFlat(False)
-                    button.setStyleSheet("color: blue;")
+            elif (self.bonusnumbers and not self.highestbonus and
+                  buttonnumber + 1 in self.bonusnumbers):
+                button.setFlat(False)
+                button.setStyleSheet("color: blue;")
 
         if self.highestbonus:
             self.btnnumerarybonus = [QtWidgets.QPushButton(self)
