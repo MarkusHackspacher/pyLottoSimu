@@ -14,7 +14,8 @@ pyLottoSimu
 
 Lotto Generator und Simulator
 
-a simulation of Lotto Germany (pick 6 out of 49), Lotto Austria (pick 6 out of 45), EuroMillionen, Powerball Lottery US and Mega Millions lottery system.
+a simulation of Lotto Germany (pick 6 out of 49), Lotto Austria (pick 6 out of 45), EuroMillionen,
+Powerball Lottery US, Mega Millions lottery and Hot Lotto Sizzler system.
 
 install
 -------
@@ -22,9 +23,13 @@ install
 The program requires [Python 2.7 or 3.x](http://www.python.org/download/) 
 and [Qt5 for Python](http://www.riverbankcomputing.com/software/pyqt/download5).
 
+pyLottoSimu can be started in these languages:
+
+English, German, French, Spanish, Italian, Danish, Dutch, Polish and Russian
+
 Start with
 
-`python lotto.pyw [de|fr|es|it|ru]`
+`python lotto.pyw [de|dk|fr|es|it|nl|pl|ru]`
 
 Make the documentation as .html file:
 
@@ -33,17 +38,21 @@ cd docs
 make html
 ```
 
-To translate the program or make a translation in your language,
+To translate the program or make a translation in your language
 insert in the complete.pro your language code.
+
 
 ```
 cd pylottosimu
 pylupdate4 complete.pro
 ```
 
-translate your language file: lotto1_xx.ts, and produce the .ts translation files with
+Translate your language file or fix a typo in the lotto1_xx.ts file.
+Produce the .ts translation files with:
 
 `lrelease complete.pro`
+
+feel free and send me a pull request. Thank you in advance.
 
 ![Image](misc/pyLottoSimu_screenshot_en.png "screenshot")
 

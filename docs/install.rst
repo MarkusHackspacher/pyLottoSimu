@@ -48,7 +48,7 @@ change the directory and run::
 
 alternative::
 
-    python lotto.pyw [de|fr|es|it|ru]
-    python3 lotto.pyw [de|fr|es|it|ru]
+    python lotto.pyw [de|dk|fr|es|it|nl|pl|ru]
+    python3 lotto.pyw [de|dk|fr|es|it|nl|pl|ru]
 
 

@@ -33,7 +33,6 @@ Setup for testing, create the UI_lottosystem.py file:
 from __future__ import absolute_import
 
 import unittest
-import sys
 from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
 from pylottosimu.lottosystem import lottosystemdata
 

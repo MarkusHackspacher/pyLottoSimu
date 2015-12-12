@@ -8,8 +8,8 @@ Welcome to pyLottoSimu's documentation!
 
 Lotto Generator and Simulator
 
-a simulation of the German (6 of 49), Austria (6 of 45)
-or EuroMillionen (5 of 50 plus 2) lottery system.
+a simulation of Lotto Germany (pick 6 out of 49), Lotto Austria (pick 6 out of 45), EuroMillionen,
+Powerball Lottery US, Mega Millions lottery and Hot Lotto Sizzler system.
 
 The pyLottoSimu program generates random lottery numbers and can
 simulate a draw. In the simulation view a Lotto Ball is visible on the
@@ -17,6 +17,10 @@ numbers rotate faster and faster, and is finally available, this is the
 text, the first number of today\'s draw was the ... Maybe it was indeed
 actually the numbers of the next draw, of course are here, all the
 figures provided without guarantee.
+
+pyLottoSimu can be started in these languages:
+
+English, German, French, Spanish, Italian, Danish, Dutch, Polish and Russian
 
 Start
 -----
@@ -28,7 +32,7 @@ The program requires Python_ 2.7 or 3.x and `Qt5 for Python`_.
 
 Start with::
 
-  python lotto.pyw [de|fr|es|it|ru]
+  python lotto.pyw [de|dk|fr|es|it|nl|pl|ru]
 
 Documentation
 -------------
