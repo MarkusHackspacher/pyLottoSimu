@@ -9,7 +9,10 @@ python:
 before_install:
   - "sudo apt-get update"
 install:
-  - "sudo apt-get install python-qt4" #python-pyqt5 python3-pyqt5
+  - "sudo apt-get install python-qt4"
+  - "pip install pep8"
+  - "ln -s /usr/lib/python2.7/dist-packages/PyQt4/ $VIRTUAL_ENV/lib/python2.7/site-packages/"
+  - "ln -s /usr/lib/python2.7/dist-packages/sip.so $VIRTUAL_ENV/lib/python2.7/site-packages/"
 script: 
   nosetests
 notifications:

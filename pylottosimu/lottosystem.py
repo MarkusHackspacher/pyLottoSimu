@@ -25,7 +25,7 @@ import sys
 import json
 
 
-class lottosystemdata():
+class lottosystemdata(object):
     """
     The class lottosystemdata loads predefined lottery systems.
     And read and write a json file of the data set.
