@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="ru" sourcelanguage="en">
+<!DOCTYPE TS>
+<TS version="2.0" language="ru" sourcelanguage="en">
 <context>
     <name>Dialog</name>
     <message>
@@ -52,34 +53,186 @@
     </message>
 </context>
 <context>
+    <name>DrawLotto</name>
+    <message>
+        <location filename="pylotto.py" line="390"/>
+        <source>And now we come to the winning number {0}, it is the {1}.</source>
+        <translation>И теперь мы подходим к выигрышным номером {0}, то {1}.</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="392"/>
+        <source>The {0} lotto number of today&apos;s draw is the {1}.</source>
+        <translation>{0} лото число ничья сегодня является {1}.</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="394"/>
+        <source>We come to the {0} winning number, this is the {1}.</source>
+        <translation>Теперь мы подошли к выигрышным номером {0}, это {1}.</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="396"/>
+        <source>Now we come to {0} number of today&apos;s draw ... {1}.</source>
+        <translation>Теперь мы подошли к {0} число сегодняшней ничьей ... {1}.</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="398"/>
+        <source>The {0} winning number is {1}.</source>
+        <translation>{0} выигрышный номер {1}.</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="399"/>
+        <source>first</source>
+        <translation>первый</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="399"/>
+        <source>second</source>
+        <translation>второй</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="400"/>
+        <source>third</source>
+        <translation>третий</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="400"/>
+        <source>fourth</source>
+        <translation>четвертый</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="401"/>
+        <source>fifth</source>
+        <translation>пятый</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="401"/>
+        <source>sixth</source>
+        <translation>шестой</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="402"/>
+        <source>seventh</source>
+        <translation>седьмой</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="402"/>
+        <source>eighth</source>
+        <translation>восьмой</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="403"/>
+        <source>ninth</source>
+        <translation>девятый</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="403"/>
+        <source>10th</source>
+        <translation>10-й</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="404"/>
+        <source>11th</source>
+        <translation>11</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="404"/>
+        <source>12th</source>
+        <translation>12</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="405"/>
+        <source>13th</source>
+        <translation>13</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="405"/>
+        <source>14th</source>
+        <translation>14</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="406"/>
+        <source>15th</source>
+        <translation>15</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="451"/>
+        <source>We are already at the winning number {0}, and thus the penultimate number of today&apos;s draw. It is the {1}.</source>
+        <translation>Теперь мы подошли к числу {0}, и, таким образом предпоследний числа сегодняшних ничьей. Это {1}.</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="457"/>
+        <source>And now we come to the {0} and lastwinning number, it is the {1}.</source>
+        <translation>И теперь мы подходим к {0} и последний выигрышный номер, это {1}.</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="471"/>
+        <source>the bonus numbers are{0}, </source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="473"/>
+        <source>the bonus number is{0}, </source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="480"/>
+        <source>That was today&apos;s lottery draw, the figures were:{0}, {1}I wish you a nice evening! Bye, bye!</source>
+        <translation>Это была сегодняшняя ничья лотерее, эти цифры составили: {0}, {1}я желаю вам хорошего вечера! до свидания!</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="486"/>
+        <source>with {0} additional numbers </source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="493"/>
+        <source>Welcome to the lottery draw,
+at {0}.
+numbers are drawn: {1} out of {2} {3}!</source>
+        <translation>Добро пожаловать в розыгрыше лотереи,
+на {0}.
+номера взяты: {1} из {2} {3}!</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="504"/>
+        <source>And the first winning number is the {0}.</source>
+        <translation>И первый выигрышный номер {0}.</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="509"/>
+        <source>The additional number is the {0}.</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
     <name>LottoSimuDialog</name>
     <message>
-        <location filename="pylotto.py" line="127"/>
+        <location filename="pylotto.py" line="146"/>
         <source>ready</source>
         <translation>готовый</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="250"/>
+        <location filename="pylotto.py" line="268"/>
         <source>lotto simulation</source>
         <translation>Лото моделирования</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="267"/>
+        <location filename="pylotto.py" line="285"/>
         <source>random numbers</source>
         <translation>случайных чисел</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="291"/>
+        <location filename="pylotto.py" line="309"/>
         <source>Error, no valid numbers available!</source>
         <translation>Ошибка, нет действительных номеров доступны!</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="310"/>
+        <location filename="pylotto.py" line="328"/>
         <source>Info</source>
         <translation>информация</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="311"/>
+        <location filename="pylotto.py" line="329"/>
         <source>simulation of a random draw
 
 based on an idea of imageupload,
@@ -96,12 +249,12 @@ Lizenz: GNU GPL v3
 http://www.gnu.org/licenses/</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="293"/>
+        <location filename="pylotto.py" line="311"/>
         <source>{} {} out of {}: {}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="318"/>
+        <location filename="pylotto.py" line="336"/>
         <source>More Information about the program at http://pylottosimu.readthedocs.org</source>
         <translation type="unfinished"></translation>
     </message>
@@ -216,158 +369,6 @@ http://www.gnu.org/licenses/</translation>
     <message>
         <location filename="lottosimu_gui.ui" line="460"/>
         <source>Lotto system</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>drawlotto</name>
-    <message>
-        <location filename="pylotto.py" line="371"/>
-        <source>And now we come to the winning number {0}, it is the {1}.</source>
-        <translation>И теперь мы подходим к выигрышным номером {0}, то {1}.</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="373"/>
-        <source>The {0} lotto number of today&apos;s draw is the {1}.</source>
-        <translation>{0} лото число ничья сегодня является {1}.</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="375"/>
-        <source>We come to the {0} winning number, this is the {1}.</source>
-        <translation>Теперь мы подошли к выигрышным номером {0}, это {1}.</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="377"/>
-        <source>Now we come to {0} number of today&apos;s draw ... {1}.</source>
-        <translation>Теперь мы подошли к {0} число сегодняшней ничьей ... {1}.</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="379"/>
-        <source>The {0} winning number is {1}.</source>
-        <translation>{0} выигрышный номер {1}.</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="380"/>
-        <source>first</source>
-        <translation>первый</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="380"/>
-        <source>second</source>
-        <translation>второй</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="381"/>
-        <source>third</source>
-        <translation>третий</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="381"/>
-        <source>fourth</source>
-        <translation>четвертый</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="382"/>
-        <source>fifth</source>
-        <translation>пятый</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="382"/>
-        <source>sixth</source>
-        <translation>шестой</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="383"/>
-        <source>seventh</source>
-        <translation>седьмой</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="383"/>
-        <source>eighth</source>
-        <translation>восьмой</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="384"/>
-        <source>ninth</source>
-        <translation>девятый</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="384"/>
-        <source>10th</source>
-        <translation>10-й</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="385"/>
-        <source>11th</source>
-        <translation>11</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="385"/>
-        <source>12th</source>
-        <translation>12</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="386"/>
-        <source>13th</source>
-        <translation>13</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="386"/>
-        <source>14th</source>
-        <translation>14</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="387"/>
-        <source>15th</source>
-        <translation>15</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="432"/>
-        <source>We are already at the winning number {0}, and thus the penultimate number of today&apos;s draw. It is the {1}.</source>
-        <translation>Теперь мы подошли к числу {0}, и, таким образом предпоследний числа сегодняшних ничьей. Это {1}.</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="438"/>
-        <source>And now we come to the {0} and lastwinning number, it is the {1}.</source>
-        <translation>И теперь мы подходим к {0} и последний выигрышный номер, это {1}.</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="485"/>
-        <source>And the first winning number is the {0}.</source>
-        <translation>И первый выигрышный номер {0}.</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="490"/>
-        <source>The additional number is the {0}.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="461"/>
-        <source>That was today&apos;s lottery draw, the figures were:{0}, {1}I wish you a nice evening! Bye, bye!</source>
-        <translation>Это была сегодняшняя ничья лотерее, эти цифры составили: {0}, {1}я желаю вам хорошего вечера! до свидания!</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="467"/>
-        <source>with {0} additional numbers </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="474"/>
-        <source>Welcome to the lottery draw,
-at {0}.
-numbers are drawn: {1} out of {2} {3}!</source>
-        <translation>Добро пожаловать в розыгрыше лотереи,
-на {0}.
-номера взяты: {1} из {2} {3}!</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="452"/>
-        <source>the bonus numbers are{0}, </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="454"/>
-        <source>the bonus number is{0}, </source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -94,8 +94,12 @@ class LottoSettingsDialog(QtWidgets.QDialog):
     :type parent: string
     """
     def __init__(self, sysdat, parent=None, testcase=None):
-        """Inital user interface and slots
-        """
+        '''Setup the Lotto Settings Dialog
+
+        :param parent:
+        :param testcase:
+        :return:
+        '''
         super(LottoSettingsDialog, self).__init__(parent)
 
         if testcase:
