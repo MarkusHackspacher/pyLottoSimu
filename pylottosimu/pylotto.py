@@ -41,7 +41,7 @@ try:
     from PyQt5 import QtGui, QtCore, QtWidgets, uic
     from PyQt5.QtSvg import QSvgWidget
 
-    def QtLoadUi(uifile):
+    def qt_loadui(uifile):
         """
         load Qt ui file
 
@@ -56,7 +56,7 @@ except ImportError:
         from PySide import QtGui as QtWidgets
         from PySide.QtSvg import QSvgWidget
 
-        def QtLoadUi(uifile):
+        def qt_loadui(uifile):
             """
             load Qt ui file
 
@@ -75,7 +75,7 @@ except ImportError:
         from PyQt4 import QtGui as QtWidgets
         from PyQt4.QtSvg import QSvgWidget
 
-        def QtLoadUi(uifile):
+        def qt_loadui(uifile):
             """
             load Qt ui file
 
@@ -115,7 +115,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         super(LottoSimuDialog, self).__init__()
 
         # Set up the user interface from Designer.
-        self.ui = QtLoadUi(os.path.abspath(os.path.join(
+        self.ui = qt_loadui(os.path.abspath(os.path.join(
                            os.path.dirname(sys.argv[0]),
                            "pylottosimu", "lottosimu_gui.ui")))
         self.ui.setWindowIcon(
@@ -148,6 +148,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
         self.turn = 0
         self.random_number = 0
+        self.LastTextnumber = -1
         self.delay_of_next_number = self.ui.horizontalSlider.value()
         self.lottodraw = DrawLotto()
         self.ui.label_numbers.setText(self.lottodraw.data['name'])
@@ -189,7 +190,6 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         if self.turn >= len((self.lottodraw.random_number +
                              self.lottodraw.random_addit)):
             self.timer.stop()
-            text = ''
             if self.ui.rdbtn_show_draw_after.isChecked():
                 self.onbtn_draw_overview()
             self.ui.btn_draw_overview.setVisible(True)

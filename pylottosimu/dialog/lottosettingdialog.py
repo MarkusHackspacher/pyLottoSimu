@@ -32,7 +32,7 @@ try:
     from PyQt5 import QtGui, QtWidgets, uic
     from PyQt5.QtSvg import QSvgWidget
 
-    def QtLoadUi(uifile):
+    def qt_loadui(uifile):
         """
         load Qt ui file
 
@@ -48,7 +48,7 @@ except ImportError:
         from PySide import QtGui as QtWidgets
         from PySide.QtSvg import QSvgWidget
 
-        def QtLoadUi(uifile):
+        def qt_loadui(uifile):
             """
             load Qt ui file
 
@@ -67,7 +67,7 @@ except ImportError:
         from PyQt4 import QtGui as QtWidgets
         from PyQt4.QtSvg import QSvgWidget
 
-        def QtLoadUi(uifile):
+        def qt_loadui(uifile):
             """
             load Qt ui file
 
@@ -108,7 +108,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
             self.ui.setupUi(self)
         else:
             # Set up the user interface from Designer.
-            self.ui = QtLoadUi(os.path.abspath(os.path.join(
+            self.ui = qt_loadui(os.path.abspath(os.path.join(
                 os.path.dirname(sys.argv[0]),
                 "pylottosimu", "dialog", "lottosystem.ui")))
             self.ui.setWindowIcon(
