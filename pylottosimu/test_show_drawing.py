@@ -51,7 +51,7 @@ __license__ = "GPL"
 __copyright__ = "<2015> Markus Hackspacher"
 
 
-class show_drawingTestCase(unittest.TestCase):
+class ShowDrawingTestCase(unittest.TestCase):
     """
     Test of drawing
     """
@@ -60,7 +60,7 @@ class show_drawingTestCase(unittest.TestCase):
         '''Creates the QApplication instance'''
 
         # Simple way of making instance a singleton
-        super(show_drawingTestCase, self).setUp()
+        super(ShowDrawingTestCase, self).setUp()
         global _instance
         if _instance is None:
             _instance = QtWidgets.QApplication([])
@@ -70,7 +70,7 @@ class show_drawingTestCase(unittest.TestCase):
     def tearDown(self):
         '''Deletes the reference owned by self'''
         del self.app
-        super(show_drawingTestCase, self).tearDown()
+        super(ShowDrawingTestCase, self).tearDown()
 
     def test_twoballnumber(self):
         '''test with two ball numbers '''

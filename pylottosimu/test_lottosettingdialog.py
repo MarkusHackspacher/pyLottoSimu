@@ -34,7 +34,7 @@ from __future__ import absolute_import
 
 import unittest
 from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
-from pylottosimu.lottosystem import lottosystemdata
+from pylottosimu.lottosystem import LottoSystemData
 
 _FORCE_PYSIDE = False
 _FORCE_PYQT4 = False
@@ -58,7 +58,7 @@ __license__ = "GPL"
 __copyright__ = "<2015> Markus Hackspacher"
 
 
-class show_lottosystemdataTestCase(unittest.TestCase):
+class LottoSystemDataTestCase(unittest.TestCase):
     """
     Test of drawing
     """
@@ -67,7 +67,7 @@ class show_lottosystemdataTestCase(unittest.TestCase):
         '''Creates the QApplication instance'''
 
         # Simple way of making instance a singleton
-        super(show_lottosystemdataTestCase, self).setUp()
+        super(LottoSystemDataTestCase, self).setUp()
         global _instance
         # if _instance is None:
         #    _instance = QtWidgets.QApplication(sys.argv)
@@ -77,7 +77,7 @@ class show_lottosystemdataTestCase(unittest.TestCase):
     def tearDown(self):
         '''Deletes the reference owned by self'''
         del self.app
-        super(show_lottosystemdataTestCase, self).tearDown()
+        super(LottoSystemDataTestCase, self).tearDown()
 
     def test_dialog(self):
         '''test '''

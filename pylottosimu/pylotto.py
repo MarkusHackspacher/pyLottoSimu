@@ -31,7 +31,7 @@ import random
 
 from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
-from pylottosimu.lottosystem import lottosystemdata
+from pylottosimu.lottosystem import LottoSystemData
 
 _FORCE_PYSIDE = False
 
@@ -112,7 +112,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
         self.action_lottosim()
         self.timer = QtCore.QTimer(self)
-        self.sysdat = lottosystemdata()
+        self.sysdat = LottoSystemData()
 
         # Slots
         self.ui.btn_random_numbers.clicked.connect(
@@ -131,7 +131,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.turn = 0
         self.random_number = 0
         self.delay_of_next_number = self.ui.horizontalSlider.value()
-        self.lottodraw = drawlotto()
+        self.lottodraw = DrawLotto()
         self.ui.label_numbers.setText(self.lottodraw.data['name'])
         self.ui.show()
 
@@ -319,6 +319,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         infobox.setInformativeText(text)
         infobox.exec_()
 
+    @staticmethod
     def onwebsite(self):
         """Open website
 
@@ -334,7 +335,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.close()
 
 
-class drawlotto(QtCore.QObject):
+class DrawLotto(QtCore.QObject):
     """simulate a lotto draw
 
     :param name: name of game
@@ -356,7 +357,7 @@ class drawlotto(QtCore.QObject):
     def __init__(self, name='Lotto DE', max_draw=49, draw_numbers=6,
                  with_addit=False, addit_numbers=0, sep_addit_numbers=False,
                  max_addit=0):
-        super(drawlotto, self).__init__()
+        super(DrawLotto, self).__init__()
         self.data = {
             'name': name,
             'max_draw': max_draw,

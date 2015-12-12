@@ -20,14 +20,14 @@
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
 import unittest
-from pylottosimu.lottosystem import lottosystemdata
+from pylottosimu.lottosystem import LottoSystemData
 """Testcase of module pylottosimu.lottosystemdata"""
 
 
 class TestCodeFormat(unittest.TestCase):
     """Test the code format of the file"""
     def setUp(self):
-        self.lottosystem = lottosystemdata()
+        self.lottosystem = LottoSystemData()
 
     def test_readfile(self):
         """read the lottosystems.json file

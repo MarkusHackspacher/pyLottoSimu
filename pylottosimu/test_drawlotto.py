@@ -25,7 +25,7 @@ import unittest
 from pylottosimu import pylotto
 
 
-class drawlottoTestCase(unittest.TestCase):
+class DrawLottoTestCase(unittest.TestCase):
     """
     Test the lotto draw with some input numbers
     """
@@ -34,7 +34,7 @@ class drawlottoTestCase(unittest.TestCase):
 
         :return: none
         """
-        self.lotto = pylotto.drawlotto(with_addit=False, addit_numbers=2,
+        self.lotto = pylotto.DrawLotto(with_addit=False, addit_numbers=2,
                                        sep_addit_numbers=True, max_addit=10)
 
     def test_setting(self):

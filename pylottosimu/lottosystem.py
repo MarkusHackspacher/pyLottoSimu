@@ -25,9 +25,9 @@ import sys
 import json
 
 
-class lottosystemdata(object):
+class LottoSystemData(object):
     """
-    The class lottosystemdata loads predefined lottery systems.
+    loads predefined lottery systems.
     And read and write a json file of the data set.
 
     Dataset:
@@ -86,6 +86,7 @@ class lottosystemdata(object):
             data = json.load(data_file)
         return data
 
+    @staticmethod
     def fixdata(self):
         """Data of predefined lottery system.
 
