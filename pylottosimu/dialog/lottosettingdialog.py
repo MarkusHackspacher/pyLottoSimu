@@ -121,18 +121,28 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         self.systemdata = sysdat
         for systemname in self.systemdata.data:
             self.ui.combo_name.addItem(systemname['name'])
-        self.ui.combo_name.currentIndexChanged.connect(self.setvalues)
+        self.ui.combo_name.currentIndexChanged.connect(self.set_values)
         self.ui.check_with_addit.clicked.connect(self.with_addit)
         self.ui.check_sep_addit_numbers.clicked.connect(self.sep_addit_numbers)
 
         self.set_values()
 
     def sep_addit_numbers(self):
+        """if the checkbox with separete additional numbers is active
+        then enable to set the number
+
+        :return:
+        """
         check = self.ui.check_sep_addit_numbers.isChecked()
         self.ui.label_max_addit.setEnabled(check)
         self.ui.spinBox_max_addit.setEnabled(check)
 
     def with_addit(self):
+        """if the checkbox with additional numbers is active
+        then enable to set the number
+
+        :return:
+        """
         check = self.ui.check_with_addit.isChecked()
         self.ui.spinBox_addit_numbers.setEnabled(check)
         self.ui.label_addit_numbers.setEnabled(check)
@@ -143,7 +153,10 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         self.sep_addit_numbers()
 
     def set_values(self):
-        """Set Values"""
+        """Set Values
+
+        :return:
+        """
         index = self.ui.combo_name.currentIndex()
         self.ui.spinBox_max_draw.setValue(
             self.systemdata.data[index]['max_draw'])
@@ -160,7 +173,10 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         self.with_addit()
 
     def values(self):
-        """Values"""
+        """Values
+
+        :return:
+        """
         return (str(self.ui.combo_name.currentText()),
                 self.ui.spinBox_max_draw.valueFromText(
                     self.ui.spinBox_max_draw.text()),
