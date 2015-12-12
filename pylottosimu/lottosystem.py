@@ -30,6 +30,15 @@ class lottosystemdata():
     The class lottosystemdata loads predefined lotto systems.
     And read and write a json file of the data set.
 
+    Dataset:
+    name: name of the lottery system,
+    max_draw: highest number of draw
+    draw_numbers: number to pick
+    with_addit: with additional number
+    sep_addit_numbers: with separate additional number, the additional number are not in the same pot
+    addit_numbers: additional number to pick
+    max_addit: highest additional number in the separate pot
+
     .. todo:: at program start: look for the right path in the home environ
      load json and last use lotto
 
@@ -76,14 +85,18 @@ class lottosystemdata():
         return data
 
     def fixdata(self):
-        """Returns predefined lottosystems.
-        the following are predefined:
-        Lotto Germany, 6 from 49
-        Lotto Austria, 6 from 45
-        EuroMillionen, 5 from 50
-        Powerball Lottery US, 5 from 59
-        Mega Millions
+        """Data of predefined lottery system.
 
+        The following are predefined:
+        Lotto Germany (pick 6 out of 49),
+        Lotto Austria (pick 6 out of 45),
+        EuroMillionen,
+        Powerball Lottery US,
+        Mega Millions,
+        Hot Lotto Sizzler
+
+        If you miss your favorite lottery system than could you add here.
+        
         :returns: data"""
         data = [
             {
