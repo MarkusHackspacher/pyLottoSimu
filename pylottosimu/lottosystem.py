@@ -87,7 +87,7 @@ class LottoSystemData(object):
         return data
 
     @staticmethod
-    def fixdata(self):
+    def fixdata():
         """Data of predefined lottery system.
 
         The following are predefined:

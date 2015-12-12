@@ -42,6 +42,12 @@ try:
     from PyQt5.QtSvg import QSvgWidget
 
     def QtLoadUI(uifile):
+        """
+        load Qt ui file
+
+        :param uifile:
+        :return:
+        """
         return uic.loadUi(uifile)
 
 except ImportError:
@@ -51,6 +57,12 @@ except ImportError:
         from PySide.QtSvg import QSvgWidget
 
         def QtLoadUI(uifile):
+            """
+            load Qt ui file
+
+            :param uifile:
+            :return:
+            """
             from PySide import QtUiTools
             loader = QtUiTools.QUiLoader()
             uif = QtCore.QFile(uifile)
@@ -64,6 +76,12 @@ except ImportError:
         from PyQt4.QtSvg import QSvgWidget
 
         def QtLoadUI(uifile):
+            """
+            load Qt ui file
+
+            :param uifile:
+            :return:
+            """
             return uic.loadUi(uifile)
 
 if sys.version_info < (3, 0):
@@ -320,7 +338,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         infobox.exec_()
 
     @staticmethod
-    def onwebsite(self):
+    def onwebsite():
         """Open website
 
         :returns: none

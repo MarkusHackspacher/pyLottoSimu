@@ -27,6 +27,11 @@ from pylottosimu.lottosystem import LottoSystemData
 class TestCodeFormat(unittest.TestCase):
     """Test the code format of the file"""
     def setUp(self):
+        """
+        load LottoSystemData
+
+        :return:
+        """
         self.lottosystem = LottoSystemData()
 
     def test_readfile(self):

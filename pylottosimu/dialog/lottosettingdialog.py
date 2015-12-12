@@ -33,6 +33,12 @@ try:
     from PyQt5.QtSvg import QSvgWidget
 
     def QtLoadUI(uifile):
+        """
+        load Qt ui file
+
+        :param uifile:
+        :return:
+        """
         return uic.loadUi(uifile)
 except ImportError:
     try:
@@ -43,6 +49,12 @@ except ImportError:
         from PySide.QtSvg import QSvgWidget
 
         def QtLoadUI(uifile):
+            """
+            load Qt ui file
+
+            :param uifile:
+            :return:
+            """
             from PySide import QtUiTools
             loader = QtUiTools.QUiLoader()
             uif = QtCore.QFile(uifile)
@@ -56,6 +68,12 @@ except ImportError:
         from PyQt4.QtSvg import QSvgWidget
 
         def QtLoadUI(uifile):
+            """
+            load Qt ui file
+
+            :param uifile:
+            :return:
+            """
             return uic.loadUi(uifile)
 
 __author__ = 'mar'

@@ -9,12 +9,11 @@ python:
 before_install:
   - "sudo apt-get update"
 install:
-  - "sudo apt-get install xvfb python-qt4"
+  - "sudo apt-get install python-qt4"
   - "pip install pep8"
   - "ln -s /usr/lib/python2.7/dist-packages/PyQt4/ $VIRTUAL_ENV/lib/python2.7/site-packages/"
   - "ln -s /usr/lib/python2.7/dist-packages/sip.so $VIRTUAL_ENV/lib/python2.7/site-packages/"
-  - "sudo start xvfb"
-script: 
+script:
   nosetests
 notifications:
   irc: false
