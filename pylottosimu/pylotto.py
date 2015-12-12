@@ -41,7 +41,7 @@ try:
     from PyQt5 import QtGui, QtCore, QtWidgets, uic
     from PyQt5.QtSvg import QSvgWidget
 
-    def QtLoadUI(uifile):
+    def QtLoadUi(uifile):
         """
         load Qt ui file
 
@@ -56,7 +56,7 @@ except ImportError:
         from PySide import QtGui as QtWidgets
         from PySide.QtSvg import QSvgWidget
 
-        def QtLoadUI(uifile):
+        def QtLoadUi(uifile):
             """
             load Qt ui file
 
@@ -75,7 +75,7 @@ except ImportError:
         from PyQt4 import QtGui as QtWidgets
         from PyQt4.QtSvg import QSvgWidget
 
-        def QtLoadUI(uifile):
+        def QtLoadUi(uifile):
             """
             load Qt ui file
 
@@ -115,7 +115,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         super(LottoSimuDialog, self).__init__()
 
         # Set up the user interface from Designer.
-        self.ui = QtLoadUI(os.path.abspath(os.path.join(
+        self.ui = QtLoadUi(os.path.abspath(os.path.join(
                            os.path.dirname(sys.argv[0]),
                            "pylottosimu", "lottosimu_gui.ui")))
         self.ui.setWindowIcon(
@@ -227,7 +227,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
         :returns: none
         """
-        system = LottoSettingsDialog.getValues(self.sysdat)
+        system = LottoSettingsDialog.GetValues(self.sysdat)
 
         if system[1]:
             self.lottodraw.data['name'] = system[0][0]

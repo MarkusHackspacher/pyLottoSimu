@@ -32,7 +32,7 @@ try:
     from PyQt5 import QtGui, QtWidgets, uic
     from PyQt5.QtSvg import QSvgWidget
 
-    def QtLoadUI(uifile):
+    def QtLoadUi(uifile):
         """
         load Qt ui file
 
@@ -48,7 +48,7 @@ except ImportError:
         from PySide import QtGui as QtWidgets
         from PySide.QtSvg import QSvgWidget
 
-        def QtLoadUI(uifile):
+        def QtLoadUi(uifile):
             """
             load Qt ui file
 
@@ -67,7 +67,7 @@ except ImportError:
         from PyQt4 import QtGui as QtWidgets
         from PyQt4.QtSvg import QSvgWidget
 
-        def QtLoadUI(uifile):
+        def QtLoadUi(uifile):
             """
             load Qt ui file
 
@@ -104,7 +104,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
             self.ui.setupUi(self)
         else:
             # Set up the user interface from Designer.
-            self.ui = QtLoadUI(os.path.abspath(os.path.join(
+            self.ui = QtLoadUi(os.path.abspath(os.path.join(
                 os.path.dirname(sys.argv[0]),
                 "pylottosimu", "dialog", "lottosystem.ui")))
             self.ui.setWindowIcon(
@@ -127,12 +127,12 @@ class LottoSettingsDialog(QtWidgets.QDialog):
 
         self.setvalues()
 
-    def sep_addit_numbers(self):
+    def SepAdditNumbers(self):
         check = self.ui.check_sep_addit_numbers.isChecked()
         self.ui.label_max_addit.setEnabled(check)
         self.ui.spinBox_max_addit.setEnabled(check)
 
-    def with_addit(self):
+    def WithAddit(self):
         check = self.ui.check_with_addit.isChecked()
         self.ui.spinBox_addit_numbers.setEnabled(check)
         self.ui.label_addit_numbers.setEnabled(check)
@@ -140,7 +140,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         self.ui.check_sep_addit_numbers.setEnabled(check)
         if check is not True:
             self.ui.check_sep_addit_numbers.setChecked(False)
-        self.sep_addit_numbers()
+        self.SepAdditNumbers()
 
     def setvalues(self):
         """Set Values"""
@@ -157,7 +157,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
             self.systemdata.data[index]['sep_addit_numbers'])
         self.ui.spinBox_max_addit.setValue(
             self.systemdata.data[index]['max_addit'])
-        self.with_addit()
+        self.WithAddit()
 
     def values(self):
         """Values"""
@@ -174,7 +174,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
                     self.ui.spinBox_max_addit.text()))
 
     @staticmethod
-    def getValues(sysdat, parent=None):
+    def GetValues(sysdat, parent=None):
         """static method to create the dialog and return
         (dialog.values, accepted)
 
