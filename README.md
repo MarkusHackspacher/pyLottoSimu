@@ -2,19 +2,16 @@ pyLottoSimu
 ===========
 
 ![Github Releases](https://img.shields.io/github/release/markushackspacher/pylottosimu.svg)
-![Stars](https://img.shields.io/github/stars/MarkusHackspacher/pyLottoSimu.svg)
-[![license-GPLv3](https://img.shields.io/badge/license-GPLv3-blue.svg)]
-(https://github.com/MarkusHackspacher/pyLottoSimu/blob/master/LICENSE)
 [![Join the chat at https://gitter.im/MarkusHackspacher/pyLottoSimu](https://badges.gitter.im/Join%20Chat.svg)]
 (https://gitter.im/MarkusHackspacher/pyLottoSimu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Documentation Status](https://readthedocs.org/projects/pylottosimu/badge/?version=latest)]
 (https://readthedocs.org/projects/pylottosimu/?badge=latest)
-[![Build Status](https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/status.png)]
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/b69a92a816434db0869b2373cab4765d/badge.svg)]
 (https://www.quantifiedcode.com/app/project/b69a92a816434db0869b2373cab4765d)
 [![Build Status](https://travis-ci.org/MarkusHackspacher/pyLottoSimu.svg?branch=master)]
 (https://travis-ci.org/MarkusHackspacher/pyLottoSimu)
+[![Build Status](https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/status.png)]
 (https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/latest)
-[![Code Issues](https://www.quantifiedcode.com/api/v1/project/b69a92a816434db0869b2373cab4765d/badge.svg)]
 
 Lotto Generator und Simulator
 
@@ -32,6 +29,7 @@ pyLottoSimu can be started in these languages:
 English, German, French, Spanish, Italian, Danish, Dutch, Polish and Russian
 
 Start with
+^^^^^^^^^^
 
 `python lotto.pyw [de|dk|fr|es|it|nl|pl|ru]`
 
