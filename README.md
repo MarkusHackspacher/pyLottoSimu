@@ -28,8 +28,7 @@ pyLottoSimu can be started in these languages:
 
 English, German, French, Spanish, Italian, Danish, Dutch, Polish and Russian
 
-Start with
-^^^^^^^^^^
+Start with:
 
 `python lotto.pyw [de|dk|fr|es|it|nl|pl|ru]`
 
