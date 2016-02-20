@@ -78,8 +78,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>478</width>
-       <height>318</height>
+       <width>476</width>
+       <height>316</height>
       </rect>
      </property>
      <property name="autoFillBackground">
@@ -343,10 +343,10 @@
     <widget class="QWidget" name="verticalLayoutWidget">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>300</x>
        <y>90</y>
-       <width>161</width>
-       <height>51</height>
+       <width>181</width>
+       <height>62</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -385,7 +385,7 @@
      <x>0</x>
      <y>0</y>
      <width>480</width>
-     <height>19</height>
+     <height>29</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_file">
@@ -461,5 +461,6 @@
    </property>
   </action>
  </widget>
+ <resources/>
  <connections/>
 </ui>
