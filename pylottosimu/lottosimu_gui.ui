@@ -78,8 +78,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>476</width>
-       <height>316</height>
+       <width>478</width>
+       <height>318</height>
       </rect>
      </property>
      <property name="autoFillBackground">
@@ -345,7 +345,7 @@
       <rect>
        <x>300</x>
        <y>90</y>
-       <width>181</width>
+       <width>171</width>
        <height>62</height>
       </rect>
      </property>
@@ -385,7 +385,7 @@
      <x>0</x>
      <y>0</y>
      <width>480</width>
-     <height>29</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_file">
