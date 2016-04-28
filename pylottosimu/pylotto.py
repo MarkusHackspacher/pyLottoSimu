@@ -3,7 +3,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2012-2015> Markus Hackspacher
+# Copyright (C) <2012-2016> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -315,25 +315,26 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
     def onclean_output_text(self):
         """Clean the output text
 
-        :returns: none"""
+        :returns: none
+        """
         self.ui.plaintextedit.setPlainText("")
 
     def oninfo(self):
-        """info message box
+        """Set the text for the info message box in html format
 
-        :returns: none"""
+        :returns: none
+        """
         infobox = QtWidgets.QMessageBox()
         infobox.setWindowTitle(self.tr('Info'))
-        text = self.tr(
-            'simulation of a random draw\n\n'
-            'based on an idea of imageupload,\n'
-            'http://www.my-image-upload.de/\n\n'
-            'GNU GPL v3\n'
-            'http://www.gnu.org/licenses/')
-        infobox.setText(text)
-        text = self.tr('More Information about the program at '
-                       'http://pylottosimu.readthedocs.org')
-        infobox.setInformativeText(text)
+        infobox.setText(self.tr(
+            'The simulation of a lottery draw based on an idea of '
+            '<a href="http://www.m-i-u.de/">my-image-upload.de</a>,<br><br>'
+            'pyLottoSimu is free software and use GNU General Public License '
+            '<a href="http://www.gnu.org/licenses/">www.gnu.org/licenses</a>'))
+        infobox.setInformativeText(self.tr(
+            'More Information about the program at '
+            '<a href="http://pylottosimu.readthedocs.io">'
+            'pylottosimu.readthedocs.io</a>'))
         infobox.exec_()
 
     @staticmethod
@@ -343,7 +344,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         :returns: none
         """
         webbrowser.open_new_tab(
-            "http://pylottosimu.readthedocs.org")
+            "http://pylottosimu.readthedocs.io")
 
     def onclose(self):
         """Close the GUI

@@ -40,9 +40,13 @@ Documentation
 Make the documentation as .html file::
 
   cd docs
-  sphinx-apidoc -f -o . ../pylottosimu
   make html
 
+Add new modules with::
+
+  cd docs
+  sphinx-apidoc -f -o . ../pylottosimu
+  
 .. image:: ../misc/pyLottoSimu_screenshot_en.png
 
 
