@@ -4,7 +4,7 @@
 """
 pyLottoSimu, load module lotto
 
-Copyright (C) <2012-2015> Markus Hackspacher
+Copyright (C) <2012-2016> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 

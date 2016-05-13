@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="en">
+<!DOCTYPE TS>
+<TS version="2.0" language="es" sourcelanguage="en">
 <context>
     <name>Dialog</name>
     <message>
         <location filename="dialog/lottosystem.ui" line="14"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>sistema</translation>
     </message>
     <message>
         <location filename="dialog/lottosystem.ui" line="52"/>
@@ -255,15 +256,12 @@ http://www.gnu.org/licenses/</translation>
     <message>
         <location filename="pylotto.py" line="329"/>
         <source>The simulation of a lottery draw based on an idea of &lt;a href=&quot;http://www.m-i-u.de/&quot;&gt;my-image-upload.de&lt;/a&gt;,&lt;br&gt;&lt;br&gt;pyLottoSimu is free software and use GNU General Public License &lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;www.gnu.org/licenses&lt;/a&gt;</source>
-        <translation>simulación de un sorteo al azar
-basado en una idea de imageupload,
-&lt;a href=&quot;http://www.m-i-u.de/&quot;&gt;my-image-upload.de&lt;/a&gt;,&lt;br&gt;&lt;br&gt;Lizenz: GNU GPL v3
-&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;www.gnu.org/licenses&lt;/a&gt;</translation>
+        <translation>simulación de un sorteo al azar basado en una idea de imageupload, &lt;a href=&quot;http://www.m-i-u.de/&quot;&gt;my-image-upload.de&lt;/a&gt;,&lt;br&gt;&lt;br&gt;Lizenz: GNU GPL v3 &lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;www.gnu.org/licenses&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="334"/>
         <source>More Information about the program at &lt;a href=&quot;http://pylottosimu.readthedocs.io&quot;&gt;pylottosimu.readthedocs.io&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Más información sobre el programa en &lt;a href=&quot;http://pylottosimu.readthedocs.io&quot;&gt;pylottosimu.readthedocs.io&lt;/a&gt;</translation>
     </message>
 </context>
 <context>
@@ -376,7 +374,7 @@ basado en una idea de imageupload,
     <message>
         <location filename="lottosimu_gui.ui" line="460"/>
         <source>Lotto system</source>
-        <translation type="unfinished"></translation>
+        <translation>sistema de lotería</translation>
     </message>
 </context>
 </TS>

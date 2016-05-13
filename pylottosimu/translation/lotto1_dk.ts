@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="da" sourcelanguage="en">
+<!DOCTYPE TS>
+<TS version="2.0" language="da" sourcelanguage="en">
 <context>
     <name>Dialog</name>
     <message>
@@ -255,10 +256,7 @@ http://www.gnu.org/licenses/</translation>
     <message>
         <location filename="pylotto.py" line="329"/>
         <source>The simulation of a lottery draw based on an idea of &lt;a href=&quot;http://www.m-i-u.de/&quot;&gt;my-image-upload.de&lt;/a&gt;,&lt;br&gt;&lt;br&gt;pyLottoSimu is free software and use GNU General Public License &lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;www.gnu.org/licenses&lt;/a&gt;</source>
-        <translation>simulering af en lodtrækning
-baseret på en idé om ImageUpload,
-&lt;a href=&quot;http://www.m-i-u.de/&quot;&gt;my-image-upload.de&lt;/a&gt;&lt;br&gt;&lt;br&gt;Lizenz: GNU GPL v3
-&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;www.gnu.org/licenses&lt;/a&gt;</translation>
+        <translation>simulering af en lodtrækning baseret på en idé om ImageUpload, &lt;a href=&quot;http://www.m-i-u.de/&quot;&gt;my-image-upload.de&lt;/a&gt;&lt;br&gt;&lt;br&gt;Lizenz: GNU GPL v3 &lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;www.gnu.org/licenses&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="334"/>

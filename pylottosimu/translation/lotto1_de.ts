@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de_DE" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="de_DE">
 <context>
     <name>Dialog</name>
     <message>
@@ -231,31 +232,9 @@ Ausgelost werden: {1} aus {2} {3}!</translation>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="329"/>
-        <source>simulation of a random draw
-
-based on an idea of imageupload,
-http://www.my-image-upload.de/
-
-GNU GPL v3
-http://www.gnu.org/licenses/</source>
-        <translation type="obsolete">Zufallsgenerator und Simulation einer Ziehung
-
-Die Idee dieser Simulation stammt von imageupload,
-dem Betreiber von http://www.my-image-upload.de/
-
-Lizenz: GNU GPL v3
-http://www.gnu.org/licenses/</translation>
-    </message>
-    <message>
         <location filename="pylotto.py" line="309"/>
         <source>{} {} out of {}: {}</source>
         <translation>{} {} aus {}: {}</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="336"/>
-        <source>More Information about the program at http://pylottosimu.readthedocs.org</source>
-        <translation type="obsolete">Weitere Informationen gibt es auf http://pylottosimu.readthedocs.org</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="329"/>
@@ -265,7 +244,7 @@ http://www.gnu.org/licenses/</translation>
     <message>
         <location filename="pylotto.py" line="334"/>
         <source>More Information about the program at &lt;a href=&quot;http://pylottosimu.readthedocs.io&quot;&gt;pylottosimu.readthedocs.io&lt;/a&gt;</source>
-        <translation>Weitere Informationen gibt es auf &lt;a href=&quot;http://pylottosimu.readthedocs.io&quot;&gt;pylottosimu.readthedocs.io&lt;/a&gt;</translation>
+        <translation>Weitere Informationen gibt es auf &lt;a href=&quot;http://pylottosimu.readthedocs.io/de/latest/&quot;&gt;pylottosimu.readthedocs.io&lt;/a&gt;</translation>
     </message>
 </context>
 <context>
