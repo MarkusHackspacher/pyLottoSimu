@@ -235,6 +235,9 @@
        <bold>true</bold>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: black;</string>
+     </property>
      <property name="text">
       <string>Text</string>
      </property>
@@ -307,6 +310,9 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: black;</string>
+     </property>
      <property name="text">
       <string>Speed</string>
      </property>
@@ -333,6 +339,9 @@
        <bold>false</bold>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color: black;</string>
+     </property>
      <property name="text">
       <string>Text</string>
      </property>
@@ -346,12 +355,15 @@
        <x>300</x>
        <y>90</y>
        <width>171</width>
-       <height>62</height>
+       <height>65</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QRadioButton" name="rdbtn_show_draw_after">
+        <property name="styleSheet">
+         <string notr="true">color:black; background-color: whitesmoke;</string>
+        </property>
         <property name="text">
          <string>show draw after</string>
         </property>
@@ -385,7 +397,7 @@
      <x>0</x>
      <y>0</y>
      <width>480</width>
-     <height>19</height>
+     <height>29</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_file">
