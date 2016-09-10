@@ -12,7 +12,7 @@ passed = 0
 failed = 0
 errors = list()
 
-IGNORED_FILES = [""]
+IGNORED_FILES = ["setup.py"]
 
 
 def check(module):
