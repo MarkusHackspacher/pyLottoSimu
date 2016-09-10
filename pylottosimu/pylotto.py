@@ -450,8 +450,8 @@ class DrawLotto(QtCore.QObject):
             text = self.tr(
                 "We are already at the winning number {0}, and thus the "
                 "penultimate number of today's draw. It is the {1}.")
-            text = str(str(text).format(self.countnumbers[turn],
-                                        self.random_number[turn]))
+            text = str(text).format(self.countnumbers[turn],
+                                    self.random_number[turn])
         elif turn == (self.data['draw_numbers'] - 1):
             text = self.tr('And now we come to the {0} and last'
                            'winning number, it is the {1}.')
@@ -493,10 +493,8 @@ class DrawLotto(QtCore.QObject):
             if sys.version_info < (3, 0):
                 dttext = dttext.decode('utf-8')
             text = str(textr).format(
-                dttext,
-                self.data['draw_numbers'],
-                self.data['max_draw'],
-                text_addit)
+                dttext, self.data['draw_numbers'],
+                self.data['max_draw'], text_addit)
         elif turn == 0:
             textr = self.tr('And the first winning number is the {0}.')
             text = str(textr).format(self.random_number[turn])
