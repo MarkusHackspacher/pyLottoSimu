@@ -6,8 +6,6 @@ pyLottoSimu
 (https://gitter.im/MarkusHackspacher/pyLottoSimu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Documentation Status](https://readthedocs.org/projects/pylottosimu/badge/?version=latest)]
 (https://readthedocs.org/projects/pylottosimu/?badge=latest)
-[![Code Issues](https://www.quantifiedcode.com/api/v1/project/b69a92a816434db0869b2373cab4765d/badge.svg)]
-(https://www.quantifiedcode.com/app/project/b69a92a816434db0869b2373cab4765d)
 [![Build Status](https://travis-ci.org/MarkusHackspacher/pyLottoSimu.svg?branch=master)]
 (https://travis-ci.org/MarkusHackspacher/pyLottoSimu)
 [![Build Status](https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/status.png)]
