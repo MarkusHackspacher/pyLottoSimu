@@ -132,7 +132,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         self.set_values()
 
     def sep_addit_numbers(self):
-        """if the checkbox with separete additional numbers is active
+        """if the checkbox with separate additional numbers is active
         then enable to set the number
 
         :return:
