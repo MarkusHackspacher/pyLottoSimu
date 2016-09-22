@@ -14,10 +14,8 @@ Powerball Lottery US, Mega Millions lottery and Hot Lotto Sizzler system.
 
 test                 | result
 ------------------------------
-**Python 2 + pyQt4** | [![Build Status](https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/status.png)]
-(https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/latest)
-**Python 3 + PyQt5** | [![Build Status](https://travis-ci.org/MarkusHackspacher/pyLottoSimu.svg?branch=master)]
-(https://travis-ci.org/MarkusHackspacher/pyLottoSimu)
+**Python 2 + pyQt4** | [![Build Status](https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/status.png)](https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/latest)
+**Python 3 + PyQt5** | [![Build Status](https://travis-ci.org/MarkusHackspacher/pyLottoSimu.svg?branch=master)](https://travis-ci.org/MarkusHackspacher/pyLottoSimu)
 
 
 install
