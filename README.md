@@ -14,17 +14,16 @@ Powerball Lottery US, Mega Millions lottery and Hot Lotto Sizzler system.
 
 test                 | result
 ---------------------|--------
-**Python 2 + pyQt4** | [![Build Status](https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/status.png)]
-(https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/latest)
-**Python 3 + PyQt5** | [![Build Status](https://travis-ci.org/MarkusHackspacher/pyLottoSimu.svg?branch=master)]
-(https://travis-ci.org/MarkusHackspacher/pyLottoSimu)
+**Python 2 + pyQt4** | [![Build Status](https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/status.png)](https://drone.io/github.com/MarkusHackspacher/pyLottoSimu/latest)
+**Python 3 + PyQt5** | [![Build Status](https://travis-ci.org/MarkusHackspacher/pyLottoSimu.svg?branch=master)](https://travis-ci.org/MarkusHackspacher/pyLottoSimu)
 
 
 install
 -------
 
 The program requires [Python 2.7 or 3.x](http://www.python.org/download/) 
-and [Qt5 for Python](http://www.riverbankcomputing.com/software/pyqt/download5).
+and [PyQt4 for Python 2](http://www.riverbankcomputing.com/software/pyqt/download)
+or PyQt5 for Python 3 `pip3 install PyQt5`.
 
 pyLottoSimu can be started in these languages:
 
