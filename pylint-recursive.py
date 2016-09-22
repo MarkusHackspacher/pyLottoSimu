@@ -13,8 +13,8 @@ failed = 0
 errors = list()
 
 IGNORED_FILES = ["setup.py",
-                 "pylottosimu/dialog/lottosettingdialog.py",
-                 "pylottosimu/dialog/UI_lottosystem.py"]
+                 "lottosettingdialog.py",  # pylottosimu/dialog/
+                 "UI_lottosystem.py"]  # pylottosimu/dialog/
 
 
 def check(module):
