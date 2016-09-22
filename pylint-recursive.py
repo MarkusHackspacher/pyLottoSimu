@@ -12,7 +12,9 @@ passed = 0
 failed = 0
 errors = list()
 
-IGNORED_FILES = ["setup.py"]
+IGNORED_FILES = ["setup.py",
+                 "dialog/lottosettingdialog.py",
+                 "dialog/UI_lottosystem.py"]
 
 
 def check(module):
