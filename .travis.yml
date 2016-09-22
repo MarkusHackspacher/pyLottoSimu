@@ -2,9 +2,9 @@ language: python
 sudo: required
 dist: trusty
 python:
-  - "2.7"
+#  - "2.7"
 #  - "3.2"
-#  - "3.4"
+  - "3.4"
   - "3.5"
 #  - "nightly"
 # command to install dependencies
