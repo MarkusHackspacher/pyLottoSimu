@@ -12,7 +12,9 @@ passed = 0
 failed = 0
 errors = list()
 
-IGNORED_FILES = ["setup.py"]
+IGNORED_FILES = ["setup.py",
+                 "lottosettingdialog.py",  # pylottosimu/dialog/
+                 "UI_lottosystem.py"]  # pylottosimu/dialog/
 
 
 def check(module):
