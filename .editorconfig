@@ -1,0 +1,11 @@
+[*.{py,xml,json}]
+charset = utf-8
+indent_style = space
+indent_size = 4
+
+[*.py]
+trim_trailing_whitespace = true
+
+[.travis.yml]
+indent_style = space
+indent_size = 2
