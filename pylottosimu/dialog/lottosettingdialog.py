@@ -167,13 +167,15 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         self.ui.spinBox_draw_numbers.setValue(
             self.systemdata.data[index]['draw_numbers'])
         self.ui.check_with_addit.setChecked(
-            self.systemdata.data[index]['with_addit'])
+            self.systemdata.data[index]['with_addition'])
         self.ui.spinBox_addit_numbers.setValue(
-            self.systemdata.data[index]['addit_numbers'])
+            self.systemdata.data[index]['addition_numbers'])
         self.ui.check_sep_addit_numbers.setChecked(
-            self.systemdata.data[index]['sep_addit_numbers'])
+            self.systemdata.data[index]['sep_addition_numbers'])
         self.ui.spinBox_max_addit.setValue(
-            self.systemdata.data[index]['max_addit'])
+            self.systemdata.data[index]['max_addition'])
+        self.ui.edit_name_addition.setText(
+            self.systemdata.data[index]['name_addition'])
         self.with_addit()
 
     def values(self):
@@ -191,7 +193,8 @@ class LottoSettingsDialog(QtWidgets.QDialog):
                     self.ui.spinBox_addit_numbers.text()),
                 self.ui.check_sep_addit_numbers.isChecked(),
                 self.ui.spinBox_max_addit.valueFromText(
-                    self.ui.spinBox_max_addit.text()))
+                    self.ui.spinBox_max_addit.text()),
+                self.ui.edit_name_addition.text())
 
     @staticmethod
     def get_values(sysdat, parent=None):

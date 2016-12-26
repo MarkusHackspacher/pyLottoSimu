@@ -9,39 +9,44 @@
         <translation>System</translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="52"/>
+        <location filename="dialog/lottosystem.ui" line="65"/>
         <source>Maximum number of draw</source>
         <translation>Höchste Zahl</translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="65"/>
+        <location filename="dialog/lottosystem.ui" line="81"/>
         <source>Maximum number of additional </source>
         <translation>Höchste Zusatzzahl</translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="75"/>
+        <location filename="dialog/lottosystem.ui" line="94"/>
         <source>Additional numbers</source>
         <translation>Anzahl der Zusatzzahlen</translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="82"/>
+        <location filename="dialog/lottosystem.ui" line="104"/>
         <source>Draw numbers</source>
         <translation>gezogene Zahlen</translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="89"/>
+        <location filename="dialog/lottosystem.ui" line="117"/>
         <source>With additional number</source>
         <translation>Mit Zusatzzahl</translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="106"/>
+        <location filename="dialog/lottosystem.ui" line="134"/>
         <source>Name of the lotto system</source>
         <translation>Lottosystemname</translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="113"/>
+        <location filename="dialog/lottosystem.ui" line="55"/>
         <source>Separete numbers area</source>
         <translation>Seperate Zusatzzahlen</translation>
+    </message>
+    <message>
+        <location filename="dialog/lottosystem.ui" line="158"/>
+        <source>Name of the additional</source>
+        <translation>Name der Zusatzzahl</translation>
     </message>
 </context>
 <context>
@@ -55,124 +60,124 @@
 <context>
     <name>DrawLotto</name>
     <message>
-        <location filename="pylotto.py" line="389"/>
+        <location filename="pylotto.py" line="391"/>
         <source>And now we come to the winning number {0}, it is the {1}.</source>
         <translation>Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="391"/>
+        <location filename="pylotto.py" line="393"/>
         <source>The {0} lotto number of today&apos;s draw is the {1}.</source>
         <translation>Kommen wir nun zur {0} Zahl der heutigen Ziehung, dies ist die {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="393"/>
+        <location filename="pylotto.py" line="395"/>
         <source>We come to the {0} winning number, this is the {1}.</source>
         <translation>Kommen wir nun zur {0} Gewinnzahl, dies ist die {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="395"/>
+        <location filename="pylotto.py" line="397"/>
         <source>Now we come to {0} number of today&apos;s draw ... {1}.</source>
         <translation>Kommen wir nun zur {0} Zahl der heutigen Ziehung ... {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="397"/>
+        <location filename="pylotto.py" line="399"/>
         <source>The {0} winning number is {1}.</source>
         <translation>Die {0} Gewinnzahl lautet {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="398"/>
+        <location filename="pylotto.py" line="400"/>
         <source>first</source>
         <translation>ersten</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="398"/>
+        <location filename="pylotto.py" line="400"/>
         <source>second</source>
         <translation>zweiten</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="399"/>
+        <location filename="pylotto.py" line="401"/>
         <source>third</source>
         <translation>dritten</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="399"/>
+        <location filename="pylotto.py" line="401"/>
         <source>fourth</source>
         <translation>vierten</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="400"/>
+        <location filename="pylotto.py" line="402"/>
         <source>fifth</source>
         <translation>fünften</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="400"/>
+        <location filename="pylotto.py" line="402"/>
         <source>sixth</source>
         <translation>sechsten</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="401"/>
+        <location filename="pylotto.py" line="403"/>
         <source>seventh</source>
         <translation>siebten</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="401"/>
+        <location filename="pylotto.py" line="403"/>
         <source>eighth</source>
         <translation>achten</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="402"/>
+        <location filename="pylotto.py" line="404"/>
         <source>ninth</source>
         <translation>neunten</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="402"/>
+        <location filename="pylotto.py" line="404"/>
         <source>10th</source>
         <translation>10.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="403"/>
+        <location filename="pylotto.py" line="405"/>
         <source>11th</source>
         <translation>11.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="403"/>
+        <location filename="pylotto.py" line="405"/>
         <source>12th</source>
         <translation>12.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="404"/>
+        <location filename="pylotto.py" line="406"/>
         <source>13th</source>
         <translation>13.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="404"/>
+        <location filename="pylotto.py" line="406"/>
         <source>14th</source>
         <translation>14.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="405"/>
+        <location filename="pylotto.py" line="407"/>
         <source>15th</source>
         <translation>15.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="450"/>
+        <location filename="pylotto.py" line="452"/>
         <source>We are already at the winning number {0}, and thus the penultimate number of today&apos;s draw. It is the {1}.</source>
         <translation>Kommen wir nun zur der {0} Zahl, und damit die vorletzte Zahl der heutigen Ziehung. Es ist die {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="456"/>
+        <location filename="pylotto.py" line="458"/>
         <source>And now we come to the {0} and lastwinning number, it is the {1}.</source>
         <translation>Und nun kommen wir zu der {0} und letzten Gewinnzahl, es ist die {1}.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="470"/>
         <source>the bonus numbers are{0}, </source>
-        <translation>die Zusatzzahl sind{0}, </translation>
+        <translation type="obsolete">die Zusatzzahl sind{0}, </translation>
     </message>
     <message>
         <location filename="pylotto.py" line="472"/>
         <source>the bonus number is{0}, </source>
-        <translation>die Zusatzzahl ist{0}, </translation>
+        <translation type="obsolete">die Zusatzzahl ist{0}, </translation>
     </message>
     <message>
         <location filename="pylotto.py" line="479"/>
@@ -182,10 +187,10 @@
     <message>
         <location filename="pylotto.py" line="485"/>
         <source>with {0} additional numbers </source>
-        <translation>mit {0} Zusatzzahl(en) </translation>
+        <translation type="obsolete">mit {0} Zusatzzahl(en) </translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="492"/>
+        <location filename="pylotto.py" line="493"/>
         <source>Welcome to the lottery draw,
 at {0}.
 numbers are drawn: {1} out of {2} {3}!</source>
@@ -194,14 +199,39 @@ am {0}.
 Ausgelost werden: {1} aus {2} {3}!</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="503"/>
+        <location filename="pylotto.py" line="502"/>
         <source>And the first winning number is the {0}.</source>
         <translation>Und die erste Gewinnzahl ist die {0}.</translation>
     </message>
     <message>
         <location filename="pylotto.py" line="508"/>
         <source>The additional number is the {0}.</source>
-        <translation>Die Zusatzzahl ist die {0}.</translation>
+        <translation type="obsolete">Die Zusatzzahl ist die {0}.</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="471"/>
+        <source>{1}:{0}, </source>
+        <translation>{1}:{0},</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="485"/>
+        <source>with {0} {1} </source>
+        <translation type="obsolete">mit {0} {1}</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="506"/>
+        <source>The {1} is {0}.</source>
+        <translation type="obsolete">Die {1} ist {0}.</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="485"/>
+        <source>with {number} {name_of_addition_number} </source>
+        <translation>mit {number} {name_of_addition_number}</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="507"/>
+        <source>The {name_of_addition_number} is {number}.</source>
+        <translation>Die {name_of_addition_number} ist die Nummer {number}.</translation>
     </message>
 </context>
 <context>
@@ -255,22 +285,22 @@ Ausgelost werden: {1} aus {2} {3}!</translation>
         <translation>pyLottoSimu</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="337"/>
+        <location filename="lottosimu_gui.ui" line="346"/>
         <source>Text</source>
         <translation>Text</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="311"/>
+        <location filename="lottosimu_gui.ui" line="317"/>
         <source>Speed</source>
         <translation>Geschwindigkeit</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="423"/>
+        <location filename="lottosimu_gui.ui" line="435"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="450"/>
+        <location filename="lottosimu_gui.ui" line="462"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
@@ -285,7 +315,7 @@ Ausgelost werden: {1} aus {2} {3}!</translation>
         <translation>Zahlen:</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="434"/>
+        <location filename="lottosimu_gui.ui" line="446"/>
         <source>random numbers</source>
         <translation>Zufallsgenerator ein</translation>
     </message>
@@ -295,27 +325,27 @@ Ausgelost werden: {1} aus {2} {3}!</translation>
         <translation>Ausgabefeld leeren</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="261"/>
+        <location filename="lottosimu_gui.ui" line="264"/>
         <source>start draw</source>
         <translation>Start</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="393"/>
+        <location filename="lottosimu_gui.ui" line="405"/>
         <source>File</source>
         <translation>Datei</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="406"/>
+        <location filename="lottosimu_gui.ui" line="418"/>
         <source>Mode</source>
         <translation>Modus</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="418"/>
+        <location filename="lottosimu_gui.ui" line="430"/>
         <source>Quit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="445"/>
+        <location filename="lottosimu_gui.ui" line="457"/>
         <source>Lotto simulation</source>
         <translation>Lottosimulation</translation>
     </message>
@@ -340,22 +370,22 @@ Ausgelost werden: {1} aus {2} {3}!</translation>
         <translation>Ausgabefeld</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="455"/>
+        <location filename="lottosimu_gui.ui" line="467"/>
         <source>Go to the website</source>
         <translation>Webseite PyLottoSimu öffnen</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="356"/>
+        <location filename="lottosimu_gui.ui" line="368"/>
         <source>show draw after</source>
         <translation>Übersicht einblenden</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="363"/>
+        <location filename="lottosimu_gui.ui" line="375"/>
         <source>show draw overview</source>
         <translation>Übersicht anzeigen</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="460"/>
+        <location filename="lottosimu_gui.ui" line="472"/>
         <source>Lotto system</source>
         <translation>Lottosystem</translation>
     </message>

@@ -106,54 +106,61 @@ class LottoSystemData(object):
                 'name': 'Lotto DE',
                 'max_draw': 49,
                 'draw_numbers': 6,
-                'with_addit': False,
-                'addit_numbers': 0,
-                'sep_addit_numbers': False,
-                'max_addit': 0
+                'with_addition': False,
+                'addition_numbers': 0,
+                'sep_addition_numbers': False,
+                'max_addition': 0,
+                'name_addition': 'Superzahl'
             },
             {
                 'name': 'Lotto AT',
                 'max_draw': 45,
                 'draw_numbers': 6,
-                'with_addit': True,
-                'addit_numbers': 1,
-                'sep_addit_numbers': False,
-                'max_addit': 0
+                'with_addition': True,
+                'addition_numbers': 1,
+                'sep_addition_numbers': False,
+                'max_addition': 0,
+                'name_addition': ''
             },
             {
                 'name': 'EuroMillionen',
                 'max_draw': 50,
                 'draw_numbers': 5,
-                'with_addit': True,
-                'addit_numbers': 2,
-                'sep_addit_numbers': True,
-                'max_addit': 11
+                'with_addition': True,
+                'addition_numbers': 2,
+                'sep_addition_numbers': True,
+                'max_addition': 11,
+                'name_addition': ''
             },
             {
                 'name': 'Powerball Lottery US',
                 'max_draw': 59,
                 'draw_numbers': 5,
-                'with_addit': True,
-                'addit_numbers': 1,
-                'sep_addit_numbers': True,
-                'max_addit': 35},
+                'with_addition': True,
+                'addition_numbers': 1,
+                'sep_addition_numbers': True,
+                'max_addition': 35,
+                'name_addition': ''
+            },
             {
                 "name": "Mega Millions",
                 "max_draw": 56,
                 "draw_numbers": 5,
-                "addit_numbers": 1,
-                "max_addit": 46,
-                "sep_addit_numbers": True,
-                "with_addit": True
+                "addition_numbers": 1,
+                "max_addition": 46,
+                "sep_addition_numbers": True,
+                "with_addition": True,
+                'name_addition': ''
             },
             {
                 "name": "Hot Lotto Sizzler",
                 "max_draw": 19,
                 "draw_numbers": 5,
-                "addit_numbers": 1,
-                "max_addit": 47,
-                "sep_addit_numbers": True,
-                "with_addit": True
+                "addition_numbers": 1,
+                "max_addition": 47,
+                "sep_addition_numbers": True,
+                "with_addition": True,
+                'name_addition': ''
             }
         ]
         return data

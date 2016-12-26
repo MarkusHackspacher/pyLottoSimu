@@ -8,38 +8,43 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="52"/>
+        <location filename="dialog/lottosystem.ui" line="65"/>
         <source>Maximum number of draw</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="65"/>
+        <location filename="dialog/lottosystem.ui" line="81"/>
         <source>Maximum number of additional </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="75"/>
+        <location filename="dialog/lottosystem.ui" line="94"/>
         <source>Additional numbers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="82"/>
+        <location filename="dialog/lottosystem.ui" line="104"/>
         <source>Draw numbers</source>
         <translation>обращается номера</translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="89"/>
+        <location filename="dialog/lottosystem.ui" line="117"/>
         <source>With additional number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="106"/>
+        <location filename="dialog/lottosystem.ui" line="134"/>
         <source>Name of the lotto system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="113"/>
+        <location filename="dialog/lottosystem.ui" line="55"/>
         <source>Separete numbers area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="dialog/lottosystem.ui" line="158"/>
+        <source>Name of the additional</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -54,124 +59,114 @@
 <context>
     <name>DrawLotto</name>
     <message>
-        <location filename="pylotto.py" line="389"/>
+        <location filename="pylotto.py" line="391"/>
         <source>And now we come to the winning number {0}, it is the {1}.</source>
         <translation>И теперь мы подходим к выигрышным номером {0}, то {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="391"/>
+        <location filename="pylotto.py" line="393"/>
         <source>The {0} lotto number of today&apos;s draw is the {1}.</source>
         <translation>{0} лото число ничья сегодня является {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="393"/>
+        <location filename="pylotto.py" line="395"/>
         <source>We come to the {0} winning number, this is the {1}.</source>
         <translation>Теперь мы подошли к выигрышным номером {0}, это {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="395"/>
+        <location filename="pylotto.py" line="397"/>
         <source>Now we come to {0} number of today&apos;s draw ... {1}.</source>
         <translation>Теперь мы подошли к {0} число сегодняшней ничьей ... {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="397"/>
+        <location filename="pylotto.py" line="399"/>
         <source>The {0} winning number is {1}.</source>
         <translation>{0} выигрышный номер {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="398"/>
+        <location filename="pylotto.py" line="400"/>
         <source>first</source>
         <translation>первый</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="398"/>
+        <location filename="pylotto.py" line="400"/>
         <source>second</source>
         <translation>второй</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="399"/>
+        <location filename="pylotto.py" line="401"/>
         <source>third</source>
         <translation>третий</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="399"/>
+        <location filename="pylotto.py" line="401"/>
         <source>fourth</source>
         <translation>четвертый</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="400"/>
+        <location filename="pylotto.py" line="402"/>
         <source>fifth</source>
         <translation>пятый</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="400"/>
+        <location filename="pylotto.py" line="402"/>
         <source>sixth</source>
         <translation>шестой</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="401"/>
+        <location filename="pylotto.py" line="403"/>
         <source>seventh</source>
         <translation>седьмой</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="401"/>
+        <location filename="pylotto.py" line="403"/>
         <source>eighth</source>
         <translation>восьмой</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="402"/>
+        <location filename="pylotto.py" line="404"/>
         <source>ninth</source>
         <translation>девятый</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="402"/>
+        <location filename="pylotto.py" line="404"/>
         <source>10th</source>
         <translation>10-й</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="403"/>
+        <location filename="pylotto.py" line="405"/>
         <source>11th</source>
         <translation>11</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="403"/>
+        <location filename="pylotto.py" line="405"/>
         <source>12th</source>
         <translation>12</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="404"/>
+        <location filename="pylotto.py" line="406"/>
         <source>13th</source>
         <translation>13</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="404"/>
+        <location filename="pylotto.py" line="406"/>
         <source>14th</source>
         <translation>14</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="405"/>
+        <location filename="pylotto.py" line="407"/>
         <source>15th</source>
         <translation>15</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="450"/>
+        <location filename="pylotto.py" line="452"/>
         <source>We are already at the winning number {0}, and thus the penultimate number of today&apos;s draw. It is the {1}.</source>
         <translation>Теперь мы подошли к числу {0}, и, таким образом предпоследний числа сегодняшних ничьей. Это {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="456"/>
+        <location filename="pylotto.py" line="458"/>
         <source>And now we come to the {0} and lastwinning number, it is the {1}.</source>
         <translation>И теперь мы подходим к {0} и последний выигрышный номер, это {1}.</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="470"/>
-        <source>the bonus numbers are{0}, </source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="472"/>
-        <source>the bonus number is{0}, </source>
-        <translation></translation>
     </message>
     <message>
         <location filename="pylotto.py" line="479"/>
@@ -179,12 +174,7 @@
         <translation>Это была сегодняшняя ничья лотерее, эти цифры составили: {0}, {1}я желаю вам хорошего вечера! до свидания!</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="485"/>
-        <source>with {0} additional numbers </source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="492"/>
+        <location filename="pylotto.py" line="493"/>
         <source>Welcome to the lottery draw,
 at {0}.
 numbers are drawn: {1} out of {2} {3}!</source>
@@ -193,14 +183,24 @@ numbers are drawn: {1} out of {2} {3}!</source>
 номера взяты: {1} из {2} {3}!</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="503"/>
+        <location filename="pylotto.py" line="502"/>
         <source>And the first winning number is the {0}.</source>
         <translation>И первый выигрышный номер {0}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="508"/>
-        <source>The additional number is the {0}.</source>
-        <translation></translation>
+        <location filename="pylotto.py" line="471"/>
+        <source>{1}:{0}, </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="485"/>
+        <source>with {number} {name_of_addition_number} </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="507"/>
+        <source>The {name_of_addition_number} is {number}.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -301,7 +301,7 @@ http://www.gnu.org/licenses/</translation>
         <translation type="obsolete">из набора</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="434"/>
+        <location filename="lottosimu_gui.ui" line="446"/>
         <source>random numbers</source>
         <translation>случайных чисел</translation>
     </message>
@@ -311,67 +311,67 @@ http://www.gnu.org/licenses/</translation>
         <translation>Выход поле пустым</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="337"/>
+        <location filename="lottosimu_gui.ui" line="346"/>
         <source>Text</source>
         <translation>Text</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="261"/>
+        <location filename="lottosimu_gui.ui" line="264"/>
         <source>start draw</source>
         <translation>начать рисовать</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="311"/>
+        <location filename="lottosimu_gui.ui" line="317"/>
         <source>Speed</source>
         <translation>скорость</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="356"/>
+        <location filename="lottosimu_gui.ui" line="368"/>
         <source>show draw after</source>
         <translation>показать рисовать</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="363"/>
+        <location filename="lottosimu_gui.ui" line="375"/>
         <source>show draw overview</source>
         <translation>показать привлечь обзор</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="393"/>
+        <location filename="lottosimu_gui.ui" line="405"/>
         <source>File</source>
         <translation>файл</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="450"/>
+        <location filename="lottosimu_gui.ui" line="462"/>
         <source>Help</source>
         <translation>помощь</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="406"/>
+        <location filename="lottosimu_gui.ui" line="418"/>
         <source>Mode</source>
         <translation>режим</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="418"/>
+        <location filename="lottosimu_gui.ui" line="430"/>
         <source>Quit</source>
         <translation>выход</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="423"/>
+        <location filename="lottosimu_gui.ui" line="435"/>
         <source>Info</source>
         <translation>информация</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="445"/>
+        <location filename="lottosimu_gui.ui" line="457"/>
         <source>Lotto simulation</source>
         <translation>Лото моделирования</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="455"/>
+        <location filename="lottosimu_gui.ui" line="467"/>
         <source>Go to the website</source>
         <translation>Перейти на сайт</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="460"/>
+        <location filename="lottosimu_gui.ui" line="472"/>
         <source>Lotto system</source>
         <translation type="unfinished"></translation>
     </message>

@@ -236,6 +236,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             self.lottodraw.data['addit_numbers'] = system[0][4]
             self.lottodraw.data['sep_addit_numbers'] = system[0][5]
             self.lottodraw.data['max_addit'] = system[0][6]
+            self.lottodraw.data['name_addition'] = system[0][7]
 
         self.ui.label_numbers.setText(self.lottodraw.data['name'])
         self.ui.btn_draw_overview.setVisible(False)
@@ -373,8 +374,8 @@ class DrawLotto(QtCore.QObject):
     """
 
     def __init__(self, name='Lotto DE', max_draw=49, draw_numbers=6,
-                 with_addit=False, addit_numbers=0, sep_addit_numbers=False,
-                 max_addit=0):
+                 with_addit=True, addit_numbers=1, sep_addit_numbers=True,
+                 max_addit=9, name_addition="Superzahl"):
         super(DrawLotto, self).__init__()
         self.data = {
             'name': name,
@@ -383,7 +384,9 @@ class DrawLotto(QtCore.QObject):
             'with_addit': with_addit,
             'addit_numbers': addit_numbers,
             'sep_addit_numbers': sep_addit_numbers,
-            'max_addit': max_addit}
+            'max_addit': max_addit,
+            'name_addition': name_addition
+        }
 
         textselection_tr = [
             self.tr(
@@ -466,11 +469,9 @@ class DrawLotto(QtCore.QObject):
             if self.data['with_addit']:
                 text_addit_number = "".join(map(" {0:02d}".format, sorted(
                     self.ballbonus[:])))
-                if len(self.ballbonus) > 1:
-                    textr_addit = self.tr("the bonus numbers are{0}, ")
-                else:
-                    textr_addit = self.tr("the bonus number is{0}, ")
-                text_addit = str(textr_addit).format(text_addit_number)
+                textr_addit = self.tr("{1}:{0}, ")
+                text_addit = str(textr_addit).format(
+                    text_addit_number, self.data['name_addition'])
             else:
                 text_addit = ""
             text_random_number = "".join(map(" {0:02d}".format, sorted(
@@ -481,9 +482,11 @@ class DrawLotto(QtCore.QObject):
             text = str(text).format(text_random_number, text_addit)
         elif turn == -1:
             if self.data['with_addit']:
-                textr_addit = self.tr("with {0} additional numbers ")
+                textr_addit = self.tr(
+                    "with {number} {name_of_addition_number} ")
                 text_addit = str(textr_addit).format(
-                    self.data['addit_numbers'])
+                    number=self.data['addit_numbers'],
+                    name_of_addition_number=self.data['name_addition'])
             else:
                 text_addit = ""
             dt = datetime.now()
@@ -501,12 +504,16 @@ class DrawLotto(QtCore.QObject):
             self.LastTextnumber = -1
         elif (turn > (self.data['draw_numbers'] - 1) and
               self.data['with_addit'] is True):
-            textr = self.tr('The additional number is the {0}.')
+            textr = self.tr('The {name_of_addition_number} is {number}.')
             if self.data['sep_addit_numbers']:
-                text = str(textr).format(self.random_addit[turn -
-                                         self.data['draw_numbers']])
+                text = str(textr).format(number=self.random_addit[turn -
+                                         self.data['draw_numbers']],
+                                         name_of_addition_number=self.data[
+                                             'name_addition'])
             else:
-                text = str(textr).format(self.random_number[turn])
+                text = str(textr).format(number=self.random_number[turn],
+                                         name_of_addition_number=self.data[
+                                             'name_addition'])
         else:
             text = 'no'
             while True:

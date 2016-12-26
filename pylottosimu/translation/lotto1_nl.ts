@@ -8,38 +8,43 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="52"/>
+        <location filename="dialog/lottosystem.ui" line="65"/>
         <source>Maximum number of draw</source>
         <translation>Hoogste aantal debetstand</translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="65"/>
+        <location filename="dialog/lottosystem.ui" line="81"/>
         <source>Maximum number of additional </source>
         <translation>de hoogste bonus</translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="75"/>
+        <location filename="dialog/lottosystem.ui" line="94"/>
         <source>Additional numbers</source>
         <translation>aantal extra nummers</translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="82"/>
+        <location filename="dialog/lottosystem.ui" line="104"/>
         <source>Draw numbers</source>
         <translation>getrokken nummers</translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="89"/>
+        <location filename="dialog/lottosystem.ui" line="117"/>
         <source>With additional number</source>
         <translation>met bonus nummer</translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="106"/>
+        <location filename="dialog/lottosystem.ui" line="134"/>
         <source>Name of the lotto system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="113"/>
+        <location filename="dialog/lottosystem.ui" line="55"/>
         <source>Separete numbers area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="dialog/lottosystem.ui" line="158"/>
+        <source>Name of the additional</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -54,124 +59,114 @@
 <context>
     <name>DrawLotto</name>
     <message>
-        <location filename="pylotto.py" line="389"/>
+        <location filename="pylotto.py" line="391"/>
         <source>And now we come to the winning number {0}, it is the {1}.</source>
         <translation>En nu komen we bij het ​​winnende nummer {0}, het is de {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="391"/>
+        <location filename="pylotto.py" line="393"/>
         <source>The {0} lotto number of today&apos;s draw is the {1}.</source>
         <translation>De {0} lotto aantal hedendaagse loting is de {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="393"/>
+        <location filename="pylotto.py" line="395"/>
         <source>We come to the {0} winning number, this is the {1}.</source>
         <translation>Nu komen we bij winnende nummer {0}, dit is de {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="395"/>
+        <location filename="pylotto.py" line="397"/>
         <source>Now we come to {0} number of today&apos;s draw ... {1}.</source>
         <translation>Nu komen we bij {0} aantal hedendaagse gelijkspel ... {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="397"/>
+        <location filename="pylotto.py" line="399"/>
         <source>The {0} winning number is {1}.</source>
         <translation>De {0} winnende nummer {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="398"/>
+        <location filename="pylotto.py" line="400"/>
         <source>first</source>
         <translation>eerste</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="398"/>
+        <location filename="pylotto.py" line="400"/>
         <source>second</source>
         <translation>tweede</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="399"/>
+        <location filename="pylotto.py" line="401"/>
         <source>third</source>
         <translation>derde</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="399"/>
+        <location filename="pylotto.py" line="401"/>
         <source>fourth</source>
         <translation>vierde</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="400"/>
+        <location filename="pylotto.py" line="402"/>
         <source>fifth</source>
         <translation>vijfde</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="400"/>
+        <location filename="pylotto.py" line="402"/>
         <source>sixth</source>
         <translation>zesde</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="401"/>
+        <location filename="pylotto.py" line="403"/>
         <source>seventh</source>
         <translation>zevende</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="401"/>
+        <location filename="pylotto.py" line="403"/>
         <source>eighth</source>
         <translation>achtste</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="402"/>
+        <location filename="pylotto.py" line="404"/>
         <source>ninth</source>
         <translation>negende</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="402"/>
+        <location filename="pylotto.py" line="404"/>
         <source>10th</source>
         <translation>10</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="403"/>
+        <location filename="pylotto.py" line="405"/>
         <source>11th</source>
         <translation>11</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="403"/>
+        <location filename="pylotto.py" line="405"/>
         <source>12th</source>
         <translation>12</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="404"/>
+        <location filename="pylotto.py" line="406"/>
         <source>13th</source>
         <translation>13</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="404"/>
+        <location filename="pylotto.py" line="406"/>
         <source>14th</source>
         <translation>14</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="405"/>
+        <location filename="pylotto.py" line="407"/>
         <source>15th</source>
         <translation>15</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="450"/>
+        <location filename="pylotto.py" line="452"/>
         <source>We are already at the winning number {0}, and thus the penultimate number of today&apos;s draw. It is the {1}.</source>
         <translation>Nu komen we bij het ​​nummer {0}, en dus het voorlaatste nummer van vandaag trekken. Het is de {1}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="456"/>
+        <location filename="pylotto.py" line="458"/>
         <source>And now we come to the {0} and lastwinning number, it is the {1}.</source>
         <translation>En nu komen we bij de {0} en laatste winnende nummer, het is de {1}.</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="470"/>
-        <source>the bonus numbers are{0}, </source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="472"/>
-        <source>the bonus number is{0}, </source>
-        <translation></translation>
     </message>
     <message>
         <location filename="pylotto.py" line="479"/>
@@ -179,12 +174,7 @@
         <translation>Dat was vandaag loting, waren de cijfers: {0}, {1}ik wens je een leuke avond! goede nacht!</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="485"/>
-        <source>with {0} additional numbers </source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="492"/>
+        <location filename="pylotto.py" line="493"/>
         <source>Welcome to the lottery draw,
 at {0}.
 numbers are drawn: {1} out of {2} {3}!</source>
@@ -193,14 +183,24 @@ op {0}.
 nummers worden getrokken: {1} van {2} {3}!</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="503"/>
+        <location filename="pylotto.py" line="502"/>
         <source>And the first winning number is the {0}.</source>
         <translation>En het eerste winnende nummer is de {0}.</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="508"/>
-        <source>The additional number is the {0}.</source>
-        <translation></translation>
+        <location filename="pylotto.py" line="471"/>
+        <source>{1}:{0}, </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="485"/>
+        <source>with {number} {name_of_addition_number} </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="507"/>
+        <source>The {name_of_addition_number} is {number}.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -301,7 +301,7 @@ http://www.gnu.org/licenses/</translation>
         <translation type="obsolete">een reeks</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="434"/>
+        <location filename="lottosimu_gui.ui" line="446"/>
         <source>random numbers</source>
         <translation>willekeurige getallen</translation>
     </message>
@@ -311,67 +311,67 @@ http://www.gnu.org/licenses/</translation>
         <translation>uitgang veld leeg</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="337"/>
+        <location filename="lottosimu_gui.ui" line="346"/>
         <source>Text</source>
         <translation>Text</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="261"/>
+        <location filename="lottosimu_gui.ui" line="264"/>
         <source>start draw</source>
         <translation>beginnen</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="311"/>
+        <location filename="lottosimu_gui.ui" line="317"/>
         <source>Speed</source>
         <translation>snelheid</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="356"/>
+        <location filename="lottosimu_gui.ui" line="368"/>
         <source>show draw after</source>
         <translation>laten trekken achter</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="363"/>
+        <location filename="lottosimu_gui.ui" line="375"/>
         <source>show draw overview</source>
         <translation>tonen tekenen overzicht</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="393"/>
+        <location filename="lottosimu_gui.ui" line="405"/>
         <source>File</source>
         <translation>bestand</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="450"/>
+        <location filename="lottosimu_gui.ui" line="462"/>
         <source>Help</source>
         <translation>Help</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="406"/>
+        <location filename="lottosimu_gui.ui" line="418"/>
         <source>Mode</source>
         <translation>keuze</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="418"/>
+        <location filename="lottosimu_gui.ui" line="430"/>
         <source>Quit</source>
         <translation>ophouden</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="423"/>
+        <location filename="lottosimu_gui.ui" line="435"/>
         <source>Info</source>
         <translation>info</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="445"/>
+        <location filename="lottosimu_gui.ui" line="457"/>
         <source>Lotto simulation</source>
         <translation>loterij simulator</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="455"/>
+        <location filename="lottosimu_gui.ui" line="467"/>
         <source>Go to the website</source>
         <translation>Ga naar de website</translation>
     </message>
     <message>
-        <location filename="lottosimu_gui.ui" line="460"/>
+        <location filename="lottosimu_gui.ui" line="472"/>
         <source>Lotto system</source>
         <translation type="unfinished"></translation>
     </message>
