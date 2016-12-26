@@ -1,11 +1,9 @@
 pyLottoSimu
 ===========
 
-![Github Releases](https://img.shields.io/github/release/markushackspacher/pylottosimu.svg)
-[![Join the chat at https://gitter.im/MarkusHackspacher/pyLottoSimu](https://badges.gitter.im/Join%20Chat.svg)]
-(https://gitter.im/MarkusHackspacher/pyLottoSimu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Documentation Status](https://readthedocs.org/projects/pylottosimu/badge/?version=latest)]
-(https://readthedocs.org/projects/pylottosimu/?badge=latest)
+[![Github Releases](https://img.shields.io/github/release/markushackspacher/pylottosimu.svg)](https://github.com/MarkusHackspacher/pyLottoSimu)
+[![Join the chat at https://gitter.im/MarkusHackspacher/pyLottoSimu](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MarkusHackspacher/pyLottoSimu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Documentation Status](https://readthedocs.org/projects/pylottosimu/badge/?version=latest)](https://readthedocs.org/projects/pylottosimu/?badge=latest)
 
 Lotto Generator und Simulator
 
@@ -24,6 +22,25 @@ install
 The program requires [Python 2.7 or 3.x](http://www.python.org/download/) 
 and [PyQt4 for Python 2](http://www.riverbankcomputing.com/software/pyqt/download)
 or PyQt5 for Python 3 `pip3 install PyQt5`.
+
+```
+# sudo apt-get install python python-pyqt5 python-pyqt5.qtsvg git
+# sudo apt-get install python3 python3-pyqt5 python3-pyqt5.qtsvg git
+```
+    
+Then you copied the source code of the program on your computer,
+either [download](https://github.com/MarkusHackspacher/pyLottoSimu) the zip file of the project or download with the version control system::
+
+```
+# git clone https://github.com/MarkusHackspacher/pyLottoSimu.git
+```
+
+change the directory and run::
+
+```
+cd pyLottoSimu
+./lotto.pyw
+```
 
 pyLottoSimu can be started in these languages:
 
