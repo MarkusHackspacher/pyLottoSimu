@@ -2,11 +2,11 @@ language: python
 sudo: required
 dist: trusty
 python:
-#  - "2.7"
+  - "2.7"
 #  - "3.2"
 #  - "3.4"
   - "3.5"
-#  - "nightly"
+  - "nightly"
 # command to install dependencies
 #virtualenv:
 #  system_site_packages: true
@@ -16,12 +16,13 @@ before_install:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
 install:
-#  - sudo apt-get -y install python-qt4
-  - pip install pep8 PyQt5
+  - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then travis_retry sudo apt-get -y install python-qt4; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then travis_retry ln -s /usr/lib/python2.7/dist-packages/PyQt4/ $VIRTUAL_ENV/lib/python2.7/site-packages/; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then travis_retry ln -s /usr/lib/python2.7/dist-packages/sip.so $VIRTUAL_ENV/lib/python2.7/site-packages/; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == 3* ]]; then travis_retry pip install PyQt5; fi
 #  - "ln -s /usr/lib/python2.7/dist-packages/PyQt4/ $VIRTUAL_ENV/lib/python2.7/site-packages/"
 #  - "ln -s /usr/lib/python2.7/dist-packages/sip.so $VIRTUAL_ENV/lib/python2.7/site-packages/"
-  - pip install pylint
-#  - sudo apt-get -y install python3-pyqt5
+  - pip install pylint pep8
 script:
  - python pylint-recursive.py
  - nosetests
