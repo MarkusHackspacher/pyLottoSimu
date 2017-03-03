@@ -6,7 +6,8 @@ python:
 #  - "3.2"
 #  - "3.4"
   - "3.5"
-  - "nightly"
+  - "3.6"
+#  - "nightly"
 # command to install dependencies
 #virtualenv:
 #  system_site_packages: true
@@ -20,8 +21,6 @@ install:
   - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then travis_retry ln -s /usr/lib/python2.7/dist-packages/PyQt4/ $VIRTUAL_ENV/lib/python2.7/site-packages/; fi
   - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then travis_retry ln -s /usr/lib/python2.7/dist-packages/sip.so $VIRTUAL_ENV/lib/python2.7/site-packages/; fi
   - if [[ $TRAVIS_PYTHON_VERSION == 3* ]]; then travis_retry pip install PyQt5; fi
-#  - "ln -s /usr/lib/python2.7/dist-packages/PyQt4/ $VIRTUAL_ENV/lib/python2.7/site-packages/"
-#  - "ln -s /usr/lib/python2.7/dist-packages/sip.so $VIRTUAL_ENV/lib/python2.7/site-packages/"
   - pip install pylint pep8
 script:
  - python pylint-recursive.py
