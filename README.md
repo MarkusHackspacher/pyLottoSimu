@@ -24,7 +24,7 @@ or PyQt5 for Python 3 `pip3 install PyQt5`.
 ```
     
 Then you copied the source code of the program on your computer,
-either [download](https://github.com/MarkusHackspacher/pyLottoSimu) the zip file of the project or download with the version control system::
+either [download](https://github.com/MarkusHackspacher/pyLottoSimu) the zip file of the project or download with the version control system:
 
 ```
 # git clone https://github.com/MarkusHackspacher/pyLottoSimu.git
