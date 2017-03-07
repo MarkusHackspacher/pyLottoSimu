@@ -2,13 +2,13 @@
                    dialog/show_drawing.py
  FORMS           = lottosimu_gui.ui \
                    dialog/lottosystem.ui
- TRANSLATIONS    = translation/lotto1_en.ts \
-                   translation/lotto1_de.ts \
-                   translation/lotto1_fr.ts \
-                   translation/lotto1_nl.ts \
-                   translation/lotto1_it.ts \
-                   translation/lotto1_es.ts \
-                   translation/lotto1_pl.ts \
-                   translation/lotto1_dk.ts \
-                   translation/lotto1_ru.ts
+ TRANSLATIONS    = translation/lotto1.ts \
+                   translation/lotto1.de.ts \
+                   translation/lotto1.fr.ts \
+                   translation/lotto1.nl.ts \
+                   translation/lotto1.it.ts \
+                   translation/lotto1.es.ts \
+                   translation/lotto1.pl.ts \
+                   translation/lotto1.dk.ts \
+                   translation/lotto1.ru.ts
  CODECFORTR      = UTF-8

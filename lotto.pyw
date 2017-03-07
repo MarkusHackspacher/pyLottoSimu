@@ -4,7 +4,7 @@
 """
 pyLottoSimu, load module lotto
 
-Copyright (C) <2012-2016> Markus Hackspacher
+Copyright (C) <2012-2017> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
@@ -57,7 +57,7 @@ def gui(arguments):
     app = QtWidgets.QApplication(sys.argv)
     translator = QtCore.QTranslator()
     translator.load(os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]),
-                    "pylottosimu", "translation", "lotto1_{}".format(locale))))
+                    "pylottosimu", "translation", "lotto1.{}".format(locale))))
     app.installTranslator(translator)
     dialog = pylotto.LottoSimuDialog()
     sys.exit(app.exec_())
