@@ -38,13 +38,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="55"/>
-        <source>Separete numbers area</source>
+        <location filename="dialog/lottosystem.ui" line="158"/>
+        <source>Name of the additional</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog/lottosystem.ui" line="158"/>
-        <source>Name of the additional</source>
+        <location filename="dialog/lottosystem.ui" line="55"/>
+        <source>Separate numbers area</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

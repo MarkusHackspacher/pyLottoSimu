@@ -52,7 +52,7 @@
        <string notr="true">color:black;</string>
       </property>
       <property name="text">
-       <string>Separete numbers area</string>
+       <string>Separate numbers area</string>
       </property>
      </widget>
     </item>
