@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="fr" sourcelanguage="en">
+<!DOCTYPE TS><TS version="2.0">
 <context>
     <name>Dialog</name>
     <message>
         <location filename="dialog/lottosystem.ui" line="14"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>Système</translation>
     </message>
     <message>
         <location filename="dialog/lottosystem.ui" line="65"/>
@@ -65,7 +65,7 @@
     </message>
     <message>
         <location filename="pylotto.py" line="394"/>
-        <source>The {0} lotto number of today&apos;s draw is the {1}.</source>
+        <source>The {0} lotto number of today&#x27;s draw is the {1}.</source>
         <translation>Le {0} nombre de loto tirage d&apos;aujourd&apos;hui est le {1}.</translation>
     </message>
     <message>
@@ -75,7 +75,7 @@
     </message>
     <message>
         <location filename="pylotto.py" line="398"/>
-        <source>Now we come to {0} number of today&apos;s draw ... {1}.</source>
+        <source>Now we come to {0} number of today&#x27;s draw ... {1}.</source>
         <translation>Nous arrivons maintenant à {0} nombre de tirage d&apos;aujourd&apos;hui ... {1}.</translation>
     </message>
     <message>
@@ -160,7 +160,7 @@
     </message>
     <message>
         <location filename="pylotto.py" line="453"/>
-        <source>We are already at the winning number {0}, and thus the penultimate number of today&apos;s draw. It is the {1}.</source>
+        <source>We are already at the winning number {0}, and thus the penultimate number of today&#x27;s draw. It is the {1}.</source>
         <translation>Nous arrivons maintenant au nombre {0}, et donc le nombre pénultième tirage d&apos;aujourd&apos;hui. Il est le {1}.</translation>
     </message>
     <message>
@@ -169,9 +169,19 @@
         <translation>Et maintenant, nous arrivons à la {0} et le numéro de lastwinning, c&apos;est le {1}.</translation>
     </message>
     <message>
+        <location filename="pylotto.py" line="472"/>
+        <source>{1}:{0}, </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="pylotto.py" line="480"/>
-        <source>That was today&apos;s lottery draw, the figures were:{0}, {1}I wish you a nice evening! Bye, bye!</source>
+        <source>That was today&#x27;s lottery draw, the figures were:{0}, {1}I wish you a nice evening! Bye, bye!</source>
         <translation>C&apos;était tirage au sort d&apos;aujourd&apos;hui, les chiffres étaient les suivants: {0}, {1}je vous souhaite une bonne soirée! Au révoir!</translation>
+    </message>
+    <message>
+        <location filename="pylotto.py" line="486"/>
+        <source>with {number} {name_of_addition_number} </source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="pylotto.py" line="495"/>
@@ -186,16 +196,6 @@ numéros sont tirés: {1} sur {2} {3}!</translation>
         <location filename="pylotto.py" line="504"/>
         <source>And the first winning number is the {0}.</source>
         <translation>Et le premier numéro gagnant est le {0}.</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="472"/>
-        <source>{1}:{0}, </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="486"/>
-        <source>with {number} {name_of_addition_number} </source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="pylotto.py" line="509"/>
@@ -226,35 +226,18 @@ numéros sont tirés: {1} sur {2} {3}!</translation>
         <translation>Erreur, pas de numéros valides disponibles!</translation>
     </message>
     <message>
-        <location filename="pylotto.py" line="329"/>
-        <source>Info</source>
-        <translation>Infos</translation>
-    </message>
-    <message>
-        <location filename="pylotto.py" line="329"/>
-        <source>simulation of a random draw
-
-based on an idea of imageupload,
-http://www.my-image-upload.de/
-
-GNU GPL v3
-http://www.gnu.org/licenses/</source>
-        <translation type="obsolete">simulation d&apos;un tirage au sort
-
-basé sur une idée de ImageUpload,
-http://www.my-image-upload.de/
-
-Lizenz: GNU GPL v3
-http://www.gnu.org/licenses/</translation>
-    </message>
-    <message>
         <location filename="pylotto.py" line="310"/>
         <source>{} {} out of {}: {}</source>
         <translation>{} {} sur {}: {}</translation>
     </message>
     <message>
+        <location filename="pylotto.py" line="329"/>
+        <source>Info</source>
+        <translation>Infos</translation>
+    </message>
+    <message>
         <location filename="pylotto.py" line="330"/>
-        <source>The simulation of a lottery draw based on an idea of &lt;a href=&quot;http://www.m-i-u.de/&quot;&gt;my-image-upload.de&lt;/a&gt;,&lt;br&gt;&lt;br&gt;pyLottoSimu is free software and use GNU General Public License &lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;www.gnu.org/licenses&lt;/a&gt;</source>
+        <source>The simulation of a lottery draw based on an idea of &lt;a href=&quot;http://www.m-i-u.de/&quot;&gt;my-image-upload.de&lt;/a&gt;,&lt;br&gt;&lt;br&gt;pyLottoSimu is free software and use GNU General Public License &lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;www.gnu.org/licenses&lt;/a&gt;&lt;/br&gt;&lt;/br&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -284,21 +267,6 @@ http://www.gnu.org/licenses/</translation>
         <location filename="lottosimu_gui.ui" line="175"/>
         <source>Numbers:</source>
         <translation>Numbers:</translation>
-    </message>
-    <message>
-        <location filename="lottosimu_gui.ui" line="164"/>
-        <source>drawn numbers</source>
-        <translation type="obsolete">numéros tirés</translation>
-    </message>
-    <message>
-        <location filename="lottosimu_gui.ui" line="187"/>
-        <source>out of</source>
-        <translation type="obsolete">sur</translation>
-    </message>
-    <message>
-        <location filename="lottosimu_gui.ui" line="203"/>
-        <source>from a set of</source>
-        <translation type="obsolete">à partir d&apos;un ensemble d&apos;</translation>
     </message>
     <message>
         <location filename="lottosimu_gui.ui" line="446"/>
@@ -375,5 +343,4 @@ http://www.gnu.org/licenses/</translation>
         <source>Lotto system</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-</TS>
+</context></TS>
