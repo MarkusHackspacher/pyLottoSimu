@@ -21,8 +21,9 @@ install:
   - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then travis_retry ln -s /usr/lib/python2.7/dist-packages/PyQt4/ $VIRTUAL_ENV/lib/python2.7/site-packages/; fi
   - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then travis_retry ln -s /usr/lib/python2.7/dist-packages/sip.so $VIRTUAL_ENV/lib/python2.7/site-packages/; fi
   - if [[ $TRAVIS_PYTHON_VERSION == 3* ]]; then travis_retry pip install PyQt5; fi
-  - pip install pylint pep8
+  - pip install pylint pep8 isort
 script:
+ - isort -c -rc pylottosimu
  - python pylint-recursive.py
  - nosetests
 notifications:
