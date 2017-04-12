@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="fr" sourcelanguage="en">
+<!DOCTYPE TS>
+<TS version="2.1" language="fr" sourcelanguage="en">
 <context>
     <name>Dialog</name>
     <message>
         <location filename="dialog/lottosystem.ui" line="14"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">système</translation>
     </message>
     <message>
         <location filename="dialog/lottosystem.ui" line="65"/>
