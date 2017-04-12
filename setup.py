@@ -20,9 +20,9 @@
 # You should have received a copy of the GNU General Public License
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
-import py2exe
 from distutils.core import setup
 
+import py2exe
 
 setup(name='pyLottoSimu',
       version='1.6.1',

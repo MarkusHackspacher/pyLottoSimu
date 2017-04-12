@@ -23,11 +23,11 @@
 from __future__ import absolute_import
 
 import os
+import random
 import sys
 import webbrowser
 from datetime import datetime
 from random import randint
-import random
 
 from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
