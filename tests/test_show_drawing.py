@@ -27,6 +27,7 @@ show_drawing
 from __future__ import absolute_import
 
 import unittest
+
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
 
 _FORCE_PYSIDE = False
