@@ -147,7 +147,6 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
         self.turn = 0
         self.random_number = 0
-        self.LastTextnumber = -1
         self.delay_of_next_number = self.ui.horizontalSlider.value()
         self.lottodraw = DrawLotto()
         self.ui.label_numbers.setText(self.lottodraw.data['name'])
@@ -184,7 +183,6 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """
         if self.turn == 0:
             self.ui.btn_draw_overview.setVisible(False)
-            self.LastTextnumber = -1
 
         if self.turn >= len((self.lottodraw.random_number +
                              self.lottodraw.random_addit)):
@@ -417,6 +415,7 @@ class DrawLotto(QtCore.QObject):
         self.random_number = 0
         self.ballbonus = []
         self.ballnumber = []
+        self.LastTextnumber = -1
 
     def draw(self):
         """draw of the lotto numbers
@@ -449,16 +448,20 @@ class DrawLotto(QtCore.QObject):
 
         :returns: pick
         """
+        try:
+            count_number = self.countnumbers[turn]
+        except IndexError:
+            count_number = turn + 1
         if turn == (self.data['draw_numbers'] - 2) and turn > 0:
             text = self.tr(
                 "We are already at the winning number {0}, and thus the "
                 "penultimate number of today's draw. It is the {1}.")
-            text = str(text).format(self.countnumbers[turn],
+            text = str(text).format(count_number,
                                     self.random_number[turn])
         elif turn == (self.data['draw_numbers'] - 1):
             text = self.tr('And now we come to the {0} and last'
                            'winning number, it is the {1}.')
-            text = str(text).format(self.countnumbers[turn],
+            text = str(text).format(count_number,
                                     self.random_number[turn])
 
         elif (turn >= (self.data['draw_numbers'] +
@@ -506,14 +509,13 @@ class DrawLotto(QtCore.QObject):
               self.data['with_addit'] is True):
             textr = self.tr('The {name_of_addition_number} is {number}.')
             if self.data['sep_addit_numbers']:
-                text = str(textr).format(number=self.random_addit[turn -
-                                         self.data['draw_numbers']],
-                                         name_of_addition_number=self.data[
-                                             'name_addition'])
+                text = str(textr).format(
+                    number=self.random_addit[turn - self.data['draw_numbers']],
+                    name_of_addition_number=self.data['name_addition'])
             else:
-                text = str(textr).format(number=self.random_number[turn],
-                                         name_of_addition_number=self.data[
-                                             'name_addition'])
+                text = str(textr).format(
+                    number=self.random_number[turn],
+                    name_of_addition_number=self.data['name_addition'])
         else:
             text = 'no'
             while True:
@@ -521,7 +523,7 @@ class DrawLotto(QtCore.QObject):
                 if textnumber != self.LastTextnumber:
                     break
             text = self.textselection[textnumber].format(
-                self.countnumbers[turn],
+                count_number,
                 self.random_number[turn])
             self.LastTextnumber = textnumber
         return text
