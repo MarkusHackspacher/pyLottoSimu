@@ -150,5 +150,6 @@ class ShowDrawingTestCase(unittest.TestCase):
         self.assertEqual(dialog.btnnumerarybonus[2].isFlat(), False)
         self.assertEqual(len(dialog.btnnumerarybonus), 3)
 
+
 if __name__ == '__main__':
     unittest.main()

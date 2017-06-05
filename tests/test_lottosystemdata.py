@@ -43,5 +43,6 @@ class TestCodeFormat(unittest.TestCase):
         print(data[0]['name'])
         self.assertEqual(data[0]['name'], fixdata[0]['name'])
 
+
 if __name__ == '__main__':
     unittest.main()

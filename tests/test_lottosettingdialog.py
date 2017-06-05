@@ -81,5 +81,6 @@ class LottoSystemDataTestCase(unittest.TestCase):
         # self.assertTrue(dialog)
         self.assertTrue(True)
 
+
 if __name__ == '__main__':
     unittest.main()

@@ -11,6 +11,9 @@ a Lotto Generator und Simulator
 a simulation of Lotto Germany (pick 6 out of 49), Lotto Austria (pick 6 out of 45), EuroMillionen,
 Powerball Lottery US, Mega Millions lottery and Hot Lotto Sizzler system.
 
+The program is developed on [github.com/MarkusHackspacher/pyLottoSimu](https://github.com/MarkusHackspacher/pyLottoSimu).
+Feedback and contributions are welcome.
+
 install
 -------
 

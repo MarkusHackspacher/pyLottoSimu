@@ -174,5 +174,6 @@ class DrawLottoTestCase(unittest.TestCase):
         self.assertEqual(self.lotto.picknumber(0)[:22],
                          'And now we come to the')
 
+
 if __name__ == '__main__':
     unittest.main()
