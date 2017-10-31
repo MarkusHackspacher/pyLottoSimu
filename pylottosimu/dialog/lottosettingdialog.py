@@ -26,6 +26,13 @@ import sys
 _FORCE_PYSIDE = False
 _FORCE_PYQT4 = False
 
+"""
+class LottoSettingsDialog
+-------------------------
+
+Manage the GUI of setting dialog. Use lottosystem.ui.
+"""
+
 try:
     if _FORCE_PYSIDE or _FORCE_PYQT4:
         raise ImportError('_FORCE_PYSIDE')
@@ -33,8 +40,7 @@ try:
     from PyQt5.QtSvg import QSvgWidget
 
     def qt_loadui(uifile):
-        """
-        load Qt ui file
+        """load Qt ui file
 
         :param uifile:
         :return:
@@ -49,8 +55,7 @@ except ImportError:
         from PySide.QtSvg import QSvgWidget
 
         def qt_loadui(uifile):
-            """
-            load Qt ui file
+            """load Qt ui file
 
             :param uifile:
             :return:
@@ -75,14 +80,6 @@ except ImportError:
             :return:
             """
             return uic.loadUi(uifile)
-
-__author__ = 'mar'
-__doc__ = """
-class LottoSettingsDialog
--------------------------
-
-The GUI of Settings. Use lottosystem.ui.
-"""
 
 
 class LottoSettingsDialog(QtWidgets.QDialog):

@@ -24,6 +24,14 @@ import sys
 
 _FORCE_PYSIDE = False
 
+"""
+class DlgShowDrawing
+--------------------
+
+show a Dialog with all the ball numbers from the draw
+and the bonus numbers.
+"""
+
 try:
     if _FORCE_PYSIDE:
         raise ImportError('_FORCE_PYSIDE')
@@ -38,14 +46,6 @@ except ImportError:
 
 if sys.version_info < (3, 0):
     range = xrange
-
-__doc__ = """
-class DlgShowDrawing
---------------------
-
-show a Dialog with all the ball numbers from the draw
-and the bonus numbers.
-"""
 
 
 class DlgShowDrawing(QtWidgets.QDialog):
