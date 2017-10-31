@@ -19,9 +19,7 @@
 # You should have received a copy of the GNU General Public License
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
-"""
-Test the dialog module
-----------------------
+"""Test the dialog module
 
 lottosettingdialog
 

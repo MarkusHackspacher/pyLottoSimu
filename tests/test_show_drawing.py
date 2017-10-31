@@ -19,11 +19,9 @@
 # You should have received a copy of the GNU General Public License
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
+"""Test the dialog module show_drawing
 """
-test the dialog module
 
-show_drawing
-"""
 from __future__ import absolute_import
 
 import unittest

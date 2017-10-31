@@ -36,18 +36,18 @@ pylottosimu.test_drawlotto module
     :undoc-members:
     :show-inheritance:
 
-pylottosimu.test_lottosystemdata module
+pylottosimu.test_lottosettingsdialog module
 ---------------------------------------
 
-.. automodule:: pylottosimu.test_lottosystemdata
+.. automodule:: pylottosimu.test_lottosettingsdialog
     :members:
     :undoc-members:
     :show-inheritance:
 
-pylottosimu.test_pep8 module
-----------------------------
+pylottosimu.test_lottosystemdata module
+---------------------------------------
 
-.. automodule:: pylottosimu.test_pep8
+.. automodule:: pylottosimu.test_lottosystemdata
     :members:
     :undoc-members:
     :show-inheritance:

@@ -19,18 +19,18 @@
 # You should have received a copy of the GNU General Public License
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
+"""Testcase for module pylottosimu.lottosystemdata
+"""
+
 import unittest
 
 from pylottosimu.lottosystem import LottoSystemData
-
-"""Testcase of module pylottosimu.lottosystemdata"""
 
 
 class TestCodeFormat(unittest.TestCase):
     """Test the code format of the file"""
     def setUp(self):
-        """
-        load LottoSystemData
+        """load LottoSystemData
 
         :return:
         """
