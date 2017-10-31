@@ -20,18 +20,18 @@
 # You should have received a copy of the GNU General Public License
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
-import os
-import sys
-
-_FORCE_PYSIDE = False
-_FORCE_PYQT4 = False
-
 """
 class LottoSettingsDialog
 -------------------------
 
 Manage the GUI of setting dialog. Use lottosystem.ui.
 """
+
+import os
+import sys
+
+_FORCE_PYSIDE = False
+_FORCE_PYQT4 = False
 
 try:
     if _FORCE_PYSIDE or _FORCE_PYQT4:
@@ -40,11 +40,6 @@ try:
     from PyQt5.QtSvg import QSvgWidget
 
     def qt_loadui(uifile):
-        """load Qt ui file
-
-        :param uifile:
-        :return:
-        """
         return uic.loadUi(uifile)
 except ImportError:
     try:

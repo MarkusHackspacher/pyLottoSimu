@@ -19,11 +19,6 @@
 # You should have received a copy of the GNU General Public License
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
-import os
-import sys
-
-_FORCE_PYSIDE = False
-
 """
 class DlgShowDrawing
 --------------------
@@ -31,6 +26,11 @@ class DlgShowDrawing
 show a Dialog with all the ball numbers from the draw
 and the bonus numbers.
 """
+
+import os
+import sys
+
+_FORCE_PYSIDE = False
 
 try:
     if _FORCE_PYSIDE:

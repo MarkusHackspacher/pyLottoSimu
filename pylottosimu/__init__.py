@@ -2,7 +2,7 @@
 
 # pyLottoSimu,
 
-# Copyright (C) <2012-2015> Markus Hackspacher
+# Copyright (C) <2012-2017> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -18,3 +18,6 @@
 
 # You should have received a copy of the GNU General Public License
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
+
+"""Manage a Lotto simulation draw.
+"""
