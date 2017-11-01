@@ -5,3 +5,4 @@ pylottosimu
    :maxdepth: 4
 
    pylottosimu
+   tests

@@ -28,39 +28,6 @@ pylottosimu.pylotto module
     :undoc-members:
     :show-inheritance:
 
-pylottosimu.test_drawlotto module
----------------------------------
-
-.. automodule:: pylottosimu.test_drawlotto
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-pylottosimu.test_lottosettingsdialog module
----------------------------------------
-
-.. automodule:: pylottosimu.test_lottosettingsdialog
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-pylottosimu.test_lottosystemdata module
----------------------------------------
-
-.. automodule:: pylottosimu.test_lottosystemdata
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-pylottosimu.test_show_drawing module
-------------------------------------
-
-.. automodule:: pylottosimu.test_show_drawing
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-
 Module contents
 ---------------
 
