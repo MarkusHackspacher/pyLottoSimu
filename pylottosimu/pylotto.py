@@ -20,6 +20,19 @@
 # You should have received a copy of the GNU General Public License
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
+"""class LottoSimuDialog
+---------------------
+
+Load the GUI and manage the signals for the program of the pyLottoSimu.
+Use the lottosimu_gui.ui
+
+class drawlotto
+---------------
+
+simulate a lotto draw.
+draw the lotto numbers and give the draw text back
+"""
+
 from __future__ import absolute_import
 
 import os
@@ -87,20 +100,6 @@ except ImportError:
 if sys.version_info < (3, 0):
     range = xrange
     str = unicode
-
-__doc__ = """
-class LottoSimuDialog
----------------------
-
-Load the GUI and manage the signals for the program of the pyLottoSimu.
-Use the lottosimu_gui.ui
-
-class drawlotto
----------------
-
-simulate a lotto draw.
-draw the lotto numbers and give the draw text back
-"""
 
 
 class LottoSimuDialog(QtWidgets.QMainWindow):

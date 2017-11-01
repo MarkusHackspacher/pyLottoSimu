@@ -27,8 +27,7 @@ from pylottosimu import pylotto
 
 
 class DrawLottoTestCase(unittest.TestCase):
-    """
-    Test the lotto draw with some input numbers
+    """Test the lotto draw with some input numbers
     """
     def setUp(self):
         """Init class pylotto.drawlotto

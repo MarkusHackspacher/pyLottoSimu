@@ -6,7 +6,12 @@ History
 Version
 -------
 
-The current version is 1.6.1 from September 2, 2015. And need PyQt5.
+The current version is 1.7 from June 3, 2017.
+
+Version 1.6.1
+^^^^^^^^^^^^^
+
+Version 1.6.1 from September 2, 2015.
 
 Version 1.6
 ^^^^^^^^^^^

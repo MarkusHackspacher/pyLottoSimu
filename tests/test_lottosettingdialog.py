@@ -50,10 +50,6 @@ except ImportError:
     except ImportError:
         from PyQt4 import QtGui as QtWidgets
 
-__author__ = 'Markus Hackspacher'
-__license__ = "GPL"
-__copyright__ = "<2015> Markus Hackspacher"
-
 
 class LottoSystemDataTestCase(unittest.TestCase):
     """
