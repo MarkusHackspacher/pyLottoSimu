@@ -50,7 +50,7 @@ class ShowDrawingTestCase(unittest.TestCase):
     """
 
     def setUp(self):
-        '''Creates the QApplication instance'''
+        """Creates the QApplication instance"""
 
         # Simple way of making instance a singleton
         super(ShowDrawingTestCase, self).setUp()
@@ -58,12 +58,12 @@ class ShowDrawingTestCase(unittest.TestCase):
         self.app = QtWidgets.QApplication([])
 
     def tearDown(self):
-        '''Deletes the reference owned by self'''
+        """Deletes the reference owned by self"""
         del self.app
         super(ShowDrawingTestCase, self).tearDown()
 
     def test_twoballnumber(self):
-        '''test with two ball numbers '''
+        """test with two ball numbers"""
         dialog = DlgShowDrawing([3, 4], 6)
         self.assertTrue(dialog)
         self.assertEqual(dialog.btn_drawnumbers[0].text(), '1')
@@ -75,7 +75,7 @@ class ShowDrawingTestCase(unittest.TestCase):
         self.assertEqual(dialog.btn_drawnumbers[5].isFlat(), True)
 
     def test_ballnumber(self):
-        '''test with one ball numbers'''
+        """test with one ball numbers"""
         dialog = DlgShowDrawing([2], 5)
         self.assertTrue(dialog)
         self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), True)
@@ -85,8 +85,8 @@ class ShowDrawingTestCase(unittest.TestCase):
         self.assertEqual(dialog.btn_drawnumbers[4].isFlat(), True)
 
     def test_bonusnumbers(self):
-        '''test ball numbers and bonus numbers in a maximal draw of 5 numbers
-        '''
+        """test ball numbers and bonus numbers in a maximal draw of 5 numbers
+        """
         dialog = DlgShowDrawing([2], 5, [1])
         self.assertTrue(dialog)
         self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), False)
@@ -101,9 +101,11 @@ class ShowDrawingTestCase(unittest.TestCase):
         self.assertEqual(dialog.btn_drawnumbers[4].isFlat(), True)
 
     def test_samenumbers(self):
-        '''test the same ball numbers and bonus numbers in a maximal draw
+        """test the same ball numbers and bonus numbers in a maximal draw
         of 5 numbers
-        '''
+
+        :return: none
+        """
         dialog = DlgShowDrawing([3], 5, [3])
         self.assertTrue(dialog)
         self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), True)
@@ -116,7 +118,10 @@ class ShowDrawingTestCase(unittest.TestCase):
         self.assertEqual(dialog.btn_drawnumbers[4].isFlat(), True)
 
     def test_bonusnumbersseparate(self):
-        '''test separate bonus numbers'''
+        """test separate bonus numbers
+
+        :return: none
+        """
         dialog = DlgShowDrawing([2], 5, [1, 2], 3)
         self.assertTrue(dialog)
         self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), True)
@@ -129,9 +134,11 @@ class ShowDrawingTestCase(unittest.TestCase):
         self.assertEqual(dialog.btnnumerarybonus[2].isFlat(), True)
 
     def test_highernumbers(self):
-        '''test with higher draw numbers as the highest number in the draw
-         in the ballnumbers and in the bonusnumbers
-         '''
+        """test with higher draw numbers as the highest number in the draw
+        in the ball numbers and in the bonus numbers
+
+        :return: none
+        """
         dialog = DlgShowDrawing([2, 4, 6], 5, [1, 3, 5], 3)
         self.assertTrue(dialog)
         self.assertEqual(dialog.btn_drawnumbers[0].isFlat(), True)

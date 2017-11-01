@@ -52,12 +52,14 @@ except ImportError:
 
 
 class LottoSystemDataTestCase(unittest.TestCase):
-    """
-    Test of drawing
+    """Test of drawing
     """
 
     def setUp(self):
-        '''Creates the QApplication instance'''
+        """Creates the QApplication instance
+
+        :return: none
+        """
 
         # Simple way of making instance a singleton
         super(LottoSystemDataTestCase, self).setUp()
@@ -65,12 +67,15 @@ class LottoSystemDataTestCase(unittest.TestCase):
         self.app = None
 
     def tearDown(self):
-        '''Deletes the reference owned by self'''
+        """Deletes the reference owned by self
+
+        :return: none
+        """
         del self.app
         super(LottoSystemDataTestCase, self).tearDown()
 
     def test_dialog(self):
-        '''test '''
+        """test"""
         # lottosystems = lottosystemdata()
         # dialog = LottoSettingsDialog(lottosystems, testcase=True)
         # self.assertTrue(dialog)
