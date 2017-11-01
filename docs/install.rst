@@ -24,6 +24,7 @@ code test
  * `pep8 <https://pypi.python.org/pypi/pep8>`_ - Python style guide checker
  * pycodestyle - Python style guide checker
  * isort - import sorting and checking tool
+ * nose - start nosetests to run the tests
 
 version control system Git
 
@@ -54,3 +55,8 @@ alternative::
     python3 lotto.pyw [de|dk|fr|es|it|nl|pl|ru]
 
 
+contribute
+----------
+
+feel free and send a pull request to https://github.com/MarkusHackspacher/pyLottoSimu .
+Thank you in advance.

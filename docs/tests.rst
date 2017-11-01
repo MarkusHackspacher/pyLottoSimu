@@ -1,5 +1,5 @@
-pylottosimu package
-===================
+tests package
+=============
 
 Submodules
 ----------
@@ -12,10 +12,10 @@ tests.test_drawlotto module
     :undoc-members:
     :show-inheritance:
 
-tests.test_lottosettingsdialog module
+tests.test_lottosettingdialog module
 ---------------------------------------
 
-.. automodule:: tests.test_lottosettingsdialog
+.. automodule:: tests.test_lottosettingdialog
     :members:
     :undoc-members:
     :show-inheritance:
