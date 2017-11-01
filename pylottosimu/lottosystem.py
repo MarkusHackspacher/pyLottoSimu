@@ -22,7 +22,6 @@
 
 import json
 import os
-import sys
 
 
 class LottoSystemData(object):
