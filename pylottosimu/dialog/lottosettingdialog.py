@@ -3,7 +3,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2012-2017> Markus Hackspacher
+# Copyright (C) <2012-2018> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
