@@ -21,8 +21,9 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 """
-import sys
+
 import os
+import sys
 
 from pylottosimu import pylotto
 
@@ -52,7 +53,7 @@ def gui(arguments):
         locale = arguments[1]
     else:
         locale = str(QtCore.QLocale.system().name())
-        print ("locale: {}".format(locale))
+        print("locale: {}".format(locale))
     app = QtWidgets.QApplication(sys.argv)
     translator = QtCore.QTranslator()
     translator.load(os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]),
