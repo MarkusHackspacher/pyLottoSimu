@@ -24,6 +24,8 @@ along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 import sys
 import os
 
+from pylottosimu import pylotto
+
 _FORCE_PYSIDE = False
 
 try:
@@ -37,9 +39,6 @@ except ImportError:
     except ImportError:
         from PyQt4 import QtCore
         from PyQt4 import QtGui as QtWidgets
-
-
-from pylottosimu import pylotto
 
 
 def gui(arguments):
@@ -61,5 +60,6 @@ def gui(arguments):
     app.installTranslator(translator)
     dialog = pylotto.LottoSimuDialog()
     sys.exit(app.exec_())
+
 
 gui(sys.argv)

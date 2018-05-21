@@ -23,7 +23,7 @@ install:
   - pip install pycodestyle isort
 script:
  - isort -c -rc
- - pycodestyle pylottosimu/ tests/ *.py
+ - pycodestyle pylottosimu/ tests/ *.py*
  - nosetests
 notifications:
   irc: false
