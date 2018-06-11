@@ -21,10 +21,14 @@ install:
   - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then travis_retry ln -s /usr/lib/python2.7/dist-packages/sip.so $VIRTUAL_ENV/lib/python2.7/site-packages/; fi
   - if [[ $TRAVIS_PYTHON_VERSION == 3* ]]; then travis_retry pip install PyQt5; fi
   - pip install pycodestyle isort
+  - pip install coverage coveralls
 script:
  - isort -c -rc
  - pycodestyle pylottosimu/ tests/ *.py*
- - nosetests
+ - COVERAGE_FILE=.coverage nosetests --verbose --cov --cov-report= -rs
+after_success:
+  - coverage combine
+  - coveralls
 notifications:
   irc: false
   email: false
