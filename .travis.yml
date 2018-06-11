@@ -25,10 +25,9 @@ install:
 script:
  - isort -c -rc
  - pycodestyle pylottosimu/ tests/ *.py*
- - COVERAGE_FILE=.coverage nosetests --verbose
+ - coverage run nosetests --verbose
 after_success:
-  - coverage combine
-  - coveralls
+  - coverage report -m
 notifications:
   irc: false
   email: false
