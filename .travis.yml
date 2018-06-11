@@ -25,7 +25,7 @@ install:
 script:
  - isort -c -rc
  - pycodestyle pylottosimu/ tests/ *.py*
- - nosetests --with-coverage --cover-erase
+ - nosetests --with-coverage --cover-erase --cover-package=pylottosimu --cover-html
 after_success:
   - coverage report -m
 notifications:
