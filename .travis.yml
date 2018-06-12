@@ -21,13 +21,16 @@ install:
   - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then travis_retry ln -s /usr/lib/python2.7/dist-packages/sip.so $VIRTUAL_ENV/lib/python2.7/site-packages/; fi
   - if [[ $TRAVIS_PYTHON_VERSION == 3* ]]; then travis_retry pip install PyQt5; fi
   - pip install pycodestyle isort
-  - pip install coverage
+  - pip install coverage codacy-coverage
 script:
  - isort -c -rc
  - pycodestyle pylottosimu/ tests/ *.py*
  - nosetests --with-coverage --cover-erase --cover-package=pylottosimu --cover-html
 after_success:
   - coverage report -m
+  - coverage xml
+  - export CODACY_PROJECT_TOKEN=c7c5048f9c0e4b74b529f9b72671c5cf
+  - python-codacy-coverage -r coverage.xml
 notifications:
   irc: false
   email: false
