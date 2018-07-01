@@ -4,8 +4,8 @@ dist: trusty
 python:
   - "2.7"
   - "3.6"
-  - "3.7"
-#  - "nightly"
+#  - "3.7"
+  - "nightly"
 # command to install dependencies
 #virtualenv:
 #  system_site_packages: true
