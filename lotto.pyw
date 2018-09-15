@@ -30,7 +30,6 @@ from PyQt5 import QtCore, QtWidgets
 from pylottosimu import pylotto
 
 
-
 def gui(arguments):
     """Open the GUI
 

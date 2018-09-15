@@ -40,13 +40,12 @@ import webbrowser
 from datetime import datetime
 from random import randint
 
-from PyQt5 import QtGui, QtCore, QtWidgets, uic
+from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtSvg import QSvgWidget
 
 from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
 from pylottosimu.lottosystem import LottoSystemData
-
 
 
 class LottoSimuDialog(QtWidgets.QMainWindow):

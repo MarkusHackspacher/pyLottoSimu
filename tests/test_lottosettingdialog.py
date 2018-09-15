@@ -36,8 +36,6 @@ from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
 from pylottosimu.lottosystem import LottoSystemData
 
 
-
-
 class LottoSystemDataTestCase(unittest.TestCase):
     """Test of drawing
     """

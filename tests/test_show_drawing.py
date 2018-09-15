@@ -29,7 +29,6 @@ from PyQt5 import QtWidgets
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
 
 
-
 class ShowDrawingTestCase(unittest.TestCase):
     """
     Test of drawing

@@ -25,7 +25,7 @@ from distutils.core import setup
 import py2exe
 
 setup(name='pyLottoSimu',
-      version='1.6.1',
+      version='1.8',
       description='Python Lotto Simulator',
       author='Markus Hackspacher',
       author_email='hackspacher@gmx.de',

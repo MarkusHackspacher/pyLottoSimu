@@ -34,7 +34,6 @@ from PyQt5 import QtGui, QtWidgets, uic
 from PyQt5.QtSvg import QSvgWidget
 
 
-
 class LottoSettingsDialog(QtWidgets.QDialog):
     """The GUI of Settings.
 
