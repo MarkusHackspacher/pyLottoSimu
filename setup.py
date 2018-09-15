@@ -3,7 +3,7 @@
 
 # pyLottoSimu, load module lotto
 
-# Copyright (C) <2014-2017> Markus Hackspacher
+# Copyright (C) <2014-2018> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
