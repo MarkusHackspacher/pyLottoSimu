@@ -25,7 +25,7 @@ English, German, French, Spanish, Italian, Danish, Dutch, Polish and Russian
 Start
 -----
 
-The program requires Python_ 2.7 or 3.x and `Qt5 for Python`_.
+The program requires Python_ 3.x and `Qt5 for Python`_.
 
 .. _Python: http://www.python.org/download/
 .. _Qt5 for Python: http://www.riverbankcomputing.com/software/pyqt/download5

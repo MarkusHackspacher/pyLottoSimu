@@ -21,7 +21,6 @@ build the help
 
 code test
 
- * `pep8 <https://pypi.python.org/pypi/pep8>`_ - Python style guide checker
  * pycodestyle - Python style guide checker
  * isort - import sorting and checking tool
  * nose - start nosetests to run the tests

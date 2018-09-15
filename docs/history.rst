@@ -6,7 +6,18 @@ History
 Version
 -------
 
-The current version is 1.7 from June 3, 2017.
+The current version is 1.8 from Mai 21, 2018.
+
+Version Next
+^^^^^^^^^^^^
+
+release first quarter 2019,
+support only Python 3 and Qt5.
+
+Version 1.7
+^^^^^^^^^^^
+
+release at June 17, 2018, more code tests integrate.
 
 Version 1.6.1
 ^^^^^^^^^^^^^
