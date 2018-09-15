@@ -30,51 +30,9 @@ Manage the GUI of setting dialog. Use lottosystem.ui.
 import os
 import sys
 
-_FORCE_PYSIDE = False
-_FORCE_PYQT4 = False
+from PyQt5 import QtGui, QtWidgets, uic
+from PyQt5.QtSvg import QSvgWidget
 
-try:
-    if _FORCE_PYSIDE or _FORCE_PYQT4:
-        raise ImportError('_FORCE_PYSIDE')
-    from PyQt5 import QtGui, QtWidgets, uic
-    from PyQt5.QtSvg import QSvgWidget
-
-    def qt_loadui(uifile):
-        return uic.loadUi(uifile)
-except ImportError:
-    try:
-        if _FORCE_PYQT4:
-            raise ImportError('_FORCE_PYSIDE')
-        from PySide import QtGui, QtCore
-        from PySide import QtGui as QtWidgets
-        from PySide.QtSvg import QSvgWidget
-
-        def qt_loadui(uifile):
-            """load Qt ui file
-
-            :param uifile:
-            :return:
-            """
-            from PySide import QtUiTools
-            loader = QtUiTools.QUiLoader()
-            uif = QtCore.QFile(uifile)
-            uif.open(QtCore.QFile.ReadOnly)
-            result = loader.load(uif)
-            uif.close()
-            return result
-    except ImportError:
-        from PyQt4 import QtGui, uic
-        from PyQt4 import QtGui as QtWidgets
-        from PyQt4.QtSvg import QSvgWidget
-
-        def qt_loadui(uifile):
-            """
-            load Qt ui file
-
-            :param uifile:
-            :return:
-            """
-            return uic.loadUi(uifile)
 
 
 class LottoSettingsDialog(QtWidgets.QDialog):
@@ -94,25 +52,20 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         '''
         super(LottoSettingsDialog, self).__init__(parent)
 
-        if testcase:
-            from UI_lottosystem import Ui_Dialog
-            self.ui = Ui_Dialog()
-            self.ui.setupUi(self)
-        else:
-            # Set up the user interface from Designer.
-            self.ui = qt_loadui(os.path.abspath(os.path.join(
+        # Set up the user interface from Designer.
+        self.ui = uic.loadUi(os.path.abspath(os.path.join(
+            os.path.dirname(sys.argv[0]),
+            "pylottosimu", "dialog", "lottosystem.ui")))
+        self.ui.setWindowIcon(
+            QtGui.QIcon(os.path.abspath(os.path.join(
                 os.path.dirname(sys.argv[0]),
-                "pylottosimu", "dialog", "lottosystem.ui")))
-            self.ui.setWindowIcon(
-                QtGui.QIcon(os.path.abspath(os.path.join(
-                    os.path.dirname(sys.argv[0]),
-                    "misc", "pyLottoSimu.svg"))))
+                "misc", "pyLottoSimu.svg"))))
 
-            self.imageLabel = QSvgWidget()
-            self.imageLabel.renderer().load(os.path.abspath(os.path.join(
-                os.path.dirname(sys.argv[0]),
-                "pylottosimu", "lottokugel.svg")))
-            self.ui.scrollArea.setWidget(self.imageLabel)
+        self.imageLabel = QSvgWidget()
+        self.imageLabel.renderer().load(os.path.abspath(os.path.join(
+            os.path.dirname(sys.argv[0]),
+            "pylottosimu", "lottokugel.svg")))
+        self.ui.scrollArea.setWidget(self.imageLabel)
 
         self.systemdata = sysdat
         for systemname in self.systemdata.data:

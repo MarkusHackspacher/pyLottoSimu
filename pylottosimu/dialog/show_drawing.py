@@ -28,24 +28,9 @@ and the bonus numbers.
 """
 
 import os
-import sys
 
-_FORCE_PYSIDE = False
+from PyQt5 import QtGui, QtCore, QtWidgets
 
-try:
-    if _FORCE_PYSIDE:
-        raise ImportError('_FORCE_PYSIDE')
-    from PyQt5 import QtGui, QtCore, QtWidgets
-except ImportError:
-    try:
-        from PySide import QtGui, QtCore
-        from PySide import QtGui as QtWidgets
-    except ImportError:
-        from PyQt4 import QtGui, QtCore
-        from PyQt4 import QtGui as QtWidgets
-
-if sys.version_info < (3, 0):
-    range = xrange
 
 
 class DlgShowDrawing(QtWidgets.QDialog):

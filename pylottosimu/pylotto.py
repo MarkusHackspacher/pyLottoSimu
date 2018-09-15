@@ -33,8 +33,6 @@ simulate a lotto draw.
 draw the lotto numbers and give the draw text back
 """
 
-from __future__ import absolute_import
-
 import os
 import random
 import sys
@@ -42,64 +40,13 @@ import webbrowser
 from datetime import datetime
 from random import randint
 
+from PyQt5 import QtGui, QtCore, QtWidgets, uic
+from PyQt5.QtSvg import QSvgWidget
+
 from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
 from pylottosimu.lottosystem import LottoSystemData
 
-_FORCE_PYSIDE = False
-
-try:
-    if _FORCE_PYSIDE:
-        raise ImportError('_FORCE_PYSIDE')
-    from PyQt5 import QtGui, QtCore, QtWidgets, uic
-    from PyQt5.QtSvg import QSvgWidget
-
-    def qt_loadui(uifile):
-        """
-        load Qt ui file
-
-        :param uifile:
-        :return:
-        """
-        return uic.loadUi(uifile)
-
-except ImportError:
-    try:
-        from PySide import QtGui, QtCore
-        from PySide import QtGui as QtWidgets
-        from PySide.QtSvg import QSvgWidget
-
-        def qt_loadui(uifile):
-            """
-            load Qt ui file
-
-            :param uifile:
-            :return:
-            """
-            from PySide import QtUiTools
-            loader = QtUiTools.QUiLoader()
-            uif = QtCore.QFile(uifile)
-            uif.open(QtCore.QFile.ReadOnly)
-            result = loader.load(uif)
-            uif.close()
-            return result
-    except ImportError:
-        from PyQt4 import QtGui, QtCore, uic
-        from PyQt4 import QtGui as QtWidgets
-        from PyQt4.QtSvg import QSvgWidget
-
-        def qt_loadui(uifile):
-            """
-            load Qt ui file
-
-            :param uifile:
-            :return:
-            """
-            return uic.loadUi(uifile)
-
-if sys.version_info < (3, 0):
-    range = xrange
-    str = unicode
 
 
 class LottoSimuDialog(QtWidgets.QMainWindow):
@@ -113,7 +60,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         super(LottoSimuDialog, self).__init__()
 
         # Set up the user interface from Designer.
-        self.ui = qt_loadui(os.path.abspath(os.path.join(
+        self.ui = uic.loadUi(os.path.abspath(os.path.join(
                            os.path.dirname(sys.argv[0]),
                            "pylottosimu", "lottosimu_gui.ui")))
         self.ui.setWindowIcon(

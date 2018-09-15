@@ -28,27 +28,14 @@ Setup for testing, create the UI_lottosystem.py file:
     cd dialog/
     pyuic4 --output UI_lottosystem.py lottosystem.ui
 """
-from __future__ import absolute_import
-
 import unittest
+
+from PyQt5 import QtWidgets
 
 from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
 from pylottosimu.lottosystem import LottoSystemData
 
-_FORCE_PYSIDE = False
-_FORCE_PYQT4 = False
 
-try:
-    if _FORCE_PYSIDE or _FORCE_PYQT4:
-        raise ImportError('_FORCE_PYSIDE')
-    from PyQt5 import QtWidgets
-except ImportError:
-    try:
-        if _FORCE_PYQT4:
-            raise ImportError('_FORCE_PYSIDE')
-        from PySide import QtGui as QtWidgets
-    except ImportError:
-        from PyQt4 import QtGui as QtWidgets
 
 
 class LottoSystemDataTestCase(unittest.TestCase):

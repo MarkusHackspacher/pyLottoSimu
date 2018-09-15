@@ -1,3 +1,4 @@
 PyQt5
 # unit test requirements
-pep8
+pycodestyle
+isort
