@@ -54,9 +54,3 @@ alternative::
     python3 lotto.pyw [de|dk|fr|es|it|nl|pl|ru]
 
 
-Contribute
-----------
-
-Feel free and send a pull request to https://github.com/MarkusHackspacher/pyLottoSimu .
-If you have an idea, tell it at https://gitter.im/MarkusHackspacher/pyLottoSimu .
-Thank you in advance.

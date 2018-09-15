@@ -57,6 +57,7 @@ Contents:
 
    install
    translate
+   contributing
    history
    modules
 

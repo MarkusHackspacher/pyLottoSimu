@@ -8,11 +8,14 @@ Version
 
 The current version is 1.8 from Mai 21, 2018.
 
-Version Next
-^^^^^^^^^^^^
+Preview next version
+^^^^^^^^^^^^^^^^^^^^
 
-release first quarter 2019,
-support only Python 3 and Qt5.
+The program starts with the last selected lotto system.
+
+Support only Python 3 and Qt5.
+
+planned release first quarter 2019.
 
 Version 1.7
 ^^^^^^^^^^^
@@ -56,8 +59,3 @@ The renewals in Version 1.4 of October 3, 2013 from pyLottoSimu is
 multilingualism there are now nine languages. And in
 Program window there is a major change, it can now
 Select whether the number overview window to appear automatically after the draw.
-
-Preview
--------
-
-The program starts with the last selected lotto system.

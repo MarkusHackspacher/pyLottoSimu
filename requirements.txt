@@ -1,4 +1,5 @@
 PyQt5
 # unit test requirements
+mock
 pycodestyle
 isort

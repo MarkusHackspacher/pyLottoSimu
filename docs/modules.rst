@@ -5,4 +5,5 @@ pylottosimu
    :maxdepth: 4
 
    pylottosimu
+   pylottosimu.dialog
    tests

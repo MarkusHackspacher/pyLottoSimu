@@ -3,37 +3,70 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyLottoSimu 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-01 20:29+0200\n"
+"POT-Creation-Date: 2018-09-15 22:49+0200\n"
 "PO-Revision-Date: 2015-09-01 20:49+0200\n"
 "Last-Translator: Markus Hackspacher <hackspacher@gmx.de>\n"
-"Language-Team: German <kde-i18n-de@kde.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: ../../index.rst:7
 msgid "Welcome to pyLottoSimu's documentation!"
 msgstr "Willkommen bei der Dokumentation von pyLottoSimu!"
 
+#: ../../index.rst:9
+msgid "Lotto Generator and Simulator"
+msgstr "Lotto Generator und Simulator"
+
+#: ../../index.rst:11
+msgid ""
+"a simulation of Lotto Germany (pick 6 out of 49), Lotto Austria (pick 6 "
+"out of 45), EuroMillionen, Powerball Lottery US, Mega Millions lottery "
+"and Hot Lotto Sizzler system."
+msgstr ""
+"Eine Simulation des Lotto Deutschland (6 aus 49), Lotto Österreich (6 aus"
+" 45), Euromillionen, Powerball-Lotterie der USA, Mega Millions Lotterie "
+"und Hot Lotto Sizzler."
+
 #: ../../index.rst:14
 msgid ""
-"The pyLottoSimu program generates random lottery numbers and can simulate a "
-"draw. In the simulation view a Lotto Ball is visible on the numbers rotate "
-"faster and faster, and is finally available, this is the text, the first "
-"number of today\\'s draw was the ... Maybe it was indeed actually the "
-"numbers of the next draw, of course are here, all the figures provided "
-"without guarantee."
-msgstr "Das pyLottoSimu Programm generiert zufällige Lottozahlen und kann eine Ziehung simulieren. In der Simulationsansicht ist eine Lottokugel sichtbar, auf der die Zahlen immer schneller rotieren, Und schließlich stehen bleibt, dazu kommt der Text, die erste Zahl der heutigen Ziehung war die ... Vielleicht waren es ja tatsächlich die Zahlen der nächsten Ziehung, natürlich sind auch hier, alle Zahlen ohne Gewähr."
+"The pyLottoSimu program generates random lottery numbers and can simulate"
+" a draw. In the simulation view a Lotto Ball is visible on the numbers "
+"rotate faster and faster, and is finally available, this is the text, the"
+" first number of today\\'s draw was the ... Maybe it was indeed actually "
+"the numbers of the next draw, of course are here, all the figures "
+"provided without guarantee."
+msgstr ""
+"Das pyLottoSimu Programm generiert zufällige Lottozahlen und kann eine "
+"Ziehung simulieren. In der Simulationsansicht ist eine Lottokugel "
+"sichtbar, auf der die Zahlen immer schneller rotieren, Und schließlich "
+"stehen bleibt, dazu kommt der Text, die erste Zahl der heutigen Ziehung "
+"war die ... Vielleicht waren es ja tatsächlich die Zahlen der nächsten "
+"Ziehung, natürlich sind auch hier, alle Zahlen ohne Gewähr."
+
+#: ../../index.rst:21
+msgid "pyLottoSimu can be started in these languages:"
+msgstr "pyLottoSimu kann in diesen Sprachen gestartet werden:"
+
+#: ../../index.rst:23
+msgid ""
+"English, German, French, Spanish, Italian, Danish, Dutch, Polish and "
+"Russian"
+msgstr ""
+"Englisch, Deutsch, Französisch, Spanisch, Italienisch, Dänisch, "
+"Niederländisch, Polnisch und Russisch"
 
 #: ../../index.rst:26
 msgid "Start"
 msgstr "Start"
 
 #: ../../index.rst:28
-msgid "The program requires Python_ 2.7 or 3.x and `Qt5 for Python`_."
+#, fuzzy
+msgid "The program requires Python_ 3.x and `Qt5 for Python`_."
 msgstr "Das Programm verwendet Python_ 2.7 oder 3.x und `Qt5 for Python`_."
 
 #: ../../index.rst:33
@@ -46,52 +79,30 @@ msgstr "Dokumentation"
 
 #: ../../index.rst:40
 msgid "Make the documentation as .html file::"
-msgstr "Dokumentation als .html Datei aus den Kommentaren des Quelltextes erstellen lassen::"
+msgstr ""
+"Dokumentation als .html Datei aus den Kommentaren des Quelltextes "
+"erstellen lassen::"
 
-#: ../../index.rst:49
+#: ../../index.rst:45
+msgid "Add new modules with::"
+msgstr "Fügen Sie neue Module hinzu mit ::"
+
+#: ../../index.rst:53
 msgid "Contents:"
 msgstr "Inhalt"
 
-#: ../../index.rst:60
+#: ../../index.rst:65
 msgid "Indices and tables"
 msgstr "Indizes und Tabellen"
 
-#: ../../index.rst:62
+#: ../../index.rst:67
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
-#: ../../index.rst:63
+#: ../../index.rst:68
 msgid ":ref:`modindex`"
 msgstr ":ref:`modindex`"
 
-#: ../../index.rst:64
+#: ../../index.rst:69
 msgid ":ref:`search`"
 msgstr ":ref:`search`"
-
-#: ../../index.rst:9
-msgid "Lotto Generator and Simulator"
-msgstr "Lotto Generator und Simulator"
-
-#: ../../index.rst:11
-msgid ""
-"a simulation of Lotto Germany (pick 6 out of 49), Lotto Austria (pick 6 out "
-"of 45), EuroMillionen, Powerball Lottery US, Mega Millions lottery and Hot "
-"Lotto Sizzler system."
-msgstr "Eine Simulation des Lotto Deutschland (6 aus 49), Lotto Österreich (6 aus 45), Euromillionen, Powerball-Lotterie der USA, Mega Millions Lotterie und Hot Lotto Sizzler."
-
-#: ../../index.rst:21
-msgid "pyLottoSimu can be started in these languages:"
-msgstr "pyLottoSimu kann in diesen Sprachen gestartet werden:"
-
-#: ../../index.rst:23
-msgid ""
-"English, German, French, Spanish, Italian, Danish, Dutch, Polish and Russian"
-msgstr "Englisch, Deutsch, Französisch, Spanisch, Italienisch, Dänisch, Niederländisch, Polnisch und Russisch"
-
-#~ msgid ""
-#~ "a simulation of the German (6 of 49), Austria (6 of 45) or EuroMillionen (5 "
-#~ "of 50 plus 2) lottery system."
-#~ msgstr ""
-#~ "Eine Simulation der Deutschen 6 aus 49, der Österreichischen 6 aus 45 oder "
-#~ "der EuroMillionen (5 aus 50 plus 2) Lotterie."
-
