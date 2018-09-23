@@ -250,8 +250,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         else:
             text = self.tr("Error, no valid numbers available!")
         dt = datetime.now()
-        texttr = self.tr("{} {} out of {}: {}")
-        text = str(texttr).format(dt.strftime("%H:%M:%S:"),
+        texttr = self.tr("{}: {} out of {}: {}")
+        text = str(texttr).format(dt.strftime("%H:%M:%S"),
                                   self.lottodraw.data['draw_numbers'],
                                   self.lottodraw.data['max_draw'], text)
         self.ui.plaintextedit.appendPlainText(text)
@@ -440,7 +440,7 @@ class DrawLotto(QtCore.QObject):
             dt = datetime.now()
             textr = self.tr('Welcome to the lottery draw,\n'
                             'at {0}.\nnumbers are drawn: {1} out of {2} {3}!')
-            dttext = dt.strftime("%d %B %Y um %H:%M")
+            dttext = dt.strftime("%d %B %Y %H:%M")
             if sys.version_info < (3, 0):
                 dttext = dttext.decode('utf-8')
             text = str(textr).format(

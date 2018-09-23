@@ -18,9 +18,8 @@ Feedback and contributions are welcome.
 install
 -------
 
-The program requires [Python 2.7 or 3.x](http://www.python.org/download/) 
-and [PyQt4 for Python 2](http://www.riverbankcomputing.com/software/pyqt/download)
-or PyQt5 for Python 3 `pip3 install PyQt5`.
+The program requires [Python 3.x](http://www.python.org/download/) 
+and PyQt5 for Python 3 `pip3 install PyQt5`.
 
 ```
 # sudo apt-get install python python-pyqt5 python-pyqt5.qtsvg git
@@ -58,7 +57,6 @@ make html
 
 To translate the program or make a translation in your language
 insert in the complete.pro your language code.
-
 
 ```
 cd pylottosimu

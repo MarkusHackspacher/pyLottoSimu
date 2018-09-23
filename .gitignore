@@ -4,6 +4,7 @@
 *.pyt
 *.pytc
 *.json
+*.mo
 
 .eric4project/
 lotto/.directory

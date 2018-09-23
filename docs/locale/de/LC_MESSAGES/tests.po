@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyLottoSimu 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-15 23:23+0200\n"
+"POT-Creation-Date: 2018-09-23 05:58+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Markus Hackspacher\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -215,4 +215,61 @@ msgstr ""
 #: of tests:1
 msgid "test case"
 msgstr "Testfall"
+
+#~ msgid "Test the lotto draw with some input numbers"
+#~ msgstr ""
+
+#~ msgid "Init class pylotto.drawlotto"
+#~ msgstr ""
+
+#~ msgid "test draw without a additional number"
+#~ msgstr ""
+
+#~ msgid "test draw with a additional number"
+#~ msgstr ""
+
+#~ msgid "test draw with a separate additional number"
+#~ msgstr ""
+
+#~ msgid "test draw one number without a additional number"
+#~ msgstr ""
+
+#~ msgid "test draw three number without a additional number"
+#~ msgstr ""
+
+#~ msgid "test draw two number without a additional number"
+#~ msgstr ""
+
+#~ msgid "test set draw to no number and make sure to set to one number"
+#~ msgstr ""
+
+#~ msgid "Test lotto.data"
+#~ msgstr ""
+
+#~ msgid "Test the dialog module"
+#~ msgstr ""
+
+#~ msgid "lottosettingdialog"
+#~ msgstr ""
+
+#~ msgid "Setup for testing, create the UI_lottosystem.py file:"
+#~ msgstr ""
+
+#~ msgid "cd dialog/ pyuic4 --output UI_lottosystem.py lottosystem.ui"
+#~ msgstr ""
+
+#~ msgid "test"
+#~ msgstr "Testfall"
+
+#~ msgid "Testcase for module pylottosimu.lottosystemdata"
+#~ msgstr ""
+
+#~ msgid "Test the code format of the file"
+#~ msgstr ""
+
+#~ msgid "load LottoSystemData"
+#~ msgstr ""
+
+#~ msgid "read the lottosystems.json file"
+#~ msgstr ""
 
