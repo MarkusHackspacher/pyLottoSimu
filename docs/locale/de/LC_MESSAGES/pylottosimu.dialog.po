@@ -1,16 +1,20 @@
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: pyLottoSimu 1.6\n"
+"Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-23 06:08+0200\n"
-"PO-Revision-Date: 2015-09-05 21:41+0200\n"
-"Last-Translator: Markus Hackspacher\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-10-01 17:59\n"
+"Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
+"Language-Team: German\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: pylottosimu\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /master/docs/_build/locale/pylottosimu.dialog.pot\n"
+"Language: de_DE\n"
 
 #: ../../pylottosimu.dialog.rst:2
 msgid "pylottosimu.dialog package"
@@ -24,89 +28,31 @@ msgstr "Submodule"
 msgid "pylottosimu.dialog.lottosettingdialog module"
 msgstr "pylottosimu.dialog.lottosettingdialog Modul"
 
-#: of pylottosimu.dialog.lottosettingdialog:2
+#: ../../../pylottosimu/dialog/lottosettingdialog.py:docstring of pylottosimu.dialog.lottosettingdialog:2
 msgid "class LottoSettingsDialog"
 msgstr "Klasse LottoSettingsDialog"
 
-#: of pylottosimu.dialog.lottosettingdialog:4
-#, fuzzy
+#: ../../../pylottosimu/dialog/lottosettingdialog.py:docstring of pylottosimu.dialog.lottosettingdialog:4
 msgid "Manage the GUI of setting dialog. Use lottosystem.ui."
-msgstr "Die GUI von Einstellungen. Verwenden lottosystem.ui."
+msgstr ""
 
 #: ../../pylottosimu.dialog.rst:16
 msgid "pylottosimu.dialog.show_drawing module"
 msgstr "pylottosimu.dialog.show_drawing Modul"
 
-#: of pylottosimu.dialog.show_drawing:2
+#: ../../../pylottosimu/dialog/show_drawing.py:docstring of pylottosimu.dialog.show_drawing:2
 msgid "class DlgShowDrawing"
 msgstr "Klasse DlgShowDrawing"
 
-#: of pylottosimu.dialog.show_drawing:4
-msgid ""
-"show a Dialog with all the ball numbers from the draw and the bonus "
-"numbers."
-msgstr ""
-"zeigen einen Dialog mit allen Ball Zahlen von der Auslosung und der "
-"Bonus-Nummern."
+#: ../../../pylottosimu/dialog/show_drawing.py:docstring of pylottosimu.dialog.show_drawing:4
+msgid "show a Dialog with all the ball numbers from the draw and the bonus numbers."
+msgstr "zeigen einen Dialog mit allen Ball Zahlen von der Auslosung und der Bonus-Nummern."
 
 #: ../../pylottosimu.dialog.rst:25
 msgid "Module contents"
 msgstr "Modulinhalte"
 
-#: of pylottosimu.dialog:1
+#: ../../../pylottosimu/dialog/__init__.py:docstring of pylottosimu.dialog:1
 msgid "additional dialogs"
 msgstr ""
-
-#~ msgid "Bases: :class:`PyQt5.QtWidgets.QDialog`"
-#~ msgstr ""
-
-#~ msgid "Show the numbers in a dialog box"
-#~ msgstr "Anzeige der Numern in der Dialogbox"
-
-#~ msgid "The GUI of Settings."
-#~ msgstr "Die GUI von Einstellungen."
-
-#~ msgid "Lotto setting"
-#~ msgstr "Lotto-Einstellung"
-
-#~ msgid "parent window"
-#~ msgstr "Eltern-Fenster"
-
-#~ msgid "static method to create the dialog and return (dialog.values, accepted)"
-#~ msgstr ""
-#~ "statische Methode, um den Dialog zu "
-#~ "erstellen und (dialog.values, akzeptiert)"
-
-#~ msgid "dialog.values, accepted"
-#~ msgstr "dialog.values, akzeptiert"
-
-#~ msgid "Set Values"
-#~ msgstr "Werte setzen "
-
-#~ msgid "Values"
-#~ msgstr "Werte"
-
-#~ msgid "the number of draw"
-#~ msgstr "die Zahl der Ziehung"
-
-#~ msgid "the number of the PushButtons"
-#~ msgstr "die Anzahl der Tasten"
-
-#~ msgid "the bonus numbers"
-#~ msgstr "die Bonuszahlen"
-
-#~ msgid "the highest bonus number (separate numbers)"
-#~ msgstr "die höchste Zusatzzahl (separate Nummern)"
-
-#~ msgid "None"
-#~ msgstr "Keine"
-
-#~ msgid ""
-#~ "Array of buttons from 1 to the "
-#~ "highest number and buttons for the "
-#~ "additional numbers"
-#~ msgstr ""
-#~ "Reihe von Tasten von 1 bis zur "
-#~ "höchsten Zahl und Schaltflächen für die"
-#~ " zusätzlichen Nummern"
 
