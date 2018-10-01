@@ -1,65 +1,51 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2018, pyLottoSimu-Team
-# This file is distributed under the same license as the pyLottoSimu
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
-#
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: pyLottoSimu 1.8\n"
+"Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-15 23:45+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-10-01 18:12\n"
+"Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
+"Language-Team: German\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: pylottosimu\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /master/docs/_build/locale/contributing.pot\n"
+"Language: de_DE\n"
 
 #: ../../contributing.rst:2
 msgid "Contributing to pyLottoSimu"
-msgstr ""
+msgstr "Einen Beitrag zur pyLottoSimu"
 
 #: ../../contributing.rst:4
 msgid "Contents"
-msgstr ""
+msgstr "Inhalt"
 
 #: ../../contributing.rst:6
-msgid ""
-"You are very welcome to contribute to the project! The bugtracker and git"
-" repository can be found at the `project's page "
-"<https://github.com/MarkusHackspacher/pyLottoSimu/>`_. If you have an "
-"idea, tell it at https://gitter.im/MarkusHackspacher/pyLottoSimu . Thank "
-"you in advance."
+msgid "You are very welcome to contribute to the project! The bugtracker and git repository can be found at the `project's page <https://github.com/MarkusHackspacher/pyLottoSimu/>`_. If you have an idea, tell it at https://gitter.im/MarkusHackspacher/pyLottoSimu . Thank you in advance."
 msgstr ""
 
 #: ../../contributing.rst:13
 msgid "How to contribute"
-msgstr ""
+msgstr "Wie kann man mitmachen"
 
 #: ../../contributing.rst:15
 msgid "There are various possibilities to get involved, for example you can:"
 msgstr ""
 
 #: ../../contributing.rst:17
-msgid ""
-"`Report bugs "
-"<https://github.com/MarkusHackspacher/pyLottoSimu/issues/new>`_ "
-"preferably with patches if you can;"
+msgid "`Report bugs <https://github.com/MarkusHackspacher/pyLottoSimu/issues/new>`_ preferably with patches if you can;"
 msgstr ""
 
 #: ../../contributing.rst:19
-msgid ""
-"Enhance this `documentation "
-"<https://github.com/MarkusHackspacher/pyLottoSimu/tree/master/docs>`_"
+msgid "Enhance this `documentation <https://github.com/MarkusHackspacher/pyLottoSimu/tree/master/docs>`_"
 msgstr ""
 
 #: ../../contributing.rst:20
-msgid ""
-"`Fork the code <https://github.com/MarkusHackspacher/pyLottoSimu>`_, "
-"implement new features, test and send a pull request"
+msgid "`Fork the code <https://github.com/MarkusHackspacher/pyLottoSimu>`_, implement new features, test and send a pull request"
 msgstr ""
 
 #: ../../contributing.rst:24
