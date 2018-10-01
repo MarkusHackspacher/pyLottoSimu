@@ -172,7 +172,7 @@
     <message>
       <location filename="pylotto.py" line="472"/>
       <source>{1}:{0}, </source>
-      <translation type="unfinished">{1}:{0}, </translation>
+      <translation>{1}:{0}, </translation>
     </message>
     <message>
       <location filename="pylotto.py" line="480"/>
