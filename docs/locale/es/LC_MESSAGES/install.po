@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pylottosimu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-15 23:37+0200\n"
+"PO-Revision-Date: 2018-10-01 18:41\n"
+"Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: pylottosimu\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /master/docs/_build/locale/install.pot\n"
+"Language: es_ES\n"
+
+#: ../../install.rst:2
+msgid "Installation"
+msgstr ""
+
+#: ../../install.rst:4
+msgid "Installing pyLottoSimu should usually be quite easy, as you can simply unpack and run pyLottoSimu in place if you wish to do so."
+msgstr ""
+
+#: ../../install.rst:8
+msgid "Contents"
+msgstr ""
+
+#: ../../install.rst:11
+msgid "dependencies"
+msgstr ""
+
+#: ../../install.rst:13
+msgid "You'll need these dependencies to run the program:"
+msgstr ""
+
+#: ../../install.rst:15
+msgid "`python <http://www.python.org>`_ - The python programming language along with python-setuptools"
+msgstr ""
+
+#: ../../install.rst:16
+msgid "`pyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 for Python"
+msgstr ""
+
+#: ../../install.rst:18
+msgid "build the help"
+msgstr ""
+
+#: ../../install.rst:20
+msgid "`Sphinx <http://sphinx-doc.org/>`_ - Documentation"
+msgstr ""
+
+#: ../../install.rst:22
+msgid "code test"
+msgstr ""
+
+#: ../../install.rst:24
+msgid "pycodestyle - Python style guide checker"
+msgstr ""
+
+#: ../../install.rst:25
+msgid "isort - import sorting and checking tool"
+msgstr ""
+
+#: ../../install.rst:26
+msgid "nose - start nosetests to run the tests"
+msgstr ""
+
+#: ../../install.rst:28
+msgid "version control system Git"
+msgstr ""
+
+#: ../../install.rst:30
+msgid "`Git <https://git-scm.com/>`_ - Git - distributed version control system"
+msgstr ""
+
+#: ../../install.rst:34
+msgid "Installing Debian or Ubuntu"
+msgstr ""
+
+#: ../../install.rst:36
+msgid "First you need to your computer these programs: Python, pyQt5 and version control system git::"
+msgstr ""
+
+#: ../../install.rst:41
+msgid "Then you copied the source code of the program on your computer, either download the zip file of the project or download with the version control system::"
+msgstr ""
+
+#: ../../install.rst:46
+msgid "change the directory and run::"
+msgstr ""
+
+#: ../../install.rst:51
+msgid "alternative::"
+msgstr ""
+
