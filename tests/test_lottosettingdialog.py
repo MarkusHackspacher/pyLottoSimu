@@ -22,13 +22,7 @@
 """Test the dialog module
 
 lottosettingdialog
-
-Setup for testing, create the UI_lottosystem.py file:
-
-    cd dialog/
-    pyuic4 --output UI_lottosystem.py lottosystem.ui
 """
-import sys
 import unittest
 
 from PyQt5 import QtWidgets
