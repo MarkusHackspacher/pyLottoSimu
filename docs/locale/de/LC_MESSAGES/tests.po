@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-23 05:58+0200\n"
-"PO-Revision-Date: 2018-10-01 17:59\n"
+"PO-Revision-Date: 2018-10-01 18:31\n"
 "Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -76,7 +76,7 @@ msgstr "Zurück"
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_highernumbers:4
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_samenumbers:4
 msgid "none"
-msgstr ""
+msgstr "keine"
 
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw:1
 msgid "test draw without a additional number"
@@ -203,7 +203,7 @@ msgstr ""
 
 #: ../../tests.rst:40
 msgid "Module contents"
-msgstr ""
+msgstr "Modulinhalte"
 
 #: ../../../tests/__init__.py:docstring of tests:1
 msgid "test case"
