@@ -1,16 +1,20 @@
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: pyLottoSimu 1.6\n"
+"Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-23 09:19+0200\n"
-"PO-Revision-Date: 2015-09-15 21:41+0200\n"
-"Last-Translator: Markus Hackspacher\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-10-01 17:59\n"
+"Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
+"Language-Team: German\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: pylottosimu\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /master/docs/_build/locale/pylottosimu.pot\n"
+"Language: de_DE\n"
 
 #: ../../pylottosimu.rst:2
 msgid "pylottosimu package"
@@ -28,103 +32,87 @@ msgstr "Untermodule"
 msgid "pylottosimu.lottosystem module"
 msgstr "pylottosimu.lottosystem Modul"
 
-#: of pylottosimu.lottosystem.LottoSystemData:1
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:1
 msgid "Bases: :class:`object`"
-msgstr "Bases: :class:`object`"
-
-#: of pylottosimu.lottosystem.LottoSystemData:1
-#, fuzzy
-msgid ""
-"loads predefined lottery systems. And read and write a json file of the "
-"data set."
 msgstr ""
-"Die Klassen lottosystemdata ladet die vorgegeben Lotteriesysteme. Und "
-"Lesen und Schreiben einer JSON-Datei des Datensatzes."
 
-#: of pylottosimu.lottosystem.LottoSystemData:4
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:1
+msgid "loads predefined lottery systems. And read and write a json file of the data set."
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:4
 msgid "Dataset:"
 msgstr "Datensatz"
 
-#: of pylottosimu.lottosystem.LottoSystemData:6
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:6
 msgid "name: name of the lottery system,"
 msgstr "Name: Name des Lotterie-System,"
 
-#: of pylottosimu.lottosystem.LottoSystemData:7
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:7
 msgid "max_draw: highest number of draw"
 msgstr "max_draw: höchste Zahl der Auslosung"
 
-#: of pylottosimu.lottosystem.LottoSystemData:8
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:8
 msgid "draw_numbers: number to pick"
 msgstr "draw_numbers: Anzahl der Ziehungen"
 
-#: of pylottosimu.lottosystem.LottoSystemData:9
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:9
 msgid "with_addit: with additional number"
 msgstr "with_addit: mit Zusatzzahl"
 
-#: of pylottosimu.lottosystem.LottoSystemData:10
-msgid ""
-"sep_addit_numbers: with separate additional number, the additional number"
-" are not in the same pot"
-msgstr ""
-"sep_addit_numbers: mit separaten Zusatzzahl, die zusätzliche Zahl nicht "
-"in den gleichen Topf"
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:10
+msgid "sep_addit_numbers: with separate additional number, the additional number are not in the same pot"
+msgstr "sep_addit_numbers: mit separaten Zusatzzahl, die zusätzliche Zahl nicht in den gleichen Topf"
 
-#: of pylottosimu.lottosystem.LottoSystemData:12
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:12
 msgid "addit_numbers: additional number to pick"
 msgstr "addit_numbers: mit Zusatzzahlen"
 
-#: of pylottosimu.lottosystem.LottoSystemData:13
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:13
 msgid "max_addit: highest additional number in the separate pot"
 msgstr "max_addit: höchste Zusatzzahl in dem separaten Topf"
 
-#: of pylottosimu.lottosystem.LottoSystemData.fixdata:1
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.fixdata:1
 msgid "Data of predefined lottery system."
 msgstr "Daten der vordefinierten Lotterie-Systeme."
 
-#: of pylottosimu.lottosystem.LottoSystemData.fixdata:3
-msgid ""
-"The following are predefined: Lotto Germany (pick 6 out of 49), Lotto "
-"Austria (pick 6 out of 45), EuroMillionen, Powerball Lottery US, Mega "
-"Millions, Hot Lotto Sizzler"
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.fixdata:3
+msgid "The following are predefined: Lotto Germany (pick 6 out of 49), Lotto Austria (pick 6 out of 45), EuroMillionen, Powerball Lottery US, Mega Millions, Hot Lotto Sizzler"
 msgstr ""
 
-#: of pylottosimu.lottosystem.LottoSystemData.fixdata:11
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.fixdata:11
 msgid "If you miss your favorite lottery system than could you add here."
-msgstr ""
-"Wenn Sie ihre Lieblings-Lotterie-System vermissen, könnten sie es hier "
-"hinzufügen."
+msgstr "Wenn Sie ihre Lieblings-Lotterie-System vermissen, könnten sie es hier hinzufügen."
 
-#: of pylottosimu.lottosystem.LottoSystemData.fixdata
-#: pylottosimu.lottosystem.LottoSystemData.projectpath
-#: pylottosimu.lottosystem.LottoSystemData.readfile
-#: pylottosimu.lottosystem.LottoSystemData.writetofile
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.fixdata:0
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.projectpath:0
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.readfile:0
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.writetofile:0
 msgid "Returns"
 msgstr ""
 
-#: of pylottosimu.lottosystem.LottoSystemData.fixdata:13
-#: pylottosimu.lottosystem.LottoSystemData.readfile:3
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.fixdata:13
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.readfile:3
 msgid "data"
 msgstr "Daten"
 
-#: of pylottosimu.lottosystem.LottoSystemData.projectpath:1
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.projectpath:1
 msgid "open in the home path and create a direction."
 msgstr "Öffnen Sie im Home-Pfad und eine Richtung."
 
-#: of pylottosimu.lottosystem.LottoSystemData.projectpath:3
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.projectpath:3
 msgid "path of the project"
 msgstr "Pfad des Projekts"
 
-#: of pylottosimu.lottosystem.LottoSystemData.readfile:1
-#, fuzzy
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.readfile:1
 msgid "read lottosystems.json"
-msgstr "Lesen lottosystems.json"
+msgstr ""
 
-#: of pylottosimu.lottosystem.LottoSystemData.writetofile:1
-#, fuzzy
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.writetofile:1
 msgid "write lottosystems.json"
-msgstr "Schreiben lottosystems.json"
+msgstr ""
 
-#: of pylottosimu.lottosystem.LottoSystemData.writetofile:3
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.writetofile:3
 msgid "none"
 msgstr "keine"
 
@@ -132,232 +120,27 @@ msgstr "keine"
 msgid "pylottosimu.pylotto module"
 msgstr "pylottosimu.pylotto Modul"
 
-#: of pylottosimu.pylotto:2
+#: ../../../pylottosimu/pylotto.py:docstring of pylottosimu.pylotto:2
 msgid "class LottoSimuDialog"
 msgstr "Klasse LottoSimuDialog"
 
-#: of pylottosimu.pylotto:4
-#, fuzzy
-msgid ""
-"Load the GUI and manage the signals for the program of the pyLottoSimu. "
-"Use the lottosimu_gui.ui"
+#: ../../../pylottosimu/pylotto.py:docstring of pylottosimu.pylotto:4
+msgid "Load the GUI and manage the signals for the program of the pyLottoSimu. Use the lottosimu_gui.ui"
 msgstr ""
-"Die GUI und das Programm der pyLottoSimu. Verwenden Sie die "
-"lottosimu_gui.ui"
 
-#: of pylottosimu.pylotto:8
+#: ../../../pylottosimu/pylotto.py:docstring of pylottosimu.pylotto:8
 msgid "class drawlotto"
 msgstr "Klasse drawlotto"
 
-#: of pylottosimu.pylotto:10
+#: ../../../pylottosimu/pylotto.py:docstring of pylottosimu.pylotto:10
 msgid "simulate a lotto draw. draw the lotto numbers and give the draw text back"
-msgstr ""
-"simulieren eine Lotto-Auslosung. ziehen die Lottozahlen und geben die "
-"Auslosung Text zurück"
+msgstr "simulieren eine Lotto-Auslosung. ziehen die Lottozahlen und geben die Auslosung Text zurück"
 
 #: ../../pylottosimu.rst:32
 msgid "Module contents"
 msgstr "Modulinhalte"
 
-#: of pylottosimu:1
-#, fuzzy
+#: ../../../pylottosimu/__init__.py:docstring of pylottosimu:1
 msgid "Manage a Lotto simulation draw."
-msgstr "Simuliere eine Lottoziehung"
-
-#~ msgid "The signals for the GUI"
-#~ msgstr "Signale für die GUI"
-
-#~ msgid "Bases: :class:`PyQt5.QtWidgets.QMainWindow`"
-#~ msgstr "Bases: :class:`PyQt5.QtWidgets.QMainWindow`"
-
-#~ msgid "show dialog of the draw"
-#~ msgstr "Auslosung Dialog zeigen"
-
-#~ msgid ""
-#~ "Start simulation with the first drawing"
-#~ " init timer with the valve from "
-#~ "the Scrollbar the next drawing starts"
-#~ " with the timer event."
-#~ msgstr ""
-#~ "Simulation starten mit der ersten "
-#~ "Zeichnung, die Zeit wird in der "
-#~ "Scrollbar eingestellt "
-
-#~ msgid "Clean the output text"
-#~ msgstr "Den Ausgabetext löschen"
-
-#~ msgid "Close the GUI"
-#~ msgstr "GUI beenden"
-
-#~ msgid "info message box"
-#~ msgstr "Info Meldung"
-
-#~ msgid "Show the output from the random number generator."
-#~ msgstr "Zeigen die Ausgabe von dem Zufallszahlengenerator."
-
-#~ msgid "Start time to show a number."
-#~ msgstr "Startzeit, um eine Nummer zu zeigen."
-
-#~ msgid "Open website"
-#~ msgstr "Webseite öffnen"
-
-#~ msgid "Simulation of the draw and show the next Number on the Screen."
-#~ msgstr ""
-#~ "Simulation der Auslosung und zeigen die"
-#~ " nächste Nummer auf dem Bildschirm."
-
-#~ msgid "Bases: :class:`PyQt5.QtCore.QObject`"
-#~ msgstr ""
-
-#~ msgid "draw of the lotto numbers"
-#~ msgstr "Zeichnen der Lottozahlen"
-
-#~ msgid "pick of a lotto number"
-#~ msgstr "Ziehen einer Lotto-Nummer"
-
-#~ msgid "pick"
-#~ msgstr "Nummer ziehen"
-
-#~ msgid "pylottosimu.test_drawlotto module"
-#~ msgstr ""
-
-#~ msgid "Bases: :class:`unittest.case.TestCase`"
-#~ msgstr ""
-
-#~ msgid "pylottosimu.test_lottosystemdata module"
-#~ msgstr "pylottosimu.test_lottosystemdata Modul"
-
-#~ msgid "pylottosimu.test_pep8 module"
-#~ msgstr "pylottosimu.test_pep8 Modul"
-
-#~ msgid "Test that we conform to PEP8."
-#~ msgstr "Test, dass wir PEP8 entsprechen."
-
-#~ msgid "pylottosimu.test_show_drawing module"
-#~ msgstr "pylottosimu.test_show_drawing Modul"
-
-#~ msgid "Test of drawing"
-#~ msgstr "Test der Zeichnung"
-
-#~ msgid "Creates the QApplication instance"
-#~ msgstr "Erzeugt das QApplication Instanz"
-
-#~ msgid "Deletes the reference owned by self"
-#~ msgstr "Löscht den Referenz durch Eigenbesitz"
-
-#~ msgid "The GUI and program of the pyLottoSimu."
-#~ msgstr "Die GUI und das Programm der pyLottoSimu."
-
-#~ msgid ""
-#~ "Changing the layout for simulation or"
-#~ " generation and change the visible of"
-#~ " the buttons."
-#~ msgstr ""
-#~ "Ändern des Layouts für die Simulation"
-#~ " oder die Erzeugung und ändern Sie"
-#~ " die sichtbar von den Tasten."
-
-#~ msgid "name of game"
-#~ msgstr "Name des Spiels"
-
-#~ msgid "maximal draw numbers"
-#~ msgstr "Anzahl der Nummern"
-
-#~ msgid "the draw numbers"
-#~ msgstr "Die Losnumern"
-
-#~ msgid "with additional number"
-#~ msgstr "mit Zusatzzahlen"
-
-#~ msgid "the additional numbers"
-#~ msgstr "Die Zusatzzahlen"
-
-#~ msgid "separates additional numbers"
-#~ msgstr "seperate Zusatzzahlen"
-
-#~ msgid "maximal additional numbers"
-#~ msgstr "Maximale Anzahl der Zusatzzahlen"
-
-#~ msgid "Test the code format of the file"
-#~ msgstr "Testen des Code Format der Datei"
-
-#~ msgid "read the lottosystems.json file"
-#~ msgstr "lesen der lottosystems.json Datei"
-
-#~ msgid "test the dialog module"
-#~ msgstr "testen des Dialogmodul"
-
-#~ msgid "show_drawing"
-#~ msgstr ""
-
-#~ msgid "Init class pylotto.drawlotto"
-#~ msgstr "Init-Klasse pylotto.drawlotto"
-
-#~ msgid "test draw without a additional number"
-#~ msgstr "Teste Ziehung ohne eine Zusatzzahl"
-
-#~ msgid "test draw with a additional number"
-#~ msgstr "Teste Ziehung mit einer Zusatzzahl"
-
-#~ msgid "test draw with a separate additional number"
-#~ msgstr "Teste Ziehung mit einer seperaten Zusatzzahl"
-
-#~ msgid "Test lotto.data"
-#~ msgstr "Test lotto.data"
-
-#~ msgid ""
-#~ "The following are predefined: Lotto "
-#~ "Germany (pick 6 out of 49), Lotto"
-#~ " Austria (pick 6 out of 45), "
-#~ "EuroMillionen, Powerball Lottery US, Mega "
-#~ "Millions, Hot Lotto Sizzler"
-#~ msgstr ""
-#~ "Die folgenden sind vordefiniert: Lotto "
-#~ "Deutschland (6 aus 49), Lotto Österreich"
-#~ " (6 aus 45), Euromillionen, Powerball-"
-#~ "Lotterie der USA, Mega Millions, Hot "
-#~ "Lotto Sizzler"
-
-#~ msgid "test draw one number without a additional number"
-#~ msgstr "Test ziehen Zahl ohne Zusatz"
-
-#~ msgid "test draw three number without a additional number"
-#~ msgstr "Test ziehen drei Zahl ohne Zusatz"
-
-#~ msgid "test draw two number without a additional number"
-#~ msgstr "Test zeichnen Sie zwei Nummer ohne zusätzliche Anzahl"
-
-#~ msgid "test set draw to no number and make sure to set to one number"
-#~ msgstr ""
-#~ "Test-Set bis gar keine Nummer "
-#~ "ziehen und sicherstellen, dass auf eine"
-#~ " Zahl gesetzt"
-
-#~ msgid "test with one ball numbers"
-#~ msgstr "Test mit einer Ziehung"
-
-#~ msgid "test ball numbers and bonus numbers in a maximal draw of 5 numbers"
-#~ msgstr "Test Ziehungen und Bonus-Nummern mit 5 Zahlen in der Auslosung"
-
-#~ msgid "test separate bonus numbers"
-#~ msgstr "Test separaten Zusatzzahlen"
-
-#~ msgid ""
-#~ "test with higher draw numbers as "
-#~ "the highest number in the draw in"
-#~ " the ballnumbers and in the "
-#~ "bonusnumbers"
-#~ msgstr "Test mit höhere Zahl der Ziehungen als die höchste Zahl der Nummern"
-
-#~ msgid ""
-#~ "test the same ball numbers and "
-#~ "bonus numbers in a maximal draw of"
-#~ " 5 numbers"
-#~ msgstr ""
-#~ "test die gleiche Kugelnummern und "
-#~ "Bonus-Nummern in einem Maximal Auslosung"
-#~ " der 5 Zahlen"
-
-#~ msgid "test with two ball numbers"
-#~ msgstr "Test mit zwei Nummern"
+msgstr ""
 
