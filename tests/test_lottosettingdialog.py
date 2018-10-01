@@ -28,6 +28,7 @@ Setup for testing, create the UI_lottosystem.py file:
     cd dialog/
     pyuic4 --output UI_lottosystem.py lottosystem.ui
 """
+import sys
 import unittest
 
 from PyQt5 import QtWidgets
@@ -49,7 +50,7 @@ class LottoSystemDataTestCase(unittest.TestCase):
         # Simple way of making instance a singleton
         super(LottoSystemDataTestCase, self).setUp()
 
-        self.app = None
+        self.app = QtWidgets.QApplication([])
 
     def tearDown(self):
         """Deletes the reference owned by self
@@ -61,9 +62,9 @@ class LottoSystemDataTestCase(unittest.TestCase):
 
     def test_dialog(self):
         """test"""
-        # lottosystems = lottosystemdata()
-        # dialog = LottoSettingsDialog(lottosystems, testcase=True)
-        # self.assertTrue(dialog)
+        lottosystems = LottoSystemData()
+        dialog = LottoSettingsDialog(lottosystems, testcase=True)
+        self.assertTrue(dialog)
         self.assertTrue(True)
 
 
