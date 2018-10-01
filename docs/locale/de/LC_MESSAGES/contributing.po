@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-15 23:45+0200\n"
-"PO-Revision-Date: 2018-10-01 17:59\n"
+"PO-Revision-Date: 2018-10-01 18:12\n"
 "Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,11 @@ msgstr ""
 
 #: ../../contributing.rst:2
 msgid "Contributing to pyLottoSimu"
-msgstr ""
+msgstr "Einen Beitrag zur pyLottoSimu"
 
 #: ../../contributing.rst:4
 msgid "Contents"
-msgstr ""
+msgstr "Inhalt"
 
 #: ../../contributing.rst:6
 msgid "You are very welcome to contribute to the project! The bugtracker and git repository can be found at the `project's page <https://github.com/MarkusHackspacher/pyLottoSimu/>`_. If you have an idea, tell it at https://gitter.im/MarkusHackspacher/pyLottoSimu . Thank you in advance."
@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../../contributing.rst:13
 msgid "How to contribute"
-msgstr ""
+msgstr "Wie kann man mitmachen"
 
 #: ../../contributing.rst:15
 msgid "There are various possibilities to get involved, for example you can:"
