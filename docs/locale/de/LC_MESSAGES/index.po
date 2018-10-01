@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-15 22:49+0200\n"
-"PO-Revision-Date: 2018-10-01 17:59\n"
+"PO-Revision-Date: 2018-10-01 18:02\n"
 "Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -42,7 +42,7 @@ msgstr "Englisch, Deutsch, Französisch, Spanisch, Italienisch, Dänisch, Nieder
 
 #: ../../index.rst:26
 msgid "Start"
-msgstr ""
+msgstr "Start"
 
 #: ../../index.rst:28
 msgid "The program requires Python_ 3.x and `Qt5 for Python`_."
