@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2018, pyLottoSimu-Team
+# This file is distributed under the same license as the pyLottoSimu package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pyLottoSimu 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-23 06:08+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../pylottosimu.dialog.rst:2
+msgid "pylottosimu.dialog package"
+msgstr ""
+
+#: ../../pylottosimu.dialog.rst:5
+msgid "Submodules"
+msgstr ""
+
+#: ../../pylottosimu.dialog.rst:8
+msgid "pylottosimu.dialog.lottosettingdialog module"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/lottosettingdialog.py:docstring of pylottosimu.dialog.lottosettingdialog:2
+msgid "class LottoSettingsDialog"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/lottosettingdialog.py:docstring of pylottosimu.dialog.lottosettingdialog:4
+msgid "Manage the GUI of setting dialog. Use lottosystem.ui."
+msgstr ""
+
+#: ../../pylottosimu.dialog.rst:16
+msgid "pylottosimu.dialog.show_drawing module"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/show_drawing.py:docstring of pylottosimu.dialog.show_drawing:2
+msgid "class DlgShowDrawing"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/show_drawing.py:docstring of pylottosimu.dialog.show_drawing:4
+msgid "show a Dialog with all the ball numbers from the draw and the bonus numbers."
+msgstr ""
+
+#: ../../pylottosimu.dialog.rst:25
+msgid "Module contents"
+msgstr ""
+
+#: ../../../pylottosimu/dialog/__init__.py:docstring of pylottosimu.dialog:1
+msgid "additional dialogs"
+msgstr ""
+
