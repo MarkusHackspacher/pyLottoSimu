@@ -1,28 +1,28 @@
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: pyLottoSimu 1.6\n"
+"Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-15 23:37+0200\n"
-"PO-Revision-Date: 2015-09-09 10:07+0200\n"
-"Last-Translator: Markus Hackspacher\n"
+"PO-Revision-Date: 2018-10-01 17:59\n"
+"Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: pylottosimu\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /master/docs/_build/locale/install.pot\n"
+"Language: de_DE\n"
 
 #: ../../install.rst:2
 msgid "Installation"
-msgstr "Installation"
+msgstr ""
 
 #: ../../install.rst:4
-msgid ""
-"Installing pyLottoSimu should usually be quite easy, as you can simply "
-"unpack and run pyLottoSimu in place if you wish to do so."
-msgstr ""
-"pyLottoSimu zu starten ist echt einfach, in ein Verzeichniss nach Wunsch "
-"den Quelltext entpacken und starten"
+msgid "Installing pyLottoSimu should usually be quite easy, as you can simply unpack and run pyLottoSimu in place if you wish to do so."
+msgstr "pyLottoSimu zu starten ist echt einfach, in ein Verzeichniss nach Wunsch den Quelltext entpacken und starten"
 
 #: ../../install.rst:8
 msgid "Contents"
@@ -37,18 +37,12 @@ msgid "You'll need these dependencies to run the program:"
 msgstr "Diese Programme brauchst du um pyLottoSimu zu starten:"
 
 #: ../../install.rst:15
-msgid ""
-"`python <http://www.python.org>`_ - The python programming language along"
-" with python-setuptools"
+msgid "`python <http://www.python.org>`_ - The python programming language along with python-setuptools"
 msgstr "`python <http://www.python.org>`_ - Die Python Programmiersprache"
 
 #: ../../install.rst:16
-msgid ""
-"`pyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - "
-"Qt5 for Python"
-msgstr ""
-"`pyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - "
-"Qt5 für Python"
+msgid "`pyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 for Python"
+msgstr "`pyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 für Python"
 
 #: ../../install.rst:18
 msgid "build the help"
@@ -87,22 +81,12 @@ msgid "Installing Debian or Ubuntu"
 msgstr "Installation bei Debian oder Ubuntu"
 
 #: ../../install.rst:36
-msgid ""
-"First you need to your computer these programs: Python, pyQt5 and version"
-" control system git::"
-msgstr ""
-"Zuerst brauchst du auf deinen Rechner diese Programme: Python und pyQt5 "
-"und optimal die Versionsverwaltung Git."
+msgid "First you need to your computer these programs: Python, pyQt5 and version control system git::"
+msgstr "Zuerst brauchst du auf deinen Rechner diese Programme: Python und pyQt5 und optimal die Versionsverwaltung Git."
 
 #: ../../install.rst:41
-msgid ""
-"Then you copied the source code of the program on your computer, either "
-"download the zip file of the project or download with the version control"
-" system::"
-msgstr ""
-"Dann kopiert du den Quellcode des Programmes auf deinem Rechner, entweder"
-" das zip File von den Projekt herunterladen oder eleganter mit der "
-"Versionsverwaltung Git herunterladen::"
+msgid "Then you copied the source code of the program on your computer, either download the zip file of the project or download with the version control system::"
+msgstr "Dann kopiert du den Quellcode des Programmes auf deinem Rechner, entweder das zip File von den Projekt herunterladen oder eleganter mit der Versionsverwaltung Git herunterladen::"
 
 #: ../../install.rst:46
 msgid "change the directory and run::"
@@ -111,15 +95,4 @@ msgstr "In das Verzeichniss wechseln und starten"
 #: ../../install.rst:51
 msgid "alternative::"
 msgstr "Alternative::"
-
-#~ msgid "Contribute"
-#~ msgstr "Beitragen"
-
-#~ msgid ""
-#~ "Feel free and send a pull request"
-#~ " to https://github.com/MarkusHackspacher/pyLottoSimu ."
-#~ " If you have an idea, tell it"
-#~ " at https://gitter.im/MarkusHackspacher/pyLottoSimu ."
-#~ " Thank you in advance."
-#~ msgstr ""
 
