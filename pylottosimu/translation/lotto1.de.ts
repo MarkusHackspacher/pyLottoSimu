@@ -6,7 +6,7 @@
     <message>
       <location filename="dialog/lottosystem.ui" line="14"/>
       <source>System</source>
-      <translation type="unfinished">System</translation>
+      <translation>System</translation>
     </message>
     <message>
       <location filename="dialog/lottosystem.ui" line="65"/>
@@ -234,7 +234,7 @@ Ausgelost werden: {1} aus {2} {3}!</translation>
     <message>
       <location filename="pylotto.py" line="329"/>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Info</translation>
     </message>
     <message>
       <location filename="pylotto.py" line="330"/>
@@ -252,7 +252,7 @@ Ausgelost werden: {1} aus {2} {3}!</translation>
     <message>
       <location filename="lottosimu_gui.ui" line="26"/>
       <source>pyLottoSimu</source>
-      <translation type="unfinished">pyLottoSimu</translation>
+      <translation>pyLottoSimu</translation>
     </message>
     <message>
       <location filename="lottosimu_gui.ui" line="149"/>
@@ -282,7 +282,7 @@ Ausgelost werden: {1} aus {2} {3}!</translation>
     <message>
       <location filename="lottosimu_gui.ui" line="346"/>
       <source>Text</source>
-      <translation type="unfinished">Text</translation>
+      <translation>Text</translation>
     </message>
     <message>
       <location filename="lottosimu_gui.ui" line="264"/>
@@ -327,7 +327,7 @@ Ausgelost werden: {1} aus {2} {3}!</translation>
     <message>
       <location filename="lottosimu_gui.ui" line="435"/>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Info</translation>
     </message>
     <message>
       <location filename="lottosimu_gui.ui" line="457"/>
