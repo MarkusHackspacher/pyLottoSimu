@@ -244,7 +244,7 @@ Ausgelost werden: {1} aus {2} {3}!</translation>
     <message>
       <location filename="../pylotto.py" line="253"/>
       <source>{}: {} out of {}: {}</source>
-      <translation type="unfinished">{}: {} out of {}: {}</translation>
+      <translation>{}: {} aus {}: {}</translation>
     </message>
   </context>
   <context>
