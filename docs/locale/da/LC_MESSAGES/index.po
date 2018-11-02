@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pylottosimu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-15 22:49+0200\n"
+"PO-Revision-Date: 2018-11-02 18:42\n"
+"Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
+"Language-Team: Danish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: pylottosimu\n"
+"X-Crowdin-Language: da\n"
+"X-Crowdin-File: /master/docs/_build/locale/index.pot\n"
+"Language: da_DK\n"
+
+#: ../../index.rst:7
+msgid "Welcome to pyLottoSimu's documentation!"
+msgstr ""
+
+#: ../../index.rst:9
+msgid "Lotto Generator and Simulator"
+msgstr ""
+
+#: ../../index.rst:11
+msgid "a simulation of Lotto Germany (pick 6 out of 49), Lotto Austria (pick 6 out of 45), EuroMillionen, Powerball Lottery US, Mega Millions lottery and Hot Lotto Sizzler system."
+msgstr ""
+
+#: ../../index.rst:14
+msgid "The pyLottoSimu program generates random lottery numbers and can simulate a draw. In the simulation view a Lotto Ball is visible on the numbers rotate faster and faster, and is finally available, this is the text, the first number of today\\'s draw was the ... Maybe it was indeed actually the numbers of the next draw, of course are here, all the figures provided without guarantee."
+msgstr ""
+
+#: ../../index.rst:21
+msgid "pyLottoSimu can be started in these languages:"
+msgstr ""
+
+#: ../../index.rst:23
+msgid "English, German, French, Spanish, Italian, Danish, Dutch, Polish and Russian"
+msgstr ""
+
+#: ../../index.rst:26
+msgid "Start"
+msgstr ""
+
+#: ../../index.rst:28
+msgid "The program requires Python_ 3.x and `Qt5 for Python`_."
+msgstr ""
+
+#: ../../index.rst:33
+msgid "Start with::"
+msgstr ""
+
+#: ../../index.rst:38
+msgid "Documentation"
+msgstr ""
+
+#: ../../index.rst:40
+msgid "Make the documentation as .html file::"
+msgstr ""
+
+#: ../../index.rst:45
+msgid "Add new modules with::"
+msgstr ""
+
+#: ../../index.rst:53
+msgid "Contents:"
+msgstr ""
+
+#: ../../index.rst:65
+msgid "Indices and tables"
+msgstr ""
+
+#: ../../index.rst:67
+msgid ":ref:`genindex`"
+msgstr ""
+
+#: ../../index.rst:68
+msgid ":ref:`modindex`"
+msgstr ""
+
+#: ../../index.rst:69
+msgid ":ref:`search`"
+msgstr ""
+
