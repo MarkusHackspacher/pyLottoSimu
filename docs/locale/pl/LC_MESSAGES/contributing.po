@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pylottosimu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-15 23:45+0200\n"
+"PO-Revision-Date: 2018-11-02 18:42\n"
+"Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
+"Language-Team: Polish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: pylottosimu\n"
+"X-Crowdin-Language: pl\n"
+"X-Crowdin-File: /master/docs/_build/locale/contributing.pot\n"
+"Language: pl_PL\n"
+
+#: ../../contributing.rst:2
+msgid "Contributing to pyLottoSimu"
+msgstr ""
+
+#: ../../contributing.rst:4
+msgid "Contents"
+msgstr ""
+
+#: ../../contributing.rst:6
+msgid "You are very welcome to contribute to the project! The bugtracker and git repository can be found at the `project's page <https://github.com/MarkusHackspacher/pyLottoSimu/>`_. If you have an idea, tell it at https://gitter.im/MarkusHackspacher/pyLottoSimu . Thank you in advance."
+msgstr ""
+
+#: ../../contributing.rst:13
+msgid "How to contribute"
+msgstr ""
+
+#: ../../contributing.rst:15
+msgid "There are various possibilities to get involved, for example you can:"
+msgstr ""
+
+#: ../../contributing.rst:17
+msgid "`Report bugs <https://github.com/MarkusHackspacher/pyLottoSimu/issues/new>`_ preferably with patches if you can;"
+msgstr ""
+
+#: ../../contributing.rst:19
+msgid "Enhance this `documentation <https://github.com/MarkusHackspacher/pyLottoSimu/tree/master/docs>`_"
+msgstr ""
+
+#: ../../contributing.rst:20
+msgid "`Fork the code <https://github.com/MarkusHackspacher/pyLottoSimu>`_, implement new features, test and send a pull request"
+msgstr ""
+
+#: ../../contributing.rst:24
+msgid "Running the test suite"
+msgstr ""
+
+#: ../../contributing.rst:26
+msgid "To run the tests, just type the following on a terminal::"
+msgstr ""
+

@@ -3,96 +3,96 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-15 23:37+0200\n"
-"PO-Revision-Date: 2018-11-02 19:02\n"
+"PO-Revision-Date: 2018-11-02 18:43\n"
 "Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
-"Language-Team: German\n"
+"Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: pylottosimu\n"
-"X-Crowdin-Language: de\n"
+"X-Crowdin-Language: it\n"
 "X-Crowdin-File: /master/docs/_build/locale/install.pot\n"
-"Language: de_DE\n"
+"Language: it_IT\n"
 
 #: ../../install.rst:2
 msgid "Installation"
-msgstr "Installation"
+msgstr ""
 
 #: ../../install.rst:4
 msgid "Installing pyLottoSimu should usually be quite easy, as you can simply unpack and run pyLottoSimu in place if you wish to do so."
-msgstr "pyLottoSimu zu starten ist echt einfach, in ein Verzeichniss nach Wunsch den Quelltext entpacken und starten"
+msgstr ""
 
 #: ../../install.rst:8
 msgid "Contents"
-msgstr "Inhalt"
+msgstr ""
 
 #: ../../install.rst:11
 msgid "dependencies"
-msgstr "Abhängigkeiten"
+msgstr ""
 
 #: ../../install.rst:13
 msgid "You'll need these dependencies to run the program:"
-msgstr "Diese Abhängigkeiten zum Ausführen des Programms benötigen Sie Folgendes:"
+msgstr ""
 
 #: ../../install.rst:15
 msgid "`python <http://www.python.org>`_ - The python programming language along with python-setuptools"
-msgstr "\"Python <http://www.python.org>' _ - Python Programmiersprache zusammen mit Python-Setuptools"
+msgstr ""
 
 #: ../../install.rst:16
 msgid "`pyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 for Python"
-msgstr "`pyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 für Python"
+msgstr ""
 
 #: ../../install.rst:18
 msgid "build the help"
-msgstr "Hilfe generieren"
+msgstr ""
 
 #: ../../install.rst:20
 msgid "`Sphinx <http://sphinx-doc.org/>`_ - Documentation"
-msgstr "`Sphinx <http://sphinx-doc.org/>`_ - Dokumentation"
+msgstr ""
 
 #: ../../install.rst:22
 msgid "code test"
-msgstr "Codestyle Test"
+msgstr ""
 
 #: ../../install.rst:24
 msgid "pycodestyle - Python style guide checker"
-msgstr "pycodestyle - Python Style Guide Checker"
+msgstr ""
 
 #: ../../install.rst:25
 msgid "isort - import sorting and checking tool"
-msgstr "isort - import Sortier- und Prüfwerkzeug"
+msgstr ""
 
 #: ../../install.rst:26
 msgid "nose - start nosetests to run the tests"
-msgstr "nose - um die Tests durchzuführen"
+msgstr ""
 
 #: ../../install.rst:28
 msgid "version control system Git"
-msgstr "Versionsverwaltung Git"
+msgstr ""
 
 #: ../../install.rst:30
 msgid "`Git <https://git-scm.com/>`_ - Git - distributed version control system"
-msgstr "`Git <https://git-scm.com/>`_ - Git - Versionskontrollsystem"
+msgstr ""
 
 #: ../../install.rst:34
 msgid "Installing Debian or Ubuntu"
-msgstr "Installation bei Debian oder Ubuntu"
+msgstr ""
 
 #: ../../install.rst:36
 msgid "First you need to your computer these programs: Python, pyQt5 and version control system git::"
-msgstr "Zuerst brauchst du auf deinen Rechner diese Programme: Python und pyQt5 und optimal die Versionsverwaltung Git."
+msgstr ""
 
 #: ../../install.rst:41
 msgid "Then you copied the source code of the program on your computer, either download the zip file of the project or download with the version control system::"
-msgstr "Dann kopiert du den Quellcode des Programmes auf deinem Rechner, entweder das zip File von den Projekt herunterladen oder eleganter mit der Versionsverwaltung Git herunterladen::"
+msgstr ""
 
 #: ../../install.rst:46
 msgid "change the directory and run::"
-msgstr "In das Verzeichniss wechseln und starten"
+msgstr ""
 
 #: ../../install.rst:51
 msgid "alternative::"
-msgstr "Alternative::"
+msgstr ""
 

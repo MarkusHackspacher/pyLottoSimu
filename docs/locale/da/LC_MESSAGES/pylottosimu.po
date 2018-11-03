@@ -1,0 +1,146 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pylottosimu\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-23 09:19+0200\n"
+"PO-Revision-Date: 2018-11-02 18:43\n"
+"Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
+"Language-Team: Danish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: pylottosimu\n"
+"X-Crowdin-Language: da\n"
+"X-Crowdin-File: /master/docs/_build/locale/pylottosimu.pot\n"
+"Language: da_DK\n"
+
+#: ../../pylottosimu.rst:2
+msgid "pylottosimu package"
+msgstr ""
+
+#: ../../pylottosimu.rst:5
+msgid "Subpackages"
+msgstr ""
+
+#: ../../pylottosimu.rst:12
+msgid "Submodules"
+msgstr ""
+
+#: ../../pylottosimu.rst:16
+msgid "pylottosimu.lottosystem module"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:1
+msgid "Bases: :class:`object`"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:1
+msgid "loads predefined lottery systems. And read and write a json file of the data set."
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:4
+msgid "Dataset:"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:6
+msgid "name: name of the lottery system,"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:7
+msgid "max_draw: highest number of draw"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:8
+msgid "draw_numbers: number to pick"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:9
+msgid "with_addit: with additional number"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:10
+msgid "sep_addit_numbers: with separate additional number, the additional number are not in the same pot"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:12
+msgid "addit_numbers: additional number to pick"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData:13
+msgid "max_addit: highest additional number in the separate pot"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.fixdata:1
+msgid "Data of predefined lottery system."
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.fixdata:3
+msgid "The following are predefined: Lotto Germany (pick 6 out of 49), Lotto Austria (pick 6 out of 45), EuroMillionen, Powerball Lottery US, Mega Millions, Hot Lotto Sizzler"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.fixdata:11
+msgid "If you miss your favorite lottery system than could you add here."
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.fixdata:0
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.projectpath:0
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.readfile:0
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.writetofile:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.fixdata:13
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.readfile:3
+msgid "data"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.projectpath:1
+msgid "open in the home path and create a direction."
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.projectpath:3
+msgid "path of the project"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.readfile:1
+msgid "read lottosystems.json"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.writetofile:1
+msgid "write lottosystems.json"
+msgstr ""
+
+#: ../../../pylottosimu/lottosystem.py:docstring of pylottosimu.lottosystem.LottoSystemData.writetofile:3
+msgid "none"
+msgstr ""
+
+#: ../../pylottosimu.rst:24
+msgid "pylottosimu.pylotto module"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.py:docstring of pylottosimu.pylotto:2
+msgid "class LottoSimuDialog"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.py:docstring of pylottosimu.pylotto:4
+msgid "Load the GUI and manage the signals for the program of the pyLottoSimu. Use the lottosimu_gui.ui"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.py:docstring of pylottosimu.pylotto:8
+msgid "class drawlotto"
+msgstr ""
+
+#: ../../../pylottosimu/pylotto.py:docstring of pylottosimu.pylotto:10
+msgid "simulate a lotto draw. draw the lotto numbers and give the draw text back"
+msgstr ""
+
+#: ../../pylottosimu.rst:32
+msgid "Module contents"
+msgstr ""
+
+#: ../../../pylottosimu/__init__.py:docstring of pylottosimu:1
+msgid "Manage a Lotto simulation draw."
+msgstr ""
+
