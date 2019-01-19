@@ -144,7 +144,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
                 self.ui.edit_name_addition.text())
 
     @staticmethod
-    def get_values(sysdat, parent=None):
+    def get_values(sysdat, parent=None,  testcase=None):
         """static method to create the dialog and return
         (dialog.values, accepted)
 
@@ -153,6 +153,6 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         :returns: dialog.values, accepted
         :rtype: array of int, bool
         """
-        dialog = LottoSettingsDialog(sysdat, parent)
+        dialog = LottoSettingsDialog(sysdat, parent, testcase)
         result = dialog.ui.exec_()
         return (dialog.values(), result == QtWidgets.QDialog.Accepted)
