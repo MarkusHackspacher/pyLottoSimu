@@ -51,22 +51,22 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         '''
         super(LottoSettingsDialog, self).__init__(parent)
 
-        # Set up the user interface from Designer.
-        if not testcase:
-            self.ui = uic.loadUi(os.path.abspath(os.path.join(
-                os.path.dirname(sys.argv[0]),
-                "pylottosimu", "dialog", "lottosystem.ui")))
-        else:
-            self.ui = uic.loadUi(os.path.join(
-                "pylottosimu", "dialog", "lottosystem.ui"))
-        self.ui.setWindowIcon(
-            QtGui.QIcon(os.path.abspath(os.path.join(
-                os.path.dirname(sys.argv[0]), "misc", "pyLottoSimu.svg"))))
+        def loadpath(*path):
+            if not testcase:
+                return (os.path.abspath(os.path.join(
+                    os.path.dirname(sys.argv[0]), *path)))
+            else:
+                return os.path.join(path)
 
+        # Set up the user interface from Designer.
+        self.ui = uic.loadUi(
+            loadpath("pylottosimu", "dialog", "lottosystem.ui"))
+
+        self.ui.setWindowIcon(
+            QtGui.QIcon(loadpath("misc", "pyLottoSimu.svg")))
         self.imageLabel = QSvgWidget()
-        self.imageLabel.renderer().load(os.path.abspath(os.path.join(
-            os.path.dirname(sys.argv[0]),
-            "pylottosimu", "lottokugel.svg")))
+        self.imageLabel.renderer().load(
+            loadpath("pylottosimu", "lottokugel.svg"))
         self.ui.scrollArea.setWidget(self.imageLabel)
 
         self.systemdata = sysdat
