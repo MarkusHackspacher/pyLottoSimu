@@ -2,7 +2,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2015-2018> Markus Hackspacher
+# Copyright (C) <2015-2019> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -59,7 +59,12 @@ class LottoSystemDataTestCase(unittest.TestCase):
         lottosystems = LottoSystemData()
         dialog = LottoSettingsDialog(lottosystems, testcase=True)
         self.assertTrue(dialog)
-        self.assertTrue(True)
+
+    def test_dialoggetvalues(self):
+        """test"""
+        lottosystems = LottoSystemData()
+        dialog = LottoSettingsDialog.get_values(lottosystems, testcase=True)
+        self.assertEqual(dialog, True)
 
 
 if __name__ == '__main__':
