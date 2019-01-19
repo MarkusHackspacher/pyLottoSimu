@@ -56,7 +56,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
                 return (os.path.abspath(os.path.join(
                     os.path.dirname(sys.argv[0]), *path)))
             else:
-                return os.path.join(path)
+                return os.path.join(*path)
 
         # Set up the user interface from Designer.
         self.ui = uic.loadUi(

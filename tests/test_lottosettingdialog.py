@@ -64,8 +64,14 @@ class LottoSystemDataTestCase(unittest.TestCase):
         """test"""
         lottosystems = LottoSystemData()
         dialog = LottoSettingsDialog(lottosystems, testcase=True)
-        print(dialog.values())
+
         self.assertEqual(dialog.values(), True)
+
+    def test_dialoggetvalues(self):
+        """test LottoSettingsDialog.get_values"""
+        lottosystems = LottoSystemData()
+        dialog = LottoSettingsDialog.get_values(lottosystems, testcase=True)
+        self.assertEqual(dialog, True)
 
 
 if __name__ == '__main__':
