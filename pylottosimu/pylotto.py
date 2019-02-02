@@ -3,7 +3,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2012-2018> Markus Hackspacher
+# Copyright (C) <2012-2019> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -33,6 +33,7 @@ simulate a lotto draw.
 draw the lotto numbers and give the draw text back
 """
 
+import logging
 import os
 import random
 import sys
@@ -132,7 +133,6 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         """
         if self.turn == 0:
             self.ui.btn_draw_overview.setVisible(False)
-
         if self.turn >= len((self.lottodraw.random_number +
                              self.lottodraw.random_addit)):
             self.timer.stop()
@@ -173,17 +173,17 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
         :returns: none
         """
-        system = LottoSettingsDialog.get_values(self.sysdat)
-
-        if system[1]:
-            self.lottodraw.data['name'] = system[0][0]
-            self.lottodraw.data['max_draw'] = system[0][1]
-            self.lottodraw.data['draw_numbers'] = system[0][2]
-            self.lottodraw.data['with_addit'] = system[0][3]
-            self.lottodraw.data['addit_numbers'] = system[0][4]
-            self.lottodraw.data['sep_addit_numbers'] = system[0][5]
-            self.lottodraw.data['max_addit'] = system[0][6]
-            self.lottodraw.data['name_addition'] = system[0][7]
+        system, accept = LottoSettingsDialog.get_values(self.sysdat)
+        logging.debug('Lotto setting %s accept: %s', list(system), accept)
+        if accept:
+            self.lottodraw.data['name'] = system[0]
+            self.lottodraw.data['max_draw'] = system[1]
+            self.lottodraw.data['draw_numbers'] = system[2]
+            self.lottodraw.data['with_addit'] = system[3]
+            self.lottodraw.data['addit_numbers'] = system[4]
+            self.lottodraw.data['sep_addit_numbers'] = system[5]
+            self.lottodraw.data['max_addit'] = system[6]
+            self.lottodraw.data['name_addition'] = system[7]
 
         self.ui.label_numbers.setText(self.lottodraw.data['name'])
         self.ui.btn_draw_overview.setVisible(False)
@@ -365,7 +365,7 @@ class DrawLotto(QtCore.QObject):
             self.countnumbers = map(unicode, countnumbers_tr)
 
         self.random_addit = []
-        self.random_number = 0
+        self.random_number = []
         self.ballbonus = []
         self.ballnumber = []
         self.LastTextnumber = -1
@@ -455,6 +455,7 @@ class DrawLotto(QtCore.QObject):
                 dttext, self.data['draw_numbers'],
                 self.data['max_draw'], text_addit)
         elif turn == 0:
+            logging.debug('First random number, %i', self.random_number[turn])
             textr = self.tr('And the first winning number is the {0}.')
             text = str(textr).format(self.random_number[turn])
             self.LastTextnumber = -1

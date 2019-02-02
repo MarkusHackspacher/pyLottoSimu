@@ -2,7 +2,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2015-2018> Markus Hackspacher
+# Copyright (C) <2015-2019> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -46,3 +46,12 @@ class TestLottoSimuDialog(TestCase):
 
     def test_onInfo(self):
         self.ui.onInfo(True)
+
+    def test_showNextNumber(self):
+        self.ui.turn = 0
+        self.assertEqual(self.ui.lottodraw.random_number, [])
+        self.assertEqual(self.ui.lottodraw.random_addit, [])
+        self.ui.lottodraw.random_number = [1]
+        self.ui.showNextNumber()
+        self.assertEqual(self.ui.ui.plaintextedit.toPlainText(),
+                         'And the first winning number is the 1.')
