@@ -47,7 +47,7 @@ def gui(arguments):
     translator.load(os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]),
                     "pylottosimu", "translation", "lotto1.{}".format(locale))))
     app.installTranslator(translator)
-    dialog = pylotto.LottoSimuDialog()
+    pylotto.LottoSimuDialog()
     sys.exit(app.exec_())
 
 

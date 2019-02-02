@@ -59,9 +59,13 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         super(LottoSimuDialog, self).__init__()
 
         # Set up the user interface from Designer.
-        self.ui = uic.loadUi(os.path.abspath(os.path.join(
-            os.path.dirname(sys.argv[0]),
-            "pylottosimu", "lottosimu_gui.ui")))
+        try:
+            self.ui = uic.loadUi(os.path.join(
+                "pylottosimu", "lottosimu_gui.ui"))
+        except FileNotFoundError:
+            self.ui = uic.loadUi(os.path.abspath(os.path.join(
+                os.path.dirname(sys.argv[0]),
+                "pylottosimu", "lottosimu_gui.ui")))
         self.ui.setWindowIcon(
             QtGui.QIcon(os.path.abspath(os.path.join(
                 os.path.dirname(sys.argv[0]), "misc", "pyLottoSimu.svg"))))
@@ -72,23 +76,23 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             "pylottosimu", "lottokugel.svg")))
         self.ui.scrollArea.setWidget(self.imageLabel)
 
-        self.action_lottosim()
+        self.actionLottoSim()
         self.timer = QtCore.QTimer(self)
         self.sysdat = LottoSystemData()
 
         # Slots
         self.ui.btn_random_numbers.clicked.connect(
-            self.onrandom_numbers_generator)
-        self.ui.clean_output_text.clicked.connect(self.onclean_output_text)
-        self.ui.btn_start.clicked.connect(self.onbtn_start)
-        self.ui.action_quit.triggered.connect(self.onclose)
-        self.ui.action_info.triggered.connect(self.oninfo)
-        self.ui.action_go_to_the_website.triggered.connect(self.onwebsite)
-        self.ui.action_lotto_simulation.changed.connect(self.action_lottosim)
-        self.ui.btn_draw_overview.clicked.connect(self.onbtn_draw_overview)
-        self.timer.timeout.connect(self.ontimer)
+            self.randomNumbersGenerator)
+        self.ui.clean_output_text.clicked.connect(self.cleanOutputText)
+        self.ui.btn_start.clicked.connect(self.onBtnStart)
+        self.ui.action_quit.triggered.connect(self.onClose)
+        self.ui.action_info.triggered.connect(self.onInfo)
+        self.ui.action_go_to_the_website.triggered.connect(self.openWebsite)
+        self.ui.action_lotto_simulation.changed.connect(self.actionLottoSim)
+        self.ui.btn_draw_overview.clicked.connect(self.onDrawOverview)
+        self.timer.timeout.connect(self.onTimer)
         self.ui.statusBar().showMessage(self.tr('ready'))
-        self.ui.actionLotto_system.triggered.connect(self.onsystem)
+        self.ui.actionLotto_system.triggered.connect(self.onSystem)
 
         self.turn = 0
         self.random_number = 0
@@ -97,7 +101,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.label_numbers.setText(self.lottodraw.data['name'])
         self.ui.show()
 
-    def ontimer(self):
+    def onTimer(self):
         """Start time to show a number.
 
         :returns: none
@@ -118,10 +122,10 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                     self.lottodraw.data['max_draw']) + 1), 1)[0]))
         self.timer.start(100)
         if self.delay_of_next_number < 0:
-            self.show_next_number()
+            self.showNextNumber()
             self.delay_of_next_number = verz
 
-    def show_next_number(self):
+    def showNextNumber(self):
         """Simulation of the draw and show the next Number on the Screen.
 
         :returns: none
@@ -133,7 +137,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                              self.lottodraw.random_addit)):
             self.timer.stop()
             if self.ui.rdbtn_show_draw_after.isChecked():
-                self.onbtn_draw_overview()
+                self.onDrawOverview()
             self.ui.btn_draw_overview.setVisible(True)
         else:
             self.ui.label_last_draw_number.setText(str((
@@ -148,7 +152,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
 
         self.turn += 1
 
-    def onbtn_draw_overview(self):
+    def onDrawOverview(self):
         """show dialog of the draw
 
         :returns: none
@@ -164,7 +168,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                                  )
         dlgdraw.exec_()
 
-    def onsystem(self):
+    def onSystem(self):
         """show dialog of the draw
 
         :returns: none
@@ -184,7 +188,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.label_numbers.setText(self.lottodraw.data['name'])
         self.ui.btn_draw_overview.setVisible(False)
 
-    def onbtn_start(self):
+    def onBtnStart(self):
         """Start simulation with the first drawing
         init timer with the valve from the Scrollbar
         the next drawing starts with the timer event.
@@ -198,7 +202,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.timer.start(100)
         self.delay_of_next_number = self.ui.horizontalSlider.value()
 
-    def action_lottosim(self):
+    def actionLottoSim(self):
         """Changing the layout for simulation or generation
         and change the visible of the buttons.
 
@@ -238,7 +242,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             self.ui.rdbtn_show_draw_after.setVisible(False)
             self.timer.stop()
 
-    def onrandom_numbers_generator(self):
+    def randomNumbersGenerator(self):
         """Show the output from the random number generator.
 
         :returns: none
@@ -256,14 +260,14 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                                   self.lottodraw.data['max_draw'], text)
         self.ui.plaintextedit.appendPlainText(text)
 
-    def onclean_output_text(self):
+    def cleanOutputText(self):
         """Clean the output text
 
         :returns: none
         """
         self.ui.plaintextedit.setPlainText("")
 
-    def oninfo(self):
+    def onInfo(self, test=None):
         """Set the text for the info message box in html format
 
         :returns: none
@@ -279,10 +283,14 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             'More Information about the program at '
             '<a href="http://pylottosimu.readthedocs.io">'
             'pylottosimu.readthedocs.io</a>'))
+        if test:
+            infobox.setStandardButtons(QtWidgets.QMessageBox.Ok)
+            button = infobox.button(QtWidgets.QMessageBox.Ok)
+            QtCore.QTimer.singleShot(0, button.clicked)
         infobox.exec_()
 
     @staticmethod
-    def onwebsite():
+    def openWebsite():
         """Open website
 
         :returns: none
@@ -290,7 +298,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         webbrowser.open_new_tab(
             "http://pylottosimu.readthedocs.io")
 
-    def onclose(self):
+    def onClose(self):
         """Close the GUI
 
         :returns: none"""
