@@ -6,6 +6,7 @@ pyLottoSimu
 [![Join the chat at https://gitter.im/MarkusHackspacher/pyLottoSimu](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MarkusHackspacher/pyLottoSimu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Documentation Status](https://readthedocs.org/projects/pylottosimu/badge/?version=latest)](https://readthedocs.org/projects/pylottosimu/?badge=latest)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6b96ee1e2b2d415ca10677b604990cd9)](https://www.codacy.com/app/MarkusHackspacher/pyLottoSimu?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MarkusHackspacher/pyLottoSimu&amp;utm_campaign=Badge_Grade)
+[![Crowdin](https://d322cqt584bo4o.cloudfront.net/pylottosimu/localized.svg)](https://crowdin.com/project/pylottosimu)
 
 a Lotto Generator und Simulator
 
