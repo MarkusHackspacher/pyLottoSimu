@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-23 05:58+0200\n"
-"PO-Revision-Date: 2018-10-01 18:31\n"
+"PO-Revision-Date: 2019-02-21 20:43\n"
 "Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -147,7 +147,7 @@ msgstr ""
 
 #: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.test_dialog:1
 msgid "test"
-msgstr ""
+msgstr "test"
 
 #: ../../tests.rst:24
 msgid "tests.test_lottosystemdata module"
@@ -179,7 +179,7 @@ msgstr ""
 
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_ballnumber:1
 msgid "test with one ball numbers"
-msgstr ""
+msgstr "mit einer Ballnummer testen"
 
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_bonusnumbers:1
 msgid "test ball numbers and bonus numbers in a maximal draw of 5 numbers"
@@ -199,7 +199,7 @@ msgstr ""
 
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_twoballnumber:1
 msgid "test with two ball numbers"
-msgstr ""
+msgstr "mit zwei Ballnummern testen"
 
 #: ../../tests.rst:40
 msgid "Module contents"
