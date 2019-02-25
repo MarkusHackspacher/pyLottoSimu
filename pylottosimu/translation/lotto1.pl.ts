@@ -6,12 +6,12 @@
     <message>
       <location filename="../dialog/lottosystem.ui" line="14"/>
       <source>System</source>
-      <translation type="unfinished">System</translation>
+      <translation>System</translation>
     </message>
     <message>
       <location filename="../dialog/lottosystem.ui" line="65"/>
       <source>Maximum number of draw</source>
-      <translation type="unfinished">Maximum number of draw</translation>
+      <translation>Maksymalna liczba prób</translation>
     </message>
     <message>
       <location filename="../dialog/lottosystem.ui" line="81"/>
@@ -172,7 +172,7 @@
     <message>
       <location filename="../pylotto.py" line="420"/>
       <source>{1}:{0}, </source>
-      <translation type="unfinished">{1}:{0}, </translation>
+      <translation>{1}:{0}, </translation>
     </message>
     <message>
       <location filename="../pylotto.py" line="428"/>
@@ -229,7 +229,7 @@ numery są rysowane: {1} z {2} {3}!</translation>
     <message>
       <location filename="../pylotto.py" line="272"/>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Informacje</translation>
     </message>
     <message>
       <location filename="../pylotto.py" line="273"/>
@@ -282,7 +282,7 @@ numery są rysowane: {1} z {2} {3}!</translation>
     <message>
       <location filename="../lottosimu_gui.ui" line="346"/>
       <source>Text</source>
-      <translation type="unfinished">Text</translation>
+      <translation>Tekst</translation>
     </message>
     <message>
       <location filename="../lottosimu_gui.ui" line="264"/>
@@ -327,7 +327,7 @@ numery są rysowane: {1} z {2} {3}!</translation>
     <message>
       <location filename="../lottosimu_gui.ui" line="435"/>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Informacje</translation>
     </message>
     <message>
       <location filename="../lottosimu_gui.ui" line="457"/>
