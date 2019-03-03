@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-15 23:45+0200\n"
-"PO-Revision-Date: 2018-11-02 18:43\n"
+"PO-Revision-Date: 2019-03-03 09:33\n"
 "Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -22,19 +22,19 @@ msgstr ""
 
 #: ../../contributing.rst:4
 msgid "Contents"
-msgstr ""
+msgstr "Contenuti"
 
 #: ../../contributing.rst:6
 msgid "You are very welcome to contribute to the project! The bugtracker and git repository can be found at the `project's page <https://github.com/MarkusHackspacher/pyLottoSimu/>`_. If you have an idea, tell it at https://gitter.im/MarkusHackspacher/pyLottoSimu . Thank you in advance."
-msgstr ""
+msgstr "Sei molto lieto di contribuire al progetto! Il bugtracker e il repository git possono essere trovati nella pagina di `progetto <https://github.com/MarkusHackspacher/pyLottoSimu/>`_. Se hai un'idea, raccontalo a https://gitter.im/MarkusHackspacher/pyLottoSimu . Grazie in anticipo."
 
 #: ../../contributing.rst:13
 msgid "How to contribute"
-msgstr ""
+msgstr "Come partecipare al progetto"
 
 #: ../../contributing.rst:15
 msgid "There are various possibilities to get involved, for example you can:"
-msgstr ""
+msgstr "Ci sono varie possibilità di coinvolgimento, ad esempio è possibile:"
 
 #: ../../contributing.rst:17
 msgid "`Report bugs <https://github.com/MarkusHackspacher/pyLottoSimu/issues/new>`_ preferably with patches if you can;"
