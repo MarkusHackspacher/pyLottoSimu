@@ -34,6 +34,7 @@ draw the lotto numbers and give the draw text back
 """
 
 import logging
+import operator
 import os
 import random
 import sys
@@ -45,8 +46,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtSvg import QSvgWidget
 
 from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
+from pylottosimu.dialog.printdialog import DlgPrint
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
 from pylottosimu.lottosystem import LottoSystemData
+from pylottosimu.statistics import statistic
 
 
 class LottoSimuDialog(QtWidgets.QMainWindow):
@@ -93,7 +96,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.btn_draw_overview.clicked.connect(self.onDrawOverview)
         self.timer.timeout.connect(self.onTimer)
         self.ui.statusBar().showMessage(self.tr('ready'))
-        self.ui.actionLotto_system.triggered.connect(self.onSystem)
+        self.ui.action_lotto_system.triggered.connect(self.onSystem)
+        self.ui.action_uniform_distribution.triggered.connect(self.draw_distribution)
 
         self.turn = 0
         self.random_number = 0
@@ -304,6 +308,20 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         :returns: none"""
         self.ui.close()
 
+    def draw_distribution(self, test=None):
+        self.testdraw = statistic.uniform_distribution()
+        maxtest = max(self.testdraw.items(), key=operator.itemgetter(1))
+        mintest = min(self.testdraw.items(), key=operator.itemgetter(1))
+        printdlg = DlgPrint()
+        printdlg.editor.setHtml(self.tr(
+            '<h1>Overview</h1>Maximim {} at number {}, Minimum {} at number {}'
+            '<br>Numbers in draw {}'.format(
+                maxtest[1], maxtest[0],
+                mintest[1], mintest[0],
+                len(self.testdraw.items()))))
+        if test:
+            QtCore.QTimer.singleShot(500, printdlg.reject)
+        printdlg.exec_()
 
 class DrawLotto(QtCore.QObject):
     """simulate a lotto draw

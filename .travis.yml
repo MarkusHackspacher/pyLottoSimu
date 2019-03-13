@@ -5,14 +5,21 @@ python:
   - "3.7"
 #  - "nightly"
 before_install:
-  - "export DISPLAY=:99.0"
+  - sudo apt-get update
+  - sudo apt-get install -y xvfb herbstluftwm
 install:
   - pip install -r requirements.txt
   - pip install coverage codacy-coverage
+  - "export DISPLAY=:99.0"
+  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -screen 0 1920x1200x24 -ac +extension GLX +render -noreset"
+  - sleep 3
+before_script:
+  - "herbstluftwm &"
+  - sleep 1
 script:
  - isort -c -rc
  - pycodestyle pylottosimu/ tests/ *.py*
- - xvfb-run nosetests --with-coverage --cover-erase --cover-package=pylottosimu --cover-html
+ - nosetests --with-coverage --cover-erase --cover-package=pylottosimu --cover-html
 after_success:
   - coverage report -m
   - coverage xml

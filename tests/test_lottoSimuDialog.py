@@ -55,3 +55,6 @@ class TestLottoSimuDialog(TestCase):
         self.ui.showNextNumber()
         self.assertEqual(self.ui.ui.plaintextedit.toPlainText(),
                          'And the first winning number is the 1.')
+
+    def test_actionLottoSim(self):
+        self.ui.ui.action_lotto_simulation.setChecked(False)

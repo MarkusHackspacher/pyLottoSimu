@@ -1,52 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="ru" sourcelanguage="en">
-  <context>
+<!DOCTYPE TS><TS version="2.0" language="ru" sourcelanguage="en">
+<context>
     <name>Dialog</name>
     <message>
-      <location filename="../dialog/lottosystem.ui" line="14"/>
-      <source>System</source>
-      <translation type="unfinished">System</translation>
+        <location filename="../dialog/lottosystem.ui" line="14"/>
+        <source>System</source>
+        <translation type="unfinished">System</translation>
     </message>
     <message>
-      <location filename="../dialog/lottosystem.ui" line="65"/>
-      <source>Maximum number of draw</source>
-      <translation type="unfinished">Maximum number of draw</translation>
+        <location filename="../dialog/lottosystem.ui" line="65"/>
+        <source>Maximum number of draw</source>
+        <translation type="unfinished">Maximum number of draw</translation>
     </message>
     <message>
-      <location filename="../dialog/lottosystem.ui" line="81"/>
-      <source>Maximum number of additional </source>
-      <translation type="unfinished">Maximum number of additional </translation>
+        <location filename="../dialog/lottosystem.ui" line="81"/>
+        <source>Maximum number of additional </source>
+        <translation type="unfinished">Maximum number of additional </translation>
     </message>
     <message>
-      <location filename="../dialog/lottosystem.ui" line="94"/>
-      <source>Additional numbers</source>
-      <translation type="unfinished">Additional numbers</translation>
+        <location filename="../dialog/lottosystem.ui" line="94"/>
+        <source>Additional numbers</source>
+        <translation type="unfinished">Additional numbers</translation>
     </message>
     <message>
-      <location filename="../dialog/lottosystem.ui" line="104"/>
-      <source>Draw numbers</source>
-      <translation>обращается номера</translation>
+        <location filename="../dialog/lottosystem.ui" line="104"/>
+        <source>Draw numbers</source>
+        <translation>обращается номера</translation>
     </message>
     <message>
-      <location filename="../dialog/lottosystem.ui" line="117"/>
-      <source>With additional number</source>
-      <translation type="unfinished">With additional number</translation>
+        <location filename="../dialog/lottosystem.ui" line="117"/>
+        <source>With additional number</source>
+        <translation type="unfinished">With additional number</translation>
     </message>
     <message>
-      <location filename="../dialog/lottosystem.ui" line="134"/>
-      <source>Name of the lotto system</source>
-      <translation type="unfinished">Name of the lotto system</translation>
+        <location filename="../dialog/lottosystem.ui" line="134"/>
+        <source>Name of the lotto system</source>
+        <translation type="unfinished">Name of the lotto system</translation>
     </message>
     <message>
-      <location filename="../dialog/lottosystem.ui" line="158"/>
-      <source>Name of the additional</source>
-      <translation type="unfinished">Name of the additional</translation>
+        <location filename="../dialog/lottosystem.ui" line="158"/>
+        <source>Name of the additional</source>
+        <translation type="unfinished">Name of the additional</translation>
     </message>
     <message>
-      <location filename="../dialog/lottosystem.ui" line="55"/>
-      <source>Separate numbers area</source>
-      <translation type="unfinished">Separate numbers area</translation>
+        <location filename="../dialog/lottosystem.ui" line="55"/>
+        <source>Separate numbers area</source>
+        <translation type="unfinished">Separate numbers area</translation>
     </message>
   </context>
   <context>
@@ -70,12 +69,12 @@
   <context>
     <name>DlgShowDrawing</name>
     <message>
-      <location filename="../dialog/show_drawing.py" line="114"/>
-      <source>Show Drawing</source>
-      <translation>Показать Рисование</translation>
+        <location filename="../dialog/show_drawing.py" line="114"/>
+        <source>Show Drawing</source>
+        <translation>Показать Рисование</translation>
     </message>
-  </context>
-  <context>
+</context>
+<context>
     <name>DrawLotto</name>
     <message>
       <location filename="../pylotto.py" line="361"/>
@@ -207,7 +206,7 @@
       <source>Welcome to the lottery draw,
 at {0}.
 numbers are drawn: {1} out of {2} {3}!</source>
-      <translation>Добро пожаловать в розыгрыше лотереи,
+        <translation>Добро пожаловать в розыгрыше лотереи,
 на {0}.
 номера взяты: {1} из {2} {3}!</translation>
     </message>
@@ -221,8 +220,8 @@ numbers are drawn: {1} out of {2} {3}!</source>
       <source>The {name_of_addition_number} is {number}.</source>
       <translation type="unfinished">The {name_of_addition_number} is {number}.</translation>
     </message>
-  </context>
-  <context>
+</context>
+<context>
     <name>LottoSimuDialog</name>
     <message>
       <location filename="../pylotto.py" line="98"/>
@@ -273,24 +272,29 @@ numbers are drawn: {1} out of {2} {3}!</source>
   <context>
     <name>MainWindow</name>
     <message>
-      <location filename="../lottosimu_gui.ui" line="26"/>
-      <source>pyLottoSimu</source>
-      <translation type="unfinished">pyLottoSimu</translation>
+        <location filename="../lottosimu_gui.ui" line="26"/>
+        <source>pyLottoSimu</source>
+        <translation type="unfinished">pyLottoSimu</translation>
     </message>
     <message>
-      <location filename="../lottosimu_gui.ui" line="149"/>
-      <source>lottery numbers</source>
-      <translation>лотереи</translation>
+        <location filename="../lottosimu_gui.ui" line="149"/>
+        <source>lottery numbers</source>
+        <translation>лотереи</translation>
     </message>
     <message>
-      <location filename="../lottosimu_gui.ui" line="121"/>
-      <source>output field</source>
-      <translation>поле вывода</translation>
+        <location filename="../lottosimu_gui.ui" line="121"/>
+        <source>output field</source>
+        <translation>поле вывода</translation>
     </message>
     <message>
-      <location filename="../lottosimu_gui.ui" line="175"/>
-      <source>Numbers:</source>
-      <translation>числа:</translation>
+        <location filename="../lottosimu_gui.ui" line="175"/>
+        <source>Numbers:</source>
+        <translation>числа:</translation>
+    </message>
+    <message>
+        <location filename="../lottosimu_gui.ui" line="447"/>
+        <source>random numbers</source>
+        <translation>случайных чисел</translation>
     </message>
     <message>
       <location filename="../lottosimu_gui.ui" line="447"/>
@@ -298,39 +302,39 @@ numbers are drawn: {1} out of {2} {3}!</source>
       <translation>случайных чисел</translation>
     </message>
     <message>
-      <location filename="../lottosimu_gui.ui" line="216"/>
-      <source>output field empty</source>
-      <translation>Выход поле пустым</translation>
+        <location filename="../lottosimu_gui.ui" line="346"/>
+        <source>Text</source>
+        <translation type="unfinished">Text</translation>
     </message>
     <message>
-      <location filename="../lottosimu_gui.ui" line="346"/>
-      <source>Text</source>
-      <translation type="unfinished">Text</translation>
+        <location filename="../lottosimu_gui.ui" line="264"/>
+        <source>start draw</source>
+        <translation>начать рисовать</translation>
     </message>
     <message>
-      <location filename="../lottosimu_gui.ui" line="264"/>
-      <source>start draw</source>
-      <translation>начать рисовать</translation>
+        <location filename="../lottosimu_gui.ui" line="317"/>
+        <source>Speed</source>
+        <translation>скорость</translation>
     </message>
     <message>
-      <location filename="../lottosimu_gui.ui" line="317"/>
-      <source>Speed</source>
-      <translation>скорость</translation>
+        <location filename="../lottosimu_gui.ui" line="368"/>
+        <source>show draw after</source>
+        <translation>показать рисовать</translation>
     </message>
     <message>
-      <location filename="../lottosimu_gui.ui" line="368"/>
-      <source>show draw after</source>
-      <translation>показать рисовать</translation>
+        <location filename="../lottosimu_gui.ui" line="375"/>
+        <source>show draw overview</source>
+        <translation>показать привлечь обзор</translation>
     </message>
     <message>
-      <location filename="../lottosimu_gui.ui" line="375"/>
-      <source>show draw overview</source>
-      <translation>показать привлечь обзор</translation>
+        <location filename="../lottosimu_gui.ui" line="405"/>
+        <source>File</source>
+        <translation>файл</translation>
     </message>
     <message>
-      <location filename="../lottosimu_gui.ui" line="405"/>
-      <source>File</source>
-      <translation>файл</translation>
+        <location filename="../lottosimu_gui.ui" line="463"/>
+        <source>Help</source>
+        <translation>помощь</translation>
     </message>
     <message>
       <location filename="../lottosimu_gui.ui" line="463"/>
@@ -338,9 +342,9 @@ numbers are drawn: {1} out of {2} {3}!</source>
       <translation>помощь</translation>
     </message>
     <message>
-      <location filename="../lottosimu_gui.ui" line="418"/>
-      <source>Mode</source>
-      <translation>режим</translation>
+        <location filename="../lottosimu_gui.ui" line="431"/>
+        <source>Quit</source>
+        <translation>выход</translation>
     </message>
     <message>
       <location filename="../lottosimu_gui.ui" line="431"/>
