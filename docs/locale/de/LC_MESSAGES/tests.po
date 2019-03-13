@@ -133,7 +133,7 @@ msgstr ""
 #: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase:1
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase:1
 msgid "Test of drawing"
-msgstr ""
+msgstr "Ziehung testen"
 
 #: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.setUp:1
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.setUp:1
