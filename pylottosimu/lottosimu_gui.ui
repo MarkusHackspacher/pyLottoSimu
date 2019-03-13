@@ -397,7 +397,7 @@
      <x>0</x>
      <y>0</y>
      <width>480</width>
-     <height>29</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_file">
@@ -418,7 +418,8 @@
      <string>Mode</string>
     </property>
     <addaction name="action_lotto_simulation"/>
-    <addaction name="actionLotto_system"/>
+    <addaction name="action_lotto_system"/>
+    <addaction name="action_uniform_distribution"/>
    </widget>
    <addaction name="menu_file"/>
    <addaction name="menu_mode"/>
@@ -467,9 +468,14 @@
     <string>Go to the website</string>
    </property>
   </action>
-  <action name="actionLotto_system">
+  <action name="action_lotto_system">
    <property name="text">
     <string>Lotto system</string>
+   </property>
+  </action>
+  <action name="action_uniform_distribution">
+   <property name="text">
+    <string>Uniform Distribution</string>
    </property>
   </action>
  </widget>
