@@ -64,7 +64,7 @@ insert in the complete.pro your language code.
 
 ```
 cd pylottosimu
-pylupdate4 complete.pro
+pylupdate5 complete.pro
 ```
 
 Translate your language file or fix a typo in the lotto1_xx.ts file.
