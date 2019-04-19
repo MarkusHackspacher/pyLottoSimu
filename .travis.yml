@@ -4,6 +4,10 @@ dist: xenial
 python:
   - "3.7"
 #  - "nightly"
+addons:
+  apt:
+    packages:
+    - libxkbcommon-x11-0
 before_install:
   - sudo apt-get update
   - sudo apt-get install -y xvfb herbstluftwm
