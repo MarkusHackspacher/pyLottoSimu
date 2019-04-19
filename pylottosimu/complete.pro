@@ -3,8 +3,7 @@
                    dialog/printdialog.py
  FORMS           = lottosimu_gui.ui \
                    dialog/lottosystem.ui
- TRANSLATIONS    = translation/lotto1.ts \
-                   translation/lotto1.de.ts \
+ TRANSLATIONS    = translation/lotto1.de.ts \
                    translation/lotto1.fr.ts \
                    translation/lotto1.nl.ts \
                    translation/lotto1.it.ts \

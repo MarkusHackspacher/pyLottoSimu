@@ -31,10 +31,11 @@ class statistic():
         lotto_distribution = pylottosimu.pylotto.DrawLotto()
         lotto_times = []
         for _ in range(10000):
-             lotto_distribution.draw()
-             lotto_times += lotto_distribution.random_number
+            lotto_distribution.draw()
+            lotto_times += lotto_distribution.random_number
         c = Counter(lotto_times)
-        print("max: {0}, min: {1}".format(max(c.items(), key=operator.itemgetter(1)),
-                                          min(c.items(), key=operator.itemgetter(1))))
+        print("max: {0}, min: {1}".format(
+            max(c.items(), key=operator.itemgetter(1)),
+            min(c.items(), key=operator.itemgetter(1))))
         print("{}".format(len(lotto_times) / 49))
         return c

@@ -97,7 +97,8 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.timer.timeout.connect(self.onTimer)
         self.ui.statusBar().showMessage(self.tr('ready'))
         self.ui.action_lotto_system.triggered.connect(self.onSystem)
-        self.ui.action_uniform_distribution.triggered.connect(self.draw_distribution)
+        self.ui.action_uniform_distribution.triggered.connect(
+            self.draw_distribution)
 
         self.turn = 0
         self.random_number = 0
@@ -322,6 +323,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         if test:
             QtCore.QTimer.singleShot(500, printdlg.reject)
         printdlg.exec_()
+
 
 class DrawLotto(QtCore.QObject):
     """simulate a lotto draw
