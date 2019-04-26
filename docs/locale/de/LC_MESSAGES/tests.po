@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-23 05:58+0200\n"
-"PO-Revision-Date: 2019-02-21 20:43\n"
-"Last-Translator: MarkusHackspacher <hackspacher@gmx.de>\n"
+"PO-Revision-Date: 2019-04-26 19:43\n"
+"Last-Translator: Markus Hackspacher (MarkusHackspacher)\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,22 +26,22 @@ msgstr "Untermodule"
 
 #: ../../tests.rst:8
 msgid "tests.test_drawlotto module"
-msgstr ""
+msgstr "tests.test_drawlotto Modul"
 
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase:1
 #: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase:1
 #: ../../../tests/test_lottosystemdata.py:docstring of tests.test_lottosystemdata.TestCodeFormat:1
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase:1
 msgid "Bases: :class:`unittest.case.TestCase`"
-msgstr ""
+msgstr "Bases: :class:`unittest.case.TestCase`"
 
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase:1
 msgid "Test the lotto draw with some input numbers"
-msgstr ""
+msgstr "Teste die Lottoziehung mit einigen eingegebenen Zahlen"
 
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.setUp:1
 msgid "Init class pylotto.drawlotto"
-msgstr ""
+msgstr "Initiiere class pylotto.drawlotto"
 
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.setUp:0
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw:0
@@ -80,15 +80,15 @@ msgstr "keine"
 
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw:1
 msgid "test draw without a additional number"
-msgstr ""
+msgstr "Testziehung ohne zusätzliche Nummer"
 
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw_addit:1
 msgid "test draw with a additional number"
-msgstr ""
+msgstr "Testziehung mit einer zusätzlichen Nummer"
 
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw_addit_sep:1
 msgid "test draw with a separate additional number"
-msgstr ""
+msgstr "Testziehung mit weiterer zusätzlicher Nummer"
 
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawone:1
 msgid "test draw one number without a additional number"
