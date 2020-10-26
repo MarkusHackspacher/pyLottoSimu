@@ -1,18 +1,26 @@
 language: python
-sudo: required
-dist: xenial
+os: linux
+dist: bionic
 services:
   - xvfb
 python:
-  - "3.8"
+  - "3.9"
 #  - "nightly"
+addons:
+  apt:
+    packages:
+    - libxkbcommon-x11-0
 install:
   - pip install -r requirements.txt
   - pip install coverage codacy-coverage
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3 # give xvfb some time to start
 script:
- - isort -c -rc
+ - isort . --diff
  - pycodestyle pylottosimu/ tests/ *.py*
- - xvfb-run nosetests --with-coverage --cover-erase --cover-package=pylottosimu --cover-html
+ - nosetests --with-coverage --cover-erase --cover-package=pylottosimu --cover-html
 after_success:
   - coverage report -m
   - coverage xml
