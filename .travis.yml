@@ -14,6 +14,8 @@ addons:
 install:
   - pip install -r requirements.txt
   - pip install coverage codacy-coverage
+variables:
+  QT_QPA_PLATFORM: "offscreen"
 script:
  - isort . --diff
  - pycodestyle pylottosimu/ tests/ *.py*
