@@ -3,6 +3,7 @@ os: linux
 dist: bionic
 services:
   - xvfb
+  # https://docs.travis-ci.com/user/gui-and-headless-browsers
 python:
   - "3.9"
 #  - "nightly"
@@ -13,10 +14,6 @@ addons:
 install:
   - pip install -r requirements.txt
   - pip install coverage codacy-coverage
-before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - sleep 3 # give xvfb some time to start
 script:
  - isort . --diff
  - pycodestyle pylottosimu/ tests/ *.py*
