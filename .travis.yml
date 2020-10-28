@@ -7,19 +7,13 @@ services:
 python:
   - "3.9"
 #  - "nightly"
-addons:
-  apt:
-    packages:
-    - libxkbcommon-x11-0
 install:
   - pip install -r requirements.txt
   - pip install coverage codacy-coverage
-variables:
-  QT_QPA_PLATFORM: "offscreen"
 script:
  - isort . --diff
  - pycodestyle pylottosimu/ tests/ *.py*
- - nosetests --with-coverage --cover-erase --cover-package=pylottosimu --cover-html
+ - QT_QPA_PLATFORM: "offscreen" xvfb-run -a --server-args="-screen 0 1024x768x24" nosetests --with-coverage --cover-erase --cover-package=pylottosimu --cover-html
 after_success:
   - coverage report -m
   - coverage xml
