@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-23 05:58+0200\n"
-"PO-Revision-Date: 2020-10-26 20:17\n"
+"PO-Revision-Date: 2020-11-11 20:34\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -101,7 +101,7 @@ msgstr "Testziehung mit 3 Zahlen ohne zusätzlicher Zahl"
 
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawtwo:1
 msgid "test draw two number without a additional number"
-msgstr ""
+msgstr "Testziehung mit einer Zahl und ohne Zusatzzahl"
 
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawzero:1
 msgid "test set draw to no number and make sure to set to one number"
