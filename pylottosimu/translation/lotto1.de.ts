@@ -54,17 +54,17 @@
     <message>
       <location filename="../dialog/printdialog.py" line="33"/>
       <source>Document Printer</source>
-      <translation type="unfinished">Document Printer</translation>
+      <translation>Dokument erstellen</translation>
     </message>
     <message>
       <location filename="../dialog/printdialog.py" line="39"/>
       <source>Print</source>
-      <translation type="unfinished">Print</translation>
+      <translation>Drucken</translation>
     </message>
     <message>
       <location filename="../dialog/printdialog.py" line="41"/>
       <source>Preview</source>
-      <translation type="unfinished">Preview</translation>
+      <translation>Vorschau</translation>
     </message>
   </context>
   <context>
@@ -370,7 +370,7 @@ Ausgelost werden: {1} aus {2} {3}!</translation>
     <message>
       <location filename="../lottosimu_gui.ui" line="478"/>
       <source>Uniform Distribution</source>
-      <translation type="unfinished">Uniform Distribution</translation>
+      <translation>Einheitliche Verteilung</translation>
     </message>
   </context>
 </TS>
