@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-15 22:49+0200\n"
-"PO-Revision-Date: 2020-10-26 20:17\n"
+"PO-Revision-Date: 2021-10-28 20:43\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -19,69 +19,69 @@ msgstr ""
 
 #: ../../index.rst:7
 msgid "Welcome to pyLottoSimu's documentation!"
-msgstr ""
+msgstr "Benvenuti nella documentazione di pyLottoSimu!"
 
 #: ../../index.rst:9
 msgid "Lotto Generator and Simulator"
-msgstr ""
+msgstr "Lotto Generatore e Simulatore"
 
 #: ../../index.rst:11
 msgid "a simulation of Lotto Germany (pick 6 out of 49), Lotto Austria (pick 6 out of 45), EuroMillionen, Powerball Lottery US, Mega Millions lottery and Hot Lotto Sizzler system."
-msgstr ""
+msgstr "una simulazione del Lotto Germania (scegliere 6 su 49), Lotto Austria (scegliere 6 su 45), EuroMillionen, Powerball Lotteria Stati Uniti, Mega Millions lotteria e Hot Lotto Sizzler sistema."
 
 #: ../../index.rst:14
 msgid "The pyLottoSimu program generates random lottery numbers and can simulate a draw. In the simulation view a Lotto Ball is visible on the numbers rotate faster and faster, and is finally available, this is the text, the first number of today\\'s draw was the ... Maybe it was indeed actually the numbers of the next draw, of course are here, all the figures provided without guarantee."
-msgstr ""
+msgstr "Il programma pyLottoSimu genera numeri casuali della lotteria e può simulare un pareggio. Nella vista di simulazione un Lotto Ball è visibile sui numeri ruotano più velocemente e più velocemente, ed è finalmente disponibile, questo è il testo, il primo numero del sorteggio di oggi è stato il . Forse sono stati effettivamente i numeri del prossimo pareggio, naturalmente, sono qui, tutte le cifre fornite senza garanzia."
 
 #: ../../index.rst:21
 msgid "pyLottoSimu can be started in these languages:"
-msgstr ""
+msgstr "pyLottoSimu può essere iniziato in queste lingue:"
 
 #: ../../index.rst:23
 msgid "English, German, French, Spanish, Italian, Danish, Dutch, Polish and Russian"
-msgstr ""
+msgstr "Inglese, tedesco, francese, spagnolo, italiano, danese, olandese, polacco e russo"
 
 #: ../../index.rst:26
 msgid "Start"
-msgstr ""
+msgstr "Inizio"
 
 #: ../../index.rst:28
 msgid "The program requires Python_ 3.x and `Qt5 for Python`_."
-msgstr ""
+msgstr "Il programma richiede Python_ 3.x e `Qt5 per Python`_."
 
 #: ../../index.rst:33
 msgid "Start with::"
-msgstr ""
+msgstr "Comincia con::"
 
 #: ../../index.rst:38
 msgid "Documentation"
-msgstr ""
+msgstr "Documentazione"
 
 #: ../../index.rst:40
 msgid "Make the documentation as .html file::"
-msgstr ""
+msgstr "Crea la documentazione come file .html::"
 
 #: ../../index.rst:45
 msgid "Add new modules with::"
-msgstr ""
+msgstr "Aggiungi nuovi moduli con::"
 
 #: ../../index.rst:53
 msgid "Contents:"
-msgstr ""
+msgstr "Contenuti:"
 
 #: ../../index.rst:65
 msgid "Indices and tables"
-msgstr ""
+msgstr "Indici e tabelle"
 
 #: ../../index.rst:67
 msgid ":ref:`genindex`"
-msgstr ""
+msgstr ":ref:`genindex`"
 
 #: ../../index.rst:68
 msgid ":ref:`modindex`"
-msgstr ""
+msgstr ":ref:`modindex`"
 
 #: ../../index.rst:69
 msgid ":ref:`search`"
-msgstr ""
+msgstr ":ref:`search`"
 
