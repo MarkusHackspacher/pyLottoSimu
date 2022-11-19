@@ -3,7 +3,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2012-2020> Markus Hackspacher
+# Copyright (C) <2012-2022> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -377,12 +377,8 @@ class DrawLotto(QtCore.QObject):
                            self.tr('11th'), self.tr('12th'),
                            self.tr('13th'), self.tr('14th'),
                            self.tr('15th')]
-        if sys.version_info >= (3, 0):
-            self.textselection = textselection_tr
-            self.countnumbers = countnumbers_tr
-        else:
-            self.textselection = map(unicode, textselection_tr)
-            self.countnumbers = map(unicode, countnumbers_tr)
+        self.textselection = textselection_tr
+        self.countnumbers = countnumbers_tr
 
         self.random_addit = []
         self.random_number = []
