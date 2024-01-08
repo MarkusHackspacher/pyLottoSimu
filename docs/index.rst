@@ -22,6 +22,12 @@ pyLottoSimu can be started in these languages:
 
 English, German, French, Spanish, Italian, Danish, Dutch, Polish and Russian
 
+The program is developed on [github.com/MarkusHackspacher/pyLottoSimu](https://github.com/MarkusHackspacher/pyLottoSimu).
+Feedback and contributions are welcome.
+
+Help to translate with https://crowdin.com/project/pylottosimu
+Login with Github possible.
+
 Start
 -----
 
