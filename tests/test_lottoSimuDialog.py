@@ -24,7 +24,7 @@
 
 from unittest import TestCase
 
-from PyQt5 import QtWidgets
+from PyQt6 import QtWidgets
 
 from pylottosimu.pylotto import LottoSimuDialog
 

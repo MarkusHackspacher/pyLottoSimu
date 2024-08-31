@@ -3,7 +3,7 @@
 """
 Archerank2
 
-Copyright (C) <2018-2019> Markus Hackspacher
+Copyright (C) <2018-2024> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
@@ -24,7 +24,7 @@ along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 import os
 import sys
 
-from PyQt5 import QtGui, QtPrintSupport, QtWidgets
+from PyQt6 import QtGui, QtPrintSupport, QtWidgets
 
 
 class DlgPrint(QtWidgets.QDialog):

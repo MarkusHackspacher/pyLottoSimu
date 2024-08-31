@@ -2,7 +2,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2012-2019> Markus Hackspacher
+# Copyright (C) <2012-2024> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -29,7 +29,7 @@ and the bonus numbers.
 
 import os
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 
 
 class DlgShowDrawing(QtWidgets.QDialog):

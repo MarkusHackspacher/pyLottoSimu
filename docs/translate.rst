@@ -17,9 +17,9 @@ translate your language file: lotto1_xx.ts, and produce the .ts translation file
 
   lrelease complete.pro
 
-At Linux should you install the pyqt5-dev-tools to use the *pylupdate5* command and qttools5-dev-tools for the *lrelease*::
+At Linux should you install the PyQt6-dev-tools to use the *pylupdate5* command and qttools5-dev-tools for the *lrelease*::
 
-  apt-get install pyqt5-dev-tools qttools5-dev-tools
+  apt-get install PyQt6-dev-tools qttools5-dev-tools
 
 Documentation Translate
 -----------------------

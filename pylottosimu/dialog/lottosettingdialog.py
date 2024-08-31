@@ -3,7 +3,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2012-2019> Markus Hackspacher
+# Copyright (C) <2012-2024> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -30,8 +30,8 @@ Manage the GUI of setting dialog. Use lottosystem.ui.
 import os
 import sys
 
-from PyQt5 import QtGui, QtWidgets, uic
-from PyQt5.QtSvg import QSvgWidget
+from PyQt6 import QtGui, QtWidgets, uic
+from PyQt6.QtSvgWidgets import QSvgWidget
 
 
 class LottoSettingsDialog(QtWidgets.QDialog):
