@@ -2,7 +2,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2015-2019> Markus Hackspacher
+# Copyright (C) <2015-2024> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -25,7 +25,7 @@ lottosettingdialog
 """
 import unittest
 
-from PyQt6 import QtWidgets
+from PyQt6.QtWidgets import QApplication
 
 from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
 from pylottosimu.lottosystem import LottoSystemData
@@ -44,7 +44,7 @@ class LottoSystemDataTestCase(unittest.TestCase):
         # Simple way of making instance a singleton
         super(LottoSystemDataTestCase, self).setUp()
 
-        self.app = QtWidgets.QApplication([])
+        self.app = QApplication([])
 
     def tearDown(self):
         """Deletes the reference owned by self

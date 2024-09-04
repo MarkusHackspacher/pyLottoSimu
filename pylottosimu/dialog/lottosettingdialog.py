@@ -154,5 +154,5 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         :rtype: array of int, bool
         """
         dialog = LottoSettingsDialog(sysdat, parent)
-        result = dialog.ui.exec_()
+        result = dialog.ui.exec()
         return (dialog.values(), result == QtWidgets.QDialog.Accepted)

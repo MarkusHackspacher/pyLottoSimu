@@ -171,7 +171,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                                  self.lottodraw.ballbonus,
                                  highestbonus=separetebonus
                                  )
-        dlgdraw.exec_()
+        dlgdraw.exec()
 
     def onSystem(self):
         """show dialog of the draw
@@ -292,7 +292,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             infobox.setStandardButtons(QtWidgets.QMessageBox.Ok)
             button = infobox.button(QtWidgets.QMessageBox.Ok)
             QtCore.QTimer.singleShot(0, button.clicked)
-        infobox.exec_()
+        infobox.exec()
 
     @staticmethod
     def openWebsite():
@@ -322,7 +322,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                 len(self.testdraw.items()))))
         if test:
             QtCore.QTimer.singleShot(500, printdlg.reject)
-        printdlg.exec_()
+        printdlg.exec()
 
 
 class DrawLotto(QtCore.QObject):
