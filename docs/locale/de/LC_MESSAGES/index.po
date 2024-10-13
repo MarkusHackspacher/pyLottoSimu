@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-13 11:16+0200\n"
-"PO-Revision-Date: 2024-10-13 18:52\n"
+"PO-Revision-Date: 2024-10-13 20:46\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +43,7 @@ msgstr "Englisch, Deutsch, Französisch, Spanisch, Italienisch, Dänisch, Nieder
 
 #: ../../index.rst:25
 msgid "Help to translate with https://crowdin.com/project/pylottosimu Login with Github possible."
-msgstr ""
+msgstr "Hilf mit https://crowdin.com/project/pylottosimu Login mit Github möglich."
 
 #: ../../index.rst:29
 msgid "Start"
