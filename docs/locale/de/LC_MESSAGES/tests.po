@@ -208,5 +208,5 @@ msgstr "Modulinhalte"
 
 #: ../../../tests/__init__.py:docstring of tests:1
 msgid "test case"
-msgstr "Testfall"
+msgstr ""
 
