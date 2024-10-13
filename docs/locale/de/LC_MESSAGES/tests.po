@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-23 05:58+0200\n"
-"PO-Revision-Date: 2024-10-13 10:14\n"
+"PO-Revision-Date: 2024-10-13 13:31\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -125,11 +125,11 @@ msgstr ""
 
 #: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:5
 msgid "Setup for testing, create the UI_lottosystem.py file:"
-msgstr ""
+msgstr "Setup für Test, erstellt die UI_lottosystem.py-Datei:"
 
 #: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:7
 msgid "cd dialog/ pyuic4 --output UI_lottosystem.py lottosystem.ui"
-msgstr ""
+msgstr "cd dialog/ pyuic4 --output UI_lottosystem.py lottosystem.ui"
 
 #: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase:1
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase:1
@@ -208,5 +208,5 @@ msgstr "Modulinhalte"
 
 #: ../../../tests/__init__.py:docstring of tests:1
 msgid "test case"
-msgstr ""
+msgstr "Testfall"
 
