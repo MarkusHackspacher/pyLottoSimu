@@ -250,11 +250,6 @@ numre er trukket: {1} af {2} {3}!</translation>
         <translation type="unfinished">Info</translation>
     </message>
     <message>
-        <location filename="../pylotto.py" line="281"/>
-        <source>The simulation of a lottery draw based on an idea of &lt;a href=&quot;http://www.m-i-u.de/&quot;&gt;my-image-upload.de&lt;/a&gt;,&lt;br&gt;&lt;br&gt;pyLottoSimu is free software and use GNU General Public License &lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;www.gnu.org/licenses&lt;/a&gt;</source>
-        <translation type="obsolete">simulering af en lodtrækning baseret på en idé om ImageUpload, &lt;a href=&quot;http://www.m-i-u.de/&quot;&gt;my-image-upload.de&lt;/a&gt;&lt;br&gt;&lt;br&gt;Lizenz: GNU GPL v3 &lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;www.gnu.org/licenses&lt;/a&gt;</translation>
-    </message>
-    <message>
         <location filename="../pylotto.py" line="286"/>
         <source>More Information about the program at &lt;a href=&quot;http://pylottosimu.readthedocs.io&quot;&gt;pylottosimu.readthedocs.io&lt;/a&gt;</source>
         <translation type="unfinished">More Information about the program at &lt;a href=&quot;http://pylottosimu.readthedocs.io&quot;&gt;pylottosimu.readthedocs.io&lt;/a&gt;</translation>
@@ -263,11 +258,6 @@ numre er trukket: {1} af {2} {3}!</translation>
         <location filename="../pylotto.py" line="262"/>
         <source>{}: {} out of {}: {}</source>
         <translation type="unfinished">{}: {} out of {}: {}</translation>
-    </message>
-    <message>
-        <location filename="../pylotto.py" line="316"/>
-        <source>&lt;h1&gt;Overview&lt;/h1&gt;Maximim {} at number {}, Minimum {} at number {}&lt;br&gt;Numbers in draw {}</source>
-        <translation type="obsolete">&lt;h1&gt;Overview&lt;/h1&gt;Maximim {} at number {}, Minimum {} at number {}&lt;br&gt;Numbers in draw {}</translation>
     </message>
     <message>
         <location filename="../pylotto.py" line="282"/>

@@ -250,11 +250,6 @@ números se dibujan: {1} de {2} {3}!</translation>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../pylotto.py" line="281"/>
-        <source>The simulation of a lottery draw based on an idea of &lt;a href=&quot;http://www.m-i-u.de/&quot;&gt;my-image-upload.de&lt;/a&gt;,&lt;br&gt;&lt;br&gt;pyLottoSimu is free software and use GNU General Public License &lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;www.gnu.org/licenses&lt;/a&gt;</source>
-        <translation type="obsolete">simulación de un sorteo al azar basado en una idea de imageupload, &lt;a href=&quot;http://www.m-i-u.de/&quot;&gt;my-image-upload.de&lt;/a&gt;,&lt;br&gt;&lt;br&gt;Lizenz: GNU GPL v3 &lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;www.gnu.org/licenses&lt;/a&gt;</translation>
-    </message>
-    <message>
         <location filename="../pylotto.py" line="286"/>
         <source>More Information about the program at &lt;a href=&quot;http://pylottosimu.readthedocs.io&quot;&gt;pylottosimu.readthedocs.io&lt;/a&gt;</source>
         <translation>Más información sobre el programa en &lt;a href=&quot;http://pylottosimu.readthedocs.io&quot;&gt;pylottosimu.readthedocs.io&lt;/a&gt;</translation>
@@ -263,11 +258,6 @@ números se dibujan: {1} de {2} {3}!</translation>
         <location filename="../pylotto.py" line="262"/>
         <source>{}: {} out of {}: {}</source>
         <translation type="unfinished">{}: {} out of {}: {}</translation>
-    </message>
-    <message>
-        <location filename="../pylotto.py" line="316"/>
-        <source>&lt;h1&gt;Overview&lt;/h1&gt;Maximim {} at number {}, Minimum {} at number {}&lt;br&gt;Numbers in draw {}</source>
-        <translation type="obsolete">&lt;h1&gt;Overview&lt;/h1&gt;Maximim {} at number {}, Minimum {} at number {}&lt;br&gt;Numbers in draw {}</translation>
     </message>
     <message>
         <location filename="../pylotto.py" line="282"/>

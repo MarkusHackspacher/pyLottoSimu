@@ -160,27 +160,3 @@ msgstr "Modulinhalte"
 msgid "Manage a Lotto simulation draw."
 msgstr "Eine Lotto-Simulations Ziehung verwalten."
 
-#~ msgid "class LottoSimuDialog"
-#~ msgstr "Klasse LottoSimuDialog"
-
-#~ msgid ""
-#~ "Load the GUI and manage the "
-#~ "signals for the program of the "
-#~ "pyLottoSimu. Use the lottosimu_gui.ui"
-#~ msgstr ""
-#~ "Lädt die GUI und regelt die "
-#~ "Signale für der Programm der "
-#~ "pyLottoSimu. Verwendet die lottosin_gui.ui"
-
-#~ msgid "class drawlotto"
-#~ msgstr "Klasse drawlotto"
-
-#~ msgid ""
-#~ "simulate a lotto draw. draw the "
-#~ "lotto numbers and give the draw "
-#~ "text back"
-#~ msgstr ""
-#~ "simulieren eine Lotto-Auslosung. ziehen "
-#~ "die Lottozahlen und geben die Auslosung"
-#~ " Text zurück"
-

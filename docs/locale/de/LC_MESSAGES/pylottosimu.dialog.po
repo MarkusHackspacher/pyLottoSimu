@@ -38,24 +38,3 @@ msgstr "Modulinhalte"
 msgid "additional dialogs"
 msgstr "weitere Dialoge"
 
-#~ msgid "class LottoSettingsDialog"
-#~ msgstr "Klasse LottoSettingsDialog"
-
-#~ msgid "Manage the GUI of setting dialog. Use lottosystem.ui."
-#~ msgstr ""
-#~ "Verwalten Sie die GUI des "
-#~ "Einstellungen-Dialogs. Verwenden Sie "
-#~ "lottosystem.ui."
-
-#~ msgid "class DlgShowDrawing"
-#~ msgstr "Klasse DlgShowDrawing"
-
-#~ msgid ""
-#~ "show a Dialog with all the ball"
-#~ " numbers from the draw and the "
-#~ "bonus numbers."
-#~ msgstr ""
-#~ "zeigen einen Dialog mit allen Ball "
-#~ "Zahlen von der Auslosung und der "
-#~ "Bonus-Nummern."
-
