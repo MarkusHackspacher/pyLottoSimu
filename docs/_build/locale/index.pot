@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2018, pyLottoSimu-Team
+# Copyright (C) 2015-2024, pyLottoSimu-Team
 # This file is distributed under the same license as the pyLottoSimu package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyLottoSimu 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-15 22:49+0200\n"
+"POT-Creation-Date: 2024-10-13 11:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,47 +40,50 @@ msgstr ""
 msgid "English, German, French, Spanish, Italian, Danish, Dutch, Polish and Russian"
 msgstr ""
 
-#: ../../index.rst:26
+#: ../../index.rst:25
+msgid "Help to translate with https://crowdin.com/project/pylottosimu Login with Github possible."
+msgstr ""
+
+#: ../../index.rst:29
 msgid "Start"
 msgstr ""
 
-#: ../../index.rst:28
+#: ../../index.rst:31
 msgid "The program requires Python_ 3.x and `Qt5 for Python`_."
 msgstr ""
 
-#: ../../index.rst:33
+#: ../../index.rst:36
 msgid "Start with::"
 msgstr ""
 
-#: ../../index.rst:38
+#: ../../index.rst:41
 msgid "Documentation"
 msgstr ""
 
-#: ../../index.rst:40
+#: ../../index.rst:43
 msgid "Make the documentation as .html file::"
 msgstr ""
 
-#: ../../index.rst:45
+#: ../../index.rst:48
 msgid "Add new modules with::"
 msgstr ""
 
-#: ../../index.rst:53
+#: ../../index.rst:56
 msgid "Contents:"
 msgstr ""
 
-#: ../../index.rst:65
+#: ../../index.rst:68
 msgid "Indices and tables"
 msgstr ""
 
-#: ../../index.rst:67
+#: ../../index.rst:70
 msgid ":ref:`genindex`"
 msgstr ""
 
-#: ../../index.rst:68
+#: ../../index.rst:71
 msgid ":ref:`modindex`"
 msgstr ""
 
-#: ../../index.rst:69
+#: ../../index.rst:72
 msgid ":ref:`search`"
 msgstr ""
-

@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2015-2018, pyLottoSimu-Team
+# Copyright (C) 2015-2024, pyLottoSimu-Team
 # This file is distributed under the same license as the pyLottoSimu package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyLottoSimu 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-15 23:50+0200\n"
+"POT-Creation-Date: 2024-10-13 11:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,4 +91,3 @@ msgstr ""
 #: ../../history.rst:58
 msgid "The renewals in Version 1.4 of October 3, 2013 from pyLottoSimu is multilingualism there are now nine languages. And in Program window there is a major change, it can now Select whether the number overview window to appear automatically after the draw."
 msgstr ""
-

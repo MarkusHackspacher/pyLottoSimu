@@ -280,8 +280,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         infobox = QtWidgets.QMessageBox()
         infobox.setWindowTitle(self.tr('Info'))
         infobox.setText(self.tr(
-            'The simulation of a lottery draw based on an idea of '
-            '<a href="http://www.m-i-u.de/">my-image-upload.de</a>,<br><br>'
+            'The simulation of a lottery draw<br>'
             'pyLottoSimu is free software and use GNU General Public License '
             '<a href="http://www.gnu.org/licenses/">www.gnu.org/licenses</a>'))
         infobox.setInformativeText(self.tr(
