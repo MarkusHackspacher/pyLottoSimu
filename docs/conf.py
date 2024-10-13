@@ -28,7 +28,7 @@ class Mock(MagicMock):
     def __getattr__(cls, name):
             return Mock()
 
-MOCK_MODULES = ['PyQt6', 'PyQt6.QtSvg']
+MOCK_MODULES = ['PyQt5', 'PyQt5.QtSvg']
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -66,7 +66,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'pyLottoSimu'
-copyright = '2015-2018, pyLottoSimu-Team'
+copyright = '2015-2024, pyLottoSimu-Team'
 author = 'Markus Hackspacher'
 
 # The version info for the project you're documenting, acts as replacement for

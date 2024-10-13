@@ -1,4 +1,4 @@
-PyQt6
+PyQt5
 # unit test requirements
 mock
 pycodestyle
