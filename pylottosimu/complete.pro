@@ -6,5 +6,6 @@
  TRANSLATIONS    = translation/lotto1.de.ts \
                    translation/lotto1.fr.ts \
                    translation/lotto1.it.ts \
-                   translation/lotto1.crowdin.ts
+                   translation/lotto1.es.ts \
+                  translation/lotto1.crowdin.ts
  CODECFORTR      = UTF-8
