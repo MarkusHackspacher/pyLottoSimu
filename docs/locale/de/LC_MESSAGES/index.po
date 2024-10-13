@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-15 22:49+0200\n"
-"PO-Revision-Date: 2024-10-13 09:45\n"
+"POT-Creation-Date: 2024-10-13 11:16+0200\n"
+"PO-Revision-Date: 2024-10-13 18:52\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -41,47 +41,51 @@ msgstr "pyLottoSimu kann in diesen Sprachen gestartet werden:"
 msgid "English, German, French, Spanish, Italian, Danish, Dutch, Polish and Russian"
 msgstr "Englisch, Deutsch, Französisch, Spanisch, Italienisch, Dänisch, Niederländisch, Polnisch und Russisch"
 
-#: ../../index.rst:26
+#: ../../index.rst:25
+msgid "Help to translate with https://crowdin.com/project/pylottosimu Login with Github possible."
+msgstr ""
+
+#: ../../index.rst:29
 msgid "Start"
 msgstr "Start"
 
-#: ../../index.rst:28
+#: ../../index.rst:31
 msgid "The program requires Python_ 3.x and `Qt5 for Python`_."
 msgstr "Das Programm benötigt Python_ 3.x und `Qt5 für Python`_."
 
-#: ../../index.rst:33
+#: ../../index.rst:36
 msgid "Start with::"
 msgstr "Start mit::"
 
-#: ../../index.rst:38
+#: ../../index.rst:41
 msgid "Documentation"
 msgstr "Dokumentation"
 
-#: ../../index.rst:40
+#: ../../index.rst:43
 msgid "Make the documentation as .html file::"
 msgstr "Dokumentation als .html Datei aus den Kommentaren des Quelltextes erstellen lassen::"
 
-#: ../../index.rst:45
+#: ../../index.rst:48
 msgid "Add new modules with::"
 msgstr "Fügen Sie neue Module hinzu mit ::"
 
-#: ../../index.rst:53
+#: ../../index.rst:56
 msgid "Contents:"
 msgstr "Inhalt"
 
-#: ../../index.rst:65
+#: ../../index.rst:68
 msgid "Indices and tables"
 msgstr "Indizes und Tabellen"
 
-#: ../../index.rst:67
+#: ../../index.rst:70
 msgid ":ref:`genindex`"
 msgstr ":ref:`genindex`"
 
-#: ../../index.rst:68
+#: ../../index.rst:71
 msgid ":ref:`modindex`"
 msgstr ":ref:`genindex`"
 
-#: ../../index.rst:69
+#: ../../index.rst:72
 msgid ":ref:`search`"
 msgstr ":ref:'Suche'"
 
