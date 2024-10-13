@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-15 23:45+0200\n"
-"PO-Revision-Date: 2024-10-13 09:45\n"
+"PO-Revision-Date: 2024-10-13 16:14\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -55,5 +55,5 @@ msgstr "Testsuite wird ausgeführt"
 
 #: ../../contributing.rst:26
 msgid "To run the tests, just type the following on a terminal::"
-msgstr "Um die Tests auszuführen, tippen Sie einfach folgendes auf einem Terminal::"
+msgstr "Um die Tests auszuführen, geben Sie einfach folgendes auf einem Terminal ein::"
 
