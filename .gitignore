@@ -4,7 +4,9 @@
 *.pyt
 *.pytc
 *.json
+
 *.mo
+pylottosimu/translation/lotto1.crowdin.qm
 
 .eric4project/
 lotto/.directory
