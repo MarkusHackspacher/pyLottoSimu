@@ -2,7 +2,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2015-2019> Markus Hackspacher
+# Copyright (C) <2015-2024> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -24,7 +24,7 @@
 
 import unittest
 
-from PyQt6 import QtWidgets
+from PyQt5 import QtWidgets
 
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
 

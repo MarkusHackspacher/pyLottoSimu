@@ -21,10 +21,10 @@ install
 -------
 
 The program requires [Python 3.x](http://www.python.org/download/) 
-and PyQt6 for Python 3 `pip3 install PyQt6`.
+and PyQt5 for Python 3 `pip3 install PyQt5`.
 
 ```
-# sudo apt-get install python3 python3-PyQt6 python3-PyQt6.qtsvg git
+# sudo apt-get install python3 python3-pyqt5 git
 ```
     
 Then you copied the source code of the program on your computer,

@@ -42,8 +42,8 @@ import webbrowser
 from datetime import datetime
 from random import randint
 
-from PyQt6 import QtCore, QtGui, QtWidgets, uic
-from PyQt6.QtSvgWidgets import QSvgWidget
+from PyQt5 import QtCore, QtGui, QtWidgets, uic
+from PyQt5.QtSvg import QSvgWidget
 
 from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
 from pylottosimu.dialog.printdialog import DlgPrint
