@@ -66,7 +66,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'pyLottoSimu'
-copyright = '2015-2018, pyLottoSimu-Team'
+copyright = '2015-2024, pyLottoSimu-Team'
 author = 'Markus Hackspacher'
 
 # The version info for the project you're documenting, acts as replacement for

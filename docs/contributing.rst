@@ -6,7 +6,8 @@ Contributing to pyLottoSimu
 You are very welcome to contribute to the project!
 The bugtracker and git repository can be found at the
 `project's page <https://github.com/MarkusHackspacher/pyLottoSimu/>`_.
-If you have an idea, tell it at https://gitter.im/MarkusHackspacher/pyLottoSimu .
+If you have an idea or a issues, tell it at
+`issues page <https://github.com/MarkusHackspacher/pyLottoSimu/issues>`_.
 Thank you in advance.
 
 How to contribute

@@ -2,7 +2,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2015-2019> Markus Hackspacher
+# Copyright (C) <2015-2024> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -19,12 +19,14 @@
 # You should have received a copy of the GNU General Public License
 # along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 
-"""Test the dialog module LottoSimuDialog
+"""Test the dialog module
+
+LottoSimuDialog
 """
 
 from unittest import TestCase
 
-from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QApplication
 
 from pylottosimu.pylotto import LottoSimuDialog
 
@@ -35,7 +37,7 @@ class TestLottoSimuDialog(TestCase):
 
         # Simple way of making instance a singleton
         super(TestLottoSimuDialog, self).setUp()
-        self.app = QtWidgets.QApplication([])
+        self.app = QApplication([])
 
         self.ui = LottoSimuDialog()
 
@@ -55,6 +57,3 @@ class TestLottoSimuDialog(TestCase):
         self.ui.showNextNumber()
         self.assertEqual(self.ui.ui.plaintextedit.toPlainText(),
                          'And the first winning number is the 1.')
-
-    def test_actionLottoSim(self):
-        self.ui.ui.action_lotto_simulation.setChecked(False)

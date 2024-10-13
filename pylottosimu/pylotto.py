@@ -3,7 +3,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2012-2020> Markus Hackspacher
+# Copyright (C) <2012-2024> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -171,7 +171,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
                                  self.lottodraw.ballbonus,
                                  highestbonus=separetebonus
                                  )
-        dlgdraw.exec_()
+        dlgdraw.exec()
 
     def onSystem(self):
         """show dialog of the draw
@@ -280,8 +280,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         infobox = QtWidgets.QMessageBox()
         infobox.setWindowTitle(self.tr('Info'))
         infobox.setText(self.tr(
-            'The simulation of a lottery draw based on an idea of '
-            '<a href="http://www.m-i-u.de/">my-image-upload.de</a>,<br><br>'
+            'The simulation of a lottery draw<br>'
             'pyLottoSimu is free software and use GNU General Public License '
             '<a href="http://www.gnu.org/licenses/">www.gnu.org/licenses</a>'))
         infobox.setInformativeText(self.tr(
@@ -292,7 +291,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
             infobox.setStandardButtons(QtWidgets.QMessageBox.Ok)
             button = infobox.button(QtWidgets.QMessageBox.Ok)
             QtCore.QTimer.singleShot(0, button.clicked)
-        infobox.exec_()
+        infobox.exec()
 
     @staticmethod
     def openWebsite():
@@ -315,14 +314,14 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         mintest = min(self.testdraw.items(), key=operator.itemgetter(1))
         printdlg = DlgPrint()
         printdlg.editor.setHtml(self.tr(
-            '<h1>Overview</h1>Maximim {} at number {}, Minimum {} at number {}'
+            '<h1>Overview</h1>maximum {} at number {}, minimum {} at number {}'
             '<br>Numbers in draw {}'.format(
                 maxtest[1], maxtest[0],
                 mintest[1], mintest[0],
                 len(self.testdraw.items()))))
         if test:
             QtCore.QTimer.singleShot(500, printdlg.reject)
-        printdlg.exec_()
+        printdlg.exec()
 
 
 class DrawLotto(QtCore.QObject):
@@ -377,12 +376,8 @@ class DrawLotto(QtCore.QObject):
                            self.tr('11th'), self.tr('12th'),
                            self.tr('13th'), self.tr('14th'),
                            self.tr('15th')]
-        if sys.version_info >= (3, 0):
-            self.textselection = textselection_tr
-            self.countnumbers = countnumbers_tr
-        else:
-            self.textselection = map(unicode, textselection_tr)
-            self.countnumbers = map(unicode, countnumbers_tr)
+        self.textselection = textselection_tr
+        self.countnumbers = countnumbers_tr
 
         self.random_addit = []
         self.random_number = []

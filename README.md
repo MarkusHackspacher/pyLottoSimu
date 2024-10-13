@@ -1,11 +1,9 @@
 pyLottoSimu
 ===========
 
-[![Build Status](https://travis-ci.org/MarkusHackspacher/pyLottoSimu.svg?branch=master)](https://travis-ci.org/MarkusHackspacher/pyLottoSimu)
 [![Github Releases](https://img.shields.io/github/release/markushackspacher/pylottosimu.svg)](https://github.com/MarkusHackspacher/pyLottoSimu)
 [![Join the chat at https://gitter.im/MarkusHackspacher/pyLottoSimu](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MarkusHackspacher/pyLottoSimu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Documentation Status](https://readthedocs.org/projects/pylottosimu/badge/?version=latest)](https://readthedocs.org/projects/pylottosimu/?badge=latest)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6b96ee1e2b2d415ca10677b604990cd9)](https://www.codacy.com/app/MarkusHackspacher/pyLottoSimu?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MarkusHackspacher/pyLottoSimu&amp;utm_campaign=Badge_Grade)
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/pylottosimu/localized.svg)](https://crowdin.com/project/pylottosimu)
 
 a Lotto Generator und Simulator
@@ -16,7 +14,7 @@ Powerball Lottery US, Mega Millions lottery and Hot Lotto Sizzler system.
 The program is developed on [github.com/MarkusHackspacher/pyLottoSimu](https://github.com/MarkusHackspacher/pyLottoSimu).
 Feedback and contributions are welcome.
 
-Help to translate with https://crowdin.com/project/pylottosimu
+Help to translate with [https://crowdin.com/project/pylottosimu](https://crowdin.com/project/pylottosimu).
 Login with Github possible.
 
 install
@@ -26,8 +24,7 @@ The program requires [Python 3.x](http://www.python.org/download/)
 and PyQt5 for Python 3 `pip3 install PyQt5`.
 
 ```
-# sudo apt-get install python python-pyqt5 python-pyqt5.qtsvg git
-# sudo apt-get install python3 python3-pyqt5 python3-pyqt5.qtsvg git
+# sudo apt-get install python3 python3-pyqt5 git
 ```
     
 Then you copied the source code of the program on your computer,

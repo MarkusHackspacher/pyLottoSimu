@@ -2,7 +2,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2012-2019> Markus Hackspacher
+# Copyright (C) <2012-2024> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -57,7 +57,7 @@ class DlgShowDrawing(QtWidgets.QDialog):
                         "..", "..", "misc", "pyLottoSimu.svg"))))
         self.setModal(True)
         self.buttonBox = QtWidgets.QDialogButtonBox(self)
-        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setOrientation(QtCore.Qt.Orientation.Horizontal)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Ok)
 
         self.boxLayout = QtWidgets.QBoxLayout(

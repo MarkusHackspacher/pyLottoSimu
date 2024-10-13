@@ -3,7 +3,7 @@
 """
 Archerank2
 
-Copyright (C) <2018-2019> Markus Hackspacher
+Copyright (C) <2018-2024> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
@@ -48,13 +48,13 @@ class DlgPrint(QtWidgets.QDialog):
 
     def handle_print(self):
         dialog = QtPrintSupport.QPrintDialog()
-        if dialog.exec_() == QtWidgets.QDialog.Accepted:
+        if dialog.exec() == QtWidgets.QDialog.Accepted:
             self.editor.document().print_(dialog.printer())
 
     def handle_preview(self):
         dialog = QtPrintSupport.QPrintPreviewDialog()
         dialog.paintRequested.connect(self.editor.print_)
-        dialog.exec_()
+        dialog.exec()
 
     def handleTextChanged(self):
         enable = not self.editor.document().isEmpty()

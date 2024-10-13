@@ -38,7 +38,7 @@ msgid "translate your language file: lotto1_xx.ts, and produce the .ts translati
 msgstr ""
 
 #: ../../translate.rst:20
-msgid "At Linux should you install the pyqt5-dev-tools to use the *pylupdate5* command and qttools5-dev-tools for the *lrelease*::"
+msgid "At Linux should you install the PyQt6-dev-tools to use the *pylupdate5* command and qttools5-dev-tools for the *lrelease*::"
 msgstr ""
 
 #: ../../translate.rst:25

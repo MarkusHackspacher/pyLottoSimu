@@ -3,7 +3,7 @@
 
 # pyLottoSimu
 
-# Copyright (C) <2012-2019> Markus Hackspacher
+# Copyright (C) <2012-2024> Markus Hackspacher
 
 # This file is part of pyLottoSimu.
 
@@ -154,5 +154,8 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         :rtype: array of int, bool
         """
         dialog = LottoSettingsDialog(sysdat, parent)
-        result = dialog.ui.exec_()
+        result = dialog.ui.exec()
         return (dialog.values(), result == QtWidgets.QDialog.Accepted)
+
+    def test_actionLottoSim(self):
+        self.ui.ui.action_lotto_simulation.setChecked(False)
