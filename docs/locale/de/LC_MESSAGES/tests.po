@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-23 05:58+0200\n"
-"PO-Revision-Date: 2020-11-11 20:34\n"
+"PO-Revision-Date: 2024-10-13 09:46\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -105,19 +105,19 @@ msgstr "Testziehung mit einer Zahl und ohne Zusatzzahl"
 
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawzero:1
 msgid "test set draw to no number and make sure to set to one number"
-msgstr ""
+msgstr "Dieser Test ziehen keine Nummer und stellt sicher, dass eine Zahl gesetzt wird"
 
 #: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_setting:1
 msgid "Test lotto.data"
-msgstr ""
+msgstr "lotto.data testen"
 
 #: ../../tests.rst:16
 msgid "tests.test_lottosettingdialog module"
-msgstr ""
+msgstr "tests.test_lottosettingdialog Modul"
 
 #: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:1
 msgid "Test the dialog module"
-msgstr ""
+msgstr "Dialogmodul testen"
 
 #: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:3
 msgid "lottosettingdialog"
@@ -139,7 +139,7 @@ msgstr "Ziehung testen"
 #: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.setUp:1
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.setUp:1
 msgid "Creates the QApplication instance"
-msgstr ""
+msgstr "Erstellt die QApplication Instanz"
 
 #: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.tearDown:1
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.tearDown:1
@@ -160,7 +160,7 @@ msgstr ""
 
 #: ../../../tests/test_lottosystemdata.py:docstring of tests.test_lottosystemdata.TestCodeFormat:1
 msgid "Test the code format of the file"
-msgstr ""
+msgstr "Codeformat der Datei testen"
 
 #: ../../../tests/test_lottosystemdata.py:docstring of tests.test_lottosystemdata.TestCodeFormat.setUp:1
 msgid "load LottoSystemData"
@@ -188,7 +188,7 @@ msgstr ""
 
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_bonusnumbersseparate:1
 msgid "test separate bonus numbers"
-msgstr ""
+msgstr "separate Bonus-Nummern testen"
 
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_highernumbers:1
 msgid "test with higher draw numbers as the highest number in the draw in the ball numbers and in the bonus numbers"
@@ -196,7 +196,7 @@ msgstr ""
 
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_samenumbers:1
 msgid "test the same ball numbers and bonus numbers in a maximal draw of 5 numbers"
-msgstr ""
+msgstr "Testet auf die gleichen Ballnummern und Bonus-Nummern in einer maximalen Ziehung von 5 Zahlen"
 
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_twoballnumber:1
 msgid "test with two ball numbers"
