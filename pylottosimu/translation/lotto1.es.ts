@@ -72,7 +72,7 @@
     <message>
       <location filename="../dialog/show_drawing.py" line="114"/>
       <source>Show Drawing</source>
-      <translation>Mostrar Drawing</translation>
+      <translation>Mostrar Dibujo</translation>
     </message>
   </context>
   <context>
@@ -80,7 +80,7 @@
     <message>
       <location filename="../pylotto.py" line="362"/>
       <source>And now we come to the winning number {0}, it is the {1}.</source>
-      <translation>Y ahora llegamos a la número ganador {0} es {1}.</translation>
+      <translation>Y ahora llegamos al número ganador {0}, es {1}.</translation>
     </message>
     <message>
       <location filename="../pylotto.py" line="364"/>
