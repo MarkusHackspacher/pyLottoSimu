@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-23 06:08+0200\n"
-"PO-Revision-Date: 2020-10-26 20:16\n"
+"POT-Creation-Date: 2024-10-13 11:16+0200\n"
+"PO-Revision-Date: 2024-10-13 18:52\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -29,24 +29,8 @@ msgstr ""
 msgid "pylottosimu.dialog.lottosettingdialog module"
 msgstr ""
 
-#: ../../../pylottosimu/dialog/lottosettingdialog.py:docstring of pylottosimu.dialog.lottosettingdialog:2
-msgid "class LottoSettingsDialog"
-msgstr ""
-
-#: ../../../pylottosimu/dialog/lottosettingdialog.py:docstring of pylottosimu.dialog.lottosettingdialog:4
-msgid "Manage the GUI of setting dialog. Use lottosystem.ui."
-msgstr ""
-
 #: ../../pylottosimu.dialog.rst:16
 msgid "pylottosimu.dialog.show_drawing module"
-msgstr ""
-
-#: ../../../pylottosimu/dialog/show_drawing.py:docstring of pylottosimu.dialog.show_drawing:2
-msgid "class DlgShowDrawing"
-msgstr ""
-
-#: ../../../pylottosimu/dialog/show_drawing.py:docstring of pylottosimu.dialog.show_drawing:4
-msgid "show a Dialog with all the ball numbers from the draw and the bonus numbers."
 msgstr ""
 
 #: ../../pylottosimu.dialog.rst:25
