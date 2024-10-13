@@ -6,7 +6,7 @@
     <message>
       <location filename="../dialog/lottosystem.ui" line="14"/>
       <source>System</source>
-      <translation type="unfinished">System</translation>
+      <translation>System</translation>
     </message>
     <message>
       <location filename="../dialog/lottosystem.ui" line="55"/>
