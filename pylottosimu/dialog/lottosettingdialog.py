@@ -157,6 +157,5 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         result = dialog.ui.exec()
         return (dialog.values(), result == QtWidgets.QDialog.Accepted)
 
-
     def test_actionLottoSim(self):
         self.ui.ui.action_lotto_simulation.setChecked(False)
