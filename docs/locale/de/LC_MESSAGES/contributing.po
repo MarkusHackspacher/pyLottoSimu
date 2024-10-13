@@ -16,7 +16,7 @@ msgstr ""
 
 #: ../../contributing.rst:2
 msgid "Contributing to pyLottoSimu"
-msgstr "Beitrag zur pyLottoSimu"
+msgstr "Beitragen zur pyLottoSimu"
 
 #: ../../contributing.rst:4
 msgid "Contents"

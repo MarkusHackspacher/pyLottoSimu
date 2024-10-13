@@ -67,9 +67,6 @@ msgstr ""
 msgid "Module contents"
 msgstr "Modulinhalte"
 
-#: of tests:1
-msgid "test case"
-msgstr "Testfall"
 
 #~ msgid "Test the lotto draw with some input numbers"
 #~ msgstr "Teste die Lottoziehung mit einigen eingegebenen Zahlen"
@@ -106,7 +103,6 @@ msgstr "Testfall"
 
 #~ msgid "Test the dialog module"
 #~ msgstr ""
-
 #~ msgid "lottosettingdialog"
 #~ msgstr ""
 
