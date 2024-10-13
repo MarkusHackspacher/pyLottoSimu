@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-23 05:58+0200\n"
-"PO-Revision-Date: 2024-10-13 13:31\n"
+"PO-Revision-Date: 2024-10-13 18:41\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -121,7 +121,7 @@ msgstr "Dialogmodul testen"
 
 #: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:3
 msgid "lottosettingdialog"
-msgstr ""
+msgstr "lottosetting-Dialog"
 
 #: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:5
 msgid "Setup for testing, create the UI_lottosystem.py file:"
@@ -176,7 +176,7 @@ msgstr ""
 
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing:1
 msgid "Test the dialog module show_drawing"
-msgstr ""
+msgstr "Test des Dialogmodul show_drawing"
 
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_ballnumber:1
 msgid "test with one ball numbers"
@@ -184,7 +184,7 @@ msgstr "mit einer Ballnummer testen"
 
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_bonusnumbers:1
 msgid "test ball numbers and bonus numbers in a maximal draw of 5 numbers"
-msgstr ""
+msgstr "Testet auf die gleichen Ballnummern und Bonus-Nummern in einer maximalen Ziehung von 5 Zahlen"
 
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_bonusnumbersseparate:1
 msgid "test separate bonus numbers"
@@ -192,7 +192,7 @@ msgstr "separate Bonus-Nummern testen"
 
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_highernumbers:1
 msgid "test with higher draw numbers as the highest number in the draw in the ball numbers and in the bonus numbers"
-msgstr ""
+msgstr "testen mit höheren Ziehungszahlen als die höchste Zahl bei der Auslosung in den Nummern und in den Bonuszahlen"
 
 #: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_samenumbers:1
 msgid "test the same ball numbers and bonus numbers in a maximal draw of 5 numbers"
