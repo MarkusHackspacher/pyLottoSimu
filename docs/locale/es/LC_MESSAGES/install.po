@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-15 23:37+0200\n"
-"PO-Revision-Date: 2024-10-13 09:45\n"
+"POT-Creation-Date: 2024-10-13 11:16+0200\n"
+"PO-Revision-Date: 2024-10-13 20:08\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -42,7 +42,7 @@ msgid "`python <http://www.python.org>`_ - The python programming language along
 msgstr ""
 
 #: ../../install.rst:16
-msgid "`pyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 for Python"
+msgid "`PyQt6 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 for Python"
 msgstr ""
 
 #: ../../install.rst:18
@@ -82,7 +82,7 @@ msgid "Installing Debian or Ubuntu"
 msgstr ""
 
 #: ../../install.rst:36
-msgid "First you need to your computer these programs: Python, pyQt5 and version control system git::"
+msgid "First you need to your computer these programs: Python, PyQt6 and version control system git::"
 msgstr ""
 
 #: ../../install.rst:41
