@@ -314,7 +314,7 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         mintest = min(self.testdraw.items(), key=operator.itemgetter(1))
         printdlg = DlgPrint()
         printdlg.editor.setHtml(self.tr(
-            '<h1>Overview</h1>Maximim {} at number {}, Minimum {} at number {}'
+            '<h1>Overview</h1>maximum {} at number {}, minimum {} at number {}'
             '<br>Numbers in draw {}'.format(
                 maxtest[1], maxtest[0],
                 mintest[1], mintest[0],

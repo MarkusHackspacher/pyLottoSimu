@@ -267,11 +267,16 @@ Ausgelost werden: {1} aus {2} {3}!</translation>
     <message>
         <location filename="../pylotto.py" line="316"/>
         <source>&lt;h1&gt;Overview&lt;/h1&gt;Maximim {} at number {}, Minimum {} at number {}&lt;br&gt;Numbers in draw {}</source>
-        <translation type="unfinished">&lt;h1&gt;Overview&lt;/h1&gt;Maximim {} at number {}, Minimum {} at number {}&lt;br&gt;Numbers in draw {}</translation>
+        <translation type="obsolete">&lt;h1&gt;Overview&lt;/h1&gt;Maximim {} at number {}, Minimum {} at number {}&lt;br&gt;Numbers in draw {}</translation>
     </message>
     <message>
         <location filename="../pylotto.py" line="282"/>
         <source>The simulation of a lottery draw&lt;br&gt;pyLottoSimu is free software and use GNU General Public License &lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;www.gnu.org/licenses&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../pylotto.py" line="316"/>
+        <source>&lt;h1&gt;Overview&lt;/h1&gt;maximum {} at number {}, minimum {} at number {}&lt;br&gt;Numbers in draw {}</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
