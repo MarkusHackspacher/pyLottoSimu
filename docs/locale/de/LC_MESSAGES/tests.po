@@ -1,18 +1,21 @@
-
 msgid ""
 msgstr ""
-"Project-Id-Version:  pylottosimu\n"
+"Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 11:16+0200\n"
-"PO-Revision-Date: 2020-11-11 20:34+0000\n"
+"POT-Creation-Date: 2018-09-23 05:58+0200\n"
+"PO-Revision-Date: 2024-10-13 10:14\n"
 "Last-Translator: \n"
-"Language: de_DE\n"
 "Language-Team: German\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: pylottosimu\n"
+"X-Crowdin-Project-ID: 313804\n"
+"X-Crowdin-Language: de\n"
+"X-Crowdin-File: /master/docs/_build/locale/tests.pot\n"
+"X-Crowdin-File-ID: 24\n"
+"Language: de_DE\n"
 
 #: ../../tests.rst:2
 msgid "tests package"
@@ -26,133 +29,184 @@ msgstr "Untermodule"
 msgid "tests.test_drawlotto module"
 msgstr "tests.test_drawlotto Modul"
 
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase:1
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase:1
+#: ../../../tests/test_lottosystemdata.py:docstring of tests.test_lottosystemdata.TestCodeFormat:1
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase:1
+msgid "Bases: :class:`unittest.case.TestCase`"
+msgstr "Bases: :class:`unittest.case.TestCase`"
+
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase:1
+msgid "Test the lotto draw with some input numbers"
+msgstr "Teste die Lottoziehung mit einigen eingegebenen Zahlen"
+
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.setUp:1
+msgid "Init class pylotto.drawlotto"
+msgstr "Initiiere class pylotto.drawlotto"
+
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.setUp:0
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw:0
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw_addit:0
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw_addit_sep:0
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawone:0
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawthree:0
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawtwo:0
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawzero:0
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_setting:0
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.setUp:0
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.tearDown:0
+#: ../../../tests/test_lottosystemdata.py:docstring of tests.test_lottosystemdata.TestCodeFormat.setUp:0
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_bonusnumbersseparate:0
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_highernumbers:0
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_samenumbers:0
+msgid "Returns"
+msgstr "Zurück"
+
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.setUp:3
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw:3
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw_addit:3
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw_addit_sep:3
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawone:3
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawthree:3
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawtwo:3
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawzero:3
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_setting:3
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.setUp:3
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.tearDown:3
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_bonusnumbersseparate:3
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_highernumbers:4
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_samenumbers:4
+msgid "none"
+msgstr "keine"
+
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw:1
+msgid "test draw without a additional number"
+msgstr "Testziehung ohne zusätzliche Nummer"
+
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw_addit:1
+msgid "test draw with a additional number"
+msgstr "Testziehung mit einer zusätzlichen Nummer"
+
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_draw_addit_sep:1
+msgid "test draw with a separate additional number"
+msgstr "Testziehung mit weiterer zusätzlicher Nummer"
+
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawone:1
+msgid "test draw one number without a additional number"
+msgstr "Testziehung mit einer Zahl und ohne zusätzlicher Zahl"
+
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawthree:1
+msgid "test draw three number without a additional number"
+msgstr "Testziehung mit 3 Zahlen ohne zusätzlicher Zahl"
+
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawtwo:1
+msgid "test draw two number without a additional number"
+msgstr "Testziehung mit einer Zahl und ohne Zusatzzahl"
+
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_drawzero:1
+msgid "test set draw to no number and make sure to set to one number"
+msgstr "Dieser Test ziehen keine Nummer und stellt sicher, dass eine Zahl gesetzt wird"
+
+#: ../../../tests/test_drawlotto.py:docstring of tests.test_drawlotto.DrawLottoTestCase.test_setting:1
+msgid "Test lotto.data"
+msgstr "lotto.data testen"
+
 #: ../../tests.rst:16
 msgid "tests.test_lottosettingdialog module"
+msgstr "tests.test_lottosettingdialog Modul"
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:1
+msgid "Test the dialog module"
+msgstr "Dialogmodul testen"
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:3
+msgid "lottosettingdialog"
 msgstr ""
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:5
+msgid "Setup for testing, create the UI_lottosystem.py file:"
+msgstr ""
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:7
+msgid "cd dialog/ pyuic4 --output UI_lottosystem.py lottosystem.ui"
+msgstr ""
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase:1
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase:1
+msgid "Test of drawing"
+msgstr "Ziehung testen"
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.setUp:1
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.setUp:1
+msgid "Creates the QApplication instance"
+msgstr "Erstellt die QApplication Instanz"
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.tearDown:1
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.tearDown:1
+msgid "Deletes the reference owned by self"
+msgstr ""
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.test_dialog:1
+msgid "test"
+msgstr "test"
 
 #: ../../tests.rst:24
 msgid "tests.test_lottosystemdata module"
 msgstr ""
 
-#: of tests.test_lottosystemdata:1
+#: ../../../tests/test_lottosystemdata.py:docstring of tests.test_lottosystemdata:1
 msgid "Testcase for module pylottosimu.lottosystemdata"
 msgstr ""
 
-#: of tests.test_lottosystemdata.TestCodeFormat:1
-#, fuzzy
-msgid "Bases: :py:class:`~unittest.case.TestCase`"
-msgstr "Bases: :class:`unittest.case.TestCase`"
-
-#: of tests.test_lottosystemdata.TestCodeFormat:1
+#: ../../../tests/test_lottosystemdata.py:docstring of tests.test_lottosystemdata.TestCodeFormat:1
 msgid "Test the code format of the file"
-msgstr ""
+msgstr "Codeformat der Datei testen"
 
-#: of tests.test_lottosystemdata.TestCodeFormat.setUp:1
+#: ../../../tests/test_lottosystemdata.py:docstring of tests.test_lottosystemdata.TestCodeFormat.setUp:1
 msgid "load LottoSystemData"
 msgstr ""
 
-#: ../../tests.rst
-msgid "Returns"
-msgstr "Zurück"
-
-#: of tests.test_lottosystemdata.TestCodeFormat.test_readfile:1
+#: ../../../tests/test_lottosystemdata.py:docstring of tests.test_lottosystemdata.TestCodeFormat.test_readfile:1
 msgid "read the lottosystems.json file"
-msgstr ""
+msgstr "lese lottosystems.json"
 
 #: ../../tests.rst:32
 msgid "tests.test_show_drawing module"
 msgstr ""
 
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing:1
+msgid "Test the dialog module show_drawing"
+msgstr ""
+
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_ballnumber:1
+msgid "test with one ball numbers"
+msgstr "mit einer Ballnummer testen"
+
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_bonusnumbers:1
+msgid "test ball numbers and bonus numbers in a maximal draw of 5 numbers"
+msgstr ""
+
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_bonusnumbersseparate:1
+msgid "test separate bonus numbers"
+msgstr "separate Bonus-Nummern testen"
+
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_highernumbers:1
+msgid "test with higher draw numbers as the highest number in the draw in the ball numbers and in the bonus numbers"
+msgstr ""
+
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_samenumbers:1
+msgid "test the same ball numbers and bonus numbers in a maximal draw of 5 numbers"
+msgstr "Testet auf die gleichen Ballnummern und Bonus-Nummern in einer maximalen Ziehung von 5 Zahlen"
+
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.test_twoballnumber:1
+msgid "test with two ball numbers"
+msgstr "mit zwei Ballnummern testen"
+
 #: ../../tests.rst:40
 msgid "Module contents"
 msgstr "Modulinhalte"
 
-#: of tests:1
+#: ../../../tests/__init__.py:docstring of tests:1
 msgid "test case"
 msgstr ""
-
-#~ msgid "Test the lotto draw with some input numbers"
-#~ msgstr "Teste die Lottoziehung mit einigen eingegebenen Zahlen"
-
-#~ msgid "Init class pylotto.drawlotto"
-#~ msgstr "Initiiere class pylotto.drawlotto"
-
-#~ msgid "none"
-#~ msgstr "keine"
-
-#~ msgid "test draw without a additional number"
-#~ msgstr "Testziehung ohne zusätzliche Nummer"
-
-#~ msgid "test draw with a additional number"
-#~ msgstr "Testziehung mit einer zusätzlichen Nummer"
-
-#~ msgid "test draw with a separate additional number"
-#~ msgstr "Testziehung mit weiterer zusätzlicher Nummer"
-
-#~ msgid "test draw one number without a additional number"
-#~ msgstr "Testziehung mit einer Zahl und ohne zusätzlicher Zahl"
-
-#~ msgid "test draw three number without a additional number"
-#~ msgstr "Testziehung mit 3 Zahlen ohne zusätzlicher Zahl"
-
-#~ msgid "test draw two number without a additional number"
-#~ msgstr "Testziehung mit einer Zahl und ohne Zusatzzahl"
-
-#~ msgid "test set draw to no number and make sure to set to one number"
-#~ msgstr ""
-
-#~ msgid "Test lotto.data"
-#~ msgstr ""
-
-#~ msgid "Test the dialog module"
-#~ msgstr ""
-
-#~ msgid "lottosettingdialog"
-#~ msgstr ""
-
-#~ msgid "Setup for testing, create the UI_lottosystem.py file:"
-#~ msgstr ""
-
-#~ msgid "cd dialog/ pyuic4 --output UI_lottosystem.py lottosystem.ui"
-#~ msgstr ""
-
-#~ msgid "Test of drawing"
-#~ msgstr "Ziehung testen"
-
-#~ msgid "Creates the QApplication instance"
-#~ msgstr ""
-
-#~ msgid "Deletes the reference owned by self"
-#~ msgstr ""
-
-#~ msgid "test"
-#~ msgstr "test"
-
-#~ msgid "Test the dialog module show_drawing"
-#~ msgstr ""
-
-#~ msgid "test with one ball numbers"
-#~ msgstr "mit einer Ballnummer testen"
-
-#~ msgid "test ball numbers and bonus numbers in a maximal draw of 5 numbers"
-#~ msgstr ""
-
-#~ msgid "test separate bonus numbers"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "test with higher draw numbers as "
-#~ "the highest number in the draw in"
-#~ " the ball numbers and in the "
-#~ "bonus numbers"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "test the same ball numbers and "
-#~ "bonus numbers in a maximal draw of"
-#~ " 5 numbers"
-#~ msgstr ""
-
-#~ msgid "test with two ball numbers"
-#~ msgstr "mit zwei Ballnummern testen"
 

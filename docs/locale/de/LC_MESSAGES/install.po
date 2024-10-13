@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-15 23:37+0200\n"
-"PO-Revision-Date: 2020-10-26 20:17\n"
+"PO-Revision-Date: 2024-10-13 09:45\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -42,8 +42,8 @@ msgid "`python <http://www.python.org>`_ - The python programming language along
 msgstr "\"Python <http://www.python.org>' _ - Python Programmiersprache zusammen mit Python-Setuptools"
 
 #: ../../install.rst:16
-msgid "`PyQt6 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 for Python"
-msgstr "`PyQt6 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 für Python"
+msgid "`pyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 for Python"
+msgstr "`pyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ - Qt5 für Python"
 
 #: ../../install.rst:18
 msgid "build the help"
@@ -82,8 +82,8 @@ msgid "Installing Debian or Ubuntu"
 msgstr "Installation bei Debian oder Ubuntu"
 
 #: ../../install.rst:36
-msgid "First you need to your computer these programs: Python, PyQt6 and version control system git::"
-msgstr "Zuerst brauchst du auf deinen Rechner diese Programme: Python und PyQt6 und optimal die Versionsverwaltung Git."
+msgid "First you need to your computer these programs: Python, pyQt5 and version control system git::"
+msgstr "Zuerst brauchst du auf deinen Rechner diese Programme: Python und pyQt5 und optimal die Versionsverwaltung Git."
 
 #: ../../install.rst:41
 msgid "Then you copied the source code of the program on your computer, either download the zip file of the project or download with the version control system::"
