@@ -26,7 +26,10 @@ LottoSimuDialog
 
 from unittest import TestCase
 
-from PyQt5.QtWidgets import QApplication
+try:
+    from PyQt6.QtWidgets import QApplication
+except ImportError:
+    from PyQt5.QtWidgets import QApplication
 
 from pylottosimu.pylotto import LottoSimuDialog
 
