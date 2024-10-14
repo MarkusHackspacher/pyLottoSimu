@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pylottosimu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-15 23:45+0200\n"
-"PO-Revision-Date: 2020-10-26 20:17\n"
+"POT-Creation-Date: 2024-10-13 11:16+0200\n"
+"PO-Revision-Date: 2024-10-13 20:07\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -26,34 +26,34 @@ msgid "Contents"
 msgstr "Contenidos"
 
 #: ../../contributing.rst:6
-msgid "You are very welcome to contribute to the project! The bugtracker and git repository can be found at the `project's page <https://github.com/MarkusHackspacher/pyLottoSimu/>`_. If you have an idea, tell it at https://gitter.im/MarkusHackspacher/pyLottoSimu . Thank you in advance."
+msgid "You are very welcome to contribute to the project! The bugtracker and git repository can be found at the `project's page <https://github.com/MarkusHackspacher/pyLottoSimu/>`_. If you have an idea or a issues, tell it at `issues page <https://github.com/MarkusHackspacher/pyLottoSimu/issues>`_. Thank you in advance."
 msgstr ""
 
-#: ../../contributing.rst:13
+#: ../../contributing.rst:14
 msgid "How to contribute"
 msgstr ""
 
-#: ../../contributing.rst:15
+#: ../../contributing.rst:16
 msgid "There are various possibilities to get involved, for example you can:"
 msgstr ""
 
-#: ../../contributing.rst:17
+#: ../../contributing.rst:18
 msgid "`Report bugs <https://github.com/MarkusHackspacher/pyLottoSimu/issues/new>`_ preferably with patches if you can;"
 msgstr ""
 
-#: ../../contributing.rst:19
+#: ../../contributing.rst:20
 msgid "Enhance this `documentation <https://github.com/MarkusHackspacher/pyLottoSimu/tree/master/docs>`_"
 msgstr ""
 
-#: ../../contributing.rst:20
+#: ../../contributing.rst:21
 msgid "`Fork the code <https://github.com/MarkusHackspacher/pyLottoSimu>`_, implement new features, test and send a pull request"
 msgstr ""
 
-#: ../../contributing.rst:24
+#: ../../contributing.rst:25
 msgid "Running the test suite"
 msgstr ""
 
-#: ../../contributing.rst:26
+#: ../../contributing.rst:27
 msgid "To run the tests, just type the following on a terminal::"
 msgstr ""
 
