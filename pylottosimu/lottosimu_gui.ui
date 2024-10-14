@@ -410,7 +410,6 @@
     <property name="title">
      <string>Help</string>
     </property>
-    <addaction name="action_go_to_the_website"/>
     <addaction name="action_info"/>
    </widget>
    <widget class="QMenu" name="menu_mode">

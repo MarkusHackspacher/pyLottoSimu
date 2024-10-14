@@ -24,7 +24,10 @@
 
 import unittest
 
-from PyQt5 import QtWidgets
+try:
+    from PyQt6.QtWidgets import QApplication
+except ImportError:
+    from PyQt5.QtWidgets import QApplication
 
 from pylottosimu.dialog.show_drawing import DlgShowDrawing
 
@@ -40,7 +43,7 @@ class ShowDrawingTestCase(unittest.TestCase):
         # Simple way of making instance a singleton
         super(ShowDrawingTestCase, self).setUp()
 
-        self.app = QtWidgets.QApplication([])
+        self.app = QApplication([])
 
     def tearDown(self):
         """Deletes the reference owned by self"""

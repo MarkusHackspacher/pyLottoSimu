@@ -29,7 +29,10 @@ and the bonus numbers.
 
 import os
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+try:
+    from PyQt6 import QtCore, QtGui, QtWidgets
+except ImportError:
+    from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class DlgShowDrawing(QtWidgets.QDialog):
@@ -58,10 +61,15 @@ class DlgShowDrawing(QtWidgets.QDialog):
         self.setModal(True)
         self.buttonBox = QtWidgets.QDialogButtonBox(self)
         self.buttonBox.setOrientation(QtCore.Qt.Orientation.Horizontal)
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Ok)
+        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.StandardButton.Ok)
 
-        self.boxLayout = QtWidgets.QBoxLayout(
-            QtWidgets.QBoxLayout.TopToBottom, self)
+        try:
+            self.boxLayout = QtWidgets.QBoxLayout(
+                QtWidgets.QBoxLayout.Direction.TopToBottom, self)
+        except AttributeError:
+            # PyQt5:
+            self.boxLayout = QtWidgets.QBoxLayout(
+                 QtWidgets.QBoxLayout.TopToBottom, self)
 
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridbonus = QtWidgets.QGridLayout()
