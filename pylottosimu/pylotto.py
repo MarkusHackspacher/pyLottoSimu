@@ -42,8 +42,12 @@ import webbrowser
 from datetime import datetime
 from random import randint
 
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
-from PyQt5.QtSvg import QSvgWidget
+try:
+    from PyQt6 import QtCore, QtGui, QtWidgets, uic
+    from PyQt6.QtSvgWidgets import QSvgWidget
+except ImportError:
+    from PyQt5 import QtCore, QtGui, QtWidgets, uic
+    from PyQt5.QtSvg import QSvgWidget
 
 from pylottosimu.dialog.lottosettingdialog import LottoSettingsDialog
 from pylottosimu.dialog.printdialog import DlgPrint
@@ -91,7 +95,6 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         self.ui.btn_start.clicked.connect(self.onBtnStart)
         self.ui.action_quit.triggered.connect(self.onClose)
         self.ui.action_info.triggered.connect(self.onInfo)
-        self.ui.action_go_to_the_website.triggered.connect(self.openWebsite)
         self.ui.action_lotto_simulation.changed.connect(self.actionLottoSim)
         self.ui.btn_draw_overview.clicked.connect(self.onDrawOverview)
         self.timer.timeout.connect(self.onTimer)
@@ -281,17 +284,20 @@ class LottoSimuDialog(QtWidgets.QMainWindow):
         infobox.setWindowTitle(self.tr('Info'))
         infobox.setText(self.tr(
             'The simulation of a lottery draw<br>'
-            'pyLottoSimu is free software and use GNU General Public License '
+            'pyLottoSimu is free software and use GNU General Public License<br>'
             '<a href="http://www.gnu.org/licenses/">www.gnu.org/licenses</a>'))
         infobox.setInformativeText(self.tr(
             'More Information about the program at '
             '<a href="http://pylottosimu.readthedocs.io">'
             'pylottosimu.readthedocs.io</a>'))
+        infobox.setStandardButtons(QtWidgets.QMessageBox.StandardButton.Ok)
+        websideButton = infobox.addButton(self.tr('Website'), QtWidgets.QMessageBox.ButtonRole.ActionRole)
         if test:
-            infobox.setStandardButtons(QtWidgets.QMessageBox.Ok)
-            button = infobox.button(QtWidgets.QMessageBox.Ok)
+            button = infobox.button(QtWidgets.QMessageBox.StandardButton.Ok)
             QtCore.QTimer.singleShot(0, button.clicked)
         infobox.exec()
+        if infobox.clickedButton() == websideButton:
+            self.openWebsite()
 
     @staticmethod
     def openWebsite():
