@@ -4,7 +4,7 @@
 """
 pyLottoSimu, load module lotto
 
-Copyright (C) <2012-2019> Markus Hackspacher
+Copyright (C) <2012-2024> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
@@ -25,7 +25,10 @@ along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 import os
 import sys
 
-from PyQt5 import QtCore, QtWidgets
+try:
+    from PyQt6 import QtCore, QtWidgets
+except ImportError:
+    from PyQt5 import QtCore, QtWidgets
 
 from pylottosimu import pylotto
 
