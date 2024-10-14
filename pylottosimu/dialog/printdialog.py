@@ -7,7 +7,7 @@ Copyright (C) <2018-2024> Markus Hackspacher
 
 This file is part of pyLottoSimu.
 
-Archerank2 is free software: you can redistribute it and/or modify
+pyLottoSimu is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
@@ -24,7 +24,10 @@ along with pyLottoSimu.  If not, see <http://www.gnu.org/licenses/>.
 import os
 import sys
 
-from PyQt5 import QtGui, QtPrintSupport, QtWidgets
+try:
+    from PyQt6 import QtGui, QtPrintSupport, QtWidgets
+except ImportError:
+    from PyQt5 import QtGui, QtPrintSupport, QtWidgets
 
 
 class DlgPrint(QtWidgets.QDialog):

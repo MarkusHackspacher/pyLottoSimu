@@ -30,8 +30,12 @@ Manage the GUI of setting dialog. Use lottosystem.ui.
 import os
 import sys
 
-from PyQt5 import QtGui, QtWidgets, uic
-from PyQt5.QtSvg import QSvgWidget
+try:
+    from PyQt6 import QtGui, QtWidgets, uic
+    from PyQt6.QtSvgWidgets import QSvgWidget
+except ImportError:
+    from PyQt5 import QtGui, QtWidgets, uic
+    from PyQt5.QtSvg import QSvgWidget
 
 
 class LottoSettingsDialog(QtWidgets.QDialog):
@@ -155,7 +159,7 @@ class LottoSettingsDialog(QtWidgets.QDialog):
         """
         dialog = LottoSettingsDialog(sysdat, parent)
         result = dialog.ui.exec()
-        return (dialog.values(), result == QtWidgets.QDialog.Accepted)
+        return (dialog.values(), result == QtWidgets.QDialog.accepted)
 
     def test_actionLottoSim(self):
         self.ui.ui.action_lotto_simulation.setChecked(False)
