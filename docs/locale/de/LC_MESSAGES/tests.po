@@ -33,6 +33,41 @@ msgstr "tests.test_drawlotto Modul"
 msgid "tests.test_lottosettingdialog module"
 msgstr "tests.test_lottosettingdialog Modul"
 
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:1
+msgid "Test the dialog module"
+msgstr "Dialogmodul testen"
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:3
+msgid "lottosettingdialog"
+msgstr ""
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:5
+msgid "Setup for testing, create the UI_lottosystem.py file:"
+msgstr "Setup für Test, erstellt die UI_lottosystem.py-Datei:"
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog:7
+msgid "cd dialog/ pyuic4 --output UI_lottosystem.py lottosystem.ui"
+msgstr "cd dialog/ pyuic4 --output UI_lottosystem.py lottosystem.ui"
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase:1
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase:1
+msgid "Test of drawing"
+msgstr "Ziehung testen"
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.setUp:1
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.setUp:1
+msgid "Creates the QApplication instance"
+msgstr "Erstellt die QApplication Instanz"
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.tearDown:1
+#: ../../../tests/test_show_drawing.py:docstring of tests.test_show_drawing.ShowDrawingTestCase.tearDown:1
+msgid "Deletes the reference owned by self"
+msgstr ""
+
+#: ../../../tests/test_lottosettingdialog.py:docstring of tests.test_lottosettingdialog.LottoSystemDataTestCase.test_dialog:1
+msgid "test"
+msgstr "test"
+
 #: ../../tests.rst:24
 msgid "tests.test_lottosystemdata module"
 msgstr ""
@@ -72,4 +107,3 @@ msgstr "Modulinhalte"
 #: ../../../tests/__init__.py:docstring of tests:1
 msgid "test case"
 msgstr "Testfall"
-
