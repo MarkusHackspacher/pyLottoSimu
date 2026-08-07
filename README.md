@@ -21,16 +21,17 @@ install
 -------
 
 The program requires [Python 3.x](http://www.python.org/download/) 
-and PyQt5 for Python 3 `pip3 install PyQt5`.
+and PyQt5 for Python 3 `pip3 install PyQt6`.
 
 ```
-# sudo apt-get install python3 python3-pyqt5 git
+# sudo apt-get install python3 python3-pyqt6
 ```
     
 Then you copied the source code of the program on your computer,
 either [download](https://github.com/MarkusHackspacher/pyLottoSimu) the zip file of the project or download with the version control system:
 
 ```
+# sudo apt-get install git
 # git clone https://github.com/MarkusHackspacher/pyLottoSimu.git
 ```
 
